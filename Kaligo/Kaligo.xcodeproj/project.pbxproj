@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87DF6291247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF6290247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift */; };
+		87DF6293247304FC002B8FCE /* CategoriasHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF6292247304FC002B8FCE /* CategoriasHomeTableViewCell.swift */; };
+		87DF6295247305EC002B8FCE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF6294247305EC002B8FCE /* HomeViewController.swift */; };
+		87DF62972473101E002B8FCE /* HomeCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF62962473101E002B8FCE /* HomeCollectionViewDelegate.swift */; };
+		87DF629924731938002B8FCE /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF629824731938002B8FCE /* HomeTableViewDelegate.swift */; };
 		E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423ADF5246F0F7C009F42C3 /* AppDelegate.swift */; };
 		E423ADF8246F0F7C009F42C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423ADF7246F0F7C009F42C3 /* SceneDelegate.swift */; };
 		E423ADFA246F0F7C009F42C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423ADF9246F0F7C009F42C3 /* ViewController.swift */; };
@@ -21,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87DF6290247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		87DF6292247304FC002B8FCE /* CategoriasHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasHomeTableViewCell.swift; sourceTree = "<group>"; };
+		87DF6294247305EC002B8FCE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		87DF62962473101E002B8FCE /* HomeCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		87DF629824731938002B8FCE /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		E423ADF2246F0F7C009F42C3 /* Kaligo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaligo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E423ADF5246F0F7C009F42C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E423ADF7246F0F7C009F42C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +101,8 @@
 				E423AE00246F0F7E009F42C3 /* LaunchScreen.storyboard */,
 				E47EB20C246F1C77004651A2 /* Posts.storyboard */,
 				E47EB20E246F244B004651A2 /* SegmentedCollectionViewCell.swift */,
+				87DF6290247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift */,
+				87DF6292247304FC002B8FCE /* CategoriasHomeTableViewCell.swift */,
 				E47EB210246F336D004651A2 /* PlaylistTableViewCell.swift */,
 			);
 			path = View;
@@ -100,6 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				E423ADF9246F0F7C009F42C3 /* ViewController.swift */,
+				87DF6294247305EC002B8FCE /* HomeViewController.swift */,
+				87DF62962473101E002B8FCE /* HomeCollectionViewDelegate.swift */,
+				87DF629824731938002B8FCE /* HomeTableViewDelegate.swift */,
 				E47EB212246F3438004651A2 /* PostsViewController.swift */,
 				E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */,
 			);
@@ -203,7 +218,12 @@
 				E47EB211246F336D004651A2 /* PlaylistTableViewCell.swift in Sources */,
 				E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */,
 				E423ADFA246F0F7C009F42C3 /* ViewController.swift in Sources */,
+				87DF6291247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift in Sources */,
+				87DF629924731938002B8FCE /* HomeTableViewDelegate.swift in Sources */,
+				87DF6295247305EC002B8FCE /* HomeViewController.swift in Sources */,
 				E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */,
+				87DF62972473101E002B8FCE /* HomeCollectionViewDelegate.swift in Sources */,
+				87DF6293247304FC002B8FCE /* CategoriasHomeTableViewCell.swift in Sources */,
 				E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */,
 				E423ADF8246F0F7C009F42C3 /* SceneDelegate.swift in Sources */,
 			);
