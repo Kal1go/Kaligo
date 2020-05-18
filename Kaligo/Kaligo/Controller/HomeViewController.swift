@@ -10,19 +10,18 @@ import Foundation
 import UIKit
 
 //terminar o homeViewController
-//class HomeViewController: UIViewController {
-//
-//    @IBOutlet weak var imagePerfilHome: UIImageView!
-//    @IBOutlet weak var labelNivelHome: UILabel!
-//    @IBOutlet weak var labelOlaHome: UILabel!
-//    @IBOutlet weak var homeTableView: UITableView!
-//    @IBOutlet weak var dicasTableViewHome: UITableView!
-//    weak var collectionViewDelegate: HomeCollectionViewDelegate?
-//    var tableViewDelegate:
-//
-//    override func viewDidLoad() {
-//        let collectionDelegate = HomeCollectionViewDelegate()
-//        self.collectionViewDelegate = collectionDelegate
-//        collectionViewDelegate?.dicasCards = ["dica1", "dica2", "dica3"]
-//    }
-//}
+class HomeViewController: UIViewController {
+
+    @IBOutlet weak var imagePerfilHome: UIImageView!
+    @IBOutlet weak var labelNivelHome: UILabel!
+    @IBOutlet weak var labelOlaHome: UILabel!
+    @IBOutlet weak var homeTableView: UITableView!
+    @IBOutlet weak var dicasTableViewHome: UITableView!
+    weak var collectionViewDelegate: HomeCollectionViewDelegate?
+    
+    override func viewDidLoad() {
+        let collectionDelegate = HomeCollectionViewDelegate()
+        self.collectionViewDelegate = collectionDelegate
+        collectionViewDelegate?.dicasCards = ["dica1", "dica2", "dica3"]
+    }
+}

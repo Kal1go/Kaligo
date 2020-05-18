@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5mm-Jy-Czh" customClass="AwesomeReviewView" customModule="selfSizing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wj-mr-ldl">
+                    <rect key="frame" x="16" y="16" width="382" height="830"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1i3-3i-hMz">
+                            <rect key="frame" x="16" y="16" width="350" height="798"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Robert Downey Jr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1n-cM-sER">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="B7z-T5-4Pn"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is a member since 2011" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjY-fu-gDh">
+                                    <rect key="frame" x="0.0" y="22" width="350" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4T-iK-JRl">
+                                    <rect key="frame" x="0.0" y="42.5" width="350" height="733.5"/>
+                                    <string key="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2m-5P-Bh2">
+                                    <rect key="frame" x="0.0" y="776" width="350" height="22"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12th Feb 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ds3-hu-q4n">
+                                            <rect key="frame" x="0.0" y="0.0" width="175" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQU-kH-CYD">
+                                            <rect key="frame" x="175" y="0.0" width="175" height="22"/>
+                                            <state key="normal" title="See More"/>
+                                            <connections>
+                                                <action selector="seeMoreButtonTapped" destination="5mm-Jy-Czh" eventType="touchUpInside" id="PST-O0-v8Y"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ds3-hu-q4n" firstAttribute="width" secondItem="KQU-kH-CYD" secondAttribute="width" id="h1V-m4-AIp"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="zjY-fu-gDh" firstAttribute="height" secondItem="y1n-cM-sER" secondAttribute="height" multiplier="0.931818" id="9g8-Og-AAs"/>
+                                <constraint firstItem="ds3-hu-q4n" firstAttribute="height" secondItem="y1n-cM-sER" secondAttribute="height" id="PcY-4Z-ti9"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="1i3-3i-hMz" secondAttribute="trailing" constant="16" id="SCJ-vW-iLS"/>
+                        <constraint firstItem="1i3-3i-hMz" firstAttribute="leading" secondItem="1wj-mr-ldl" secondAttribute="leading" constant="16" id="Sqj-EV-PjK"/>
+                        <constraint firstAttribute="bottom" secondItem="1i3-3i-hMz" secondAttribute="bottom" constant="16" id="j5D-Sg-j7l"/>
+                        <constraint firstItem="1i3-3i-hMz" firstAttribute="top" secondItem="1wj-mr-ldl" secondAttribute="top" constant="16" id="l4i-WO-wQo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="x28-ZI-YUp" firstAttribute="bottom" secondItem="1wj-mr-ldl" secondAttribute="bottom" constant="16" id="5JS-ZO-zW8"/>
+                <constraint firstItem="1wj-mr-ldl" firstAttribute="leading" secondItem="x28-ZI-YUp" secondAttribute="leading" constant="16" id="8EL-E7-dC3"/>
+                <constraint firstItem="1wj-mr-ldl" firstAttribute="top" secondItem="5mm-Jy-Czh" secondAttribute="top" constant="16" id="8eH-Xd-bRc"/>
+                <constraint firstItem="x28-ZI-YUp" firstAttribute="trailing" secondItem="1wj-mr-ldl" secondAttribute="trailing" constant="16" id="bD8-Le-iRA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="x28-ZI-YUp"/>
+            <connections>
+                <outlet property="dateLabel" destination="ds3-hu-q4n" id="fQL-Mj-S0j"/>
+                <outlet property="descLabel" destination="P4T-iK-JRl" id="f1i-E1-5o7"/>
+                <outlet property="mainStackView" destination="1i3-3i-hMz" id="bLP-Rc-lFI"/>
+                <outlet property="memberSinceLabel" destination="zjY-fu-gDh" id="pvd-UP-4k4"/>
+                <outlet property="seeMoreButton" destination="KQU-kH-CYD" id="jMV-0m-pGX"/>
+                <outlet property="userNameLabel" destination="y1n-cM-sER" id="fnA-FR-QMP"/>
+            </connections>
+            <point key="canvasLocation" x="87.681159420289859" y="290.29017857142856"/>
+        </view>
+    </objects>
+</document>
