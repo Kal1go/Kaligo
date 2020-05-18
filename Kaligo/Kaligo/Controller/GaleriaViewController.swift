@@ -10,17 +10,36 @@ import UIKit
 
 class GaleriaViewController: UIViewController {
 
+    @IBOutlet weak var playlistsOptionImage: UIImageView!
+    @IBOutlet weak var tipsOptionImage: UIImageView!
+    @IBOutlet weak var playlistsTableView: UITableView!
+    
+    // TODO: delegate deve ser weak
+    var tableViewDelegate: GaleryPlaylistsTableViewDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let codeSegmented = CustomSegmentedControl(
-            frame: CGRect(
-                x: 0,
-                y: 50,
-                width: self.view.frame.width,
-                height: 50),
-            buttonTitle: ["Playlists", "Dicas"])
-        codeSegmented.backgroundColor = .clear
-        view.addSubview(codeSegmented)
+        
+        self.tableViewDelegate = GaleryPlaylistsTableViewDelegate()
+        tableViewDelegate?.playlists = [ModeloPlaylist(userName: "Jaque",
+                                                       userLevel: "Nível 7",
+                                                       title: "Álgebra",
+                                                       description: "Descrição dessa playlist",
+                                                       category: "Categoria",
+                                                       numberOfForks: 36)]
+        
+        playlistsTableView.delegate = tableViewDelegate
+        playlistsTableView.dataSource = tableViewDelegate
+        
     }
-
+    
+    @IBAction func changeFilter(_ sender: UIButton) {
+        if sender.tag == 1 {
+            playlistsOptionImage.tintColor = UIColor(named: "Clicavel")
+            tipsOptionImage.tintColor = UIColor(named: "Background")
+        } else {
+            tipsOptionImage.tintColor = UIColor(named: "Clicavel")
+            playlistsOptionImage.tintColor = UIColor(named: "Background")
+        }
+    }
 }

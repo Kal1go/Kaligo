@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CriarPlaylistTableViewCell: UITableViewCell {
+class AddPlaylistTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

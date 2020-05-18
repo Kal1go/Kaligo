@@ -35,8 +35,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnN-st-LsX">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnN-st-LsX">
                                                 <rect key="frame" x="28" y="5.5" width="157" height="59.5"/>
+                                                <connections>
+                                                    <action selector="changeFilter:" destination="xRc-ws-f3N" eventType="touchUpInside" id="iQg-lX-kOM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="Background"/>
@@ -73,8 +76,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY4-c7-XMT">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY4-c7-XMT">
                                                 <rect key="frame" x="25" y="5.5" width="160" height="59.5"/>
+                                                <connections>
+                                                    <action selector="changeFilter:" destination="xRc-ws-f3N" eventType="touchUpInside" id="z8j-Y4-alZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="Background"/>
@@ -112,7 +118,7 @@
                                 <rect key="frame" x="0.0" y="205" width="414" height="657"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="81" id="xOi-jq-pwD" customClass="CriarPlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addPlaylistCell" rowHeight="81" id="xOi-jq-pwD" customClass="AddPlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xOi-jq-pwD" id="Wc8-3e-GfB">
@@ -186,6 +192,13 @@
                                                         <constraint firstAttribute="width" constant="85" id="vYG-XQ-Kfj"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMu-fz-EgH">
+                                                    <rect key="frame" x="304" y="43" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Álgebra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z86-7U-qhj">
                                                     <rect key="frame" x="40" y="98" width="74" height="26.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
@@ -231,6 +244,7 @@
                                         <connections>
                                             <outlet property="backgroundImage" destination="VYT-fW-6I4" id="z1i-dQ-8Rr"/>
                                             <outlet property="forkButton" destination="5bi-sb-WqZ" id="l1T-AM-2FH"/>
+                                            <outlet property="numberOfForks" destination="MMu-fz-EgH" id="a6y-tu-R5g"/>
                                             <outlet property="playlistCategory" destination="hq2-Iz-v9k" id="Udx-SC-Psy"/>
                                             <outlet property="playlistDescription" destination="Asa-qG-dE4" id="8XG-lo-IpN"/>
                                             <outlet property="playlistTitle" destination="Z86-7U-qhj" id="ooH-DS-3DN"/>
@@ -255,6 +269,11 @@
                         <viewLayoutGuide key="safeArea" id="7JB-JB-58R"/>
                     </view>
                     <navigationItem key="navigationItem" title="Galeria" id="hN5-jv-OFG"/>
+                    <connections>
+                        <outlet property="playlistsOptionImage" destination="0hQ-W6-83a" id="k2y-E2-u9u"/>
+                        <outlet property="playlistsTableView" destination="t3M-63-Z9x" id="AeA-bx-uzZ"/>
+                        <outlet property="tipsOptionImage" destination="ZzB-JM-uVp" id="E6r-SQ-Vvp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwx-vj-u0r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
