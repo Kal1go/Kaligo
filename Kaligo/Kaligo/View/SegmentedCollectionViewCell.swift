@@ -15,4 +15,5 @@ class SegmentedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var selectionImage: UIImageView!
     
     @IBOutlet weak var filterTitle: UILabel!
+    
 }

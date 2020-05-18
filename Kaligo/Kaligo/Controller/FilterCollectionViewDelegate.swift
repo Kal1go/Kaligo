@@ -28,5 +28,20 @@ class FilterCollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollec
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "filterCell",
+            for: indexPath) as? SegmentedCollectionViewCell
+            else { return }
+        
+        var colorName: String = "Clicavel"
+        
+        if cell.selectionImage.tintColor == UIColor(named: colorName) {
+            colorName = "Background"
+        } 
+        
+        cell.selectionImage.tintColor = UIColor(named: colorName)
+    }
 
 }
