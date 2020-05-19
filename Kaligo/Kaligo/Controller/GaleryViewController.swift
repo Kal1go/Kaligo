@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GaleriaViewController: UIViewController {
+class GaleryViewController: UIViewController {
 
     @IBOutlet weak var playlistsOptionImage: UIImageView!
     @IBOutlet weak var tipsOptionImage: UIImageView!
@@ -20,25 +20,37 @@ class GaleriaViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableViewDelegate = GaleryPlaylistsTableViewDelegate()
-        tableViewDelegate?.playlists = [ModeloPlaylist(userName: "Jaque",
-                                                       userLevel: "Nível 7",
-                                                       title: "Álgebra",
-                                                       description: "Descrição dessa playlist",
-                                                       category: "Categoria",
-                                                       numberOfForks: 36)]
-        
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
+    }
+    
+    func generateTemplateData() {
+        let playlist = ModeloPlaylist(userName: "Jaque",
+                                      userLevel: "Nível 7",
+                                      title: "Álgebra",
+                                      description: "Descrição dessa playlist",
+                                      category: "Categoria",
+                                      numberOfForks: 36)
         
+        let tip = ModeloDica(userName: "Jaque",
+                             userLevel: "Nível 7",
+                             title: "Álgebra",
+                             description: "Descrição dessa playlist",
+                             category: "Categoria")
+        
+        tableViewDelegate?.playlists = [playlist]
+        tableViewDelegate?.tips = [tip]
     }
     
     @IBAction func changeFilter(_ sender: UIButton) {
         if sender.tag == 1 {
             playlistsOptionImage.tintColor = UIColor(named: "Clicavel")
             tipsOptionImage.tintColor = UIColor(named: "Background")
+            tableViewDelegate?.filter = .playlists
         } else {
             tipsOptionImage.tintColor = UIColor(named: "Clicavel")
             playlistsOptionImage.tintColor = UIColor(named: "Background")
+            tableViewDelegate?.filter = .tips
         }
     }
 }

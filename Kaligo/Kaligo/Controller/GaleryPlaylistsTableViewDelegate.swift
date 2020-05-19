@@ -41,19 +41,21 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
             return cell
             
         } else {
-            guard
-                let cell = tableView.dequeueReusableCell(
-                    withIdentifier: "playlistCell",
-                    for: indexPath) as? PlaylistTableViewCell,
-                let playlists = self.playlists
-                else { return UITableViewCell() }
-            
-            let playlist = playlists[indexPath.row]
-            setPlaylistRow(for: cell, with: playlist)
-            
-            return cell
+            if filter == .playlists {
+                guard
+                    let cell = tableView.dequeueReusableCell(
+                        withIdentifier: "playlistCell",
+                        for: indexPath) as? PlaylistTableViewCell,
+                    let playlists = self.playlists
+                    else { return UITableViewCell() }
+                
+                let playlist = playlists[indexPath.row]
+                setPlaylistRow(for: cell, with: playlist)
+                
+                return cell
+            }
         }
-        
+        return UITableViewCell()
     }
     
     func setPlaylistRow(for cell: PlaylistTableViewCell, with playlist: ModeloPlaylist) {

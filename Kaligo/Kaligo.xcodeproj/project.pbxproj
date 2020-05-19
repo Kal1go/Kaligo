@@ -22,7 +22,7 @@
 		E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */; };
 		E4B748A92473021B00B3FAAF /* PlaylistTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748A82473021B00B3FAAF /* PlaylistTableViewDelegate.swift */; };
 		E4B748AB247309F700B3FAAF /* Galeria.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B748AA247309F700B3FAAF /* Galeria.storyboard */; };
-		E4B748AF247310F000B3FAAF /* GaleriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748AE247310F000B3FAAF /* GaleriaViewController.swift */; };
+		E4B748AF247310F000B3FAAF /* GaleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748AE247310F000B3FAAF /* GaleryViewController.swift */; };
 		E4B748B3247320B300B3FAAF /* AddPlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B2247320B300B3FAAF /* AddPlaylistTableViewCell.swift */; };
 		E4B748B52473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B42473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +45,7 @@
 		E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		E4B748A82473021B00B3FAAF /* PlaylistTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewDelegate.swift; sourceTree = "<group>"; };
 		E4B748AA247309F700B3FAAF /* Galeria.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Galeria.storyboard; sourceTree = "<group>"; };
-		E4B748AE247310F000B3FAAF /* GaleriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleriaViewController.swift; sourceTree = "<group>"; };
+		E4B748AE247310F000B3FAAF /* GaleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryViewController.swift; sourceTree = "<group>"; };
 		E4B748B2247320B300B3FAAF /* AddPlaylistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaylistTableViewCell.swift; sourceTree = "<group>"; };
 		E4B748B42473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryPlaylistsTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,7 +121,7 @@
 				E47EB212246F3438004651A2 /* PostsViewController.swift */,
 				E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */,
 				E4B748A82473021B00B3FAAF /* PlaylistTableViewDelegate.swift */,
-				E4B748AE247310F000B3FAAF /* GaleriaViewController.swift */,
+				E4B748AE247310F000B3FAAF /* GaleryViewController.swift */,
 				E4B748B42473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift */,
 			);
 			path = Controller;
@@ -230,7 +230,7 @@
 				E423ADFA246F0F7C009F42C3 /* ViewController.swift in Sources */,
 				E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */,
 				E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */,
-				E4B748AF247310F000B3FAAF /* GaleriaViewController.swift in Sources */,
+				E4B748AF247310F000B3FAAF /* GaleryViewController.swift in Sources */,
 				E435E4962474483E003D79CD /* Tip.swift in Sources */,
 				E423ADF8246F0F7C009F42C3 /* SceneDelegate.swift in Sources */,
 				E435E49424744811003D79CD /* Playlist.swift in Sources */,
