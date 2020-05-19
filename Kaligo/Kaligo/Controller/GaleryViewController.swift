@@ -20,6 +20,7 @@ class GaleryViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableViewDelegate = GaleryPlaylistsTableViewDelegate()
+        generateTemplateData()
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
     }
@@ -35,8 +36,8 @@ class GaleryViewController: UIViewController {
         let tip = ModeloDica(userName: "Jaque",
                              userLevel: "Nível 7",
                              title: "Álgebra",
-                             description: "Descrição dessa playlist",
-                             category: "Categoria")
+                             description: "Leve agasalho",
+                             category: "ENEM")
         
         tableViewDelegate?.playlists = [playlist]
         tableViewDelegate?.tips = [tip]
@@ -52,5 +53,6 @@ class GaleryViewController: UIViewController {
             playlistsOptionImage.tintColor = UIColor(named: "Background")
             tableViewDelegate?.filter = .tips
         }
+        playlistsTableView.reloadData()
     }
 }

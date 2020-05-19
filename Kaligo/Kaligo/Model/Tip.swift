@@ -13,5 +13,5 @@ struct ModeloDica {
     var userLevel: String
     var title: String
     var description: String
-    var category: String    
+    var category: String
 }

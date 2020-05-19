@@ -41,30 +41,43 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
             return cell
             
         } else {
+            guard
+                let cell = tableView.dequeueReusableCell(
+                    withIdentifier: "playlistCell",
+                    for: indexPath) as? PlaylistTableViewCell,
+                let playlists = playlists,
+                let tips = tips
+                else { return UITableViewCell() }
+            
             if filter == .playlists {
-                guard
-                    let cell = tableView.dequeueReusableCell(
-                        withIdentifier: "playlistCell",
-                        for: indexPath) as? PlaylistTableViewCell,
-                    let playlists = self.playlists
-                    else { return UITableViewCell() }
-                
                 let playlist = playlists[indexPath.row]
-                setPlaylistRow(for: cell, with: playlist)
+                setRow(for: cell, with: playlist)
                 
-                return cell
+            } else {
+                let tip = tips[indexPath.row]
+                setRow(for: cell, with: tip)
             }
+            return cell
         }
-        return UITableViewCell()
     }
     
-    func setPlaylistRow(for cell: PlaylistTableViewCell, with playlist: ModeloPlaylist) {
-        cell.userName.text = playlist.userName
-        cell.userLevel.text = playlist.userLevel
-        cell.playlistTitle.text = playlist.title
-        cell.playlistDescription.text = playlist.description
-        cell.playlistCategory.text = playlist.category
-        cell.numberOfForks.text = "\(playlist.numberOfForks)"
+    private func setRow<T>(for cell: PlaylistTableViewCell, with data: T) {
+        if let d = data as? ModeloPlaylist {
+            cell.userName.text = d.userName
+            cell.userLevel.text = d.userLevel
+            cell.playlistTitle.text = d.title
+            cell.playlistDescription.text = d.description
+            cell.playlistCategory.text = d.category
+            cell.numberOfForks.text = "\(d.numberOfForks)"
+            
+        } else if let d = data as? ModeloDica {
+            cell.userName.text = d.userName
+            cell.userLevel.text = d.userLevel
+            cell.playlistTitle.text = d.title
+            cell.playlistDescription.text = d.description
+            cell.playlistCategory.text = d.category
+        }
+        
     }
     
 }
