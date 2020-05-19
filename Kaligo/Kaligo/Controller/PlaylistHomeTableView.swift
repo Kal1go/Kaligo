@@ -23,7 +23,7 @@ class PlaylistHomeTableView: UITableViewController {
        
        func setUpReviews() {
            self.data.createReviewsWith(quantity: 6)
-           self.tableView.estimatedRowHeight = 233.0
+           self.tableView.estimatedRowHeight = 400.0
        }
        
        override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
