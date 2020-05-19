@@ -14,6 +14,7 @@
 		E423ADFF246F0F7E009F42C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E423ADFE246F0F7E009F42C3 /* Assets.xcassets */; };
 		E423AE02246F0F7E009F42C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E423AE00246F0F7E009F42C3 /* LaunchScreen.storyboard */; };
 		E435E49424744811003D79CD /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435E49324744811003D79CD /* Playlist.swift */; };
+		E435E4962474483E003D79CD /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435E4952474483E003D79CD /* Tip.swift */; };
 		E47EB20D246F1C77004651A2 /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47EB20C246F1C77004651A2 /* Posts.storyboard */; };
 		E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EB20E246F244B004651A2 /* SegmentedCollectionViewCell.swift */; };
 		E47EB211246F336D004651A2 /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EB210246F336D004651A2 /* PlaylistTableViewCell.swift */; };
@@ -36,6 +37,7 @@
 		E423AE01246F0F7E009F42C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E423AE03246F0F7E009F42C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E435E49324744811003D79CD /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		E435E4952474483E003D79CD /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		E47EB20C246F1C77004651A2 /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
 		E47EB20E246F244B004651A2 /* SegmentedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCollectionViewCell.swift; sourceTree = "<group>"; };
 		E47EB210246F336D004651A2 /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				E435E49324744811003D79CD /* Playlist.swift */,
+				E435E4952474483E003D79CD /* Tip.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */,
 				E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */,
 				E4B748AF247310F000B3FAAF /* GaleriaViewController.swift in Sources */,
+				E435E4962474483E003D79CD /* Tip.swift in Sources */,
 				E423ADF8246F0F7C009F42C3 /* SceneDelegate.swift in Sources */,
 				E435E49424744811003D79CD /* Playlist.swift in Sources */,
 			);

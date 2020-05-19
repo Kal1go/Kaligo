@@ -8,9 +8,16 @@
 
 import UIKit
 
+enum GaleryFilter {
+    case playlists
+    case tips
+}
+
 class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     var playlists: [ModeloPlaylist]?
+    var tips: [ModeloDica]?
+    var filter: GaleryFilter = .playlists
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
