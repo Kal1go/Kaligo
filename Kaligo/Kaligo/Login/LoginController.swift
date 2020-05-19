@@ -55,6 +55,7 @@ class LoginController: UIViewController {
     }
 }
 
+// MARK: - LoginAuthorization
 extension LoginController: ASAuthorizationControllerDelegate {
     func setUpSignInAppleButton() {
         authorizationButton.addTarget(self, action: #selector(handleAppleIdRequest), for: .touchUpInside)
@@ -77,35 +78,6 @@ extension LoginController: ASAuthorizationControllerDelegate {
         
         func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
             print(error)
-        }
-    }
-    @IBAction
-    func loginAutomatic() {
-        let params = [
-            "email": "matheusgoislimasilva@gmail.com",
-            "password": "000837.35591f9754ae48889b47debe49ec675e.2120",
-            "name": "Matheus Gois",
-            "application": "json"
-        ]
-        
-        self.showSpinner(onView: self.view)
-        UserHandler.auth(params: params) { (response) in
-            switch response {
-            case .success(let user):
-                DispatchQueue.main.async {
-                    CommonData.shared.user = user
-                    DispatchQueue.main.async {
-                    self.showAlert(title: "Login realizado com sucesso!", message: "")
-                    self.removeSpinner()
-                    }
-                }
-            case.error(let description):
-                DispatchQueue.main.async {
-                    self.showAlert(title: "Não foi possível fazer login!",
-                    message: description)
-                    self.removeSpinner()
-                }
-            }
         }
     }
 }
