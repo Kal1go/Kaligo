@@ -69,6 +69,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82667190247448D300152760 /* Awesome xib */ = {
+			isa = PBXGroup;
+			children = (
+				87DF629E24733AF9002B8FCE /* AwesomeReviewView.xib */,
+				87DF62A024733D4D002B8FCE /* AwesomeReviewView.swift */,
+			);
+			path = "Awesome xib";
+			sourceTree = "<group>";
+		};
+		82667191247448E200152760 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				87DF62A224733DBE002B8FCE /* Review.swift */,
+				87DF62A424733E18002B8FCE /* Reviews.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		826671922474491700152760 /* PlaylistHome */ = {
+			isa = PBXGroup;
+			children = (
+				87DF629A24732A01002B8FCE /* PlaylistHome.storyboard */,
+				87DF62A624733E67002B8FCE /* PlaylistHomeTableView.swift */,
+				82667190247448D300152760 /* Awesome xib */,
+				82667191247448E200152760 /* Review */,
+			);
+			path = PlaylistHome;
+			sourceTree = "<group>";
+		};
 		E423ADE9246F0F7C009F42C3 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +117,7 @@
 		E423ADF4246F0F7C009F42C3 /* Kaligo */ = {
 			isa = PBXGroup;
 			children = (
+				826671922474491700152760 /* PlaylistHome */,
 				E47EB216246F349C004651A2 /* Controller */,
 				E47EB215246F3491004651A2 /* View */,
 				E47EB214246F3489004651A2 /* Model */,
@@ -116,11 +146,6 @@
 				87DF6290247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift */,
 				87DF6292247304FC002B8FCE /* CategoriasHomeTableViewCell.swift */,
 				E47EB210246F336D004651A2 /* PlaylistTableViewCell.swift */,
-				87DF629A24732A01002B8FCE /* PlaylistHome.storyboard */,
-				87DF629E24733AF9002B8FCE /* AwesomeReviewView.xib */,
-				87DF62A024733D4D002B8FCE /* AwesomeReviewView.swift */,
-				87DF62A224733DBE002B8FCE /* Review.swift */,
-				87DF62A424733E18002B8FCE /* Reviews.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,7 +158,6 @@
 				87DF62962473101E002B8FCE /* HomeCollectionViewDelegate.swift */,
 				87DF629824731938002B8FCE /* HomeTableViewDelegate.swift */,
 				E47EB212246F3438004651A2 /* PostsViewController.swift */,
-				87DF62A624733E67002B8FCE /* PlaylistHomeTableView.swift */,
 				E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */,
 			);
 			path = Controller;
