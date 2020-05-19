@@ -8,15 +8,6 @@
 
 import UIKit
 
-struct ModeloPlaylist {
-    var userName: String
-    var userLevel: String
-    var title: String
-    var description: String
-    var category: String
-    var numberOfForks: Int
-}
-
 class PlaylistTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     var playlists: [ModeloPlaylist]?

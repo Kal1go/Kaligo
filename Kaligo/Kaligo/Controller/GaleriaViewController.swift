@@ -14,7 +14,6 @@ class GaleriaViewController: UIViewController {
     @IBOutlet weak var tipsOptionImage: UIImageView!
     @IBOutlet weak var playlistsTableView: UITableView!
     
-    // TODO: delegate deve ser weak
     var tableViewDelegate: GaleryPlaylistsTableViewDelegate?
     
     override func viewDidLoad() {
