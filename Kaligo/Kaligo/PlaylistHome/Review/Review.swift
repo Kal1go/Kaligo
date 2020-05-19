@@ -8,11 +8,11 @@
 
 import Foundation
 struct Review {
-    var title: String = "Robert Downey Jr"
-    var date: String = "12th Feb 2020"
+    var title: String = "Nome do Passo"
+    var date: String = "hhtttp//:anieuddc.com.br"
     var memberSince: String = "Is a member since 2011"
     var isExpanded: Bool = false
-    var description: String  = "There are many variations of passages of Lorenfajnfknaekfnerkjfnkjfkjrkrenkjfnakjknfnkjnbdbjkebjbbjjdjnedjnwekdneneeoneom Ipsum avai"
+    var description: String  = "Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das professoras"
 }
 
 typealias Reviews = [Review]

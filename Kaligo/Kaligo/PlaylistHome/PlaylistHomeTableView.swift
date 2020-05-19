@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 
 class PlaylistHomeTableView: UITableViewController {
+
+    @IBOutlet weak var botaoFechar: UIButton!
+    
+    @IBAction func acaoBotaoFechar(_ sender: Any) {
+  print("oiii")
+    }
     private var data = Reviews()
     
     override func viewDidLoad() {
@@ -27,6 +33,9 @@ class PlaylistHomeTableView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 184
+        }
         return UITableView.automaticDimension
     }
     
@@ -36,15 +45,18 @@ class PlaylistHomeTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        ///Cell is defined in Main.storyboard
+        if indexPath.row == 0 {
+            let cell1 = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath)
+            return cell1
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.selectionStyle = .none
         
         if cell.contentView.subviews.contains(where: { $0.tag == 999 }) == false {
-            guard let customView = Bundle.main.loadNibNamed(String(describing: AwesomeReviewView.self),
-                                                            owner: self, options: nil)?.first as? AwesomeReviewView else {
-                fatalError("Is impossible take the View")
-            }
+        guard let customView = Bundle.main.loadNibNamed(String(describing: AwesomeReviewView.self),
+                                                        owner: self, options: nil)?.first as? AwesomeReviewView else {
+            fatalError("Is impossible take the View")
+        }
             
             customView.tag = 999
             cell.contentView.addSubview(customView)
@@ -53,15 +65,11 @@ class PlaylistHomeTableView: UITableViewController {
             customView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor).isActive = true
             customView.topAnchor.constraint(equalTo: cell.contentView.topAnchor).isActive = true
             customView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor).isActive = true
-            /**
-             This **did tap handler** coming from the *AwesomeReviewView* which will let table view knows that there’s an action to be done. In this case, the table view will need to resize.
-             */
+        
             customView.onSeeMoreDidTap {
                 [weak self] in
                 self?.data[indexPath.row].isExpanded.toggle()
-                /**
-                 Once AwesomeReviewView has resized itself, it will be called **onSeeMoreDidTap**. This is the time for table view to resize that particular cell, **beginUpdates** and **endUpdates** will do the trick.
-                 */
+                
                 tableView.beginUpdates()
                 tableView.endUpdates()
             }

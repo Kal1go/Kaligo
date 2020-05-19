@@ -12,7 +12,6 @@ import UIKit
 class AwesomeReviewView: UIView {
     @IBOutlet private weak var mainStackView: UIStackView!
     @IBOutlet private weak var userNameLabel: UILabel!
-    @IBOutlet private weak var memberSinceLabel: UILabel!
     @IBOutlet private weak var descLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var seeMoreButton: UIButton!
@@ -34,10 +33,8 @@ class AwesomeReviewView: UIView {
     
     func setupWith(review: Review) {
         self.userNameLabel.text = review.title
-        self.memberSinceLabel.text = review.memberSince
         self.descLabel.text = review.description + review.description + review.description + review.description + review.description
         self.dateLabel.text = review.date
-        
         self.isSeeLess = review.isExpanded
         self.descLabel.numberOfLines = self.isSeeLess ? 0 : 7
         self.seeMoreButton.setTitle(self.isSeeLess ? "See less" : "See more", for: .normal)
