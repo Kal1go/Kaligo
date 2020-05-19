@@ -9,7 +9,9 @@
 import UIKit
 
 class AddPlaylistTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var addButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

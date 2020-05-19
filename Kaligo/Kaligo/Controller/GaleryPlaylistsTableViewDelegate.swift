@@ -38,6 +38,13 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
                 for: indexPath) as? AddPlaylistTableViewCell
                 else { return UITableViewCell() }
             
+            if filter == .playlists {
+                cell.addButton.setTitle("Criar playlist", for: .normal)
+                
+            } else {
+                cell.addButton.setTitle("Criar dica", for: .normal)
+            }
+            
             return cell
             
         } else {
