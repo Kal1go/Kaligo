@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Endpoints-Requests",
+        "repositoryURL": "https://github.com/MaatheusGois/Endpoints-Requests.git",
+        "state": {
+          "branch": "master",
+          "revision": "11b729030d52a0b4374824abb2fa994f4e78c6ac",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

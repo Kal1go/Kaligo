@@ -3,10 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		826CA017247393E0006A543D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826CA016247393E0006A543D /* Login.storyboard */; };
+		826CA019247393F2006A543D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CA018247393F2006A543D /* LoginController.swift */; };
+		82A300E824739515001957E0 /* Spinner+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A300E724739515001957E0 /* Spinner+Extension.swift */; };
+		82A300EA24739551001957E0 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A300E924739551001957E0 /* UserHandler.swift */; };
+		82A300EC24739575001957E0 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A300EB24739575001957E0 /* Environment.swift */; };
+		82A300EE247395A5001957E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A300ED247395A5001957E0 /* User.swift */; };
+		82A300F024739602001957E0 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A300EF24739602001957E0 /* CommonData.swift */; };
+		82A300F324739658001957E0 /* ServerAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A300F224739658001957E0 /* ServerAnswer.swift */; };
+		82A300F9247396C9001957E0 /* Endpoints-Requests in Frameworks */ = {isa = PBXBuildFile; productRef = 82A300F8247396C9001957E0 /* Endpoints-Requests */; };
+		82A300FC2473971A001957E0 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A300FB2473971A001957E0 /* Alert+Extension.swift */; };
+		82A300FE24739800001957E0 /* LoginExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A300FD24739800001957E0 /* LoginExtensions.swift */; };
 		E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423ADF5246F0F7C009F42C3 /* AppDelegate.swift */; };
 		E423ADF8246F0F7C009F42C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423ADF7246F0F7C009F42C3 /* SceneDelegate.swift */; };
 		E423ADFA246F0F7C009F42C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423ADF9246F0F7C009F42C3 /* ViewController.swift */; };
@@ -16,6 +27,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		826CA016247393E0006A543D /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		826CA018247393F2006A543D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		82A300E724739515001957E0 /* Spinner+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spinner+Extension.swift"; sourceTree = "<group>"; };
+		82A300E924739551001957E0 /* UserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
+		82A300EB24739575001957E0 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		82A300ED247395A5001957E0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		82A300EF24739602001957E0 /* CommonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
+		82A300F224739658001957E0 /* ServerAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAnswer.swift; sourceTree = "<group>"; };
+		82A300FB2473971A001957E0 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
+		82A300FD24739800001957E0 /* LoginExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtensions.swift; sourceTree = "<group>"; };
+		82A300FF24739C78001957E0 /* Kaligo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kaligo.entitlements; sourceTree = "<group>"; };
 		E423ADF2246F0F7C009F42C3 /* Kaligo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaligo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E423ADF5246F0F7C009F42C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E423ADF7246F0F7C009F42C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +53,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A300F9247396C9001957E0 /* Endpoints-Requests in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		826CA01124739285006A543D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				826CA016247393E0006A543D /* Login.storyboard */,
+				826CA018247393F2006A543D /* LoginController.swift */,
+				82A300FD24739800001957E0 /* LoginExtensions.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		82A300F124739623001957E0 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				82A300EB24739575001957E0 /* Environment.swift */,
+				82A300F224739658001957E0 /* ServerAnswer.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		82A300FA247396F2001957E0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				82A300EF24739602001957E0 /* CommonData.swift */,
+				82A300E724739515001957E0 /* Spinner+Extension.swift */,
+				82A300FB2473971A001957E0 /* Alert+Extension.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		82A3010024739E9C001957E0 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				82A300ED247395A5001957E0 /* User.swift */,
+				82A300E924739551001957E0 /* UserHandler.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		E423ADE9246F0F7C009F42C3 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +117,11 @@
 		E423ADF4246F0F7C009F42C3 /* Kaligo */ = {
 			isa = PBXGroup;
 			children = (
+				82A300FF24739C78001957E0 /* Kaligo.entitlements */,
+				82A300FA247396F2001957E0 /* Shared */,
+				82A300F124739623001957E0 /* Connection */,
+				82A3010024739E9C001957E0 /* User */,
+				826CA01124739285006A543D /* Login */,
 				E423ADF5246F0F7C009F42C3 /* AppDelegate.swift */,
 				E423ADF7246F0F7C009F42C3 /* SceneDelegate.swift */,
 				E423ADF9246F0F7C009F42C3 /* ViewController.swift */,
@@ -84,6 +150,9 @@
 			dependencies = (
 			);
 			name = Kaligo;
+			packageProductDependencies = (
+				82A300F8247396C9001957E0 /* Endpoints-Requests */,
+			);
 			productName = Kaligo;
 			productReference = E423ADF2246F0F7C009F42C3 /* Kaligo.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +181,9 @@
 				Base,
 			);
 			mainGroup = E423ADE9246F0F7C009F42C3;
+			packageReferences = (
+				82A300F7247396C9001957E0 /* XCRemoteSwiftPackageReference "Endpoints-Requests" */,
+			);
 			productRefGroup = E423ADF3246F0F7C009F42C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				826CA017247393E0006A543D /* Login.storyboard in Resources */,
 				E423AE02246F0F7E009F42C3 /* LaunchScreen.storyboard in Resources */,
 				E423ADFF246F0F7E009F42C3 /* Assets.xcassets in Resources */,
 				E423ADFD246F0F7C009F42C3 /* Main.storyboard in Resources */,
@@ -159,8 +232,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A300E824739515001957E0 /* Spinner+Extension.swift in Sources */,
+				82A300FE24739800001957E0 /* LoginExtensions.swift in Sources */,
+				82A300EA24739551001957E0 /* UserHandler.swift in Sources */,
+				82A300FC2473971A001957E0 /* Alert+Extension.swift in Sources */,
 				E423ADFA246F0F7C009F42C3 /* ViewController.swift in Sources */,
+				82A300EC24739575001957E0 /* Environment.swift in Sources */,
+				82A300EE247395A5001957E0 /* User.swift in Sources */,
+				82A300F024739602001957E0 /* CommonData.swift in Sources */,
+				826CA019247393F2006A543D /* LoginController.swift in Sources */,
 				E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */,
+				82A300F324739658001957E0 /* ServerAnswer.swift in Sources */,
 				E423ADF8246F0F7C009F42C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,8 +387,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kaligo/Kaligo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5HW626WUP4;
+				DEVELOPMENT_TEAM = CTAFH43K36;
 				INFOPLIST_FILE = Kaligo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -323,8 +406,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kaligo/Kaligo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5HW626WUP4;
+				DEVELOPMENT_TEAM = CTAFH43K36;
 				INFOPLIST_FILE = Kaligo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,6 +443,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		82A300F7247396C9001957E0 /* XCRemoteSwiftPackageReference "Endpoints-Requests" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MaatheusGois/Endpoints-Requests.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		82A300F8247396C9001957E0 /* Endpoints-Requests */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82A300F7247396C9001957E0 /* XCRemoteSwiftPackageReference "Endpoints-Requests" */;
+			productName = "Endpoints-Requests";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E423ADEA246F0F7C009F42C3 /* Project object */;
 }

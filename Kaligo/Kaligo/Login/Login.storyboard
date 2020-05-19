@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eEB-Vq-HJz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Controller-->
+        <scene sceneID="U7g-cx-ToT">
+            <objects>
+                <viewController id="eEB-Vq-HJz" customClass="LoginController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Hs-NM-rQO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGh-th-wDp" customClass="ASAuthorizationAppleIDButton">
+                                <rect key="frame" x="41.5" y="745" width="331" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OSE-nw-8UX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uGh-th-wDp" firstAttribute="width" secondItem="5Hs-NM-rQO" secondAttribute="width" multiplier="0.8" id="BvU-gM-Qc5"/>
+                            <constraint firstItem="uGh-th-wDp" firstAttribute="centerX" secondItem="FSb-rZ-KTI" secondAttribute="centerX" id="io6-xs-ABW"/>
+                            <constraint firstItem="uGh-th-wDp" firstAttribute="centerY" secondItem="FSb-rZ-KTI" secondAttribute="centerY" multiplier="1.7" id="jrU-ku-jgy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FSb-rZ-KTI"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorizationButton" destination="uGh-th-wDp" id="dv5-u5-SBn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gon-7O-me8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="-197"/>
+        </scene>
+    </scenes>
+</document>
