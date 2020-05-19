@@ -13,6 +13,19 @@
 		E423ADFD246F0F7C009F42C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E423ADFB246F0F7C009F42C3 /* Main.storyboard */; };
 		E423ADFF246F0F7E009F42C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E423ADFE246F0F7E009F42C3 /* Assets.xcassets */; };
 		E423AE02246F0F7E009F42C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E423AE00246F0F7E009F42C3 /* LaunchScreen.storyboard */; };
+		E435E49424744811003D79CD /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435E49324744811003D79CD /* Playlist.swift */; };
+		E435E4962474483E003D79CD /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435E4952474483E003D79CD /* Tip.swift */; };
+		E435E49824744CDD003D79CD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E435E49724744CDD003D79CD /* Default-568h@2x.png */; };
+		E47EB20D246F1C77004651A2 /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47EB20C246F1C77004651A2 /* Posts.storyboard */; };
+		E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EB20E246F244B004651A2 /* SegmentedCollectionViewCell.swift */; };
+		E47EB211246F336D004651A2 /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EB210246F336D004651A2 /* PlaylistTableViewCell.swift */; };
+		E47EB213246F3438004651A2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EB212246F3438004651A2 /* PostsViewController.swift */; };
+		E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */; };
+		E4B748A92473021B00B3FAAF /* PlaylistTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748A82473021B00B3FAAF /* PlaylistTableViewDelegate.swift */; };
+		E4B748AB247309F700B3FAAF /* Galeria.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B748AA247309F700B3FAAF /* Galeria.storyboard */; };
+		E4B748AF247310F000B3FAAF /* GaleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748AE247310F000B3FAAF /* GaleryViewController.swift */; };
+		E4B748B3247320B300B3FAAF /* AddPlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B2247320B300B3FAAF /* AddPlaylistTableViewCell.swift */; };
+		E4B748B52473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B42473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,19 @@
 		E423ADFE246F0F7E009F42C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E423AE01246F0F7E009F42C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E423AE03246F0F7E009F42C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E435E49324744811003D79CD /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		E435E4952474483E003D79CD /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		E435E49724744CDD003D79CD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E47EB20C246F1C77004651A2 /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
+		E47EB20E246F244B004651A2 /* SegmentedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCollectionViewCell.swift; sourceTree = "<group>"; };
+		E47EB210246F336D004651A2 /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
+		E47EB212246F3438004651A2 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		E4B748A82473021B00B3FAAF /* PlaylistTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewDelegate.swift; sourceTree = "<group>"; };
+		E4B748AA247309F700B3FAAF /* Galeria.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Galeria.storyboard; sourceTree = "<group>"; };
+		E4B748AE247310F000B3FAAF /* GaleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryViewController.swift; sourceTree = "<group>"; };
+		E4B748B2247320B300B3FAAF /* AddPlaylistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaylistTableViewCell.swift; sourceTree = "<group>"; };
+		E4B748B42473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryPlaylistsTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +66,7 @@
 		E423ADE9246F0F7C009F42C3 = {
 			isa = PBXGroup;
 			children = (
+				E435E49724744CDD003D79CD /* Default-568h@2x.png */,
 				E423ADF4246F0F7C009F42C3 /* Kaligo */,
 				E423ADF3246F0F7C009F42C3 /* Products */,
 			);
@@ -56,15 +83,51 @@
 		E423ADF4246F0F7C009F42C3 /* Kaligo */ = {
 			isa = PBXGroup;
 			children = (
+				E47EB216246F349C004651A2 /* Controller */,
+				E47EB215246F3491004651A2 /* View */,
+				E47EB214246F3489004651A2 /* Model */,
 				E423ADF5246F0F7C009F42C3 /* AppDelegate.swift */,
 				E423ADF7246F0F7C009F42C3 /* SceneDelegate.swift */,
-				E423ADF9246F0F7C009F42C3 /* ViewController.swift */,
-				E423ADFB246F0F7C009F42C3 /* Main.storyboard */,
 				E423ADFE246F0F7E009F42C3 /* Assets.xcassets */,
-				E423AE00246F0F7E009F42C3 /* LaunchScreen.storyboard */,
 				E423AE03246F0F7E009F42C3 /* Info.plist */,
 			);
 			path = Kaligo;
+			sourceTree = "<group>";
+		};
+		E47EB214246F3489004651A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E435E49324744811003D79CD /* Playlist.swift */,
+				E435E4952474483E003D79CD /* Tip.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E47EB215246F3491004651A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E423ADFB246F0F7C009F42C3 /* Main.storyboard */,
+				E423AE00246F0F7E009F42C3 /* LaunchScreen.storyboard */,
+				E47EB20C246F1C77004651A2 /* Posts.storyboard */,
+				E4B748AA247309F700B3FAAF /* Galeria.storyboard */,
+				E47EB20E246F244B004651A2 /* SegmentedCollectionViewCell.swift */,
+				E47EB210246F336D004651A2 /* PlaylistTableViewCell.swift */,
+				E4B748B2247320B300B3FAAF /* AddPlaylistTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E47EB216246F349C004651A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E423ADF9246F0F7C009F42C3 /* ViewController.swift */,
+				E47EB212246F3438004651A2 /* PostsViewController.swift */,
+				E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */,
+				E4B748A82473021B00B3FAAF /* PlaylistTableViewDelegate.swift */,
+				E4B748AE247310F000B3FAAF /* GaleryViewController.swift */,
+				E4B748B42473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +189,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B748AB247309F700B3FAAF /* Galeria.storyboard in Resources */,
+				E47EB20D246F1C77004651A2 /* Posts.storyboard in Resources */,
 				E423AE02246F0F7E009F42C3 /* LaunchScreen.storyboard in Resources */,
 				E423ADFF246F0F7E009F42C3 /* Assets.xcassets in Resources */,
 				E423ADFD246F0F7C009F42C3 /* Main.storyboard in Resources */,
+				E435E49824744CDD003D79CD /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,9 +225,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E47EB213246F3438004651A2 /* PostsViewController.swift in Sources */,
+				E47EB211246F336D004651A2 /* PlaylistTableViewCell.swift in Sources */,
+				E4B748B3247320B300B3FAAF /* AddPlaylistTableViewCell.swift in Sources */,
+				E4B748A92473021B00B3FAAF /* PlaylistTableViewDelegate.swift in Sources */,
+				E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */,
+				E4B748B52473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift in Sources */,
 				E423ADFA246F0F7C009F42C3 /* ViewController.swift in Sources */,
+				E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */,
 				E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */,
+				E4B748AF247310F000B3FAAF /* GaleryViewController.swift in Sources */,
+				E435E4962474483E003D79CD /* Tip.swift in Sources */,
 				E423ADF8246F0F7C009F42C3 /* SceneDelegate.swift in Sources */,
+				E435E49424744811003D79CD /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5HW626WUP4;
+				DEVELOPMENT_TEAM = B7X85S6HV6;
 				INFOPLIST_FILE = Kaligo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -324,7 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5HW626WUP4;
+				DEVELOPMENT_TEAM = B7X85S6HV6;
 				INFOPLIST_FILE = Kaligo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
