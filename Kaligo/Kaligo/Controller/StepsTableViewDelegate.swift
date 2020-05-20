@@ -10,7 +10,10 @@ import UIKit
 
 class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     
-    var steps = [ModeloPasso]()
+    var steps: [ModeloPasso] = [ModeloPasso(title: "",
+                                            description: "",
+                                            url: "",
+                                            number: 1)]
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
