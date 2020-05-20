@@ -42,9 +42,9 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
             cell.titleTextField.tag = step.number - 1
             cell.titleTextField.delegate = titleDelegate
             
-            cell.descriptionTextView.text = step.description
             cell.descriptionTextView.tag = step.number - 1
             cell.descriptionTextView.delegate = descriptionDelegate
+            descriptionDelegate?.setTextView(cell.descriptionTextView, with: step.description)
 
             cell.urlTextField.text = step.url
             cell.urlTextField.tag = step.number - 1

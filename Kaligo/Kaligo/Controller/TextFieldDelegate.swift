@@ -30,14 +30,18 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if validateText() {
+        if validateText(for: textField) {
             guard let text = textField.text else { return }
             inputDelegate?.setText(for: textField.tag, with: text, type: type)
         }
     }
     
-    private func validateText() -> Bool {
-        // validar o texto antes de enviar
-        return true
+    private func validateText(for textField: UITextField) -> Bool {
+        if let text = textField.text {
+            if text != "" {
+                return true
+            }
+        }
+        return false
     }
 }
