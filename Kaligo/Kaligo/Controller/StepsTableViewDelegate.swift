@@ -29,15 +29,17 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
         
         if steps.isEmpty {
             cell.deleteButton.tag = 1
+            cell.stepNumber.text = "1"
         } else {
             let step = steps[indexPath.row]
             cell.deleteButton.tag = step.number
+            cell.stepNumber.text = "\(step.number)"
             cell.titleTextField.text = step.title
             cell.descriptionTextField.text = step.description
             cell.urlTextField.text = step.url
         }
         
-        return UITableViewCell()
+        return cell
     }
     
 }

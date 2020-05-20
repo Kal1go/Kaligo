@@ -12,9 +12,14 @@ class CreatePlaylistViewController: UIViewController {
     
     @IBOutlet weak var stepsTableView: UITableView!
     
+    var stepsTableViewDelegate: StepsTableViewDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        stepsTableViewDelegate = StepsTableViewDelegate()
+        stepsTableView.delegate = stepsTableViewDelegate
+        stepsTableView.dataSource = stepsTableViewDelegate
         // Do any additional setup after loading the view.
     }
 }
