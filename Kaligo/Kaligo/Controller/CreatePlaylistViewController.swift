@@ -29,4 +29,9 @@ class CreatePlaylistViewController: UIViewController {
             stepsTableView.reloadData()
         }
     }
+    
+    @IBAction func deleteStep(_ sender: UIButton) {
+        stepsTableViewDelegate?.deleteStep(at: sender.tag)
+        stepsTableView.reloadData()
+    }
 }

@@ -33,11 +33,11 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
                 else { return UITableViewCell() }
             
             if steps.isEmpty {
-                cell.deleteButton.tag = 1
+                cell.deleteButton.tag = 0
                 cell.stepNumber.text = "1"
             } else {
                 let step = steps[indexPath.row]
-                cell.deleteButton.tag = step.number
+                cell.deleteButton.tag = step.number - 1
                 cell.stepNumber.text = "\(step.number)"
                 cell.titleTextField.text = step.title
                 cell.descriptionTextField.text = step.description
@@ -51,7 +51,13 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
             
             return cell
         }
-        
+    }
+    
+    func deleteStep(at index: Int) {
+        self.steps.remove(at: index)
+        for i in 0 ..< steps.count {
+            steps[i].number = i + 1
+        }
     }
     
 }

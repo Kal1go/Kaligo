@@ -131,6 +131,9 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AW7-Sk-g86">
                                                     <rect key="frame" x="344" y="11" width="50" height="50"/>
+                                                    <connections>
+                                                        <action selector="deleteStep:" destination="0sc-ja-n1k" eventType="touchUpInside" id="mh6-nq-3lu"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" name="Background"/>
