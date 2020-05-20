@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-Eh-l7p">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-Eh-l7p">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
@@ -169,6 +169,42 @@
                                             <outlet property="urlTextField" destination="Nql-1r-AxH" id="SDW-60-NGm"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addStepCell" rowHeight="81" id="68e-vj-6GW">
+                                        <rect key="frame" x="0.0" y="393" width="414" height="81"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="68e-vj-6GW" id="pFn-Oi-1H7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="criar-botao" translatesAutoresizingMaskIntoConstraints="NO" id="hVf-Fi-07Q">
+                                                    <rect key="frame" x="84.5" y="12" width="245" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="57" id="ES6-3G-Ama"/>
+                                                        <constraint firstAttribute="width" constant="245" id="q2B-qE-Gfp"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kg-qa-OmQ">
+                                                    <rect key="frame" x="84.5" y="15" width="245" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <state key="normal" title="Adicionar passo">
+                                                        <color key="titleColor" name="Background"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addStep:" destination="0sc-ja-n1k" eventType="touchUpInside" id="dxd-wG-D1I"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" name="Background"/>
+                                            <constraints>
+                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="trailing" secondItem="hVf-Fi-07Q" secondAttribute="trailing" id="7ha-iU-V55"/>
+                                                <constraint firstItem="hVf-Fi-07Q" firstAttribute="centerX" secondItem="pFn-Oi-1H7" secondAttribute="centerX" id="GP1-IF-Ovc"/>
+                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="leading" secondItem="hVf-Fi-07Q" secondAttribute="leading" id="Ksl-e6-oiz"/>
+                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="bottom" secondItem="hVf-Fi-07Q" secondAttribute="bottom" id="TNa-u8-QEp"/>
+                                                <constraint firstItem="hVf-Fi-07Q" firstAttribute="centerY" secondItem="pFn-Oi-1H7" secondAttribute="centerY" id="VNZ-2s-uZv"/>
+                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="top" secondItem="hVf-Fi-07Q" secondAttribute="top" constant="3" id="kg0-5s-elM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -217,6 +253,7 @@
         <image name="campodetexto-multiplo" width="325" height="115"/>
         <image name="campodetexto-umalinha" width="325" height="39"/>
         <image name="circulo-enumeracao" width="35" height="35"/>
+        <image name="criar-botao" width="245" height="57"/>
         <image name="passo-card" width="414" height="365"/>
         <namedColor name="Background">
             <color red="0.94099998474121094" green="0.97299998998641968" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

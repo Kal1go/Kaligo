@@ -12,8 +12,12 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
     
     var steps = [ModeloPasso]()
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if steps.isEmpty {
+        if (steps.isEmpty && section == 0) || section == 1 {
             return 1
         }
         
@@ -22,24 +26,32 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "stepCell",
                 for: indexPath) as? StepTableViewCell
-            else { return UITableViewCell() }
-        
-        if steps.isEmpty {
-            cell.deleteButton.tag = 1
-            cell.stepNumber.text = "1"
+                else { return UITableViewCell() }
+            
+            if steps.isEmpty {
+                cell.deleteButton.tag = 1
+                cell.stepNumber.text = "1"
+            } else {
+                let step = steps[indexPath.row]
+                cell.deleteButton.tag = step.number
+                cell.stepNumber.text = "\(step.number)"
+                cell.titleTextField.text = step.title
+                cell.descriptionTextField.text = step.description
+                cell.urlTextField.text = step.url
+            }
+            
+            return cell
+            
         } else {
-            let step = steps[indexPath.row]
-            cell.deleteButton.tag = step.number
-            cell.stepNumber.text = "\(step.number)"
-            cell.titleTextField.text = step.title
-            cell.descriptionTextField.text = step.description
-            cell.urlTextField.text = step.url
+            let cell = tableView.dequeueReusableCell(withIdentifier: "addStepCell", for: indexPath)
+            
+            return cell
         }
         
-        return cell
     }
     
 }

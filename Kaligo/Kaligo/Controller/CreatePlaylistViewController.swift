@@ -20,6 +20,10 @@ class CreatePlaylistViewController: UIViewController {
         stepsTableViewDelegate = StepsTableViewDelegate()
         stepsTableView.delegate = stepsTableViewDelegate
         stepsTableView.dataSource = stepsTableViewDelegate
-        // Do any additional setup after loading the view.
+        stepsTableView.tableFooterView = UIView()
+    }
+    
+    @IBAction func addStep(_ sender: Any) {
+        print("Novo passo")
     }
 }
