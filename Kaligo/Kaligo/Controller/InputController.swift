@@ -21,10 +21,10 @@ class InputController: InputDelegate {
         switch type {
         case .title:
             steps[index].title = text
+        case .description:
+            steps[index].description = text
         case .url:
             steps[index].url = text
-        default:
-            break
         }
     }
 }

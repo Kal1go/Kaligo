@@ -14,6 +14,7 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
     
     var titleDelegate: TextFieldDelegate?
     var urlDelegate: TextFieldDelegate?
+    var descriptionDelegate: TextViewDelegate?
     var inputController: InputController?
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,9 +34,7 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
                 else { return UITableViewCell() }
             
             let step = steps[indexPath.row]
-            
-            print("TITULO: \(step.title)")
-                
+                            
             cell.deleteButton.tag = step.number - 1
             cell.stepNumber.text = "\(step.number)"
             
@@ -45,7 +44,8 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
             
             cell.descriptionTextView.text = step.description
             cell.descriptionTextView.tag = step.number - 1
-            
+            cell.descriptionTextView.delegate = descriptionDelegate
+
             cell.urlTextField.text = step.url
             cell.urlTextField.tag = step.number - 1
             cell.urlTextField.delegate = urlDelegate

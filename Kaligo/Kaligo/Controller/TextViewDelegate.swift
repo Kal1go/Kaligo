@@ -1,5 +1,5 @@
 //
-//  TextFieldDelegate.swift
+//  TextViewDelegate.swift
 //  Kaligo
 //
 //  Created by Lia Kassardjian on 20/05/20.
@@ -8,18 +8,8 @@
 
 import UIKit
 
-enum InputType {
-    case title
-    case description
-    case url
-}
-
-protocol InputDelegate: class {
-    func setText(for index: Int, with text: String, type: InputType)
-}
-
-class TextFieldDelegate: NSObject, UITextFieldDelegate {
-        
+class TextViewDelegate: NSObject, UITextViewDelegate {
+    
     weak var inputDelegate: InputDelegate?
     
     var type: InputType
@@ -29,10 +19,10 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
         self.type = type
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textViewDidEndEditing(_ textView: UITextView) {
         if validateText() {
-            guard let text = textField.text else { return }
-            inputDelegate?.setText(for: textField.tag, with: text, type: type)
+            guard let text = textView.text else { return }
+            inputDelegate?.setText(for: textView.tag, with: text, type: type)
         }
     }
     
@@ -40,4 +30,5 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
         // validar o texto antes de enviar
         return true
     }
+    
 }

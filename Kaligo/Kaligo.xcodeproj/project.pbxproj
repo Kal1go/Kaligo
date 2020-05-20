@@ -19,6 +19,7 @@
 		E435E49A24745ACD003D79CD /* CriarPlaylist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E435E49924745ACD003D79CD /* CriarPlaylist.storyboard */; };
 		E43BC6122475748800351A22 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BC6112475748800351A22 /* TextFieldDelegate.swift */; };
 		E43BC6142475997900351A22 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BC6132475997900351A22 /* InputController.swift */; };
+		E43BC61624759FEE00351A22 /* TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BC61524759FEE00351A22 /* TextViewDelegate.swift */; };
 		E451F3402474765D004E450C /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F33F2474765D004E450C /* StepTableViewCell.swift */; };
 		E451F34224747B87004E450C /* CreatePlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F34124747B87004E450C /* CreatePlaylistViewController.swift */; };
 		E451F34424747C25004E450C /* StepsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F34324747C25004E450C /* StepsTableViewDelegate.swift */; };
@@ -50,6 +51,7 @@
 		E435E49924745ACD003D79CD /* CriarPlaylist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CriarPlaylist.storyboard; sourceTree = "<group>"; };
 		E43BC6112475748800351A22 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		E43BC6132475997900351A22 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
+		E43BC61524759FEE00351A22 /* TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewDelegate.swift; sourceTree = "<group>"; };
 		E451F33F2474765D004E450C /* StepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
 		E451F34124747B87004E450C /* CreatePlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaylistViewController.swift; sourceTree = "<group>"; };
 		E451F34324747C25004E450C /* StepsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				E451F34124747B87004E450C /* CreatePlaylistViewController.swift */,
 				E451F34324747C25004E450C /* StepsTableViewDelegate.swift */,
 				E43BC6112475748800351A22 /* TextFieldDelegate.swift */,
+				E43BC61524759FEE00351A22 /* TextViewDelegate.swift */,
 				E43BC6132475997900351A22 /* InputController.swift */,
 			);
 			path = Controller;
@@ -263,6 +266,7 @@
 				E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */,
 				E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */,
 				E4B748AF247310F000B3FAAF /* GaleryViewController.swift in Sources */,
+				E43BC61624759FEE00351A22 /* TextViewDelegate.swift in Sources */,
 				E435E4962474483E003D79CD /* Tip.swift in Sources */,
 				E423ADF8246F0F7C009F42C3 /* SceneDelegate.swift in Sources */,
 				E435E49424744811003D79CD /* Playlist.swift in Sources */,
