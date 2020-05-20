@@ -22,7 +22,7 @@ class InputController: InputDelegate {
         case .title:
             steps[index].title = text
         case .url:
-            steps[index].title = text
+            steps[index].url = text
         default:
             break
         }

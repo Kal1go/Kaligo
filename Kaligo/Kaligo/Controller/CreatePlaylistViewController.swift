@@ -21,6 +21,13 @@ class CreatePlaylistViewController: UIViewController {
         stepsTableView.delegate = stepsTableViewDelegate
         stepsTableView.dataSource = stepsTableViewDelegate
         stepsTableView.tableFooterView = UIView()
+        
+        guard let delegate = stepsTableViewDelegate else { return }
+        delegate.inputController = InputController(dataSource: delegate)
+        
+        guard let inputController = delegate.inputController else { return }
+        delegate.titleDelegate = TextFieldDelegate(delegate: inputController, type: .title)
+        delegate.urlDelegate = TextFieldDelegate(delegate: inputController, type: .url)
     }
     
     @IBAction func addStep(_ sender: Any) {
@@ -34,5 +41,10 @@ class CreatePlaylistViewController: UIViewController {
         stepsTableViewDelegate?.deleteStep(at: sender.tag)
         stepsTableView.reloadData()
     }
+    
+    @IBAction func showSteps(_ sender: Any) {
+        print(stepsTableViewDelegate?.steps as Any)
+    }
+    
     
 }

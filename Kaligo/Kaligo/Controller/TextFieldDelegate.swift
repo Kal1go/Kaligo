@@ -20,26 +20,26 @@ protocol InputDelegate: class {
 
 class TextFieldDelegate: NSObject, UITextFieldDelegate {
 
-    var textIsValid: Bool = false
+    var textIsValid: Bool = true
     
-    var view: UIView
+//    var view: UIView
     
     weak var inputDelegate: InputDelegate?
     
     var type: InputType
     
-    init(view: UIView, delegate: InputDelegate, type: InputType) {
-        self.view = view
+    init(delegate: InputDelegate, type: InputType) {
+//        self.view = view
         self.inputDelegate = delegate
         self.type = type
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let nextField = view.viewWithTag(textField.tag + 1) as? UITextField {
-           nextField.becomeFirstResponder()
-        } else {
-           textField.resignFirstResponder()
-        }
+//        if let nextField = view.viewWithTag(textField.tag + 1) as? UITextField {
+//           nextField.becomeFirstResponder()
+//        } else {
+//           textField.resignFirstResponder()
+//        }
         return true
     }
     
@@ -53,6 +53,4 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
     private func validateText() {
         // validar o texto antes de enviar
     }
-    
-    
 }

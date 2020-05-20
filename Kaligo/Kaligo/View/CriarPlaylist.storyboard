@@ -221,7 +221,11 @@
                         <viewLayoutGuide key="safeArea" id="u5Y-yX-gJr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Criar playlist" id="J6u-1E-vsX">
-                        <barButtonItem key="rightBarButtonItem" title="Terminar" id="3b8-yU-eEO"/>
+                        <barButtonItem key="rightBarButtonItem" title="Terminar" id="3b8-yU-eEO">
+                            <connections>
+                                <action selector="showSteps:" destination="0sc-ja-n1k" id="7KM-6N-2MG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="stepsTableView" destination="7fj-Eh-l7p" id="qBd-3C-gZN"/>
