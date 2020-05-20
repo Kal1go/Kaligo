@@ -166,7 +166,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="deleteButton" destination="AW7-Sk-g86" id="M8g-yi-DzZ"/>
-                                            <outlet property="descriptionTextField" destination="dnA-Lh-s3r" id="STV-KS-inh"/>
+                                            <outlet property="descriptionTextView" destination="dnA-Lh-s3r" id="STV-KS-inh"/>
                                             <outlet property="stepNumber" destination="VOr-aa-DMj" id="lZh-He-Bg3"/>
                                             <outlet property="titleTextField" destination="fSv-Ws-Khb" id="GQz-Nb-ds5"/>
                                             <outlet property="urlTextField" destination="Nql-1r-AxH" id="SDW-60-NGm"/>

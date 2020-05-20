@@ -10,10 +10,10 @@ import UIKit
 
 class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     
-    var steps: [ModeloPasso] = [ModeloPasso(title: "",
-                                            description: "",
-                                            url: "",
-                                            number: 1)]
+    var steps: [ModeloPasso] = [ModeloPasso(number: 1)]
+    
+    weak var titleDelegate: TextFieldDelegate?
+    weak var urlDelegate: TextFieldDelegate?
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -40,11 +40,20 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
                 cell.stepNumber.text = "1"
             } else {
                 let step = steps[indexPath.row]
+                
                 cell.deleteButton.tag = step.number - 1
                 cell.stepNumber.text = "\(step.number)"
+                
                 cell.titleTextField.text = step.title
-                cell.descriptionTextField.text = step.description
+                cell.titleTextField.tag = step.number - 1
+                cell.titleTextField.delegate = titleDelegate
+                
+                cell.descriptionTextView.text = step.description
+                cell.descriptionTextView.tag = step.number - 1
+                
                 cell.urlTextField.text = step.url
+                cell.urlTextField.tag = step.number - 1
+                cell.urlTextField.delegate = urlDelegate
             }
             
             return cell
@@ -62,5 +71,7 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
             steps[i].number = i + 1
         }
     }
+    
+
     
 }

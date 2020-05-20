@@ -14,7 +14,7 @@ class StepTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleTextField: UITextField!
     
-    @IBOutlet weak var descriptionTextField: UITextView!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     @IBOutlet weak var urlTextField: UITextField!
     

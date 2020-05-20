@@ -17,6 +17,8 @@
 		E435E4962474483E003D79CD /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435E4952474483E003D79CD /* Tip.swift */; };
 		E435E49824744CDD003D79CD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E435E49724744CDD003D79CD /* Default-568h@2x.png */; };
 		E435E49A24745ACD003D79CD /* CriarPlaylist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E435E49924745ACD003D79CD /* CriarPlaylist.storyboard */; };
+		E43BC6122475748800351A22 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BC6112475748800351A22 /* TextFieldDelegate.swift */; };
+		E43BC6142475997900351A22 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BC6132475997900351A22 /* InputController.swift */; };
 		E451F3402474765D004E450C /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F33F2474765D004E450C /* StepTableViewCell.swift */; };
 		E451F34224747B87004E450C /* CreatePlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F34124747B87004E450C /* CreatePlaylistViewController.swift */; };
 		E451F34424747C25004E450C /* StepsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F34324747C25004E450C /* StepsTableViewDelegate.swift */; };
@@ -46,6 +48,8 @@
 		E435E4952474483E003D79CD /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		E435E49724744CDD003D79CD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E435E49924745ACD003D79CD /* CriarPlaylist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CriarPlaylist.storyboard; sourceTree = "<group>"; };
+		E43BC6112475748800351A22 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
+		E43BC6132475997900351A22 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
 		E451F33F2474765D004E450C /* StepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
 		E451F34124747B87004E450C /* CreatePlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaylistViewController.swift; sourceTree = "<group>"; };
 		E451F34324747C25004E450C /* StepsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 				E4B748B42473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift */,
 				E451F34124747B87004E450C /* CreatePlaylistViewController.swift */,
 				E451F34324747C25004E450C /* StepsTableViewDelegate.swift */,
+				E43BC6112475748800351A22 /* TextFieldDelegate.swift */,
+				E43BC6132475997900351A22 /* InputController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,8 +249,10 @@
 			files = (
 				E47EB213246F3438004651A2 /* PostsViewController.swift in Sources */,
 				E47EB211246F336D004651A2 /* PlaylistTableViewCell.swift in Sources */,
+				E43BC6122475748800351A22 /* TextFieldDelegate.swift in Sources */,
 				E451F34624747C66004E450C /* Step.swift in Sources */,
 				E451F34224747B87004E450C /* CreatePlaylistViewController.swift in Sources */,
+				E43BC6142475997900351A22 /* InputController.swift in Sources */,
 				E4B748B3247320B300B3FAAF /* AddPlaylistTableViewCell.swift in Sources */,
 				E451F34424747C25004E450C /* StepsTableViewDelegate.swift in Sources */,
 				E4B748A92473021B00B3FAAF /* PlaylistTableViewDelegate.swift in Sources */,

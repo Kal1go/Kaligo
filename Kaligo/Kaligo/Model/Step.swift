@@ -8,9 +8,16 @@
 
 import Foundation
 
-struct ModeloPasso {
+class ModeloPasso {
     var title: String
     var description: String
     var url: String
     var number: Int
+    
+    init(number: Int) {
+        self.title = ""
+        self.description = ""
+        self.url = ""
+        self.number = number
+    }
 }

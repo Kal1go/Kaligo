@@ -25,7 +25,7 @@ class CreatePlaylistViewController: UIViewController {
     
     @IBAction func addStep(_ sender: Any) {
         if let numberOfSteps = stepsTableViewDelegate?.steps.count {
-            stepsTableViewDelegate?.steps.append(ModeloPasso(title: "", description: "", url: "", number: numberOfSteps + 1))
+            stepsTableViewDelegate?.steps.append(ModeloPasso(number: numberOfSteps + 1))
             stepsTableView.reloadData()
         }
     }
@@ -34,4 +34,5 @@ class CreatePlaylistViewController: UIViewController {
         stepsTableViewDelegate?.deleteStep(at: sender.tag)
         stepsTableView.reloadData()
     }
+    
 }
