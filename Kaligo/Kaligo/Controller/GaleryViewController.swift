@@ -30,7 +30,7 @@ class GaleryViewController: UIViewController {
                                       userLevel: "Nível 7",
                                       title: "Álgebra",
                                       description: "Descrição dessa playlist",
-                                      category: "Categoria",
+                                      category: .none,
                                       numberOfForks: 36)
 
         let tip = ModeloDica(userName: "Jaque",
@@ -54,5 +54,12 @@ class GaleryViewController: UIViewController {
             tableViewDelegate?.filter = .tips
         }
         playlistsTableView.reloadData()
+    }
+    
+    @IBAction func savePlaylist(_ sender: UIStoryboardSegue) {
+        if let source = sender.source as? SavePlaylistTableViewController {
+            tableViewDelegate?.playlists?.append(source.playlist)
+            playlistsTableView.reloadData()
+        }
     }
 }
