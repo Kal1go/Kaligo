@@ -13,7 +13,7 @@ enum GaleryFilter {
     case tips
 }
 
-class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
+class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     var playlists: [ModeloPlaylist]?
     var tips: [ModeloDica]?
@@ -35,7 +35,7 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "addPlaylistCell",
-                for: indexPath) as? GaleryTableViewCell
+                for: indexPath) as? GaleryTableCell
                 else { return UITableViewCell() }
 
             if filter == .playlists {
@@ -44,7 +44,7 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
             } else {
                 cell.addButton.setTitle("Criar dica", for: .normal)
             }
-
+            cell.selectionStyle = .none
             return cell
 
         } else {
@@ -64,6 +64,7 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
                 let tip = tips[indexPath.row]
                 setRow(for: cell, with: tip)
             }
+            cell.selectionStyle = .none
             return cell
         }
     }

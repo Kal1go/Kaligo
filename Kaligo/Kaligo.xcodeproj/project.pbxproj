@@ -59,9 +59,9 @@
 		E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */; };
 		E4B748A92473021B00B3FAAF /* PostsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748A82473021B00B3FAAF /* PostsTableDelegate.swift */; };
 		E4B748AB247309F700B3FAAF /* Galery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B748AA247309F700B3FAAF /* Galery.storyboard */; };
-		E4B748AF247310F000B3FAAF /* GaleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748AE247310F000B3FAAF /* GaleryViewController.swift */; };
-		E4B748B3247320B300B3FAAF /* GaleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B2247320B300B3FAAF /* GaleryTableViewCell.swift */; };
-		E4B748B52473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B42473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift */; };
+		E4B748AF247310F000B3FAAF /* GaleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748AE247310F000B3FAAF /* GaleryController.swift */; };
+		E4B748B3247320B300B3FAAF /* GaleryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B2247320B300B3FAAF /* GaleryTableCell.swift */; };
+		E4B748B52473272900B3FAAF /* GaleryTableDataSource+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B42473272900B3FAAF /* GaleryTableDataSource+Delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,9 +119,9 @@
 		E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		E4B748A82473021B00B3FAAF /* PostsTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableDelegate.swift; sourceTree = "<group>"; };
 		E4B748AA247309F700B3FAAF /* Galery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Galery.storyboard; sourceTree = "<group>"; };
-		E4B748AE247310F000B3FAAF /* GaleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryViewController.swift; sourceTree = "<group>"; };
-		E4B748B2247320B300B3FAAF /* GaleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryTableViewCell.swift; sourceTree = "<group>"; };
-		E4B748B42473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryPlaylistsTableViewDelegate.swift; sourceTree = "<group>"; };
+		E4B748AE247310F000B3FAAF /* GaleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryController.swift; sourceTree = "<group>"; };
+		E4B748B2247320B300B3FAAF /* GaleryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryTableCell.swift; sourceTree = "<group>"; };
+		E4B748B42473272900B3FAAF /* GaleryTableDataSource+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaleryTableDataSource+Delegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +305,15 @@
 			path = Step;
 			sourceTree = "<group>";
 		};
+		82D5EB0224773DF600594274 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E4B748B2247320B300B3FAAF /* GaleryTableCell.swift */,
+				E4B748B42473272900B3FAAF /* GaleryTableDataSource+Delegate.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		E423ADE9246F0F7C009F42C3 = {
 			isa = PBXGroup;
 			children = (
@@ -329,7 +338,6 @@
 				82D5EADD247732AA00594274 /* Login */,
 				82D5EAF8247733C700594274 /* Home */,
 				82D5EAF9247733D300594274 /* Posts */,
-				82D5EAFA2477340A00594274 /* Playlists */,
 				E47EB216246F349C004651A2 /* Galery */,
 				82D5EB002477375100594274 /* Application */,
 				82D5EACC2477322A00594274 /* Connection */,
@@ -359,10 +367,10 @@
 		E47EB216246F349C004651A2 /* Galery */ = {
 			isa = PBXGroup;
 			children = (
-				E4B748B2247320B300B3FAAF /* GaleryTableViewCell.swift */,
+				82D5EAFA2477340A00594274 /* Playlists */,
 				E4B748AA247309F700B3FAAF /* Galery.storyboard */,
-				E4B748AE247310F000B3FAAF /* GaleryViewController.swift */,
-				E4B748B42473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift */,
+				E4B748AE247310F000B3FAAF /* GaleryController.swift */,
+				82D5EB0224773DF600594274 /* Components */,
 			);
 			path = Galery;
 			sourceTree = "<group>";
@@ -483,11 +491,11 @@
 				E4183E702476F02B00984A2C /* PlaylistSaveController.swift in Sources */,
 				E43BC6142475997900351A22 /* InputController.swift in Sources */,
 				82D5EAE4247732C100594274 /* Step.swift in Sources */,
-				E4B748B3247320B300B3FAAF /* GaleryTableViewCell.swift in Sources */,
+				E4B748B3247320B300B3FAAF /* GaleryTableCell.swift in Sources */,
 				E451F34424747C25004E450C /* StepsTableViewDelegate.swift in Sources */,
 				E4B748A92473021B00B3FAAF /* PostsTableDelegate.swift in Sources */,
 				E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */,
-				E4B748B52473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift in Sources */,
+				E4B748B52473272900B3FAAF /* GaleryTableDataSource+Delegate.swift in Sources */,
 				E451F3402474765D004E450C /* StepTableViewCell.swift in Sources */,
 				872A330E24756C1F006ED748 /* PlaylistHomeTableVewCell.swift in Sources */,
 				87DF62A124733D4D002B8FCE /* AwesomeReviewView.swift in Sources */,
@@ -506,7 +514,7 @@
 				87DF62972473101E002B8FCE /* HomeCollectionViewDelegate.swift in Sources */,
 				87DF6293247304FC002B8FCE /* CategoriasHomeTableViewCell.swift in Sources */,
 				E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */,
-				E4B748AF247310F000B3FAAF /* GaleryViewController.swift in Sources */,
+				E4B748AF247310F000B3FAAF /* GaleryController.swift in Sources */,
 				E43BC61624759FEE00351A22 /* TextViewDelegate.swift in Sources */,
 				82D5EAD22477326200594274 /* Environment.swift in Sources */,
 				E4183E722476F6AE00984A2C /* PlaylistSavePicker.swift in Sources */,

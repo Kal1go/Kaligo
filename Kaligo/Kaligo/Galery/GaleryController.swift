@@ -8,18 +8,18 @@
 
 import UIKit
 
-class GaleryViewController: UIViewController {
+class GaleryController: UIViewController {
 
     @IBOutlet weak var playlistsOptionImage: UIImageView!
     @IBOutlet weak var tipsOptionImage: UIImageView!
     @IBOutlet weak var playlistsTableView: UITableView!
 
-    var tableViewDelegate: GaleryPlaylistsTableViewDelegate?
+    var tableViewDelegate: GaleryTableView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableViewDelegate = GaleryPlaylistsTableViewDelegate()
+        self.tableViewDelegate = GaleryTableView()
         generateTemplateData()
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate

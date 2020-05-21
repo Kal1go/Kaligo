@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GaleryTableViewCell: UITableViewCell {
+class GaleryTableCell: UITableViewCell {
 
     @IBOutlet weak var addButton: UIButton!
     override func awakeFromNib() {
