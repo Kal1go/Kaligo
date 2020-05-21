@@ -10,7 +10,7 @@
         <!--Álgebra-->
         <scene sceneID="cx1-tq-RL0">
             <objects>
-                <tableViewController id="2Gm-jg-Wnc" customClass="PlaylistHomeTableView" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2Gm-jg-Wnc" customClass="PlaylistHomeController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rha-b7-EPT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
                 <navigationController storyboardIdentifier="playlist" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="NR7-y0-N8d" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Xnx-VV-pQY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="Background"/>
                     </navigationBar>

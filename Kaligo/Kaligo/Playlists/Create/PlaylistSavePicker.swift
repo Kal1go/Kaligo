@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PickerController: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
+class PlaylistSavePicker: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var components: [String]
     var selected: String

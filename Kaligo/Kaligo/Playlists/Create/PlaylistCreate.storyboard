@@ -11,7 +11,7 @@
         <!--Criar playlist-->
         <scene sceneID="9i5-dR-ULl">
             <objects>
-                <viewController id="0sc-ja-n1k" customClass="CreatePlaylistViewController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0sc-ja-n1k" customClass="PlaylistCreateController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ChN-bt-7VQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +248,7 @@
         <!--Salvar playlist-->
         <scene sceneID="8aA-Fc-Mys">
             <objects>
-                <tableViewController id="tEO-tS-eUt" customClass="SavePlaylistTableViewController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="tEO-tS-eUt" customClass="PlaylistSaveController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fjQ-4C-HCR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

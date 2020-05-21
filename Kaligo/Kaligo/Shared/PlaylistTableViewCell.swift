@@ -11,21 +11,13 @@ import UIKit
 class PlaylistTableViewCell: UITableViewCell {
 
     @IBOutlet weak var backgroundImage: UIImageView!
-
     @IBOutlet weak var profilePicture: UIImageView!
-
     @IBOutlet weak var userName: UILabel!
-
     @IBOutlet weak var forkButton: UIImageView!
-
     @IBOutlet weak var numberOfForks: UILabel!
-
     @IBOutlet weak var playlistTitle: UILabel!
-
     @IBOutlet weak var playlistDescription: UILabel!
-
     @IBOutlet weak var playlistCategory: UILabel!
-
     @IBOutlet weak var userLevel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

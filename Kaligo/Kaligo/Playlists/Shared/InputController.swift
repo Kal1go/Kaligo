@@ -11,13 +11,13 @@ import Foundation
 class InputController: InputDelegate {
     
     weak var tableViewDataSource: StepsTableViewDelegate?
-    weak var tableViewController: SavePlaylistTableViewController?
+    weak var tableViewController: PlaylistSaveController?
     
     init(dataSource: StepsTableViewDelegate?) {
         tableViewDataSource = dataSource
     }
     
-    init(controller: SavePlaylistTableViewController?) {
+    init(controller: PlaylistSaveController?) {
         tableViewController = controller
     }
     

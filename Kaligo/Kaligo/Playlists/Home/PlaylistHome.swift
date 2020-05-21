@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PlaylistHomeTableView: UITableViewController {
+class PlaylistHomeController: UITableViewController {
     
     @IBAction func acaoBotaoFechar(_ sender: Any) {
         dismiss(animated: true, completion: nil)

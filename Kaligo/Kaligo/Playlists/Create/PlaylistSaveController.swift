@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SavePlaylistTableViewController: UITableViewController {
+class PlaylistSaveController: UITableViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -18,7 +18,7 @@ class SavePlaylistTableViewController: UITableViewController {
     var nameDelegate: TextFieldDelegate?
     var descriptionDelegate: TextViewDelegate?
     var inputController: InputController?
-    var pickerController: PickerController?
+    var pickerController: PlaylistSavePicker?
     
     var playlist = ModeloPlaylist()
         
@@ -37,7 +37,7 @@ class SavePlaylistTableViewController: UITableViewController {
         descriptionTextView.delegate = descriptionDelegate
         descriptionDelegate?.setTextView(descriptionTextView)
         
-        pickerController = PickerController(components: getCategories())
+        pickerController = PlaylistSavePicker(components: getCategories())
         categoryPickerView.delegate = pickerController
         categoryPickerView.dataSource = pickerController
     }

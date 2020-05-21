@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaylistTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
+class PostsTableDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     var playlists: [ModeloPlaylist]?
 

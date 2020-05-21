@@ -9,15 +9,10 @@
 import UIKit
 
 class StepTableViewCell: UITableViewCell {
-
     @IBOutlet weak var stepNumber: UILabel!
-    
     @IBOutlet weak var titleTextField: UITextField!
-    
     @IBOutlet weak var descriptionTextView: UITextView!
-    
     @IBOutlet weak var urlTextField: UITextField!
-    
     @IBOutlet weak var deleteButton: UIButton!
     
     override func awakeFromNib() {
@@ -27,7 +22,6 @@ class StepTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     

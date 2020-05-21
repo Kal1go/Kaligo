@@ -35,7 +35,7 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "addPlaylistCell",
-                for: indexPath) as? AddPlaylistTableViewCell
+                for: indexPath) as? GaleryTableViewCell
                 else { return UITableViewCell() }
 
             if filter == .playlists {

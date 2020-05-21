@@ -15,7 +15,7 @@ class PostsViewController: UIViewController {
 
     // TODO: delegate deve ser weak
     var collectionViewDelegate: FilterCollectionViewDelegate?
-    var tableViewDelegate: PlaylistTableViewDelegate?
+    var tableViewDelegate: PostsTableDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class PostsViewController: UIViewController {
         filterCollectionView.delegate = self.collectionViewDelegate
         filterCollectionView.dataSource = self.collectionViewDelegate
 
-        self.tableViewDelegate = PlaylistTableViewDelegate()
+        self.tableViewDelegate = PostsTableDelegate()
         tableViewDelegate?.playlists = [ModeloPlaylist(userName: "Jaque",
                                                        userLevel: "Nível 7",
                                                        title: "Álgebra",

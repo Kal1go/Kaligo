@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreatePlaylistViewController: UIViewController {
+class PlaylistCreateController: UIViewController {
     
     @IBOutlet weak var stepsTableView: UITableView!
     @IBOutlet weak var nextButton: UIBarButtonItem!
@@ -36,7 +36,7 @@ class CreatePlaylistViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if
-            let savePlaylist = segue.destination as? SavePlaylistTableViewController,
+            let savePlaylist = segue.destination as? PlaylistSaveController,
             let steps = stepsTableViewDelegate?.steps {
             savePlaylist.playlist.steps = steps
         }
