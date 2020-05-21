@@ -11,31 +11,31 @@ import AuthenticationServices
 import Endpoints_Requests
 
 class LoginController: UIViewController {
-    
+
     @IBOutlet weak var authorizationButton: ASAuthorizationAppleIDButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         config()
         setUpSignInAppleButton()
     }
-    
+
     func config() {
-        
+
     }
-    
+
     func auth(appleIDCredential: ASAuthorizationAppleIDCredential) {
         let appleID = appleIDCredential.user //appleID is the password
         let name = appleIDCredential.fullName?.getFullName() ?? ""
         let email = appleIDCredential.email ?? ""
-        
+
         let params = [
             "email": email,
             "appleID": appleID,
             "name": name
         ]
-        
+
         self.showSpinner(onView: self.view)
         UserHandler.auth(params: params as [String: Any]) { (response) in
             switch response {
@@ -69,13 +69,13 @@ extension LoginController: ASAuthorizationControllerDelegate {
         authorizationController.delegate = self
         authorizationController.performRequests()
     }
-    
+
     func authorizationController(controller: ASAuthorizationController,
                                  didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as?  ASAuthorizationAppleIDCredential {
             self.auth(appleIDCredential: appleIDCredential)
         }
-        
+
         func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
             print(error)
         }

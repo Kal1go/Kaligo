@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		826A262E247626BB00B082ED /* ListHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A262D247626BB00B082ED /* ListHandler.swift */; };
+		826A26302476277100B082ED /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A262F2476277100B082ED /* List.swift */; };
+		826A26322476279E00B082ED /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A26312476279E00B082ED /* Step.swift */; };
+		826A2634247627AA00B082ED /* StepHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A2633247627AA00B082ED /* StepHandler.swift */; };
 		826CA017247393E0006A543D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826CA016247393E0006A543D /* Login.storyboard */; };
 		826CA019247393F2006A543D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CA018247393F2006A543D /* LoginController.swift */; };
 		82A300E824739515001957E0 /* Spinner+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A300E724739515001957E0 /* Spinner+Extension.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		826A262D247626BB00B082ED /* ListHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHandler.swift; sourceTree = "<group>"; };
+		826A262F2476277100B082ED /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		826A26312476279E00B082ED /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		826A2633247627AA00B082ED /* StepHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepHandler.swift; sourceTree = "<group>"; };
 		826CA016247393E0006A543D /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		826CA018247393F2006A543D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		82A300E724739515001957E0 /* Spinner+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spinner+Extension.swift"; sourceTree = "<group>"; };
@@ -86,6 +94,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		826A262C2476269F00B082ED /* List */ = {
+			isa = PBXGroup;
+			children = (
+				826A262F2476277100B082ED /* List.swift */,
+				826A262D247626BB00B082ED /* ListHandler.swift */,
+				826A26312476279E00B082ED /* Step.swift */,
+				826A2633247627AA00B082ED /* StepHandler.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		826CA01124739285006A543D /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +163,7 @@
 		E423ADF4246F0F7C009F42C3 /* Kaligo */ = {
 			isa = PBXGroup;
 			children = (
+				826A262C2476269F00B082ED /* List */,
 				E47EB216246F349C004651A2 /* Controller */,
 				E47EB215246F3491004651A2 /* View */,
 				E47EB214246F3489004651A2 /* Model */,
@@ -301,6 +321,7 @@
 				E47EB213246F3438004651A2 /* PostsViewController.swift in Sources */,
 				E47EB211246F336D004651A2 /* PlaylistTableViewCell.swift in Sources */,
 				E4B748B3247320B300B3FAAF /* AddPlaylistTableViewCell.swift in Sources */,
+				826A262E247626BB00B082ED /* ListHandler.swift in Sources */,
 				E4B748A92473021B00B3FAAF /* PlaylistTableViewDelegate.swift in Sources */,
 				E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */,
 				E4B748B52473272900B3FAAF /* GaleryPlaylistsTableViewDelegate.swift in Sources */,
@@ -308,12 +329,15 @@
 				E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */,
 				E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */,
 				E4B748AF247310F000B3FAAF /* GaleryViewController.swift in Sources */,
+				826A26322476279E00B082ED /* Step.swift in Sources */,
 				E435E4962474483E003D79CD /* Tip.swift in Sources */,
 				82A300E824739515001957E0 /* Spinner+Extension.swift in Sources */,
 				82A300FE24739800001957E0 /* LoginExtensions.swift in Sources */,
 				82A300EA24739551001957E0 /* UserHandler.swift in Sources */,
 				82A300FC2473971A001957E0 /* Alert+Extension.swift in Sources */,
 				E423ADFA246F0F7C009F42C3 /* ViewController.swift in Sources */,
+				826A2634247627AA00B082ED /* StepHandler.swift in Sources */,
+				826A26302476277100B082ED /* List.swift in Sources */,
 				82A300EC24739575001957E0 /* Environment.swift in Sources */,
 				82A300EE247395A5001957E0 /* User.swift in Sources */,
 				82A300F024739602001957E0 /* CommonData.swift in Sources */,
