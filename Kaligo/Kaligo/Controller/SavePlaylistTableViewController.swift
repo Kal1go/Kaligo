@@ -58,5 +58,8 @@ class SavePlaylistTableViewController: UITableViewController {
             let category = Category(rawValue: selectedValue)
             else { return }
         playlist.category = category
+        
+        print(playlist.steps)
+        print(playlist.category)
     }
 }

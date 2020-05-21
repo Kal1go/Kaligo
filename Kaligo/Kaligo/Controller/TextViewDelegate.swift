@@ -28,12 +28,16 @@ class TextViewDelegate: NSObject, UITextViewDelegate {
         }
     }
     
-    func textViewDidEndEditing(_ textView: UITextView) {
+    func textViewDidChange(_ textView: UITextView) {
         if validateText(for: textView) {
             guard let text = textView.text else { return }
             inputDelegate?.setText(for: textView.tag, with: text, type: type)
             
-        } else {
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
             textView.text = placeholder
             textView.textColor = .lightGray
         }

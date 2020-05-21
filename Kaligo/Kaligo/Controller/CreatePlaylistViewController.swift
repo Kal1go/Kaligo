@@ -31,6 +31,14 @@ class CreatePlaylistViewController: UIViewController {
         delegate.urlDelegate = TextFieldDelegate(delegate: inputController, type: .url)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if
+            let savePlaylist = segue.destination as? SavePlaylistTableViewController,
+            let steps = stepsTableViewDelegate?.steps {
+            savePlaylist.playlist.steps = steps
+        }
+    }
+    
     @IBAction func addStep(_ sender: Any) {
         if let numberOfSteps = stepsTableViewDelegate?.steps.count {
             stepsTableViewDelegate?.steps.append(ModeloPasso(number: numberOfSteps + 1))
