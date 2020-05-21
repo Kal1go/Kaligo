@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		872A330E24756C1F006ED748 /* PlaylistHomeTableVewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872A330D24756C1F006ED748 /* PlaylistHomeTableVewCell.swift */; };
 		87DF6291247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF6290247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift */; };
 		87DF6293247304FC002B8FCE /* CategoriasHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF6292247304FC002B8FCE /* CategoriasHomeTableViewCell.swift */; };
 		87DF6295247305EC002B8FCE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF6294247305EC002B8FCE /* HomeViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		872A330D24756C1F006ED748 /* PlaylistHomeTableVewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHomeTableVewCell.swift; sourceTree = "<group>"; };
 		87DF6290247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		87DF6292247304FC002B8FCE /* CategoriasHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasHomeTableViewCell.swift; sourceTree = "<group>"; };
 		87DF6294247305EC002B8FCE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				87DF629A24732A01002B8FCE /* PlaylistHome.storyboard */,
 				87DF62A624733E67002B8FCE /* PlaylistHomeTableView.swift */,
+				872A330D24756C1F006ED748 /* PlaylistHomeTableVewCell.swift */,
 				82667190247448D300152760 /* Awesome xib */,
 				82667191247448E200152760 /* Review */,
 			);
@@ -261,6 +264,7 @@
 				E47EB213246F3438004651A2 /* PostsViewController.swift in Sources */,
 				E47EB211246F336D004651A2 /* PlaylistTableViewCell.swift in Sources */,
 				E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */,
+				872A330E24756C1F006ED748 /* PlaylistHomeTableVewCell.swift in Sources */,
 				87DF62A124733D4D002B8FCE /* AwesomeReviewView.swift in Sources */,
 				87DF62A724733E67002B8FCE /* PlaylistHomeTableView.swift in Sources */,
 				E423ADFA246F0F7C009F42C3 /* ViewController.swift in Sources */,

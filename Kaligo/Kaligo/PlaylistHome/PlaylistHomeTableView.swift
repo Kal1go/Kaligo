@@ -14,7 +14,7 @@ class PlaylistHomeTableView: UITableViewController {
     @IBOutlet weak var botaoFechar: UIButton!
     
     @IBAction func acaoBotaoFechar(_ sender: Any) {
-  print("oiii")
+  dismiss(animated: true, completion: nil)
     }
     private var data = Reviews()
     

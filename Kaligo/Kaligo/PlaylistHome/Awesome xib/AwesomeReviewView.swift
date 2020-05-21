@@ -15,6 +15,8 @@ class AwesomeReviewView: UIView {
     @IBOutlet private weak var descLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var seeMoreButton: UIButton!
+    @IBOutlet weak var numeroDePassos: UILabel!
+    @IBOutlet weak var imageNumeroDePassos: UIImageView!
     
     private var isSeeLess: Bool = true
     private var seeMoreDidTapHandler: (() -> Void)?
@@ -32,6 +34,9 @@ class AwesomeReviewView: UIView {
     }
     
     func setupWith(review: Review) {
+        self.numeroDePassos.text = review.numeroDePassos
+        numeroDePassos.text = review.numeroDePassos
+        
         self.userNameLabel.text = review.title
         self.descLabel.text = review.description + review.description + review.description + review.description + review.description
         self.dateLabel.text = review.date

@@ -13,6 +13,7 @@ struct Review {
     var memberSince: String = "Is a member since 2011"
     var isExpanded: Bool = false
     var description: String  = "Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das professoras"
+    var numeroDePassos: String = "1"
 }
 
 typealias Reviews = [Review]
