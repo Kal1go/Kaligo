@@ -9,11 +9,11 @@
 import UIKit
 
 class SegmentedCollectionViewCell: UICollectionViewCell {
-    
+
     @IBOutlet weak var backgroundImage: UIImageView!
-    
+
     @IBOutlet weak var selectionImage: UIImageView!
-    
+
     @IBOutlet weak var filterTitle: UILabel!
-    
+
 }

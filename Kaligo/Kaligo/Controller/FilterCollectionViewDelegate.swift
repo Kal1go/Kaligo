@@ -9,13 +9,13 @@
 import UIKit
 
 class FilterCollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+
     var categories: [String]?
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories?.count ?? 0
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard
             let cell = collectionView.dequeueReusableCell(
@@ -23,9 +23,9 @@ class FilterCollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollec
                 for: indexPath) as? SegmentedCollectionViewCell,
             let categories = self.categories
             else { return UICollectionViewCell() }
-        
+
         cell.filterTitle.text = categories[indexPath.row]
-        
+
         return cell
     }
 
