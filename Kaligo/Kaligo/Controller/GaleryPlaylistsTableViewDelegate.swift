@@ -14,15 +14,15 @@ enum GaleryFilter {
 }
 
 class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
-    
+
     var playlists: [ModeloPlaylist]?
     var tips: [ModeloDica]?
     var filter: GaleryFilter = .playlists
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
@@ -30,23 +30,23 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
             return playlists?.count ?? 0
         }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "addPlaylistCell",
                 for: indexPath) as? AddPlaylistTableViewCell
                 else { return UITableViewCell() }
-            
+
             if filter == .playlists {
                 cell.addButton.setTitle("Criar playlist", for: .normal)
-                
+
             } else {
                 cell.addButton.setTitle("Criar dica", for: .normal)
             }
-            
+
             return cell
-            
+
         } else {
             guard
                 let cell = tableView.dequeueReusableCell(
@@ -55,11 +55,11 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
                 let playlists = playlists,
                 let tips = tips
                 else { return UITableViewCell() }
-            
+
             if filter == .playlists {
                 let playlist = playlists[indexPath.row]
                 setRow(for: cell, with: playlist)
-                
+
             } else {
                 let tip = tips[indexPath.row]
                 setRow(for: cell, with: tip)
@@ -67,7 +67,7 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
             return cell
         }
     }
-    
+
     private func setRow<T>(for cell: PlaylistTableViewCell, with data: T) {
         if let d = data as? ModeloPlaylist {
             cell.userName.text = d.userName
@@ -76,7 +76,7 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
             cell.playlistDescription.text = d.description
             cell.playlistCategory.text = d.category.rawValue
             cell.numberOfForks.text = "\(d.numberOfForks)"
-            
+
         } else if let d = data as? ModeloDica {
             cell.userName.text = d.userName
             cell.userLevel.text = d.userLevel
@@ -84,7 +84,7 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
             cell.playlistDescription.text = d.description
             cell.playlistCategory.text = d.category
         }
-        
+
     }
-    
+
 }
