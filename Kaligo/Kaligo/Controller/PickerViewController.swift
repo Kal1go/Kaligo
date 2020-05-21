@@ -15,7 +15,7 @@ class PickerController: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
 
     init(components: [String]) {
         self.components = components
-        self.selected = ""
+        self.selected = components.first ?? ""
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

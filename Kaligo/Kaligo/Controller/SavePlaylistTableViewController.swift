@@ -49,6 +49,8 @@ class SavePlaylistTableViewController: UITableViewController {
             else { return }
         
         playlist.category = category
+        
+        validateSteps()
     }
     
     private func getCategories() -> [String] {
@@ -59,6 +61,27 @@ class SavePlaylistTableViewController: UITableViewController {
             }
         }
         return categories
+    }
+    
+    private func validateSteps() {
+        var invalidIndexes = [Int]()
+        
+        for i in 0 ..< playlist.steps.count {
+            if playlist.steps[i].title == "" && playlist.steps[i].description == "" && playlist.steps[i].url == ""{
+                invalidIndexes.append(i)
+            }
+        }
+        
+        invalidIndexes = invalidIndexes.sorted(by: >)
+        
+        for i in invalidIndexes {
+            playlist.steps.remove(at: i)
+        }
+        
+        for i in 0 ..< playlist.steps.count {
+            playlist.steps[i].number = i + 1
+        }
+        
     }
 
     @IBAction func textFieldDidChange(_ sender: UITextField) {
