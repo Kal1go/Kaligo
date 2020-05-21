@@ -12,7 +12,6 @@ import UIKit
 class PlaylistHomeTableVewCell: UITableViewCell {
     
     @IBOutlet weak var imagemQntdeForks: UIImageView!
-    @IBOutlet weak var nomePlaylistCell: UILabel!
     @IBOutlet weak var imageCellPerfil: UIImageView!
     @IBOutlet weak var quantidadeForksCell: UILabel!
     @IBOutlet weak var labelCellNomePerfil: UILabel!

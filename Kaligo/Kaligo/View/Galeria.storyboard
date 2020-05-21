@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0C-yp-6uU">
-                                <rect key="frame" x="0.0" y="140" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="148.5" width="414" height="65"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDe-nA-Oth">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="65"/>
@@ -115,7 +115,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t3M-63-Z9x">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="148.5" width="414" height="713.5"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addPlaylistCell" rowHeight="81" id="xOi-jq-pwD" customClass="AddPlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
@@ -254,6 +254,7 @@
                                             <outlet property="profilePicture" destination="anL-oX-XNf" id="kgA-WU-Iu3"/>
                                             <outlet property="userLevel" destination="MyD-Kx-fFu" id="BQK-X5-LtI"/>
                                             <outlet property="userName" destination="04V-7L-OTF" id="FFR-gW-yPV"/>
+                                            <segue destination="glZ-RV-DOy" kind="show" id="3X4-gg-wmK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -282,6 +283,16 @@
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="107.8125"/>
         </scene>
+        <!--playlist-->
+        <scene sceneID="omJ-Rz-mnP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlaylistHome" referencedIdentifier="playlist" id="glZ-RV-DOy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MsF-82-IB1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3XZ-WP-75w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="152"/>
+        </scene>
         <!--addPlaylist-->
         <scene sceneID="HA5-ep-Iut">
             <objects>
@@ -290,7 +301,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAZ-6O-56i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="108"/>
+            <point key="canvasLocation" x="1658" y="91"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vxY-Xm-TWi">
@@ -298,7 +309,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LIB-Ry-Ygb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rtB-fa-LxN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="Background"/>
                     </navigationBar>
