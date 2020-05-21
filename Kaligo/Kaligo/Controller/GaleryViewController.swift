@@ -30,7 +30,7 @@ class GaleryViewController: UIViewController {
                                       userLevel: "Nível 7",
                                       title: "Álgebra",
                                       description: "Descrição dessa playlist",
-                                      category: "Categoria",
+                                      category: .none,
                                       numberOfForks: 36)
         
         let tip = ModeloDica(userName: "Jaque",

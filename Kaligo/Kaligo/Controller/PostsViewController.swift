@@ -31,7 +31,7 @@ class PostsViewController: UIViewController {
                                                        userLevel: "Nível 7",
                                                        title: "Álgebra",
                                                        description: "Descrição dessa playlist",
-                                                       category: "Categoria",
+                                                       category: .none,
                                                        numberOfForks: 36)]
         
         playlistsTableView.delegate = tableViewDelegate
