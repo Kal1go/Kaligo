@@ -48,18 +48,4 @@ class SavePlaylistTableViewController: UITableViewController {
         }
         return categories
     }
-    
-    @IBAction func showPlaylist(_ sender: Any) {
-        print(playlist.title)
-        print(playlist.description)
-        
-        guard
-            let selectedValue = pickerController?.selected,
-            let category = Category(rawValue: selectedValue)
-            else { return }
-        playlist.category = category
-        
-        print(playlist.steps)
-        print(playlist.category)
-    }
 }

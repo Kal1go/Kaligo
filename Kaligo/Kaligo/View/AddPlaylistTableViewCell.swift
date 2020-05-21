@@ -20,8 +20,4 @@ class AddPlaylistTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBAction func addPlaylist(_ sender: Any) {
-        print("Cria playlist")
-    }
-    
 }

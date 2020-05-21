@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0C-yp-6uU">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0C-yp-6uU">
                                 <rect key="frame" x="0.0" y="140" width="414" height="65"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDe-nA-Oth">
@@ -115,7 +115,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t3M-63-Z9x">
-                                <rect key="frame" x="0.0" y="205" width="414" height="657"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addPlaylistCell" rowHeight="81" id="xOi-jq-pwD" customClass="AddPlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
@@ -139,7 +139,7 @@
                                                         <color key="titleColor" name="Background"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="addPlaylist:" destination="xOi-jq-pwD" eventType="touchUpInside" id="kqm-pl-nN1"/>
+                                                        <segue destination="kOI-AZ-nfU" kind="show" id="Qf5-Ba-A55"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -261,7 +261,7 @@
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="t3M-63-Z9x" firstAttribute="top" secondItem="c0C-yp-6uU" secondAttribute="bottom" id="D7G-NL-5db"/>
+                            <constraint firstItem="t3M-63-Z9x" firstAttribute="top" secondItem="7JB-JB-58R" secondAttribute="top" id="BHd-6B-lyu"/>
                             <constraint firstItem="7JB-JB-58R" firstAttribute="trailing" secondItem="t3M-63-Z9x" secondAttribute="trailing" id="EAl-Kl-yyy"/>
                             <constraint firstItem="c0C-yp-6uU" firstAttribute="leading" secondItem="7JB-JB-58R" secondAttribute="leading" id="Kwl-c8-FOd"/>
                             <constraint firstItem="c0C-yp-6uU" firstAttribute="top" secondItem="7JB-JB-58R" secondAttribute="top" id="OA7-hN-8Y8"/>
@@ -281,6 +281,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwx-vj-u0r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="107.8125"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="HA5-ep-Iut">
+            <objects>
+                <viewControllerPlaceholder id="kOI-AZ-nfU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qS8-i0-0Hh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAZ-6O-56i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1676" y="108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vxY-Xm-TWi">

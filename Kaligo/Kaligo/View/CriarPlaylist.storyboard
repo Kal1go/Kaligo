@@ -347,7 +347,7 @@
                     <navigationItem key="navigationItem" title="Salvar playlist" id="Nbp-dJ-aZe">
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="4hX-Im-1lK">
                             <connections>
-                                <action selector="showPlaylist:" destination="tEO-tS-eUt" id="avd-pz-UAs"/>
+                                <segue destination="CEJ-Jy-xet" kind="unwind" unwindAction="savePlaylist:" id="PKk-P9-yaR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -358,6 +358,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUE-hx-Oh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="CEJ-Jy-xet" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1804" y="-66"/>
         </scene>

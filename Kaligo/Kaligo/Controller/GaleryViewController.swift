@@ -55,4 +55,8 @@ class GaleryViewController: UIViewController {
         }
         playlistsTableView.reloadData()
     }
+    
+    @IBAction func savePlaylist(_ sender: UIStoryboardSegue) {
+        print("Playlist adicionada")
+    }
 }
