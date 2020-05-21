@@ -41,6 +41,9 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <action selector="textFieldDidChange:" destination="0sc-ja-n1k" eventType="editingChanged" id="90m-G7-spB"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" name="Background"/>
@@ -221,17 +224,24 @@
                         <viewLayoutGuide key="safeArea" id="u5Y-yX-gJr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Criar playlist" id="J6u-1E-vsX">
-                        <barButtonItem key="rightBarButtonItem" title="Terminar" id="3b8-yU-eEO">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="SXg-Vu-egn">
+                            <connections>
+                                <segue destination="NTC-cD-LZl" kind="unwind" unwindAction="savePlaylist:" id="ViA-Cs-BA2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Próximo" id="3b8-yU-eEO">
                             <connections>
                                 <segue destination="tEO-tS-eUt" kind="show" id="4bl-C2-pg6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="nextButton" destination="3b8-yU-eEO" id="ybf-5x-4ev"/>
                         <outlet property="stepsTableView" destination="7fj-Eh-l7p" id="qBd-3C-gZN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJH-Hf-EVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NTC-cD-LZl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="942.02898550724649" y="-65.625"/>
         </scene>
@@ -261,6 +271,9 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldDidChange:" destination="tEO-tS-eUt" eventType="editingChanged" id="fw2-aK-9mH"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -355,6 +368,7 @@
                         <outlet property="categoryPickerView" destination="rvG-eb-Np9" id="8wh-27-zyJ"/>
                         <outlet property="descriptionTextView" destination="acA-Lp-ixy" id="dWi-ez-sxk"/>
                         <outlet property="nameTextField" destination="BXG-nM-Fba" id="tJx-Nh-upv"/>
+                        <outlet property="saveButton" destination="4hX-Im-1lK" id="Z8m-bM-zlI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUE-hx-Oh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

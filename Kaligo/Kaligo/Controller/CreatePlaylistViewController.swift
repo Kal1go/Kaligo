@@ -11,11 +11,14 @@ import UIKit
 class CreatePlaylistViewController: UIViewController {
     
     @IBOutlet weak var stepsTableView: UITableView!
+    @IBOutlet weak var nextButton: UIBarButtonItem!
     
     var stepsTableViewDelegate: StepsTableViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nextButton.isEnabled = false
 
         stepsTableViewDelegate = StepsTableViewDelegate()
         stepsTableView.delegate = stepsTableViewDelegate
@@ -51,4 +54,12 @@ class CreatePlaylistViewController: UIViewController {
         stepsTableView.reloadData()
     }
     
+    @IBAction func textFieldDidChange(_ sender: UITextField) {
+        if
+            let delegate = stepsTableViewDelegate,
+            let textFieldDelegate = delegate.titleDelegate,
+            sender.tag == 0 {
+            nextButton.isEnabled = textFieldDelegate.validateText(for: sender)
+        }
+    }
 }

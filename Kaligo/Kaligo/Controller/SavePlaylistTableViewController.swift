@@ -13,6 +13,7 @@ class SavePlaylistTableViewController: UITableViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var categoryPickerView: UIPickerView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     var nameDelegate: TextFieldDelegate?
     var descriptionDelegate: TextViewDelegate?
@@ -23,6 +24,8 @@ class SavePlaylistTableViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        saveButton.isEnabled = false
 
         inputController = InputController(controller: self)
         
@@ -58,4 +61,9 @@ class SavePlaylistTableViewController: UITableViewController {
         return categories
     }
 
+    @IBAction func textFieldDidChange(_ sender: UITextField) {
+        guard let delegate = nameDelegate else { return }
+        
+        saveButton.isEnabled = delegate.validateText(for: sender)
+    }
 }

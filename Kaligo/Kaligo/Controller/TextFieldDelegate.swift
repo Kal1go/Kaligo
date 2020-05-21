@@ -35,8 +35,8 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
             inputDelegate?.setText(for: textField.tag, with: text, type: type)
         }
     }
-    
-    private func validateText(for textField: UITextField) -> Bool {
+        
+    func validateText(for textField: UITextField) -> Bool {
         if let text = textField.text {
             if text != "" {
                 return true

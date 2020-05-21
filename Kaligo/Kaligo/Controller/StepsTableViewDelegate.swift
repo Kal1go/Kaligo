@@ -11,7 +11,7 @@ import UIKit
 class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     var steps: [ModeloPasso] = [ModeloPasso(number: 1)]
-    
+        
     var titleDelegate: TextFieldDelegate?
     var urlDelegate: TextFieldDelegate?
     var descriptionDelegate: TextViewDelegate?
@@ -28,6 +28,7 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
+            
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "stepCell",
                 for: indexPath) as? StepTableViewCell
