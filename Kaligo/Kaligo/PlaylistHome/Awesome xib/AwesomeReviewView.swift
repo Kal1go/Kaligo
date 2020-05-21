@@ -16,14 +16,13 @@ class AwesomeReviewView: UIView {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var seeMoreButton: UIButton!
     @IBOutlet weak var numeroDePassos: UILabel!
-    @IBOutlet weak var imageNumeroDePassos: UIImageView!
     
     private var isSeeLess: Bool = true
     private var seeMoreDidTapHandler: (() -> Void)?
     
     @IBAction func seeMoreButtonTapped() {
         self.isSeeLess.toggle()
-        self.descLabel.numberOfLines = self.isSeeLess ? 0 : 7
+        self.descLabel.numberOfLines = self.isSeeLess ? 0 : 3
         self.descLabel.layoutIfNeeded()
         self.seeMoreButton.setTitle(self.isSeeLess ? "See less" : "See more", for: .normal)
         self.seeMoreDidTapHandler?()
@@ -34,15 +33,30 @@ class AwesomeReviewView: UIView {
     }
     
     func setupWith(review: Review) {
-        self.numeroDePassos.text = review.numeroDePassos
-        numeroDePassos.text = review.numeroDePassos
-        
         self.userNameLabel.text = review.title
-        self.descLabel.text = review.description + review.description + review.description + review.description + review.description
+        self.descLabel.text = review.description
         self.dateLabel.text = review.date
         self.isSeeLess = review.isExpanded
-        self.descLabel.numberOfLines = self.isSeeLess ? 0 : 7
+        self.descLabel.numberOfLines = self.isSeeLess ? 0 : 3
         self.seeMoreButton.setTitle(self.isSeeLess ? "See less" : "See more", for: .normal)
+        
+        if self.descLabel.calculateMaxLines() < 3 {
+            self.seeMoreButton.isHidden = true
+        }
+
     }
     
+}
+
+extension UILabel {
+    func calculateMaxLines() -> Int {
+        let maxSize = CGSize(width: frame.size.width, height: CGFloat(Float.infinity))
+        let charSize = font.lineHeight
+        let text = (self.text ?? "") as NSString
+        let textSize = text.boundingRect(with: maxSize,
+                                         options: .usesLineFragmentOrigin,
+                                         attributes: [NSAttributedString.Key.font: font], context: nil)
+        let linesRoundedUp = Int(ceil(textSize.height/charSize))
+        return linesRoundedUp
+    }
 }

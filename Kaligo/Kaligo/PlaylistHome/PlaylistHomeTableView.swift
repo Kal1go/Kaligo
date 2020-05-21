@@ -10,11 +10,10 @@ import Foundation
 import UIKit
 
 class PlaylistHomeTableView: UITableViewController {
-
-    @IBOutlet weak var botaoFechar: UIButton!
     
+    @IBOutlet weak var botaoFechar: UIButton!
     @IBAction func acaoBotaoFechar(_ sender: Any) {
-  dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     private var data = Reviews()
     
@@ -28,7 +27,7 @@ class PlaylistHomeTableView: UITableViewController {
     }
     
     func setUpReviews() {
-        self.data.createReviewsWith(quantity: 6)
+        self.data.createReviewsWith(quantity: 20)
         self.tableView.estimatedRowHeight = 233
     }
     
@@ -53,10 +52,10 @@ class PlaylistHomeTableView: UITableViewController {
         cell.selectionStyle = .none
         
         if cell.contentView.subviews.contains(where: { $0.tag == 999 }) == false {
-        guard let customView = Bundle.main.loadNibNamed(String(describing: AwesomeReviewView.self),
-                                                        owner: self, options: nil)?.first as? AwesomeReviewView else {
-            fatalError("Is impossible take the View")
-        }
+            guard let customView = Bundle.main.loadNibNamed(String(describing: AwesomeReviewView.self),
+                                                            owner: self, options: nil)?.first as? AwesomeReviewView else {
+                                                                fatalError("Is impossible take the View")
+            }
             
             customView.tag = 999
             cell.contentView.addSubview(customView)
@@ -65,7 +64,7 @@ class PlaylistHomeTableView: UITableViewController {
             customView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor).isActive = true
             customView.topAnchor.constraint(equalTo: cell.contentView.topAnchor).isActive = true
             customView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor).isActive = true
-        
+            customView.numeroDePassos.text = String(0)
             customView.onSeeMoreDidTap {
                 [weak self] in
                 self?.data[indexPath.row].isExpanded.toggle()
