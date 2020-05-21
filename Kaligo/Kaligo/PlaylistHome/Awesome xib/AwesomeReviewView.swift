@@ -34,7 +34,7 @@ class AwesomeReviewView: UIView {
     
     func setupWith(review: Review) {
         self.userNameLabel.text = review.title
-        self.descLabel.text = review.description
+        self.descLabel.text = review.description + review.description
         self.dateLabel.text = review.date
         self.isSeeLess = review.isExpanded
         self.descLabel.numberOfLines = self.isSeeLess ? 0 : 3
@@ -55,7 +55,7 @@ extension UILabel {
         let text = (self.text ?? "") as NSString
         let textSize = text.boundingRect(with: maxSize,
                                          options: .usesLineFragmentOrigin,
-                                         attributes: [NSAttributedString.Key.font: font], context: nil)
+                                         attributes: [NSAttributedString.Key.font: font ?? UIFont.systemFontSize], context: nil)
         let linesRoundedUp = Int(ceil(textSize.height/charSize))
         return linesRoundedUp
     }
