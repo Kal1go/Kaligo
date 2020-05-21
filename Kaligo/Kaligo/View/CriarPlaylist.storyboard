@@ -365,7 +365,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Jjz-GC-OxE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NxT-0S-tdN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="addPlaylist" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="NxT-0S-tdN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="LOd-DV-4iK">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>

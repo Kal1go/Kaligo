@@ -177,13 +177,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04V-7L-OTF">
-                                                    <rect key="frame" x="90" y="38" width="49" height="20.5"/>
+                                                    <rect key="frame" x="90" y="38" width="49" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nível 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-Kx-fFu">
-                                                    <rect key="frame" x="90" y="63" width="38.5" height="15"/>
+                                                    <rect key="frame" x="90" y="63.5" width="38.5" height="14.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -282,10 +282,10 @@
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="107.8125"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--addPlaylist-->
         <scene sceneID="HA5-ep-Iut">
             <objects>
-                <viewControllerPlaceholder id="kOI-AZ-nfU" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="CriarPlaylist" referencedIdentifier="addPlaylist" id="kOI-AZ-nfU" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="qS8-i0-0Hh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAZ-6O-56i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
