@@ -39,6 +39,15 @@ class SavePlaylistTableViewController: UITableViewController {
         categoryPickerView.dataSource = pickerController
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        guard
+            let selectedValue = pickerController?.selected,
+            let category = Category(rawValue: selectedValue)
+            else { return }
+        
+        playlist.category = category
+    }
+    
     private func getCategories() -> [String] {
         var categories = [String]()
         for value in Category.allCases {
@@ -48,4 +57,5 @@ class SavePlaylistTableViewController: UITableViewController {
         }
         return categories
     }
+
 }

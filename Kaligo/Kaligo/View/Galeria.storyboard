@@ -188,7 +188,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-adicionado" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-sb-WqZ">
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-adicionado" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-sb-WqZ">
                                                     <rect key="frame" x="294" y="33" width="85" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="Z5m-Jn-oNi"/>
