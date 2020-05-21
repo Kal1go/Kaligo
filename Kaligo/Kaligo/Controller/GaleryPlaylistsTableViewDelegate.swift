@@ -74,7 +74,7 @@ class GaleryPlaylistsTableViewDelegate: NSObject, UITableViewDelegate, UITableVi
             cell.userLevel.text = d.userLevel
             cell.playlistTitle.text = d.title
             cell.playlistDescription.text = d.description
-            cell.playlistCategory.text = d.category.rawValue
+            cell.playlistCategory.text = d.category
             cell.numberOfForks.text = "\(d.numberOfForks)"
 
         } else if let d = data as? ModeloDica {

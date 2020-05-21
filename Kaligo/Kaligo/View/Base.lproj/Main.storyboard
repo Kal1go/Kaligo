@@ -12,7 +12,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="187" id="xLh-El-1dO">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="187"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xLh-El-1dO" id="kxA-fD-DqC" customClass="SegmentedCollectionViewCell" customModule="Kaligo" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xLh-El-1dO" id="kxA-fD-DqC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -74,14 +74,14 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dicasCardsCell" id="4Px-hd-mLr" customClass="SegmentedHomeCollectionViewCell" customModule="Kaligo" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4Px-hd-mLr">
                                                             <rect key="frame" x="8.5" y="0.0" width="405" height="169"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dIR-zl-FHc">
                                                                 <rect key="frame" x="0.0" y="0.0" width="405" height="169"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dicas-Cards" translatesAutoresizingMaskIntoConstraints="NO" id="m4c-cc-dQY">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardsDicas" translatesAutoresizingMaskIntoConstraints="NO" id="m4c-cc-dQY">
                                                                         <rect key="frame" x="0.0" y="-40" width="414" height="250"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     </imageView>
@@ -128,14 +128,6 @@
                                                                 <color key="backgroundColor" name="Background"/>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="405" height="169"/>
-                                                            <connections>
-                                                                <outlet property="categoriaCollectionHome" destination="raV-6a-YFZ" id="IQB-FS-yGb"/>
-                                                                <outlet property="descricaoCardCollectionHomre" destination="HTb-nk-zaM" id="r4g-kc-raJ"/>
-                                                                <outlet property="imagemCollectionHome" destination="V0f-Te-zm0" id="qD0-PV-Ly2"/>
-                                                                <outlet property="nivelUsuarioCollectionHome" destination="t6Y-Iu-9Ks" id="G1S-nM-Jnt"/>
-                                                                <outlet property="nomeUsuarioCollectionHome" destination="6yA-0S-ZkG" id="C2O-yH-zVQ"/>
-                                                                <outlet property="tituloCardCollectionHome" destination="EhG-Cd-s4Y" id="wjl-Wh-zgA"/>
-                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
@@ -143,14 +135,14 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="305" id="k6r-LI-A7b" customClass="CategoriasHomeTableViewCell" customModule="Kaligo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="305" id="k6r-LI-A7b">
                                         <rect key="frame" x="0.0" y="242.5" width="414" height="305"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k6r-LI-A7b" id="oaK-1Q-qaG" customClass="CategoriasHomeTableViewCell" customModule="Kaligo" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k6r-LI-A7b" id="oaK-1Q-qaG">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home-Categorias" translatesAutoresizingMaskIntoConstraints="NO" id="bir-iY-omF">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 68" translatesAutoresizingMaskIntoConstraints="NO" id="bir-iY-omF">
                                                     <rect key="frame" x="-116" y="-26" width="651" height="382"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -175,11 +167,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
-                                        <connections>
-                                            <outlet property="imageCategoriaCardHome" destination="pO4-1P-UfU" id="uzv-wa-IeH"/>
-                                            <outlet property="nomeCategoriaCardHome" destination="uc7-jq-019" id="RIR-el-8m4"/>
-                                            <outlet property="numeroPlaylistCardHomw" destination="7ga-kU-2Hw" id="Gcl-6F-nOq"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -195,13 +182,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="always" id="Atu-YS-PM3"/>
-                    <connections>
-                        <outlet property="dicasTableViewHome" destination="u06-3E-PLW" id="LNS-vm-UhI"/>
-                        <outlet property="homeTableView" destination="u06-3E-PLW" id="nB9-8u-Kya"/>
-                        <outlet property="imagePerfilHome" destination="GB5-6N-Yr4" id="lqa-rh-AlE"/>
-                        <outlet property="labelNivelHome" destination="ibJ-Of-gX7" id="Kbj-Ta-Kzm"/>
-                        <outlet property="labelOlaHome" destination="8ER-ce-Rvu" id="1Dy-dY-Dk7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,8 +208,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dicas-Cards" width="378" height="159"/>
-        <image name="home-Categorias" width="409" height="385"/>
+        <image name="Group 68" width="409" height="385"/>
+        <image name="cardsDicas" width="378" height="159"/>
         <image name="image-removebg-preview 1" width="332" height="227"/>
         <namedColor name="Background">
             <color red="0.94099998474121094" green="0.97299998998641968" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -19,7 +19,9 @@ class AddPlaylistTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+
     @IBAction func addPlaylist(_ sender: Any) {
         print("Cria playlist")
     }
+
 }

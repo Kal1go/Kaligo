@@ -30,7 +30,7 @@ class PlaylistTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataS
         cell.userLevel.text = playlist.userLevel
         cell.playlistTitle.text = playlist.title
         cell.playlistDescription.text = playlist.description
-        cell.playlistCategory.text = playlist.category.rawValue
+        cell.playlistCategory.text = playlist.category
         cell.numberOfForks.text = "\(playlist.numberOfForks)"
 
         return cell
