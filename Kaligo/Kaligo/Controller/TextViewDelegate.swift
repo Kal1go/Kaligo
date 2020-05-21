@@ -39,7 +39,7 @@ class TextViewDelegate: NSObject, UITextViewDelegate {
         }
     }
     
-    func setTextView(_ textView: UITextView, with text: String) {
+    func setTextView(_ textView: UITextView, with text: String = "") {
         if text != "" {
             textView.text = text
             textView.textColor = .black

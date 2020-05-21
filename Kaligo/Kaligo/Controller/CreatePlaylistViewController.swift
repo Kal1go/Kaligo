@@ -43,5 +43,4 @@ class CreatePlaylistViewController: UIViewController {
         stepsTableView.reloadData()
     }
     
-    
 }

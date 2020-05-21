@@ -65,7 +65,4 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
             steps[i].number = i + 1
         }
     }
-    
-
-    
 }

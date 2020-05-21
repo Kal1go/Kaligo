@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4183E702476F02B00984A2C /* SavePlaylistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4183E6F2476F02B00984A2C /* SavePlaylistTableViewController.swift */; };
 		E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423ADF5246F0F7C009F42C3 /* AppDelegate.swift */; };
 		E423ADF8246F0F7C009F42C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423ADF7246F0F7C009F42C3 /* SceneDelegate.swift */; };
 		E423ADFA246F0F7C009F42C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423ADF9246F0F7C009F42C3 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E4183E6F2476F02B00984A2C /* SavePlaylistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePlaylistTableViewController.swift; sourceTree = "<group>"; };
 		E423ADF2246F0F7C009F42C3 /* Kaligo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaligo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E423ADF5246F0F7C009F42C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E423ADF7246F0F7C009F42C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				E43BC6112475748800351A22 /* TextFieldDelegate.swift */,
 				E43BC61524759FEE00351A22 /* TextViewDelegate.swift */,
 				E43BC6132475997900351A22 /* InputController.swift */,
+				E4183E6F2476F02B00984A2C /* SavePlaylistTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				E43BC6122475748800351A22 /* TextFieldDelegate.swift in Sources */,
 				E451F34624747C66004E450C /* Step.swift in Sources */,
 				E451F34224747B87004E450C /* CreatePlaylistViewController.swift in Sources */,
+				E4183E702476F02B00984A2C /* SavePlaylistTableViewController.swift in Sources */,
 				E43BC6142475997900351A22 /* InputController.swift in Sources */,
 				E4B748B3247320B300B3FAAF /* AddPlaylistTableViewCell.swift in Sources */,
 				E451F34424747C25004E450C /* StepsTableViewDelegate.swift in Sources */,

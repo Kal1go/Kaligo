@@ -221,7 +221,11 @@
                         <viewLayoutGuide key="safeArea" id="u5Y-yX-gJr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Criar playlist" id="J6u-1E-vsX">
-                        <barButtonItem key="rightBarButtonItem" title="Terminar" id="3b8-yU-eEO"/>
+                        <barButtonItem key="rightBarButtonItem" title="Terminar" id="3b8-yU-eEO">
+                            <connections>
+                                <segue destination="tEO-tS-eUt" kind="show" id="4bl-C2-pg6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="stepsTableView" destination="7fj-Eh-l7p" id="qBd-3C-gZN"/>
@@ -230,6 +234,132 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJH-Hf-EVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="942.02898550724649" y="-65.625"/>
+        </scene>
+        <!--Salvar playlist-->
+        <scene sceneID="8aA-Fc-Mys">
+            <objects>
+                <tableViewController id="tEO-tS-eUt" customClass="SavePlaylistTableViewController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fjQ-4C-HCR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <sections>
+                            <tableViewSection id="Md0-6E-vMG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="gJf-9m-yRi">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gJf-9m-yRi" id="wct-SS-IUy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-umalinha" translatesAutoresizingMaskIntoConstraints="NO" id="AFH-xg-yYs">
+                                                    <rect key="frame" x="20" y="10" width="374" height="40"/>
+                                                </imageView>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Nome da playlist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXG-nM-Fba">
+                                                    <rect key="frame" x="30" y="10" width="354" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BXG-nM-Fba" firstAttribute="leading" secondItem="wct-SS-IUy" secondAttribute="leading" constant="30" id="0fw-9o-a98"/>
+                                                <constraint firstItem="AFH-xg-yYs" firstAttribute="top" secondItem="wct-SS-IUy" secondAttribute="top" constant="10" id="FVM-yF-QiJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="BXG-nM-Fba" secondAttribute="bottom" constant="10" id="IxW-DK-kJt"/>
+                                                <constraint firstAttribute="trailing" secondItem="BXG-nM-Fba" secondAttribute="trailing" constant="30" id="P1L-sJ-f2K"/>
+                                                <constraint firstAttribute="trailing" secondItem="AFH-xg-yYs" secondAttribute="trailing" constant="20" id="P5x-gp-IdP"/>
+                                                <constraint firstAttribute="bottom" secondItem="AFH-xg-yYs" secondAttribute="bottom" constant="10" id="WyR-aR-Htg"/>
+                                                <constraint firstItem="BXG-nM-Fba" firstAttribute="top" secondItem="wct-SS-IUy" secondAttribute="top" constant="10" id="pbD-n0-iQd"/>
+                                                <constraint firstItem="AFH-xg-yYs" firstAttribute="leading" secondItem="wct-SS-IUy" secondAttribute="leading" constant="20" id="swt-DM-i8f"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="Background"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="190" id="ct6-nN-Npf">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ct6-nN-Npf" id="teS-rx-84O">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-multiplo" translatesAutoresizingMaskIntoConstraints="NO" id="yH0-Yp-17j">
+                                                    <rect key="frame" x="20" y="11" width="374" height="168"/>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="acA-Lp-ixy">
+                                                    <rect key="frame" x="25" y="11" width="364" height="168"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="acA-Lp-ixy" firstAttribute="top" secondItem="teS-rx-84O" secondAttribute="topMargin" id="4TV-d0-ygE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="acA-Lp-ixy" secondAttribute="trailing" constant="5" id="89a-mC-aub"/>
+                                                <constraint firstItem="yH0-Yp-17j" firstAttribute="leading" secondItem="teS-rx-84O" secondAttribute="leadingMargin" id="HXx-um-uMy"/>
+                                                <constraint firstItem="yH0-Yp-17j" firstAttribute="trailing" secondItem="teS-rx-84O" secondAttribute="trailingMargin" id="UM1-m1-ZSO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="acA-Lp-ixy" secondAttribute="bottom" id="gMG-ox-aIT"/>
+                                                <constraint firstItem="acA-Lp-ixy" firstAttribute="leading" secondItem="teS-rx-84O" secondAttribute="leadingMargin" constant="5" id="gcS-Ef-uts"/>
+                                                <constraint firstItem="yH0-Yp-17j" firstAttribute="bottom" secondItem="teS-rx-84O" secondAttribute="bottomMargin" id="iT4-P1-0wG"/>
+                                                <constraint firstItem="yH0-Yp-17j" firstAttribute="top" secondItem="teS-rx-84O" secondAttribute="topMargin" id="lmD-pp-EsT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="Background"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="242" id="qwE-a8-p8o">
+                                        <rect key="frame" x="0.0" y="278" width="414" height="242"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qwE-a8-p8o" id="dqN-hc-s5e">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh3-U6-LQy">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-eb-Np9">
+                                                    <rect key="frame" x="0.0" y="40" width="414" height="202"/>
+                                                </pickerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="rvG-eb-Np9" secondAttribute="bottom" id="0sN-wh-Wbr"/>
+                                                <constraint firstItem="rvG-eb-Np9" firstAttribute="leading" secondItem="dqN-hc-s5e" secondAttribute="leading" id="20L-pJ-MUu"/>
+                                                <constraint firstItem="lh3-U6-LQy" firstAttribute="top" secondItem="dqN-hc-s5e" secondAttribute="topMargin" id="JHC-jB-F02"/>
+                                                <constraint firstItem="lh3-U6-LQy" firstAttribute="leading" secondItem="dqN-hc-s5e" secondAttribute="leadingMargin" id="T8G-97-iii"/>
+                                                <constraint firstAttribute="trailing" secondItem="rvG-eb-Np9" secondAttribute="trailing" id="aMJ-jG-87y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lh3-U6-LQy" secondAttribute="trailing" id="loD-8r-ghg"/>
+                                                <constraint firstItem="rvG-eb-Np9" firstAttribute="top" secondItem="lh3-U6-LQy" secondAttribute="bottom" constant="8" id="rlD-pW-IzD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="Background"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="tEO-tS-eUt" id="SX7-ae-pbO"/>
+                            <outlet property="delegate" destination="tEO-tS-eUt" id="KmI-qQ-9kQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Salvar playlist" id="Nbp-dJ-aZe">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="4hX-Im-1lK">
+                            <connections>
+                                <action selector="showPlaylist:" destination="tEO-tS-eUt" id="avd-pz-UAs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="categoryPickerView" destination="rvG-eb-Np9" id="8wh-27-zyJ"/>
+                        <outlet property="descriptionTextView" destination="acA-Lp-ixy" id="dWi-ez-sxk"/>
+                        <outlet property="nameTextField" destination="BXG-nM-Fba" id="tJx-Nh-upv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUE-hx-Oh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="-66"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jjz-GC-OxE">
