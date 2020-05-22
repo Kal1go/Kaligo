@@ -11,14 +11,15 @@
         <!--Criar playlist-->
         <scene sceneID="9i5-dR-ULl">
             <objects>
-                <viewController id="0sc-ja-n1k" customClass="PlaylistCreateController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0sc-ja-n1k" customClass="PlaylistCreateController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ChN-bt-7VQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-Eh-l7p">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-Eh-l7p">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" name="Background"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="300"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stepCell" rowHeight="365" id="q22-x0-ZLM" customClass="StepTableViewCell" customModule="Kaligo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="365"/>
@@ -65,7 +66,7 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-multiplo" translatesAutoresizingMaskIntoConstraints="NO" id="4Mq-oq-u0O">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="115"/>
                                                         </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dnA-Lh-s3r">
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" text="Descrição" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dnA-Lh-s3r">
                                                             <rect key="frame" x="5" y="0.0" width="316" height="115"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -92,7 +93,7 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-umalinha" translatesAutoresizingMaskIntoConstraints="NO" id="1Ke-GC-wUy">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="40"/>
                                                         </imageView>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nql-1r-AxH">
+                                                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nql-1r-AxH">
                                                             <rect key="frame" x="10" y="0.0" width="306" height="40"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -113,27 +114,27 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circulo-enumeracao" translatesAutoresizingMaskIntoConstraints="NO" id="uso-Mh-uAR">
-                                                    <rect key="frame" x="20" y="11" width="50" height="50"/>
+                                                    <rect key="frame" x="20" y="17" width="56" height="56"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="ltN-hY-5ow"/>
-                                                        <constraint firstAttribute="width" constant="50" id="tDD-Vv-Xrg"/>
+                                                        <constraint firstAttribute="height" constant="56" id="ltN-hY-5ow"/>
+                                                        <constraint firstAttribute="width" constant="56" id="tDD-Vv-Xrg"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOr-aa-DMj">
-                                                    <rect key="frame" x="36" y="25.5" width="18" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOr-aa-DMj">
+                                                    <rect key="frame" x="41.5" y="38" width="13" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-excluir" translatesAutoresizingMaskIntoConstraints="NO" id="NF3-oy-NEg">
-                                                    <rect key="frame" x="344" y="11" width="50" height="50"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-excluir" translatesAutoresizingMaskIntoConstraints="NO" id="NF3-oy-NEg">
+                                                    <rect key="frame" x="334" y="17" width="56" height="56"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="Kma-jP-QRc"/>
-                                                        <constraint firstAttribute="height" constant="50" id="rxE-i6-TDI"/>
+                                                        <constraint firstAttribute="width" constant="56" id="Kma-jP-QRc"/>
+                                                        <constraint firstAttribute="height" constant="56" id="rxE-i6-TDI"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AW7-Sk-g86">
-                                                    <rect key="frame" x="344" y="11" width="50" height="50"/>
+                                                    <rect key="frame" x="334" y="17" width="56" height="56"/>
                                                     <connections>
                                                         <action selector="deleteStep:" destination="0sc-ja-n1k" eventType="touchUpInside" id="mh6-nq-3lu"/>
                                                     </connections>
@@ -143,13 +144,13 @@
                                             <constraints>
                                                 <constraint firstItem="SBR-7N-oAz" firstAttribute="top" secondItem="rhh-ua-2rt" secondAttribute="bottom" constant="20" id="2Cv-cG-2BN"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="SsM-Mc-jtE" secondAttribute="trailing" constant="24" id="5Gv-lZ-hMV"/>
-                                                <constraint firstItem="NF3-oy-NEg" firstAttribute="trailing" secondItem="G5a-0M-a5h" secondAttribute="trailingMargin" id="6w8-Om-9GY"/>
+                                                <constraint firstItem="NF3-oy-NEg" firstAttribute="trailing" secondItem="G5a-0M-a5h" secondAttribute="trailingMargin" constant="-4" id="6w8-Om-9GY"/>
                                                 <constraint firstItem="VOr-aa-DMj" firstAttribute="width" relation="lessThanOrEqual" secondItem="uso-Mh-uAR" secondAttribute="width" id="GBA-xu-4o1"/>
                                                 <constraint firstItem="AW7-Sk-g86" firstAttribute="leading" secondItem="NF3-oy-NEg" secondAttribute="leading" id="Gne-wP-LuE"/>
                                                 <constraint firstItem="SBR-7N-oAz" firstAttribute="leading" secondItem="rhh-ua-2rt" secondAttribute="leading" id="HdY-Od-eSE"/>
-                                                <constraint firstItem="uso-Mh-uAR" firstAttribute="top" secondItem="G5a-0M-a5h" secondAttribute="topMargin" id="LgO-wp-iSq"/>
+                                                <constraint firstItem="uso-Mh-uAR" firstAttribute="top" secondItem="G5a-0M-a5h" secondAttribute="topMargin" constant="6" id="LgO-wp-iSq"/>
                                                 <constraint firstItem="IAf-Fl-ZTb" firstAttribute="top" secondItem="G5a-0M-a5h" secondAttribute="top" id="MLM-vQ-JeE"/>
-                                                <constraint firstItem="NF3-oy-NEg" firstAttribute="top" secondItem="G5a-0M-a5h" secondAttribute="topMargin" id="R9Q-YQ-xpp"/>
+                                                <constraint firstItem="NF3-oy-NEg" firstAttribute="top" secondItem="G5a-0M-a5h" secondAttribute="topMargin" constant="6" id="R9Q-YQ-xpp"/>
                                                 <constraint firstItem="uso-Mh-uAR" firstAttribute="leading" secondItem="G5a-0M-a5h" secondAttribute="leadingMargin" id="SO6-hx-8ja"/>
                                                 <constraint firstItem="rhh-ua-2rt" firstAttribute="trailing" secondItem="SsM-Mc-jtE" secondAttribute="trailing" id="SzV-hb-N0b"/>
                                                 <constraint firstItem="rhh-ua-2rt" firstAttribute="top" secondItem="SsM-Mc-jtE" secondAttribute="bottom" constant="20" id="Uou-hF-YIZ"/>
@@ -223,7 +224,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u5Y-yX-gJr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Criar playlist" id="J6u-1E-vsX">
+                    <navigationItem key="navigationItem" title="Criar playlist" largeTitleDisplayMode="always" id="J6u-1E-vsX">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="SXg-Vu-egn">
                             <connections>
                                 <segue destination="NTC-cD-LZl" kind="unwind" unwindAction="savePlaylist:" id="ViA-Cs-BA2"/>
@@ -397,14 +398,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="botao-excluir" width="35" height="35"/>
+        <image name="botao-excluir" width="44" height="44"/>
         <image name="campodetexto-multiplo" width="325" height="115"/>
         <image name="campodetexto-umalinha" width="325" height="39"/>
-        <image name="circulo-enumeracao" width="35" height="35"/>
+        <image name="circulo-enumeracao" width="44" height="44"/>
         <image name="criar-botao" width="245" height="57"/>
         <image name="passo-card" width="414" height="365"/>
         <namedColor name="Background">
             <color red="0.94099998474121094" green="0.97299998998641968" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Cor-LetraEscura">
+            <color red="0.14499999582767487" green="0.20000000298023224" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

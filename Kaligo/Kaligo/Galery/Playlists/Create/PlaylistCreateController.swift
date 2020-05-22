@@ -18,12 +18,19 @@ class PlaylistCreateController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpDismissKeyboard()
+        
         nextButton.isEnabled = false
 
         stepsTableViewDelegate = StepsTableViewDelegate()
         stepsTableView.delegate = stepsTableViewDelegate
         stepsTableView.dataSource = stepsTableViewDelegate
+        
         stepsTableView.tableFooterView = UIView()
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.navigationController?.navigationBar.sizeToFit()
+        }
         
         guard let delegate = stepsTableViewDelegate else { return }
         delegate.inputController = InputController(dataSource: delegate)
@@ -32,6 +39,11 @@ class PlaylistCreateController: UIViewController {
         delegate.titleDelegate = TextFieldDelegate(delegate: inputController, type: .title)
         delegate.descriptionDelegate = TextViewDelegate(delegate: inputController, type: .description)
         delegate.urlDelegate = TextFieldDelegate(delegate: inputController, type: .url)
+    }
+    
+    override func viewDidLayoutSubviews() {
+          super.viewDidLayoutSubviews()
+          self.stepsTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 340, right: 0)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
