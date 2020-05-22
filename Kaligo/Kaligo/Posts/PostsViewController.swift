@@ -13,26 +13,28 @@ class PostsViewController: UIViewController {
     @IBOutlet weak var filterCollectionView: UICollectionView!
     @IBOutlet weak var playlistsTableView: UITableView!
 
-    // TODO: delegate deve ser weak
-    var collectionViewDelegate: FilterCollectionViewDelegate?
-    var tableViewDelegate: PostsTableDelegate?
+    weak var collectionViewDelegate: FilterCollectionViewDelegate?
+    weak var tableViewDelegate: PostsTableDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.collectionViewDelegate = FilterCollectionViewDelegate()
+        
+        let filterDelegate = FilterCollectionViewDelegate()
+        self.collectionViewDelegate = filterDelegate
         collectionViewDelegate?.categories = ["Matemática", "História", "Geografia", "Biologia"]
 
         filterCollectionView.delegate = self.collectionViewDelegate
         filterCollectionView.dataSource = self.collectionViewDelegate
-
-        self.tableViewDelegate = PostsTableDelegate()
-        tableViewDelegate?.playlists = [ModeloPlaylist(userName: "Jaque",
+        
+        let postsDelegate = PostsTableDelegate()
+        self.tableViewDelegate = postsDelegate
+        tableViewDelegate?.playlists = [List(userName: "Jaque",
                                                        userLevel: "Nível 7",
                                                        title: "Álgebra",
                                                        description: "Descrição dessa playlist",
-                                                       category: .none,
-                                                       numberOfForks: 36)]
+                                                       category: "",
+                                                       numberOfForks: 36,
+                                                       type: "Playlist")]
 
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate

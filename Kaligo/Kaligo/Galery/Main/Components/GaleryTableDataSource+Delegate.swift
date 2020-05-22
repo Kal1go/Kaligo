@@ -15,7 +15,7 @@ enum GaleryFilter {
 
 class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
 
-    var playlists: [ModeloPlaylist]?
+    var playlists: [List]?
     var tips: [ModeloDica]?
     var filter: GaleryFilter = .playlists
 
@@ -70,12 +70,12 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
 
     private func setRow<T>(for cell: PlaylistTableViewCell, with data: T) {
-        if let d = data as? ModeloPlaylist {
+        if let d = data as? List {
             cell.userName.text = d.userName
             cell.userLevel.text = d.userLevel
             cell.playlistTitle.text = d.title
             cell.playlistDescription.text = d.description
-            cell.playlistCategory.text = d.category.rawValue
+            cell.playlistCategory.text = d.category
             cell.numberOfForks.text = "\(d.numberOfForks)"
 
         } else if let d = data as? ModeloDica {

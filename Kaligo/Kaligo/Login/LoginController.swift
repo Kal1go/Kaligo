@@ -10,7 +10,6 @@ import UIKit
 import AuthenticationServices
 import Endpoints_Requests
 
-
 class LoginController: UIViewController {
     
     static var isLogged: Bool {
@@ -37,8 +36,9 @@ class LoginController: UIViewController {
         let params = [
             "email": email,
             "appleID": appleID,
-            "name": name
-        ]
+            "name": name,
+            "level": 0
+        ] as [String: Any]
         
         self.showSpinner(onView: self.view)
         UserHandler.auth(params: params as [String: Any]) { (response) in

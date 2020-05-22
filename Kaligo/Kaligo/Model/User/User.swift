@@ -12,12 +12,14 @@ struct User: Codable {
     var email: String
     var appleID: String
     var name: String
+    var level: String
 
     var dictionaryRepresentation: [String: Any] {
         return [
             "email": email,
             "name": name,
-            "appleID": appleID
+            "appleID": appleID,
+            "level": level
         ]
     }
 }

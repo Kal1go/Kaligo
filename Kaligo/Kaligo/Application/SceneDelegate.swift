@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         var rootVC: UIViewController?
         
-        if LoginController.isLogged == true {
+        if LoginController.isLogged == false {
             rootVC = UIStoryboard(name: "Galery", bundle: nil)
                 .instantiateViewController(withIdentifier: "galeryvc")
         } else {

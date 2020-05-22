@@ -10,7 +10,7 @@ import UIKit
 
 class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     
-    var steps: [ModeloPasso] = [ModeloPasso(number: 1)]
+    var steps: [Step] = [Step(number: 1)]
         
     var titleDelegate: TextFieldDelegate?
     var urlDelegate: TextFieldDelegate?

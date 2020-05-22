@@ -26,12 +26,13 @@ class GaleryController: UIViewController {
     }
 
     func generateTemplateData() {
-        let playlist = ModeloPlaylist(userName: "Jaque",
+        let playlist = List(userName: "Jaque",
                                       userLevel: "Nível 7",
                                       title: "Álgebra",
                                       description: "Descrição dessa playlist",
-                                      category: .none,
-                                      numberOfForks: 36)
+                                      category: "",
+                                      numberOfForks: 36,
+                                      type: "Playlist")
 
         let tip = ModeloDica(userName: "Jaque",
                              userLevel: "Nível 7",

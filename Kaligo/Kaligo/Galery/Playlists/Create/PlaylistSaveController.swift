@@ -20,7 +20,7 @@ class PlaylistSaveController: UITableViewController {
     var inputController: InputController?
     var pickerController: PlaylistSavePicker?
     
-    var playlist = ModeloPlaylist()
+    var playlist = List()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class PlaylistSaveController: UITableViewController {
             let category = Category(rawValue: selectedValue)
             else { return }
         
-        playlist.category = category
+        playlist.category = category.rawValue
         
         validateSteps()
     }
@@ -66,8 +66,8 @@ class PlaylistSaveController: UITableViewController {
     private func validateSteps() {
         var invalidIndexes = [Int]()
         
-        for i in 0 ..< playlist.steps.count {
-            if playlist.steps[i].title == "" && playlist.steps[i].description == "" && playlist.steps[i].url == ""{
+        for i in 0 ..< (playlist.steps?.count ?? 0) {
+            if playlist.steps?[i].title == "" && playlist.steps?[i].description == "" && playlist.steps?[i].url == "" {
                 invalidIndexes.append(i)
             }
         }
@@ -75,11 +75,11 @@ class PlaylistSaveController: UITableViewController {
         invalidIndexes = invalidIndexes.sorted(by: >)
         
         for i in invalidIndexes {
-            playlist.steps.remove(at: i)
+            playlist.steps?.remove(at: i)
         }
         
-        for i in 0 ..< playlist.steps.count {
-            playlist.steps[i].number = i + 1
+        for i in 0 ..< (playlist.steps?.count ?? 0) {
+            playlist.steps?[i].number = i + 1
         }
         
     }

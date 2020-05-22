@@ -28,6 +28,7 @@ class PlaylistCreateController: UIViewController {
         
         stepsTableView.tableFooterView = UIView()
         
+        //because the tableview size, we ned make this to configure the title large, 
         DispatchQueue.main.async { [weak self] in
             self?.navigationController?.navigationBar.sizeToFit()
         }
@@ -56,7 +57,7 @@ class PlaylistCreateController: UIViewController {
     
     @IBAction func addStep(_ sender: Any) {
         if let numberOfSteps = stepsTableViewDelegate?.steps.count {
-            stepsTableViewDelegate?.steps.append(ModeloPasso(number: numberOfSteps + 1))
+            stepsTableViewDelegate?.steps.append(Step(number: numberOfSteps + 1))
             stepsTableView.reloadData()
         }
     }

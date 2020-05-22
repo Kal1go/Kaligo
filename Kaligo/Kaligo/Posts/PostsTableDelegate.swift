@@ -10,7 +10,7 @@ import UIKit
 
 class PostsTableDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
 
-    var playlists: [ModeloPlaylist]?
+    var playlists: [List]?
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return playlists?.count ?? 0
@@ -30,7 +30,7 @@ class PostsTableDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
         cell.userLevel.text = playlist.userLevel
         cell.playlistTitle.text = playlist.title
         cell.playlistDescription.text = playlist.description
-        cell.playlistCategory.text = playlist.category.rawValue
+        cell.playlistCategory.text = playlist.category
         cell.numberOfForks.text = "\(playlist.numberOfForks)"
 
         return cell
