@@ -10,7 +10,7 @@ import Foundation
 
 struct Environment {
     // MARK: - State
-    private static let PRODUCTION = false
+    private static let PRODUCTION = true
 
     // MARK: - Server
     public static var SERVER_URL: String {

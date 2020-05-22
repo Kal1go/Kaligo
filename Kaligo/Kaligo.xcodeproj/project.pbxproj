@@ -314,6 +314,16 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		82E0177824774B1900ABED8C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E4B748AA247309F700B3FAAF /* Galery.storyboard */,
+				E4B748AE247310F000B3FAAF /* GaleryController.swift */,
+				82D5EB0224773DF600594274 /* Components */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		E423ADE9246F0F7C009F42C3 = {
 			isa = PBXGroup;
 			children = (
@@ -335,12 +345,12 @@
 			isa = PBXGroup;
 			children = (
 				82D5EAD32477328F00594274 /* Kaligo.entitlements */,
+				82D5EB002477375100594274 /* Application */,
+				82D5EACC2477322A00594274 /* Connection */,
 				82D5EADD247732AA00594274 /* Login */,
 				82D5EAF8247733C700594274 /* Home */,
 				82D5EAF9247733D300594274 /* Posts */,
 				E47EB216246F349C004651A2 /* Galery */,
-				82D5EB002477375100594274 /* Application */,
-				82D5EACC2477322A00594274 /* Connection */,
 				82D5EADE247732B100594274 /* Shared */,
 				E47EB214246F3489004651A2 /* Model */,
 				E423AE00246F0F7E009F42C3 /* LaunchScreen.storyboard */,
@@ -367,10 +377,8 @@
 		E47EB216246F349C004651A2 /* Galery */ = {
 			isa = PBXGroup;
 			children = (
+				82E0177824774B1900ABED8C /* Main */,
 				82D5EAFA2477340A00594274 /* Playlists */,
-				E4B748AA247309F700B3FAAF /* Galery.storyboard */,
-				E4B748AE247310F000B3FAAF /* GaleryController.swift */,
-				82D5EB0224773DF600594274 /* Components */,
 			);
 			path = Galery;
 			sourceTree = "<group>";
@@ -672,6 +680,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7X85S6HV6;
 				INFOPLIST_FILE = Kaligo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -691,6 +700,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7X85S6HV6;
 				INFOPLIST_FILE = Kaligo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -177,13 +177,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04V-7L-OTF">
-                                                    <rect key="frame" x="90" y="38" width="49" height="20.5"/>
+                                                    <rect key="frame" x="90" y="38" width="49" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nível 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-Kx-fFu">
-                                                    <rect key="frame" x="90" y="63" width="38.5" height="15"/>
+                                                    <rect key="frame" x="90" y="63.5" width="38.5" height="14.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -272,7 +272,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7JB-JB-58R"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Galeria" id="hN5-jv-OFG"/>
+                    <navigationItem key="navigationItem" title="Galeria" leftItemsSupplementBackButton="YES" id="hN5-jv-OFG">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="YkY-5v-azl">
+                            <connections>
+                                <action selector="logout" destination="xRc-ws-f3N" id="c0r-bf-T9j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="playlistsOptionImage" destination="0hQ-W6-83a" id="k2y-E2-u9u"/>
                         <outlet property="playlistsTableView" destination="t3M-63-Z9x" id="AeA-bx-uzZ"/>
@@ -281,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwx-vj-u0r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="947.82608695652186" y="107.8125"/>
+            <point key="canvasLocation" x="1019" y="108"/>
         </scene>
         <!--playlist-->
         <scene sceneID="omJ-Rz-mnP">
@@ -306,7 +312,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vxY-Xm-TWi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LIB-Ry-Ygb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="galeryvc" automaticallyAdjustsScrollViewInsets="NO" id="LIB-Ry-Ygb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rtB-fa-LxN">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
