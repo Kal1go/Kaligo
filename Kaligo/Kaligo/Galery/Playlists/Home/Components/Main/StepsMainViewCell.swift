@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-class PlaylistHomeTableVewCell: UITableViewCell {
+class StepsMainViewCell: UITableViewCell {
     
-    @IBOutlet weak var imagemQntdeForks: UIImageView!
-    @IBOutlet weak var imageCellPerfil: UIImageView!
-    @IBOutlet weak var quantidadeForksCell: UILabel!
-    @IBOutlet weak var labelCellNomePerfil: UILabel!
+    @IBOutlet weak var numberOfForksLabel: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userLevelLabel: UILabel!
     
     override func awakeFromNib() {
            super.awakeFromNib()

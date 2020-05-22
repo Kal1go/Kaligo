@@ -10,7 +10,7 @@ import UIKit
 
 class PostsTableDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
 
-    var playlists: [List]?
+    var playlists: Lists?
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return playlists?.count ?? 0

@@ -13,6 +13,7 @@ struct User: Codable {
     var appleID: String
     var name: String
     var level: String
+    var list: Lists?
 
     var dictionaryRepresentation: [String: Any] {
         return [
@@ -21,6 +22,15 @@ struct User: Codable {
             "appleID": appleID,
             "level": level
         ]
+    }
+    static func addlist(list: List) {
+        if var userList = CommonData.shared.user.list {
+            userList.append(list)
+            CommonData.shared.user.list = userList
+        } else {
+            CommonData.shared.user.list = [list]
+        }
+        
     }
 }
 

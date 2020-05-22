@@ -22,6 +22,8 @@ class PlaylistTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        profilePicture.layer.cornerRadius = profilePicture.frame.size.height / 2
+        profilePicture.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,5 +31,8 @@ class PlaylistTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func setUp() {
+        userLevel.text = "Nível \(userLevel.text ?? "0")"
+    }
 }

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="Background"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell1" rowHeight="100" id="iqO-vR-eAH" customClass="PlaylistHomeTableVewCell" customModule="Kaligo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell1" rowHeight="100" id="iqO-vR-eAH" customClass="StepsMainViewCell" customModule="Kaligo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iqO-vR-eAH" id="6TI-Y9-Fvz">
@@ -39,7 +39,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="botao-fork" translatesAutoresizingMaskIntoConstraints="NO" id="7nO-he-SzB">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="botao-fork" translatesAutoresizingMaskIntoConstraints="NO" id="7nO-he-SzB">
                                             <rect key="frame" x="294" y="26" width="100" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="mX9-jM-BXd"/>
@@ -47,29 +47,37 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP6-8h-wbA">
-                                            <rect key="frame" x="355" y="39.5" width="21" height="21"/>
+                                            <rect key="frame" x="350" y="39.5" width="21" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atg-Yp-nOW">
+                                            <rect key="frame" x="101" y="63" width="31" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="7nO-he-SzB" firstAttribute="centerY" secondItem="vLj-IP-9XR" secondAttribute="centerY" id="1qy-dE-a6c"/>
+                                        <constraint firstItem="atg-Yp-nOW" firstAttribute="leading" secondItem="vLj-IP-9XR" secondAttribute="trailing" constant="11" id="7ow-hF-F7X"/>
+                                        <constraint firstItem="atg-Yp-nOW" firstAttribute="top" secondItem="uvw-YM-um7" secondAttribute="bottom" constant="2" id="Jei-LD-2uk"/>
                                         <constraint firstItem="uvw-YM-um7" firstAttribute="leading" secondItem="vLj-IP-9XR" secondAttribute="trailing" constant="11" id="MKu-Ct-P8V"/>
                                         <constraint firstItem="vLj-IP-9XR" firstAttribute="leading" secondItem="6TI-Y9-Fvz" secondAttribute="leadingMargin" id="T1G-D9-i5S"/>
                                         <constraint firstItem="vLj-IP-9XR" firstAttribute="centerY" secondItem="6TI-Y9-Fvz" secondAttribute="centerY" id="T9H-U9-QUC"/>
                                         <constraint firstItem="cP6-8h-wbA" firstAttribute="centerY" secondItem="7nO-he-SzB" secondAttribute="centerY" id="iwL-3Z-QR9"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="cP6-8h-wbA" secondAttribute="trailing" constant="18" id="mVI-b4-Lz2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cP6-8h-wbA" secondAttribute="trailing" constant="23" id="mVI-b4-Lz2"/>
                                         <constraint firstItem="7nO-he-SzB" firstAttribute="trailing" secondItem="6TI-Y9-Fvz" secondAttribute="trailingMargin" id="sDx-rU-zkx"/>
                                         <constraint firstItem="uvw-YM-um7" firstAttribute="centerY" secondItem="vLj-IP-9XR" secondAttribute="centerY" id="y7r-6Z-dNC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="Background"/>
                                 <connections>
-                                    <outlet property="imageCellPerfil" destination="vLj-IP-9XR" id="I4f-xO-lNS"/>
-                                    <outlet property="imagemQntdeForks" destination="7nO-he-SzB" id="l7t-N4-0Id"/>
-                                    <outlet property="labelCellNomePerfil" destination="uvw-YM-um7" id="veb-36-xFR"/>
-                                    <outlet property="quantidadeForksCell" destination="cP6-8h-wbA" id="Bf3-fK-fnw"/>
+                                    <outlet property="numberOfForksLabel" destination="cP6-8h-wbA" id="dPV-oD-i0R"/>
+                                    <outlet property="userImage" destination="vLj-IP-9XR" id="Mvr-6o-U7C"/>
+                                    <outlet property="userLevelLabel" destination="atg-Yp-nOW" id="Ryc-Yc-0YX"/>
+                                    <outlet property="userNameLabel" destination="uvw-YM-um7" id="DAT-3V-abV"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="23" id="xny-Bw-uMr" userLabel="Cell">

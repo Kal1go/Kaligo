@@ -25,8 +25,8 @@ class PlaylistSaveController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpDismissKeyboard()
         saveButton.isEnabled = false
-
         inputController = InputController(controller: self)
         
         guard let inputController = inputController else { return }
@@ -86,7 +86,37 @@ class PlaylistSaveController: UITableViewController {
 
     @IBAction func textFieldDidChange(_ sender: UITextField) {
         guard let delegate = nameDelegate else { return }
-        
         saveButton.isEnabled = delegate.validateText(for: sender)
+    }
+    
+    private func preConfigure() {
+        playlist.type = "Playlist" //TODO: - Configurar na hora de salvar Tips
+        playlist.category = pickerController?.selected ?? ""
+        playlist.userName = CommonData.shared.user.name
+        playlist.userLevel = CommonData.shared.user.level
+        playlist._id = CommonData.shared.user._id
+    }
+    
+    @IBAction func save() {
+        self.showSpinner(onView: self.view)
+        self.preConfigure()
+        ListHandler.create(list: playlist) { (response) in
+            switch response {
+            case .success(let answer):
+                DispatchQueue.main.async {
+                    User.addlist(list: answer)
+                    self.removeSpinner()
+                    self.navigationController?.previousViewController?.back()
+                }
+            case .error(let description):
+                print(description)
+                DispatchQueue.main.async {
+                    self.removeSpinner()
+                    self.showAlert(title: "Algo deu errado", message: "Verifique sua conexão com a internet.")
+                }
+            }
+
+        }
+        
     }
 }

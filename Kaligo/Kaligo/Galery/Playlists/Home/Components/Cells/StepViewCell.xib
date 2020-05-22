@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="feM-Pq-VBJ" customClass="AwesomeReviewView" customModule="Kaligo" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="feM-Pq-VBJ" customClass="StepViewCell" customModule="Kaligo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="521" height="327"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -118,12 +118,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Jfz-Ti-FIS"/>
             <connections>
-                <outlet property="dateLabel" destination="kAk-1E-Ts6" id="90q-eL-N7B"/>
                 <outlet property="descLabel" destination="J49-zI-9ZG" id="QGv-UD-fWy"/>
                 <outlet property="mainStackView" destination="Kng-sA-XRz" id="mVG-mL-qaM"/>
                 <outlet property="numeroDePassos" destination="Mso-Hb-pqH" id="Nbz-Ke-Sue"/>
                 <outlet property="seeMoreButton" destination="Vtw-oZ-mbp" id="6i5-yo-hE6"/>
-                <outlet property="userNameLabel" destination="srh-LT-U3Y" id="Nr2-U0-k4r"/>
+                <outlet property="titleLabel" destination="srh-LT-U3Y" id="Nr2-U0-k4r"/>
+                <outlet property="urlLabel" destination="kAk-1E-Ts6" id="90q-eL-N7B"/>
             </connections>
             <point key="canvasLocation" x="193.47826086956522" y="321.76339285714283"/>
         </view>

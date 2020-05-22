@@ -20,5 +20,4 @@ class GaleryTableCell: UITableViewCell {
     @IBAction func addPlaylist(_ sender: Any) {
         print("Cria playlist")
     }
-
 }

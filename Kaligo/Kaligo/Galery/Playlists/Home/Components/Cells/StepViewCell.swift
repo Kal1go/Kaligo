@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class AwesomeReviewView: UIView {
+class StepViewCell: UIView {
     @IBOutlet private weak var mainStackView: UIStackView!
-    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descLabel: UILabel!
-    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var urlLabel: UILabel!
     @IBOutlet private weak var seeMoreButton: UIButton!
     @IBOutlet weak var numeroDePassos: UILabel!
     
@@ -32,11 +32,12 @@ class AwesomeReviewView: UIView {
         self.seeMoreDidTapHandler = handler
     }
     
-    func setupWith(review: Review) {
-        self.userNameLabel.text = review.title
-        self.descLabel.text = review.description + review.description
-        self.dateLabel.text = review.date
-        self.isSeeLess = review.isExpanded
+    func setupWith(step: Step) {
+        self.titleLabel.text = step.title
+        self.descLabel.text = step.description
+        self.urlLabel.text = step.url
+        self.isSeeLess = step.isExpanded ?? false
+        self.numeroDePassos.text = String(step.number)
         self.descLabel.numberOfLines = self.isSeeLess ? 0 : 3
         self.seeMoreButton.setTitle(self.isSeeLess ? "See less" : "See more", for: .normal)
         

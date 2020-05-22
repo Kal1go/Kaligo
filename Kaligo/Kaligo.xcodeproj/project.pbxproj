@@ -10,10 +10,10 @@
 		823106402477738F0067E00C /* UserDafaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231063F2477738F0067E00C /* UserDafaults+Codable.swift */; };
 		8258E26024776027004F0B84 /* Controller+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258E25F24776027004F0B84 /* Controller+Keyboard.swift */; };
 		8258E262247760C1004F0B84 /* TextFild+Return.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258E261247760C1004F0B84 /* TextFild+Return.swift */; };
+		82A5D3352477828400E98286 /* Controller+Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A5D3342477828400E98286 /* Controller+Back.swift */; };
 		82D5EACB2477321900594274 /* Endpoints-Requests in Frameworks */ = {isa = PBXBuildFile; productRef = 82A300F8247396C9001957E0 /* Endpoints-Requests */; };
 		82D5EAD12477326200594274 /* ServerAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EACF2477326200594274 /* ServerAnswer.swift */; };
 		82D5EAD22477326200594274 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAD02477326200594274 /* Environment.swift */; };
-		82D5EAE5247732C100594274 /* List2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAE1247732C100594274 /* List2.swift */; };
 		82D5EAE6247732C100594274 /* ListHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAE2247732C100594274 /* ListHandler.swift */; };
 		82D5EAE7247732C100594274 /* StepHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAE3247732C100594274 /* StepHandler.swift */; };
 		82D5EAEB247732CD00594274 /* LoginExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAE8247732CD00594274 /* LoginExtensions.swift */; };
@@ -24,18 +24,18 @@
 		82D5EAF3247732D600594274 /* Controller+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAF0247732D600594274 /* Controller+Alert.swift */; };
 		82D5EAF6247732DE00594274 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAF4247732DD00594274 /* User.swift */; };
 		82D5EAF7247732DE00594274 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAF5247732DE00594274 /* UserHandler.swift */; };
-		872A330E24756C1F006ED748 /* PlaylistHomeTableVewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872A330D24756C1F006ED748 /* PlaylistHomeTableVewCell.swift */; };
+		872A330E24756C1F006ED748 /* StepsMainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872A330D24756C1F006ED748 /* StepsMainViewCell.swift */; };
 		87DF6291247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF6290247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift */; };
 		87DF6293247304FC002B8FCE /* CategoriasHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF6292247304FC002B8FCE /* CategoriasHomeTableViewCell.swift */; };
 		87DF6295247305EC002B8FCE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF6294247305EC002B8FCE /* HomeViewController.swift */; };
 		87DF62972473101E002B8FCE /* HomeCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF62962473101E002B8FCE /* HomeCollectionViewDelegate.swift */; };
 		87DF629924731938002B8FCE /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF629824731938002B8FCE /* HomeTableViewDelegate.swift */; };
 		87DF629B24732A01002B8FCE /* PlaylistHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DF629A24732A01002B8FCE /* PlaylistHome.storyboard */; };
-		87DF629F24733AF9002B8FCE /* AwesomeReviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87DF629E24733AF9002B8FCE /* AwesomeReviewView.xib */; };
-		87DF62A124733D4D002B8FCE /* AwesomeReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF62A024733D4D002B8FCE /* AwesomeReviewView.swift */; };
+		87DF629F24733AF9002B8FCE /* StepViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87DF629E24733AF9002B8FCE /* StepViewCell.xib */; };
+		87DF62A124733D4D002B8FCE /* StepViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF62A024733D4D002B8FCE /* StepViewCell.swift */; };
 		87DF62A324733DBE002B8FCE /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF62A224733DBE002B8FCE /* Review.swift */; };
 		87DF62A524733E18002B8FCE /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF62A424733E18002B8FCE /* Reviews.swift */; };
-		87DF62A724733E67002B8FCE /* PlaylistHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF62A624733E67002B8FCE /* PlaylistHome.swift */; };
+		87DF62A724733E67002B8FCE /* PlaylistHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF62A624733E67002B8FCE /* PlaylistHomeController.swift */; };
 		E4183E702476F02B00984A2C /* PlaylistSaveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4183E6F2476F02B00984A2C /* PlaylistSaveController.swift */; };
 		E4183E722476F6AE00984A2C /* PlaylistSavePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4183E712476F6AE00984A2C /* PlaylistSavePicker.swift */; };
 		E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423ADF5246F0F7C009F42C3 /* AppDelegate.swift */; };
@@ -52,7 +52,7 @@
 		E43BC61624759FEE00351A22 /* TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BC61524759FEE00351A22 /* TextViewDelegate.swift */; };
 		E451F3402474765D004E450C /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F33F2474765D004E450C /* StepTableViewCell.swift */; };
 		E451F34224747B87004E450C /* PlaylistCreateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F34124747B87004E450C /* PlaylistCreateController.swift */; };
-		E451F34424747C25004E450C /* StepsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F34324747C25004E450C /* StepsTableViewDelegate.swift */; };
+		E451F34424747C25004E450C /* StepsTableDataSource+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F34324747C25004E450C /* StepsTableDataSource+Delegate.swift */; };
 		E451F34624747C66004E450C /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451F34524747C66004E450C /* Step.swift */; };
 		E47EB20D246F1C77004651A2 /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47EB20C246F1C77004651A2 /* Posts.storyboard */; };
 		E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EB20E246F244B004651A2 /* SegmentedCollectionViewCell.swift */; };
@@ -70,10 +70,10 @@
 		8231063F2477738F0067E00C /* UserDafaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDafaults+Codable.swift"; sourceTree = "<group>"; };
 		8258E25F24776027004F0B84 /* Controller+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Controller+Keyboard.swift"; sourceTree = "<group>"; };
 		8258E261247760C1004F0B84 /* TextFild+Return.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFild+Return.swift"; sourceTree = "<group>"; };
+		82A5D3342477828400E98286 /* Controller+Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Controller+Back.swift"; sourceTree = "<group>"; };
 		82D5EACF2477326200594274 /* ServerAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAnswer.swift; sourceTree = "<group>"; };
 		82D5EAD02477326200594274 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		82D5EAD32477328F00594274 /* Kaligo.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Kaligo.entitlements; sourceTree = "<group>"; };
-		82D5EAE1247732C100594274 /* List2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List2.swift; sourceTree = "<group>"; };
 		82D5EAE2247732C100594274 /* ListHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListHandler.swift; sourceTree = "<group>"; };
 		82D5EAE3247732C100594274 /* StepHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepHandler.swift; sourceTree = "<group>"; };
 		82D5EAE8247732CD00594274 /* LoginExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginExtensions.swift; sourceTree = "<group>"; };
@@ -84,18 +84,18 @@
 		82D5EAF0247732D600594274 /* Controller+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller+Alert.swift"; sourceTree = "<group>"; };
 		82D5EAF4247732DD00594274 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		82D5EAF5247732DE00594274 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
-		872A330D24756C1F006ED748 /* PlaylistHomeTableVewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHomeTableVewCell.swift; sourceTree = "<group>"; };
+		872A330D24756C1F006ED748 /* StepsMainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsMainViewCell.swift; sourceTree = "<group>"; };
 		87DF6290247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		87DF6292247304FC002B8FCE /* CategoriasHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasHomeTableViewCell.swift; sourceTree = "<group>"; };
 		87DF6294247305EC002B8FCE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		87DF62962473101E002B8FCE /* HomeCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		87DF629824731938002B8FCE /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		87DF629A24732A01002B8FCE /* PlaylistHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaylistHome.storyboard; sourceTree = "<group>"; };
-		87DF629E24733AF9002B8FCE /* AwesomeReviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AwesomeReviewView.xib; sourceTree = "<group>"; };
-		87DF62A024733D4D002B8FCE /* AwesomeReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeReviewView.swift; sourceTree = "<group>"; };
+		87DF629E24733AF9002B8FCE /* StepViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepViewCell.xib; sourceTree = "<group>"; };
+		87DF62A024733D4D002B8FCE /* StepViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepViewCell.swift; sourceTree = "<group>"; };
 		87DF62A224733DBE002B8FCE /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		87DF62A424733E18002B8FCE /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
-		87DF62A624733E67002B8FCE /* PlaylistHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHome.swift; sourceTree = "<group>"; };
+		87DF62A624733E67002B8FCE /* PlaylistHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHomeController.swift; sourceTree = "<group>"; };
 		E4183E6F2476F02B00984A2C /* PlaylistSaveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSaveController.swift; sourceTree = "<group>"; };
 		E4183E712476F6AE00984A2C /* PlaylistSavePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSavePicker.swift; sourceTree = "<group>"; };
 		E423ADF2246F0F7C009F42C3 /* Kaligo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaligo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +114,7 @@
 		E43BC61524759FEE00351A22 /* TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewDelegate.swift; sourceTree = "<group>"; };
 		E451F33F2474765D004E450C /* StepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
 		E451F34124747B87004E450C /* PlaylistCreateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCreateController.swift; sourceTree = "<group>"; };
-		E451F34324747C25004E450C /* StepsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsTableViewDelegate.swift; sourceTree = "<group>"; };
+		E451F34324747C25004E450C /* StepsTableDataSource+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StepsTableDataSource+Delegate.swift"; sourceTree = "<group>"; };
 		E451F34524747C66004E450C /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		E47EB20C246F1C77004651A2 /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
 		E47EB20E246F244B004651A2 /* SegmentedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -140,11 +140,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		824AF25824777D5C005A2DC3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E451F34324747C25004E450C /* StepsTableDataSource+Delegate.swift */,
+				E4183E712476F6AE00984A2C /* PlaylistSavePicker.swift */,
+				E451F33F2474765D004E450C /* StepTableViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		82667190247448D300152760 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				87DF629E24733AF9002B8FCE /* AwesomeReviewView.xib */,
-				87DF62A024733D4D002B8FCE /* AwesomeReviewView.swift */,
+				87DF629E24733AF9002B8FCE /* StepViewCell.xib */,
+				87DF62A024733D4D002B8FCE /* StepViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -162,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				87DF629A24732A01002B8FCE /* PlaylistHome.storyboard */,
-				87DF62A624733E67002B8FCE /* PlaylistHome.swift */,
+				87DF62A624733E67002B8FCE /* PlaylistHomeController.swift */,
 				82D5EAFE247736B800594274 /* Components */,
 			);
 			path = Home;
@@ -180,9 +190,8 @@
 		82D5EADC247732A300594274 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				82D5EAE1247732C100594274 /* List2.swift */,
-				82D5EAE2247732C100594274 /* ListHandler.swift */,
 				E435E49324744811003D79CD /* List.swift */,
+				82D5EAE2247732C100594274 /* ListHandler.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -200,13 +209,13 @@
 		82D5EADE247732B100594274 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				E47EB210246F336D004651A2 /* PlaylistTableViewCell.swift */,
 				82D5EAF0247732D600594274 /* Controller+Alert.swift */,
 				82D5EAEF247732D600594274 /* CommonData.swift */,
 				82D5EAEE247732D500594274 /* Spinner+Extension.swift */,
 				8258E25F24776027004F0B84 /* Controller+Keyboard.swift */,
 				8258E261247760C1004F0B84 /* TextFild+Return.swift */,
 				8231063F2477738F0067E00C /* UserDafaults+Codable.swift */,
+				82A5D3342477828400E98286 /* Controller+Back.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -258,10 +267,10 @@
 		82D5EAFB2477347500594274 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E47EB210246F336D004651A2 /* PlaylistTableViewCell.swift */,
 				E43BC6132475997900351A22 /* InputController.swift */,
 				E43BC61524759FEE00351A22 /* TextViewDelegate.swift */,
 				E43BC6112475748800351A22 /* TextFieldDelegate.swift */,
-				E451F34324747C25004E450C /* StepsTableViewDelegate.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -270,10 +279,9 @@
 			isa = PBXGroup;
 			children = (
 				E435E49924745ACD003D79CD /* PlaylistCreate.storyboard */,
-				E4183E712476F6AE00984A2C /* PlaylistSavePicker.swift */,
 				E451F34124747B87004E450C /* PlaylistCreateController.swift */,
 				E4183E6F2476F02B00984A2C /* PlaylistSaveController.swift */,
-				E451F33F2474765D004E450C /* StepTableViewCell.swift */,
+				824AF25824777D5C005A2DC3 /* Components */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -290,7 +298,7 @@
 		82D5EAFF2477370B00594274 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				872A330D24756C1F006ED748 /* PlaylistHomeTableVewCell.swift */,
+				872A330D24756C1F006ED748 /* StepsMainViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -459,7 +467,7 @@
 				87DF629B24732A01002B8FCE /* PlaylistHome.storyboard in Resources */,
 				E423AE02246F0F7E009F42C3 /* LaunchScreen.storyboard in Resources */,
 				E423ADFF246F0F7E009F42C3 /* Assets.xcassets in Resources */,
-				87DF629F24733AF9002B8FCE /* AwesomeReviewView.xib in Resources */,
+				87DF629F24733AF9002B8FCE /* StepViewCell.xib in Resources */,
 				E423ADFD246F0F7C009F42C3 /* Main.storyboard in Resources */,
 				E435E49A24745ACD003D79CD /* PlaylistCreate.storyboard in Resources */,
 				E435E49824744CDD003D79CD /* Default-568h@2x.png in Resources */,
@@ -507,18 +515,17 @@
 				E4183E702476F02B00984A2C /* PlaylistSaveController.swift in Sources */,
 				E43BC6142475997900351A22 /* InputController.swift in Sources */,
 				E4B748B3247320B300B3FAAF /* GaleryTableCell.swift in Sources */,
-				E451F34424747C25004E450C /* StepsTableViewDelegate.swift in Sources */,
+				E451F34424747C25004E450C /* StepsTableDataSource+Delegate.swift in Sources */,
 				E4B748A92473021B00B3FAAF /* PostsTableDelegate.swift in Sources */,
 				E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */,
 				E4B748B52473272900B3FAAF /* GaleryTableDataSource+Delegate.swift in Sources */,
 				E451F3402474765D004E450C /* StepTableViewCell.swift in Sources */,
-				872A330E24756C1F006ED748 /* PlaylistHomeTableVewCell.swift in Sources */,
-				87DF62A124733D4D002B8FCE /* AwesomeReviewView.swift in Sources */,
-				82D5EAE5247732C100594274 /* List2.swift in Sources */,
+				872A330E24756C1F006ED748 /* StepsMainViewCell.swift in Sources */,
+				87DF62A124733D4D002B8FCE /* StepViewCell.swift in Sources */,
 				82D5EAD12477326200594274 /* ServerAnswer.swift in Sources */,
 				82D5EAED247732CD00594274 /* LoginController.swift in Sources */,
 				82D5EAE7247732C100594274 /* StepHandler.swift in Sources */,
-				87DF62A724733E67002B8FCE /* PlaylistHome.swift in Sources */,
+				87DF62A724733E67002B8FCE /* PlaylistHomeController.swift in Sources */,
 				82D5EAF7247732DE00594274 /* UserHandler.swift in Sources */,
 				87DF6291247304A2002B8FCE /* SegmentedHomeCollectionViewCell.swift in Sources */,
 				87DF62A524733E18002B8FCE /* Reviews.swift in Sources */,
@@ -526,6 +533,7 @@
 				87DF6295247305EC002B8FCE /* HomeViewController.swift in Sources */,
 				E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */,
 				87DF62A324733DBE002B8FCE /* Review.swift in Sources */,
+				82A5D3352477828400E98286 /* Controller+Back.swift in Sources */,
 				87DF62972473101E002B8FCE /* HomeCollectionViewDelegate.swift in Sources */,
 				87DF6293247304FC002B8FCE /* CategoriasHomeTableViewCell.swift in Sources */,
 				E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */,

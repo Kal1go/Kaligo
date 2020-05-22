@@ -13,12 +13,17 @@ enum GaleryFilter {
     case tips
 }
 
+protocol GaleryTableViewProtocol: NSObject {
+    func segue(atIndex index: Int)
+}
+
 class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
 
-    var playlists: [List]?
+    var playlists: Lists?
     var tips: [ModeloDica]?
     var filter: GaleryFilter = .playlists
-
+    weak var delegate: GaleryTableViewProtocol?
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -65,6 +70,7 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                 setRow(for: cell, with: tip)
             }
             cell.selectionStyle = .none
+            cell.setUp()
             return cell
         }
     }
@@ -86,6 +92,10 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
             cell.playlistCategory.text = d.category
         }
 
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.segue(atIndex: indexPath.row)
     }
 
 }

@@ -13,6 +13,7 @@ class PlaylistCreateController: UIViewController {
     @IBOutlet weak var stepsTableView: UITableView!
     @IBOutlet weak var nextButton: UIBarButtonItem!
     
+    //TODO: - Transformar em weak
     var stepsTableViewDelegate: StepsTableViewDelegate?
     
     override func viewDidLoad() {
@@ -21,7 +22,6 @@ class PlaylistCreateController: UIViewController {
         setUpDismissKeyboard()
         
         nextButton.isEnabled = false
-
         stepsTableViewDelegate = StepsTableViewDelegate()
         stepsTableView.delegate = stepsTableViewDelegate
         stepsTableView.dataSource = stepsTableViewDelegate

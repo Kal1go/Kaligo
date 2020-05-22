@@ -36,16 +36,18 @@ class List: Codable {
             "category": category,
             "numberOfForks": numberOfForks,
             "type": type,
+            "userName": userName,
+            "userLevel": userLevel,
             "userID": CommonData.shared.user._id ?? "",
-            "steps": steps ?? [],
+            "steps": steps?.dictionaryRepresentation() ?? [],
             "_id": _id ?? ""
         ]
     }
     
     init() {
-        self.userName = CommonData.shared.user.name
-        self.userLevel = CommonData.shared.user.level
-        self.userID = CommonData.shared.user._id ?? ""
+        self.userName = ""
+        self.userLevel = ""
+        self.userID = ""
         
         self.title = ""
         self.description = ""
@@ -61,9 +63,9 @@ class List: Codable {
          category: String,
          numberOfForks: Int,
          type: String) {
-        self.userName = CommonData.shared.user.name
-        self.userLevel = CommonData.shared.user.level
-        self.userID = CommonData.shared.user._id ?? ""
+        self.userName = userName
+        self.userLevel = userLevel
+        self.userID = _id ?? ""
         
         self.title = title
         self.description = description

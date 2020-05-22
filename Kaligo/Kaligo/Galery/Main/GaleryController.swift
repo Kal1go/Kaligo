@@ -20,28 +20,22 @@ class GaleryController: UIViewController {
         super.viewDidLoad()
 
         self.tableViewDelegate = GaleryTableView()
-        generateTemplateData()
+        generateData()
+        tableViewDelegate?.delegate = self
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
     }
 
-    func generateTemplateData() {
-        let playlist = List(userName: "Jaque",
-                                      userLevel: "Nível 7",
-                                      title: "Álgebra",
-                                      description: "Descrição dessa playlist",
-                                      category: "",
-                                      numberOfForks: 36,
-                                      type: "Playlist")
-
-        let tip = ModeloDica(userName: "Jaque",
-                             userLevel: "Nível 7",
-                             title: "Álgebra",
-                             description: "Leve agasalho",
-                             category: "ENEM")
-
-        tableViewDelegate?.playlists = [playlist]
-        tableViewDelegate?.tips = [tip]
+    func generateData() {
+        tableViewDelegate?.playlists = CommonData.shared.user.list
+        tableViewDelegate?.tips = []
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if tableViewDelegate?.playlists?.count != CommonData.shared.user.list?.count {
+            tableViewDelegate?.playlists = CommonData.shared.user.list
+            playlistsTableView.reloadData()
+        }
     }
 
     @IBAction func changeFilter(_ sender: UIButton) {
@@ -66,5 +60,22 @@ class GaleryController: UIViewController {
     
     @IBAction func logout() {
         LoginController.logout(presenter: self)
+    }
+}
+
+extension GaleryController: GaleryTableViewProtocol {
+    func segue(atIndex index: Int) {
+        guard let list = tableViewDelegate?.playlists?[index] else {
+            fatalError("Where stay the list???")
+        }
+        performSegue(withIdentifier: "listDetail", sender: list)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navegation = segue.destination as? UINavigationController,
+            let view = navegation.viewControllers.first as? PlaylistHomeController,
+            let list = sender as? List {
+                view.playlist = list
+        }
     }
 }

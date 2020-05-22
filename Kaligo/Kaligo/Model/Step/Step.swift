@@ -14,12 +14,14 @@ class Step: Codable {
     var url: String
     var number: Int
     var _id: String?
+    var isExpanded: Bool? = false
     
     var dictionaryRepresentation: [String: Any] {
         return [
             "title": title,
             "description": description,
             "url": url,
+            "number": number,
             "_id": _id ?? ""
         ]
     }
@@ -33,3 +35,15 @@ class Step: Codable {
 }
 
 typealias Steps = [Step]
+
+extension Steps {
+    func dictionaryRepresentation() -> String? {
+        var setpsRepresentation: [[String: Any]] = []
+        self.forEach({ (step) in
+            setpsRepresentation.append(step.dictionaryRepresentation)
+        })
+        guard let data = try? JSONSerialization.data(withJSONObject: setpsRepresentation, options: .prettyPrinted) else { return "" }
+
+        return String(data: data, encoding: String.Encoding.utf8) ?? ""
+    }
+}
