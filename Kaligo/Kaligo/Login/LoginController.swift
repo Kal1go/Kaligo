@@ -21,7 +21,7 @@ class LoginController: UIViewController {
         }
     }
     
-    @IBOutlet weak var authorizationButton: ASAuthorizationAppleIDButton!
+    let authorizationAppleIDButton = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,14 +84,24 @@ class LoginController: UIViewController {
 // MARK: - LoginAuthorization
 extension LoginController: ASAuthorizationControllerDelegate {
     func setUpSignInAppleButton() {
-        authorizationButton.addTarget(
+        authorizationAppleIDButton.addTarget(
             self,
             action: #selector(handleAppleIdRequest),
             for: .touchUpInside
         )
-        authorizationButton.cornerRadius = 10
-        authorizationButton.
+        authorizationAppleIDButton.cornerRadius = 10
+        self.view.addSubview(authorizationAppleIDButton)
+        
+        authorizationAppleIDButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            authorizationAppleIDButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            authorizationAppleIDButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100),
+            authorizationAppleIDButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8),
+            authorizationAppleIDButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        
     }
+    
     @objc func handleAppleIdRequest() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
