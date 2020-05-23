@@ -74,7 +74,27 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive,
+                                        title: "",
+                                        handler: { (action, view, completionHandler) in
+                                            // excluir
+                                            print("Item excluído")
+                                            completionHandler(true)
+        })
 
+        
+        action.image = UIImage(named: "botao-excluirPlaylist")
+        action.backgroundColor = UIColor(named: "Background")
+        let configuration = UISwipeActionsConfiguration(actions: [action])
+        return configuration
+    }
+    
     private func setRow<T>(for cell: PlaylistTableViewCell, with data: T) {
         if let d = data as? List {
             cell.userName.text = d.userName
