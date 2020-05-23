@@ -90,6 +90,7 @@ extension LoginController: ASAuthorizationControllerDelegate {
             for: .touchUpInside
         )
         authorizationButton.cornerRadius = 10
+        authorizationButton.
     }
     @objc func handleAppleIdRequest() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
