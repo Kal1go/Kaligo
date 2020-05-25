@@ -169,21 +169,21 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TableView-Card" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-fW-6I4">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lia" translatesAutoresizingMaskIntoConstraints="NO" id="anL-oX-XNf">
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lia" translatesAutoresizingMaskIntoConstraints="NO" id="anL-oX-XNf">
                                                     <rect key="frame" x="40" y="38" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="kK5-ve-iAs"/>
                                                         <constraint firstAttribute="height" constant="40" id="vw3-hb-ATl"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04V-7L-OTF">
-                                                    <rect key="frame" x="90" y="38" width="49" height="20.5"/>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04V-7L-OTF">
+                                                    <rect key="frame" x="90" y="38" width="49" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nível 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-Kx-fFu">
-                                                    <rect key="frame" x="90" y="63" width="38.5" height="15"/>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nível 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-Kx-fFu">
+                                                    <rect key="frame" x="90" y="63.5" width="38.5" height="14.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
@@ -203,45 +203,55 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Álgebra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z86-7U-qhj">
-                                                    <rect key="frame" x="40" y="98" width="74" height="26.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <rect key="frame" x="40" y="38" width="334" height="33.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                     <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição da playlist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asa-qG-dE4">
-                                                    <rect key="frame" x="40" y="129.5" width="158" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição da playlist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asa-qG-dE4">
+                                                    <rect key="frame" x="40" y="76.5" width="334" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" name="Cinza-texto"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq2-Iz-v9k">
-                                                    <rect key="frame" x="40" y="177.5" width="55" height="14.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <rect key="frame" x="40" y="172.5" width="334" height="19.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                     <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="hq2-Iz-v9k" firstAttribute="leading" secondItem="Asa-qG-dE4" secondAttribute="leading" id="0VC-UZ-rh8"/>
                                                 <constraint firstItem="VYT-fW-6I4" firstAttribute="height" secondItem="4zT-Yk-oED" secondAttribute="height" id="4LO-3H-hpu"/>
                                                 <constraint firstItem="anL-oX-XNf" firstAttribute="leading" secondItem="4zT-Yk-oED" secondAttribute="leadingMargin" constant="20" id="5nA-Ar-0mn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Z86-7U-qhj" secondAttribute="trailing" constant="20" id="6Nc-lB-quQ"/>
+                                                <constraint firstItem="hq2-Iz-v9k" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Asa-qG-dE4" secondAttribute="bottom" constant="20" id="Ayb-kl-BLD"/>
+                                                <constraint firstItem="Asa-qG-dE4" firstAttribute="leading" secondItem="Z86-7U-qhj" secondAttribute="leading" id="Azd-Wr-Eln"/>
+                                                <constraint firstItem="Asa-qG-dE4" firstAttribute="trailing" secondItem="Z86-7U-qhj" secondAttribute="trailing" id="ER6-Td-5yG"/>
                                                 <constraint firstItem="04V-7L-OTF" firstAttribute="leading" secondItem="anL-oX-XNf" secondAttribute="trailing" constant="10" id="EiK-6y-rNM"/>
                                                 <constraint firstItem="Z86-7U-qhj" firstAttribute="leading" secondItem="4zT-Yk-oED" secondAttribute="leadingMargin" constant="20" id="GfR-Xe-jvX"/>
                                                 <constraint firstItem="anL-oX-XNf" firstAttribute="top" secondItem="4zT-Yk-oED" secondAttribute="topMargin" constant="27" id="HMz-Zf-kIN"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="hq2-Iz-v9k" secondAttribute="bottom" constant="26" id="KpW-zG-3kg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="5bi-sb-WqZ" secondAttribute="trailing" constant="15" id="M7t-J4-LWZ"/>
-                                                <constraint firstItem="Asa-qG-dE4" firstAttribute="leading" secondItem="4zT-Yk-oED" secondAttribute="leadingMargin" constant="20" id="UPL-QG-kxg"/>
+                                                <constraint firstItem="hq2-Iz-v9k" firstAttribute="trailing" secondItem="Asa-qG-dE4" secondAttribute="trailing" id="Tux-sy-gvM"/>
                                                 <constraint firstItem="5bi-sb-WqZ" firstAttribute="bottom" secondItem="MyD-Kx-fFu" secondAttribute="bottom" id="Yhh-B6-6gf"/>
                                                 <constraint firstItem="MyD-Kx-fFu" firstAttribute="leading" secondItem="anL-oX-XNf" secondAttribute="trailing" constant="10" id="auz-Gc-QaV"/>
                                                 <constraint firstItem="04V-7L-OTF" firstAttribute="top" secondItem="anL-oX-XNf" secondAttribute="top" id="c9X-iS-700"/>
                                                 <constraint firstItem="MyD-Kx-fFu" firstAttribute="top" secondItem="04V-7L-OTF" secondAttribute="bottom" constant="4.5" id="dqO-IG-Hpw"/>
-                                                <constraint firstItem="hq2-Iz-v9k" firstAttribute="leading" secondItem="4zT-Yk-oED" secondAttribute="leadingMargin" constant="20" id="exB-dZ-sEA"/>
                                                 <constraint firstItem="VYT-fW-6I4" firstAttribute="centerX" secondItem="4zT-Yk-oED" secondAttribute="centerX" id="g2l-Hw-dIT"/>
                                                 <constraint firstItem="VYT-fW-6I4" firstAttribute="centerY" secondItem="4zT-Yk-oED" secondAttribute="centerY" id="gUr-rP-Ov3"/>
+                                                <constraint firstItem="Z86-7U-qhj" firstAttribute="top" secondItem="4zT-Yk-oED" secondAttribute="topMargin" constant="27" id="h5f-H7-Y0O"/>
                                                 <constraint firstItem="MyD-Kx-fFu" firstAttribute="bottom" secondItem="anL-oX-XNf" secondAttribute="bottom" id="iCu-Tu-Rha"/>
                                                 <constraint firstItem="Asa-qG-dE4" firstAttribute="top" secondItem="Z86-7U-qhj" secondAttribute="bottom" constant="5" id="iHn-Qa-47C"/>
                                                 <constraint firstItem="Z86-7U-qhj" firstAttribute="top" secondItem="anL-oX-XNf" secondAttribute="bottom" constant="20" id="v0J-7D-bxb"/>
                                                 <constraint firstItem="VYT-fW-6I4" firstAttribute="width" secondItem="4zT-Yk-oED" secondAttribute="width" id="wFc-5N-OWK"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="v0J-7D-bxb"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
                                         <connections>
@@ -315,7 +325,7 @@
                 <navigationController storyboardIdentifier="galeryvc" automaticallyAdjustsScrollViewInsets="NO" id="LIB-Ry-Ygb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rtB-fa-LxN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="Background"/>
                         <textAttributes key="titleTextAttributes">
