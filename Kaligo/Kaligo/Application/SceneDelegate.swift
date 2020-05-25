@@ -13,9 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
         var rootVC: UIViewController?
-        
         if LoginController.isLogged == true {
             rootVC = UIStoryboard(name: "Galery", bundle: nil)
                 .instantiateViewController(withIdentifier: "galeryvc")
@@ -23,7 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             rootVC = UIStoryboard(name: "Login", bundle: nil)
                 .instantiateViewController(withIdentifier: "loginvc")
         }
-        
         if let windowScene = scene as? UIWindowScene {
             self.window = UIWindow(windowScene: windowScene)
             self.window?.rootViewController = rootVC
