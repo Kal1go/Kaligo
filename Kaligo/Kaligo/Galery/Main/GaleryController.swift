@@ -8,6 +8,8 @@
 
 import UIKit
 
+var isMVP = true
+
 class GaleryController: UIViewController {
 
     @IBOutlet weak var playlistsOptionImage: UIImageView!

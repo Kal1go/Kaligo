@@ -24,19 +24,22 @@ class PlaylistHomeController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
+        if indexPath.row == 0 && !isMVP {
             return 100
         }
         return UITableView.automaticDimension
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isMVP {
+            return (playlist.steps?.count ?? 0)
+        }
         return (playlist.steps?.count ?? 0) + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
+        if indexPath.row == 0 && !isMVP {
             let cell1 = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath)
             
             if let cell1 = cell1 as? StepsMainViewCell {
@@ -59,7 +62,15 @@ class PlaylistHomeController: UITableViewController {
                 else {
                  fatalError("Is impossible take the View")
             }
-            guard let step = playlist.steps?[indexPath.row - 1] else {
+            
+            var row: Int
+            if isMVP {
+                row = indexPath.row
+            } else {
+                row = indexPath.row - 1
+            }
+            
+            guard let step = playlist.steps?[row] else {
                 fatalError("Is impossible take Step")
             }
             
