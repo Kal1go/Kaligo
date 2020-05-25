@@ -10,10 +10,16 @@ import Foundation
 
 enum Category: String, CaseIterable {
     case matematica = "Matemática"
-    case historia = "História"
+    case portugues = "Língua Portuguesa"
     case biologia = "Biologia"
+    case fisica = "Física"
+    case quimica = "Química"
+    case historia = "História"
     case geografica = "Geografia"
-    case portugues = "Português"
+    case filosofia = "Filosofia"
+    case sociologia = "Sociologia"
+    case estrangeiras = "Línguas estrangeiras"
+    case artes = "Artes"
     case none
 }
 
