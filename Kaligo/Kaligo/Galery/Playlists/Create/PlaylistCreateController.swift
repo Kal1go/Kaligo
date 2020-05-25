@@ -55,6 +55,22 @@ class PlaylistCreateController: UIViewController {
         }
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard let steps = stepsTableViewDelegate?.steps else { return false }
+        
+        for step in steps {
+            if step.title == "" {
+                showCustomAlert(title: "Passo incompleto!",
+                                message: "Todos os passos da sua playlist devem ter um título",
+                                isOneButton: true) { _ in }
+                
+                return false
+            }
+         }
+        
+        return true
+    }
+    
     @IBAction func addStep(_ sender: Any) {
         if let numberOfSteps = stepsTableViewDelegate?.steps.count {
             stepsTableViewDelegate?.steps.append(Step(number: numberOfSteps + 1))
@@ -63,6 +79,7 @@ class PlaylistCreateController: UIViewController {
     }
     
     @IBAction func deleteStep(_ sender: UIButton) {
+        view.endEditing(true)
         stepsTableViewDelegate?.deleteStep(at: sender.tag)
         stepsTableView.reloadData()
     }
