@@ -103,7 +103,7 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                                 DispatchQueue.main.async {
                                     switch response {
                                     case .success(let answer):
-                                        self.playlists = User.deletelist(list: answer)
+                                        self.playlists = List.delete(list: answer)
                                         controller.removeSpinner()
                                         self.delegate?.reloadData()
                                     case .error(let description):

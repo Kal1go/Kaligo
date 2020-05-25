@@ -73,6 +73,19 @@ class List: Codable {
         self.category = category
         self.type = type
     }
+    
+    static func delete(list: List) -> Lists {
+        if var userList = CommonData.shared.user.list {
+            guard let listId = CommonData.shared.user.list?.firstIndex(where: {$0._id == list._id}) else { return [] }
+            userList.remove(at: listId)
+            CommonData.shared.user.list = userList
+            return userList
+        } else {
+            print("Error list not found")
+            return []
+        }
+    }
+
 }
 
 typealias Lists = [List]
