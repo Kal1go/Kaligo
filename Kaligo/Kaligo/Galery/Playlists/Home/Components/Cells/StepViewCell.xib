@@ -17,7 +17,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sde-p6-X3i">
                     <rect key="frame" x="16" y="16" width="489" height="261"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="TableView-Card" id="dQ3-9e-bkA">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="card-playlishHome" id="dQ3-9e-bkA">
                             <rect key="frame" x="-16" y="-16" width="521" height="293"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
@@ -129,8 +129,8 @@
         </view>
     </objects>
     <resources>
-        <image name="TableView-Card" width="413" height="229"/>
         <image name="botaoNumeroDePassos" width="55" height="55"/>
+        <image name="card-playlishHome" width="410" height="267"/>
         <namedColor name="Cinza-texto">
             <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
