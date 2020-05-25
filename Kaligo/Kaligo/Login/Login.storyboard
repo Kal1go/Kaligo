@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s6n-uE-iZ3">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +15,48 @@
                     <view key="view" contentMode="scaleToFill" id="5Hs-NM-rQO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="figura-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="joc-Ux-p56">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="425"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="joc-Ux-p56" secondAttribute="height" multiplier="414:425" id="TxI-2M-leX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem-vindo ao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug3-Or-Hpg">
+                                <rect key="frame" x="40" y="450" width="334" height="40.666666666666686"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaligo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV8-ul-hvQ">
+                                <rect key="frame" x="40" y="498.66666666666669" width="334" height="57.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="48"/>
+                                <color key="textColor" name="Tint"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para começarmos, precisamos que você faça o login." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pz-AI-bca">
+                                <rect key="frame" x="40" y="586" width="334" height="52.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ug3-Or-Hpg" firstAttribute="leading" secondItem="FSb-rZ-KTI" secondAttribute="leading" constant="40" id="28k-aj-x04"/>
+                            <constraint firstItem="FSb-rZ-KTI" firstAttribute="trailing" secondItem="ug3-Or-Hpg" secondAttribute="trailing" constant="40" id="C4n-nm-LEm"/>
+                            <constraint firstItem="joc-Ux-p56" firstAttribute="centerX" secondItem="5Hs-NM-rQO" secondAttribute="centerX" id="EBC-Yd-Zb7"/>
+                            <constraint firstItem="joc-Ux-p56" firstAttribute="top" secondItem="5Hs-NM-rQO" secondAttribute="top" id="IpS-n5-6ZC"/>
+                            <constraint firstItem="5Pz-AI-bca" firstAttribute="leading" secondItem="XV8-ul-hvQ" secondAttribute="leading" id="Kf0-1j-mwG"/>
+                            <constraint firstItem="FSb-rZ-KTI" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5Pz-AI-bca" secondAttribute="bottom" constant="180" id="PRD-7h-qRq"/>
+                            <constraint firstItem="5Pz-AI-bca" firstAttribute="top" secondItem="XV8-ul-hvQ" secondAttribute="bottom" constant="30" id="eyf-EJ-qAw"/>
+                            <constraint firstItem="ug3-Or-Hpg" firstAttribute="top" secondItem="joc-Ux-p56" secondAttribute="bottom" constant="25" id="fAZ-Pg-31u"/>
+                            <constraint firstItem="XV8-ul-hvQ" firstAttribute="leading" secondItem="ug3-Or-Hpg" secondAttribute="leading" id="ifZ-dh-8hA"/>
+                            <constraint firstItem="XV8-ul-hvQ" firstAttribute="trailing" secondItem="ug3-Or-Hpg" secondAttribute="trailing" id="nAS-rg-OVA"/>
+                            <constraint firstItem="joc-Ux-p56" firstAttribute="width" secondItem="FSb-rZ-KTI" secondAttribute="width" id="poT-ag-8qs"/>
+                            <constraint firstItem="5Pz-AI-bca" firstAttribute="trailing" secondItem="XV8-ul-hvQ" secondAttribute="trailing" id="tCQ-oP-rdi"/>
+                            <constraint firstItem="XV8-ul-hvQ" firstAttribute="top" secondItem="ug3-Or-Hpg" secondAttribute="bottom" constant="8" id="tnS-Ye-5Vd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FSb-rZ-KTI"/>
                     </view>
                     <navigationItem key="navigationItem" id="02P-l7-3YN"/>
@@ -45,8 +87,12 @@
     </scenes>
     <color key="tintColor" name="Tint"/>
     <resources>
+        <image name="figura-inicio" width="414" height="425"/>
+        <namedColor name="Cor-LetraEscura">
+            <color red="0.14499999582767487" green="0.20000000298023224" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Tint">
-            <color red="0.41960784313725491" green="0.41960784313725491" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.41999998688697815" green="0.41999998688697815" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

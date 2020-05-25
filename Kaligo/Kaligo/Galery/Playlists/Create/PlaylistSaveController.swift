@@ -98,6 +98,7 @@ class PlaylistSaveController: UITableViewController {
     }
     
     @IBAction func save() {
+        self.view.endEditing(true)
         self.showSpinner(onView: self.view)
         self.preConfigure()
         ListHandler.create(list: playlist) { (response) in
