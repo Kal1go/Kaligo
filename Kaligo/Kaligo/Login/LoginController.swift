@@ -51,8 +51,8 @@ class LoginController: UIViewController {
             case.error(let description):
                 DispatchQueue.main.async {
                     self.removeSpinner()
-                    self.showAlert(title: "Não foi possível fazer login!",
-                                   message: description)
+                    self.showCustomAlert(title: "Não foi possível fazer login!",
+                                         message: description, isOneButton: true) { _ in }
                 }
             }
         }

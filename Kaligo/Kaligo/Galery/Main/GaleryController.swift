@@ -64,6 +64,13 @@ class GaleryController: UIViewController {
 }
 
 extension GaleryController: GaleryTableViewProtocol {
+    func reloadData() {
+        self.playlistsTableView.reloadData()
+    }
+    func controller() -> UIViewController {
+        return self
+    }
+    
     func segue(atIndex index: Int) {
         guard let list = tableViewDelegate?.playlists?[index] else {
             fatalError("Where stay the list???")

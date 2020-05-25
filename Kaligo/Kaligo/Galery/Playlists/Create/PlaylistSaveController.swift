@@ -112,7 +112,7 @@ class PlaylistSaveController: UITableViewController {
                 print(description)
                 DispatchQueue.main.async {
                     self.removeSpinner()
-                    self.showAlert(title: "Algo deu errado", message: "Verifique sua conexão com a internet.")
+                    self.showCustomAlert(title: "Algo deu errado", message: "Verifique sua conexão com a internet.", isOneButton: true) { _ in }
                 }
             }
 

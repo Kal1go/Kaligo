@@ -30,7 +30,17 @@ struct User: Codable {
         } else {
             CommonData.shared.user.list = [list]
         }
-        
+    }
+    static func deletelist(list: List) -> Lists {
+        if var userList = CommonData.shared.user.list {
+            guard let listId = CommonData.shared.user.list?.firstIndex(where: {$0._id == list._id}) else { return [] }
+            userList.remove(at: listId)
+            CommonData.shared.user.list = userList
+            return userList
+        } else {
+            print("Error list not found")
+            return [] 
+        }
     }
 }
 

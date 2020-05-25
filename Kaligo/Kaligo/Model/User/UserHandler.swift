@@ -88,6 +88,5 @@ class UserHandler {
     }
     public static func delete(id: Int, completion: @escaping (UserOneResponse) -> Void) {
         completion(UserOneResponse.error(description: "Not implementation"))
-
     }
 }

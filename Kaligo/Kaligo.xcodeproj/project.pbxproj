@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		823106402477738F0067E00C /* UserDafaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231063F2477738F0067E00C /* UserDafaults+Codable.swift */; };
+		823DCE57247B9985005CC9D5 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DCE56247B9985005CC9D5 /* CustomAlertView.swift */; };
+		823DCE59247B99A1005CC9D5 /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DCE58247B99A1005CC9D5 /* UIViewController+Extentions.swift */; };
+		823DCE5B247B99BA005CC9D5 /* CustomAlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823DCE5A247B99BA005CC9D5 /* CustomAlertView.storyboard */; };
 		8258E26024776027004F0B84 /* Controller+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258E25F24776027004F0B84 /* Controller+Keyboard.swift */; };
 		8258E262247760C1004F0B84 /* TextFild+Return.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8258E261247760C1004F0B84 /* TextFild+Return.swift */; };
 		82A5D3352477828400E98286 /* Controller+Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A5D3342477828400E98286 /* Controller+Back.swift */; };
@@ -21,7 +24,6 @@
 		82D5EAED247732CD00594274 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAEA247732CD00594274 /* LoginController.swift */; };
 		82D5EAF1247732D600594274 /* Spinner+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAEE247732D500594274 /* Spinner+Extension.swift */; };
 		82D5EAF2247732D600594274 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAEF247732D600594274 /* CommonData.swift */; };
-		82D5EAF3247732D600594274 /* Controller+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAF0247732D600594274 /* Controller+Alert.swift */; };
 		82D5EAF6247732DE00594274 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAF4247732DD00594274 /* User.swift */; };
 		82D5EAF7247732DE00594274 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5EAF5247732DE00594274 /* UserHandler.swift */; };
 		872A330E24756C1F006ED748 /* StepsMainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872A330D24756C1F006ED748 /* StepsMainViewCell.swift */; };
@@ -68,6 +70,9 @@
 
 /* Begin PBXFileReference section */
 		8231063F2477738F0067E00C /* UserDafaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDafaults+Codable.swift"; sourceTree = "<group>"; };
+		823DCE56247B9985005CC9D5 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		823DCE58247B99A1005CC9D5 /* UIViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extentions.swift"; sourceTree = "<group>"; };
+		823DCE5A247B99BA005CC9D5 /* CustomAlertView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomAlertView.storyboard; sourceTree = "<group>"; };
 		8258E25F24776027004F0B84 /* Controller+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Controller+Keyboard.swift"; sourceTree = "<group>"; };
 		8258E261247760C1004F0B84 /* TextFild+Return.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFild+Return.swift"; sourceTree = "<group>"; };
 		82A5D3342477828400E98286 /* Controller+Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Controller+Back.swift"; sourceTree = "<group>"; };
@@ -81,7 +86,6 @@
 		82D5EAEA247732CD00594274 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		82D5EAEE247732D500594274 /* Spinner+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Spinner+Extension.swift"; sourceTree = "<group>"; };
 		82D5EAEF247732D600594274 /* CommonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
-		82D5EAF0247732D600594274 /* Controller+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller+Alert.swift"; sourceTree = "<group>"; };
 		82D5EAF4247732DD00594274 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		82D5EAF5247732DE00594274 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
 		872A330D24756C1F006ED748 /* StepsMainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsMainViewCell.swift; sourceTree = "<group>"; };
@@ -140,6 +144,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		823DCE55247B996E005CC9D5 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				823DCE56247B9985005CC9D5 /* CustomAlertView.swift */,
+				823DCE58247B99A1005CC9D5 /* UIViewController+Extentions.swift */,
+				823DCE5A247B99BA005CC9D5 /* CustomAlertView.storyboard */,
+			);
+			path = CustomAlert;
+			sourceTree = "<group>";
+		};
 		824AF25824777D5C005A2DC3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +223,7 @@
 		82D5EADE247732B100594274 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				82D5EAF0247732D600594274 /* Controller+Alert.swift */,
+				823DCE55247B996E005CC9D5 /* CustomAlert */,
 				82D5EAEF247732D600594274 /* CommonData.swift */,
 				82D5EAEE247732D500594274 /* Spinner+Extension.swift */,
 				8258E25F24776027004F0B84 /* Controller+Keyboard.swift */,
@@ -463,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B748AB247309F700B3FAAF /* Galery.storyboard in Resources */,
+				823DCE5B247B99BA005CC9D5 /* CustomAlertView.storyboard in Resources */,
 				E47EB20D246F1C77004651A2 /* Posts.storyboard in Resources */,
 				87DF629B24732A01002B8FCE /* PlaylistHome.storyboard in Resources */,
 				E423AE02246F0F7E009F42C3 /* LaunchScreen.storyboard in Resources */,
@@ -505,7 +520,6 @@
 				E47EB213246F3438004651A2 /* PostsViewController.swift in Sources */,
 				E47EB211246F336D004651A2 /* PlaylistTableViewCell.swift in Sources */,
 				82D5EAF6247732DE00594274 /* User.swift in Sources */,
-				82D5EAF3247732D600594274 /* Controller+Alert.swift in Sources */,
 				8258E26024776027004F0B84 /* Controller+Keyboard.swift in Sources */,
 				E43BC6122475748800351A22 /* TextFieldDelegate.swift in Sources */,
 				E451F34624747C66004E450C /* Step.swift in Sources */,
@@ -522,6 +536,7 @@
 				E451F3402474765D004E450C /* StepTableViewCell.swift in Sources */,
 				872A330E24756C1F006ED748 /* StepsMainViewCell.swift in Sources */,
 				87DF62A124733D4D002B8FCE /* StepViewCell.swift in Sources */,
+				823DCE59247B99A1005CC9D5 /* UIViewController+Extentions.swift in Sources */,
 				82D5EAD12477326200594274 /* ServerAnswer.swift in Sources */,
 				82D5EAED247732CD00594274 /* LoginController.swift in Sources */,
 				82D5EAE7247732C100594274 /* StepHandler.swift in Sources */,
@@ -532,6 +547,7 @@
 				87DF629924731938002B8FCE /* HomeTableViewDelegate.swift in Sources */,
 				87DF6295247305EC002B8FCE /* HomeViewController.swift in Sources */,
 				E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */,
+				823DCE57247B9985005CC9D5 /* CustomAlertView.swift in Sources */,
 				87DF62A324733DBE002B8FCE /* Review.swift in Sources */,
 				82A5D3352477828400E98286 /* Controller+Back.swift in Sources */,
 				87DF62972473101E002B8FCE /* HomeCollectionViewDelegate.swift in Sources */,
