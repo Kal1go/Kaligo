@@ -12,20 +12,23 @@ import Endpoints_Requests
 
 class LoginController: UIViewController {
     
-    @IBOutlet weak var authorizationButton: ASAuthorizationAppleIDButton!
+    static var isLogged: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "isLogged")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isLogged")
+        }
+    }
+    
+    let authorizationAppleIDButton = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        config()
-        setUpSignInAppleButton()
+        self.setUpSignInAppleButton()
     }
     
-    func config() {
-        
-    }
-    
-    func auth(appleIDCredential: ASAuthorizationAppleIDCredential) {
+    private func auth(appleIDCredential: ASAuthorizationAppleIDCredential) {
         let appleID = appleIDCredential.user //appleID is the password
         let name = appleIDCredential.fullName?.getFullName() ?? ""
         let email = appleIDCredential.email ?? ""
@@ -33,34 +36,72 @@ class LoginController: UIViewController {
         let params = [
             "email": email,
             "appleID": appleID,
-            "name": name
-        ]
+            "name": name,
+            "level": 0
+        ] as [String: Any]
         
         self.showSpinner(onView: self.view)
         UserHandler.auth(params: params as [String: Any]) { (response) in
             switch response {
             case .success(let user):
                 DispatchQueue.main.async {
-                    CommonData.shared.user = user
-                    self.showAlert(title: "Login realizado com succeso!", message: "")
+                    self.toMain(user: user)
                     self.removeSpinner()
                 }
             case.error(let description):
                 DispatchQueue.main.async {
-                    self.showAlert(title: "Não foi possível fazer login!",
-                    message: description)
+                    self.removeSpinner()
+                    self.showCustomAlert(title: "Não foi possível fazer login!",
+                                         message: description, isOneButton: true) { _ in }
                 }
             }
         }
+    }
+    
+    private func toMain(user: User) {
+        LoginController.isLogged = true
+        CommonData.shared.user = user
+        let mainStoryboard = UIStoryboard(name: "Galery", bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: "galeryvc")
+        mainStoryboard.modalPresentationStyle = .fullScreen
+        self.present(mainStoryboard, animated: true, completion: nil)
+        
+    }
+    static func logout(presenter: UIViewController) {
+        LoginController.isLogged = false
+        
+        guard let rootVC = UIStoryboard.init(name: "Login", bundle: nil)
+            .instantiateViewController(withIdentifier: "loginvc") as? LoginController else {
+                return
+        }
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        navigationController.setNavigationBarHidden(true, animated: false)
+        UIApplication.shared.windows.first?.rootViewController = navigationController
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 }
 
 // MARK: - LoginAuthorization
 extension LoginController: ASAuthorizationControllerDelegate {
     func setUpSignInAppleButton() {
-        authorizationButton.addTarget(self, action: #selector(handleAppleIdRequest), for: .touchUpInside)
-        authorizationButton.cornerRadius = 10
+        authorizationAppleIDButton.addTarget(
+            self,
+            action: #selector(handleAppleIdRequest),
+            for: .touchUpInside
+        )
+        authorizationAppleIDButton.cornerRadius = 10
+        self.view.addSubview(authorizationAppleIDButton)
+        
+        authorizationAppleIDButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            authorizationAppleIDButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            authorizationAppleIDButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100),
+            authorizationAppleIDButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8),
+            authorizationAppleIDButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        
     }
+    
     @objc func handleAppleIdRequest() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
