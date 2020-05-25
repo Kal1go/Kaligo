@@ -24,7 +24,7 @@ class TextViewDelegate: NSObject, UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == placeholder {
             textView.text = ""
-            textView.textColor = .black
+            textView.textColor = UIColor(named: "Cor-LetraEscura")
         }
     }
     
