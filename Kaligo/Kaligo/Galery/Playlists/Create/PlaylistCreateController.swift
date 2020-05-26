@@ -20,9 +20,14 @@ class PlaylistCreateController: UIViewController {
         super.viewDidLoad()
         
         setUpDismissKeyboard()
-        
         nextButton.isEnabled = false
-        stepsTableViewDelegate = StepsTableViewDelegate()
+        
+        if stepsTableViewDelegate == nil {
+            stepsTableViewDelegate = StepsTableViewDelegate()
+        } else {
+            nextButton.isEnabled = true
+        }
+        
         stepsTableView.delegate = stepsTableViewDelegate
         stepsTableView.dataSource = stepsTableViewDelegate
         
@@ -49,9 +54,12 @@ class PlaylistCreateController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if
-            let savePlaylist = segue.destination as? PlaylistSaveController,
+            let view = segue.destination as? PlaylistSaveController,
             let steps = stepsTableViewDelegate?.steps {
-            savePlaylist.playlist.steps = steps
+            view.playlist.steps = steps
+            if let list = stepsTableViewDelegate?.list {
+                view.playlist = list
+            }
         }
     }
     

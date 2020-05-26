@@ -9,7 +9,7 @@
 import UIKit
 
 class PlaylistSaveController: UITableViewController {
-
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var categoryPickerView: UIPickerView!
@@ -21,7 +21,8 @@ class PlaylistSaveController: UITableViewController {
     var pickerController: PlaylistSavePicker?
     
     var playlist = List()
-        
+    private var isUpdate = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +41,27 @@ class PlaylistSaveController: UITableViewController {
         pickerController = PlaylistSavePicker(components: getCategories())
         categoryPickerView.delegate = pickerController
         categoryPickerView.dataSource = pickerController
+        
+        preLoadConfigure()
+    }
+    
+    private func preLoadConfigure() {
+        guard playlist.title != "" else { return }
+        
+        isUpdate = true
+        saveButton.isEnabled = true
+        nameTextField.text = playlist.title
+        descriptionTextView.text = playlist.description
+        
+        for (index, value) in Category.allCases.enumerated() {
+            if value.rawValue == playlist.category {
+                categoryPickerView.selectRow(index,
+                                             inComponent: 0,
+                                             animated: true)
+                return
+            }
+        }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,7 +105,7 @@ class PlaylistSaveController: UITableViewController {
         }
         
     }
-
+    
     @IBAction func textFieldDidChange(_ sender: UITextField) {
         guard let delegate = nameDelegate else { return }
         saveButton.isEnabled = delegate.validateText(for: sender)
@@ -101,6 +123,15 @@ class PlaylistSaveController: UITableViewController {
         self.view.endEditing(true)
         self.showSpinner(onView: self.view)
         self.preConfigure()
+        if isUpdate {
+            updateList()
+        } else {
+            createList()
+        }
+        
+    }
+    
+    func createList() {
         ListHandler.create(list: playlist) { (response) in
             switch response {
             case .success(let answer):
@@ -116,8 +147,25 @@ class PlaylistSaveController: UITableViewController {
                     self.showCustomAlert(title: "Algo deu errado", message: "Verifique sua conexão com a internet.", isOneButton: true) { _ in }
                 }
             }
-
+            
         }
-        
+    }
+    func updateList() {
+        ListHandler.update(params: playlist) { (response) in
+            switch response {
+            case .success(let answer):
+                DispatchQueue.main.async {
+                    User.addlist(list: answer)
+                    self.removeSpinner()
+                    self.navigationController?.previousViewController?.back()
+                }
+            case .error(let description):
+                print(description)
+                DispatchQueue.main.async {
+                    self.removeSpinner()
+                    self.showCustomAlert(title: "Algo deu errado", message: "Verifique sua conexão com a internet.", isOneButton: true) { _ in }
+                }
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@
         <!--Criar playlist-->
         <scene sceneID="9i5-dR-ULl">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0sc-ja-n1k" customClass="PlaylistCreateController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createList" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0sc-ja-n1k" customClass="PlaylistCreateController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ChN-bt-7VQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -55,7 +55,7 @@ class GaleryController: UIViewController {
     
     @IBAction func savePlaylist(_ sender: UIStoryboardSegue) {
         if let source = sender.source as? PlaylistSaveController {
-            tableViewDelegate?.playlists?.append(source.playlist)
+            tableViewDelegate?.playlists?.append(source.playlist ?? List())
             playlistsTableView.reloadData()
         }
     }
@@ -81,7 +81,8 @@ extension GaleryController: GaleryTableViewProtocol {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let navegation = segue.destination as? UINavigationController,
+        if
+            let navegation = segue.destination as? UINavigationController,
             let view = navegation.viewControllers.first as? PlaylistHomeController,
             let list = sender as? List {
                 view.playlist = list

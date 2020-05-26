@@ -94,4 +94,19 @@ class PlaylistHomeController: UITableViewController {
         }
         return cell
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if
+             let navegation = segue.destination as? UINavigationController,
+             let view = navegation.viewControllers.first as? PlaylistCreateController {
+            view.stepsTableViewDelegate = StepsTableViewDelegate(list: playlist)
+        }
+        
+        if
+            let navegation = segue.destination as? UINavigationController,
+            let view = navegation.viewControllers.first as? PlaylistHomeController,
+            let list = sender as? List {
+                view.playlist = list
+        }
+    }
 }

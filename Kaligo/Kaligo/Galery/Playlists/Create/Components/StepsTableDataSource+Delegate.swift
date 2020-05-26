@@ -11,11 +11,19 @@ import UIKit
 class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     var steps: Steps = [Step(number: 1)]
-        
+    var list: List?
+    
     var titleDelegate: TextFieldDelegate?
     var urlDelegate: TextFieldDelegate?
     var descriptionDelegate: TextViewDelegate?
     var inputController: InputController?
+    
+    convenience init(list: List) {
+        self.init()
+        self.list = list
+        guard let steps = list.steps else { return }
+        self.steps = steps
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
