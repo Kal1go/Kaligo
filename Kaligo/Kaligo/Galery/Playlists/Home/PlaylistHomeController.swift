@@ -19,7 +19,7 @@ class PlaylistHomeController: UITableViewController {
     }
     
     func setUp() {
-        navigationItem.title = playlist.category
+        navigationItem.title = playlist.title
         self.tableView.estimatedRowHeight = 233
     }
     
