@@ -15,7 +15,8 @@ class GaleryController: UIViewController {
     @IBOutlet weak var playlistsOptionImage: UIImageView!
     @IBOutlet weak var tipsOptionImage: UIImageView!
     @IBOutlet weak var playlistsTableView: UITableView!
-
+    @IBOutlet weak var noPlaylistLabel: UILabel!
+    
     var tableViewDelegate: GaleryTableView?
 
     override func viewDidLoad() {
@@ -27,19 +28,27 @@ class GaleryController: UIViewController {
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
     }
-
-    func generateData() {
-        tableViewDelegate?.playlists = CommonData.shared.user.list
-        tableViewDelegate?.tips = []
-    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if tableViewDelegate?.playlists?.count != CommonData.shared.user.list?.count {
             tableViewDelegate?.playlists = CommonData.shared.user.list
             playlistsTableView.reloadData()
-        }
+        }        
+        setNoPlaylistLabel()
     }
 
+    func generateData() {
+        tableViewDelegate?.playlists = CommonData.shared.user.list
+        tableViewDelegate?.tips = []
+    }
+    
+    func setNoPlaylistLabel() {
+        guard let playlists = tableViewDelegate?.playlists else { return }
+        
+        noPlaylistLabel.isHidden = playlists.isEmpty ? false : true
+    }
+    
     @IBAction func changeFilter(_ sender: UIButton) {
         if sender.tag == 1 {
             playlistsOptionImage.tintColor = UIColor(named: "Clicavel")
