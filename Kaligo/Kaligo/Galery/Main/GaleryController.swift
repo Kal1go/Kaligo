@@ -71,7 +71,7 @@ class GaleryController: UIViewController {
     }
 }
 
-extension GaleryController: GaleryTableViewProtocol {
+extension GaleryController: GaleryTableViewProtocol, PlaylistHomeControllerDelegate {
     func reloadData() {
         self.tableViewDelegate?.playlists = CommonData.shared.user.list
         self.playlistsTableView.reloadData()
@@ -94,6 +94,10 @@ extension GaleryController: GaleryTableViewProtocol {
             let list = sender as? List {
                 view.playlist = list
                 view.delegate = self
+        } else if
+            let navegation = segue.destination as? UINavigationController,
+            let view = navegation.viewControllers.first as? PlaylistCreateController {
+            view.delegate = self
         }
     }
 }

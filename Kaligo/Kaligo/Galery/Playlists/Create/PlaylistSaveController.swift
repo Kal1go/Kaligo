@@ -140,6 +140,7 @@ class PlaylistSaveController: UITableViewController {
             case .success(let answer):
                 DispatchQueue.main.async {
                     User.addlist(list: answer)
+                    self.delegate?.reloadData()
                     self.removeSpinner()
                     self.navigationController?.previousViewController?.back()
                 }
