@@ -67,17 +67,18 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTU-P2-vVb">
                                     <rect key="frame" x="0.0" y="194" width="441" height="35"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link para o youtube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAk-1E-Ts6">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSN-vM-UUJ">
                                             <rect key="frame" x="0.0" y="0.0" width="283.5" height="35"/>
-                                            <accessibility key="accessibilityConfiguration">
-                                                <accessibilityTraits key="traits" button="YES" staticText="YES"/>
-                                            </accessibility>
-                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
-                                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <state key="normal" title="Button">
+                                                <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="urlButtonTapped:" destination="feM-Pq-VBJ" eventType="touchUpInside" id="Z5d-Ts-y0s"/>
+                                            </connections>
+                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtw-oZ-mbp">
                                             <rect key="frame" x="283.5" y="0.0" width="157.5" height="35"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                             <state key="normal" title="See More"/>
                                             <connections>
                                                 <action selector="seeMoreButtonTapped" destination="feM-Pq-VBJ" eventType="touchUpInside" id="8dA-pV-Yzu"/>
@@ -85,13 +86,13 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="kAk-1E-Ts6" firstAttribute="width" secondItem="Vtw-oZ-mbp" secondAttribute="width" multiplier="1.8" id="lti-yR-jb2"/>
+                                        <constraint firstItem="JSN-vM-UUJ" firstAttribute="width" secondItem="Vtw-oZ-mbp" secondAttribute="width" multiplier="1.8" id="1Zc-iW-bPO"/>
                                     </constraints>
                                 </stackView>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="JSN-vM-UUJ" firstAttribute="height" secondItem="srh-LT-U3Y" secondAttribute="height" multiplier="1.6" id="6hZ-XH-eWy"/>
                                 <constraint firstItem="Jp3-5G-bvn" firstAttribute="height" secondItem="srh-LT-U3Y" secondAttribute="height" multiplier="2" id="Rgc-Mo-E9G"/>
-                                <constraint firstItem="kAk-1E-Ts6" firstAttribute="height" secondItem="srh-LT-U3Y" secondAttribute="height" multiplier="1.6" id="YdI-m2-xYG"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -123,7 +124,7 @@
                 <outlet property="numeroDePassos" destination="Mso-Hb-pqH" id="Nbz-Ke-Sue"/>
                 <outlet property="seeMoreButton" destination="Vtw-oZ-mbp" id="6i5-yo-hE6"/>
                 <outlet property="titleLabel" destination="srh-LT-U3Y" id="Nr2-U0-k4r"/>
-                <outlet property="urlLabel" destination="kAk-1E-Ts6" id="90q-eL-N7B"/>
+                <outlet property="urlButton" destination="JSN-vM-UUJ" id="VBI-Yb-e6V"/>
             </connections>
             <point key="canvasLocation" x="193.47826086956522" y="321.76339285714283"/>
         </view>
