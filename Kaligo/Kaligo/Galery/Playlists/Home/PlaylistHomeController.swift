@@ -9,9 +9,13 @@
 import Foundation
 import UIKit
 
+protocol PlaylistHomeControllerDelegate: class {
+    func reloadData()
+}
 class PlaylistHomeController: UITableViewController {
 
     var playlist = List()
+    weak var delegate: GaleryTableViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +95,11 @@ class PlaylistHomeController: UITableViewController {
                 tableView.endUpdates()
             }
             customView.setupWith(step: step)
+        } else if let cell = cell.contentView.subviews.first(where: { $0.tag == 999 }) as? StepViewCell {
+            guard let step = playlist.steps?[indexPath.row] else {
+                fatalError("Is impossible take Step")
+            }
+            cell.setupWith(step: step)
         }
         return cell
     }
@@ -99,7 +108,9 @@ class PlaylistHomeController: UITableViewController {
         if
              let navegation = segue.destination as? UINavigationController,
              let view = navegation.viewControllers.first as? PlaylistCreateController {
-            view.stepsTableViewDelegate = StepsTableViewDelegate(list: playlist)
+            view.isUpdate = true
+            view.list = playlist
+            view.delegate = self
         }
         
         if
@@ -107,6 +118,17 @@ class PlaylistHomeController: UITableViewController {
             let view = navegation.viewControllers.first as? PlaylistHomeController,
             let list = sender as? List {
                 view.playlist = list
+        }
+    }
+}
+
+extension PlaylistHomeController: PlaylistHomeControllerDelegate {
+    func reloadData() {
+        if let list = User.find(withId: playlist._id) {
+            playlist = list
+            setUp()
+            tableView.reloadData()
+            delegate?.reloadData()
         }
     }
 }

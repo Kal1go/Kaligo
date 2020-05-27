@@ -19,6 +19,7 @@ class PlaylistSaveController: UITableViewController {
     var descriptionDelegate: TextViewDelegate?
     var inputController: InputController?
     var pickerController: PlaylistSavePicker?
+    weak var delegate: PlaylistHomeControllerDelegate?
     
     var playlist = List()
     private var isUpdate = false
@@ -52,7 +53,7 @@ class PlaylistSaveController: UITableViewController {
         saveButton.isEnabled = true
         nameTextField.text = playlist.title
         descriptionTextView.text = playlist.description
-        
+        pickerController?.selected = playlist.category
         for (index, value) in Category.allCases.enumerated() {
             if value.rawValue == playlist.category {
                 categoryPickerView.selectRow(index,
@@ -122,10 +123,12 @@ class PlaylistSaveController: UITableViewController {
     @IBAction func save() {
         self.view.endEditing(true)
         self.showSpinner(onView: self.view)
-        self.preConfigure()
+        
         if isUpdate {
+            playlist.category = pickerController?.selected ?? ""
             updateList()
         } else {
+            self.preConfigure()
             createList()
         }
         
@@ -155,8 +158,9 @@ class PlaylistSaveController: UITableViewController {
             switch response {
             case .success(let answer):
                 DispatchQueue.main.async {
-                    User.addlist(list: answer)
+                    User.updatelist(list: answer)
                     self.removeSpinner()
+                    self.delegate?.reloadData()
                     self.navigationController?.previousViewController?.back()
                 }
             case .error(let description):

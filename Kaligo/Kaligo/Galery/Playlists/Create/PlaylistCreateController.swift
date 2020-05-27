@@ -15,6 +15,10 @@ class PlaylistCreateController: UIViewController {
     
     //TODO: - Transformar em weak
     var stepsTableViewDelegate: StepsTableViewDelegate?
+    weak var delegate: PlaylistHomeControllerDelegate?
+    
+    var isUpdate = false
+    var list = List()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +26,11 @@ class PlaylistCreateController: UIViewController {
         setUpDismissKeyboard()
         nextButton.isEnabled = false
         
-        if stepsTableViewDelegate == nil {
-            stepsTableViewDelegate = StepsTableViewDelegate()
-        } else {
+        stepsTableViewDelegate = StepsTableViewDelegate()
+        if isUpdate {
             nextButton.isEnabled = true
+            stepsTableViewDelegate?.list = list
+            stepsTableViewDelegate?.steps = list.steps ?? []
         }
         
         stepsTableView.delegate = stepsTableViewDelegate
@@ -48,18 +53,19 @@ class PlaylistCreateController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-          super.viewDidLayoutSubviews()
-          self.stepsTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 340, right: 0)
+        super.viewDidLayoutSubviews()
+        self.stepsTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 340, right: 0)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if
             let view = segue.destination as? PlaylistSaveController,
             let steps = stepsTableViewDelegate?.steps {
-            view.playlist.steps = steps
             if let list = stepsTableViewDelegate?.list {
                 view.playlist = list
             }
+            view.playlist.steps = steps
+            view.delegate = self.delegate 
         }
     }
     

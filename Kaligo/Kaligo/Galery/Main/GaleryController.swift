@@ -34,10 +34,7 @@ class GaleryController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if tableViewDelegate?.playlists?.count != CommonData.shared.user.list?.count {
-            tableViewDelegate?.playlists = CommonData.shared.user.list
-            playlistsTableView.reloadData()
-        }
+        
     }
 
     @IBAction func changeFilter(_ sender: UIButton) {
@@ -55,7 +52,7 @@ class GaleryController: UIViewController {
     
     @IBAction func savePlaylist(_ sender: UIStoryboardSegue) {
         if let source = sender.source as? PlaylistSaveController {
-            tableViewDelegate?.playlists?.append(source.playlist ?? List())
+            tableViewDelegate?.playlists?.append(source.playlist)
             playlistsTableView.reloadData()
         }
     }
@@ -67,6 +64,7 @@ class GaleryController: UIViewController {
 
 extension GaleryController: GaleryTableViewProtocol {
     func reloadData() {
+        self.tableViewDelegate?.playlists = CommonData.shared.user.list
         self.playlistsTableView.reloadData()
     }
     func controller() -> UIViewController {
@@ -86,6 +84,7 @@ extension GaleryController: GaleryTableViewProtocol {
             let view = navegation.viewControllers.first as? PlaylistHomeController,
             let list = sender as? List {
                 view.playlist = list
+                view.delegate = self
         }
     }
 }
