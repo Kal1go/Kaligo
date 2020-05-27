@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Nome do usuário"; ObjectID = "6yA-0S-ZkG"; */
+"6yA-0S-ZkG.text" = "Nome do usuário";
+
+/* Class = "UILabel"; text = "24 playlists"; ObjectID = "7ga-kU-2Hw"; */
+"7ga-kU-2Hw.text" = "24 playlists";
+
+/* Class = "UILabel"; text = "Olá, Gabriel"; ObjectID = "8ER-ce-Rvu"; */
+"8ER-ce-Rvu.text" = "Olá, Gabriel";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "Atu-YS-PM3"; */
+"Atu-YS-PM3.title" = "Home";
+
+/* Class = "UILabel"; text = "Dicas"; ObjectID = "EVc-74-gxs"; */
+"EVc-74-gxs.text" = "Dicas";
+
+/* Class = "UILabel"; text = "Título card"; ObjectID = "EhG-Cd-s4Y"; */
+"EhG-Cd-s4Y.text" = "Título card";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "Ge1-Ws-N4J"; */
+"Ge1-Ws-N4J.title" = "Title";
+
+/* Class = "UILabel"; text = "Descrição dos cards"; ObjectID = "HTb-nk-zaM"; */
+"HTb-nk-zaM.text" = "Descrição dos cards";
+
+/* Class = "UILabel"; text = "Nível 7"; ObjectID = "ibJ-Of-gX7"; */
+"ibJ-Of-gX7.text" = "Nível 7";
+
+/* Class = "UILabel"; text = "Categoria"; ObjectID = "raV-6a-YFZ"; */
+"raV-6a-YFZ.text" = "Categoria";
+
+/* Class = "UILabel"; text = "Nível do usuário"; ObjectID = "t6Y-Iu-9Ks"; */
+"t6Y-Iu-9Ks.text" = "Nível do usuário";
+
+/* Class = "UILabel"; text = "Matemática"; ObjectID = "uc7-jq-019"; */
+"uc7-jq-019.text" = "Matemática";

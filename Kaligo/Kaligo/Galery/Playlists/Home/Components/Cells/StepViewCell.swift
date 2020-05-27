@@ -13,7 +13,7 @@ class StepViewCell: UIView {
     @IBOutlet private weak var mainStackView: UIStackView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descLabel: UILabel!
-    @IBOutlet private weak var urlLabel: UILabel!
+    @IBOutlet weak var urlButton: UIButton!
     @IBOutlet private weak var seeMoreButton: UIButton!
     @IBOutlet weak var numeroDePassos: UILabel!
     
@@ -28,6 +28,15 @@ class StepViewCell: UIView {
         self.seeMoreDidTapHandler?()
     }
     
+    @IBAction func urlButtonTapped(_ sender: Any) {
+        guard let text = urlButton.titleLabel?.text else { return }
+        
+        guard let url = URL(string: (text.contains("http") ? text : "http://\(text)")) else { return }
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        
+    }
+    
     func onSeeMoreDidTap(_ handler: @escaping () -> Void) {
         self.seeMoreDidTapHandler = handler
     }
@@ -35,7 +44,7 @@ class StepViewCell: UIView {
     func setupWith(step: Step) {
         self.titleLabel.text = step.title
         self.descLabel.text = step.description
-        self.urlLabel.text = step.url
+        self.urlButton.setTitle(step.url, for: .normal)
         self.isSeeLess = step.isExpanded ?? false
         self.numeroDePassos.text = String(step.number)
         self.descLabel.numberOfLines = self.isSeeLess ? 0 : 3

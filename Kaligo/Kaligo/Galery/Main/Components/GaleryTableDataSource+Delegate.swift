@@ -95,7 +95,7 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                 }
                 DispatchQueue.main.async {
                     controller.showCustomAlert(title: "Deletar Playlist",
-                                               message: "Depois que deletado, você não poderá mais recuperar, tem certeza que  deseja deletar?",
+                                               message: "Depois que deletado, você não poderá mais recuperar, tem certeza de que deseja deletar?",
                                                isOneButton: false) { answer in
                         if answer {
                             controller.showSpinner(onView: controller.view)
@@ -106,12 +106,16 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                                         self.playlists = List.delete(list: answer)
                                         controller.removeSpinner()
                                         self.delegate?.reloadData()
+                                        if let galeryController = controller as? GaleryController {
+                                            galeryController.setNoPlaylistLabel()
+                                        }
                                     case .error(let description):
                                         controller.removeSpinner()
                                         controller.showCustomAlert(title: "Opss, algo deu errado", message: description, isOneButton: true) { _ in }
                                     }
                                 }
                             }
+                            
                         } else {
                             controller.removeSpinner()
                         }
@@ -144,7 +148,9 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.segue(atIndex: indexPath.row)
+        if indexPath.section != 0 {
+            delegate?.segue(atIndex: indexPath.row)
+        }
     }
     
 }
