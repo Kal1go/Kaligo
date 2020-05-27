@@ -24,6 +24,7 @@ class GaleryController: UIViewController {
 
         self.tableViewDelegate = GaleryTableView()
         generateData()
+        setNoPlaylistLabel()
         tableViewDelegate?.delegate = self
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
