@@ -82,7 +82,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="229" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-NU-6ar">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="229" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-NU-6ar">
                                 <rect key="frame" x="0.0" y="155" width="414" height="707"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -146,12 +146,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISX-xP-k1m">
+                                                    <rect key="frame" x="294" y="33" width="85" height="45"/>
+                                                    <connections>
+                                                        <action selector="forkPlaylist:" destination="9Lh-pP-cOi" eventType="touchUpInside" id="RBL-8D-iQn"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="height" secondItem="N1E-sq-C2R" secondAttribute="height" id="2X9-2A-qNe"/>
                                                 <constraint firstItem="Nr1-fM-fib" firstAttribute="bottom" secondItem="8L7-Wd-UxR" secondAttribute="bottom" id="2i3-Gb-7K4"/>
                                                 <constraint firstItem="P9e-26-hWI" firstAttribute="top" secondItem="N1E-sq-C2R" secondAttribute="topMargin" constant="27" id="5w8-7J-r4v"/>
                                                 <constraint firstItem="bNi-jO-FBy" firstAttribute="leading" secondItem="Nr1-fM-fib" secondAttribute="leading" constant="43" id="9Dg-0T-tDa"/>
+                                                <constraint firstItem="ISX-xP-k1m" firstAttribute="trailing" secondItem="Nr1-fM-fib" secondAttribute="trailing" id="BNO-Il-Hj1"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="centerY" secondItem="N1E-sq-C2R" secondAttribute="centerY" id="Ca4-EK-gHe"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Nr1-fM-fib" secondAttribute="trailing" constant="15" id="DCU-j8-MwG"/>
                                                 <constraint firstItem="8L7-Wd-UxR" firstAttribute="leading" secondItem="P9e-26-hWI" secondAttribute="trailing" constant="10" id="GXL-7c-u2g"/>
@@ -165,9 +172,12 @@
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="centerX" secondItem="N1E-sq-C2R" secondAttribute="centerX" id="bcA-0k-Lc2"/>
                                                 <constraint firstItem="P9e-26-hWI" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="e8z-fl-Xxx"/>
                                                 <constraint firstItem="Hz4-TD-6o5" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="fSM-gq-QjH"/>
+                                                <constraint firstItem="ISX-xP-k1m" firstAttribute="bottom" secondItem="Nr1-fM-fib" secondAttribute="bottom" id="jnh-sH-7dM"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="width" secondItem="N1E-sq-C2R" secondAttribute="width" id="phJ-Oz-wBD"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Hz4-TD-6o5" secondAttribute="bottom" constant="26" id="qWN-59-pQU"/>
                                                 <constraint firstItem="bNi-jO-FBy" firstAttribute="centerY" secondItem="Nr1-fM-fib" secondAttribute="centerY" id="rFm-7f-VxS"/>
+                                                <constraint firstItem="ISX-xP-k1m" firstAttribute="leading" secondItem="Nr1-fM-fib" secondAttribute="leading" id="thx-IU-l1r"/>
+                                                <constraint firstItem="ISX-xP-k1m" firstAttribute="top" secondItem="Nr1-fM-fib" secondAttribute="top" id="tlA-Pf-9Nh"/>
                                                 <constraint firstItem="R5Q-ug-lCG" firstAttribute="top" secondItem="h1y-Gg-Ckz" secondAttribute="bottom" constant="5" id="uC4-Od-UBJ"/>
                                                 <constraint firstItem="h1y-Gg-Ckz" firstAttribute="top" secondItem="P9e-26-hWI" secondAttribute="bottom" constant="20" id="xow-cT-2RZ"/>
                                             </constraints>
@@ -175,7 +185,8 @@
                                         <color key="backgroundColor" name="Background"/>
                                         <connections>
                                             <outlet property="backgroundImage" destination="CCt-sz-H4N" id="Eqs-IM-BIc"/>
-                                            <outlet property="forkButton" destination="Nr1-fM-fib" id="FUJ-CT-waf"/>
+                                            <outlet property="forkButton" destination="ISX-xP-k1m" id="Yo9-i1-Ve3"/>
+                                            <outlet property="forkImage" destination="Nr1-fM-fib" id="FUJ-CT-waf"/>
                                             <outlet property="numberOfForks" destination="bNi-jO-FBy" id="2cX-iR-zwE"/>
                                             <outlet property="playlistCategory" destination="Hz4-TD-6o5" id="Wf1-ny-Jyj"/>
                                             <outlet property="playlistDescription" destination="R5Q-ug-lCG" id="fVd-UK-GMD"/>
@@ -183,6 +194,7 @@
                                             <outlet property="profilePicture" destination="P9e-26-hWI" id="ZRx-SO-me5"/>
                                             <outlet property="userLevel" destination="8L7-Wd-UxR" id="2mj-Tu-n9I"/>
                                             <outlet property="userName" destination="MmI-Bn-V28" id="t2G-0t-K42"/>
+                                            <segue destination="Tgo-9D-TBx" kind="show" identifier="showPlaylist" id="4EZ-ZB-KW2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -210,10 +222,20 @@
             </objects>
             <point key="canvasLocation" x="630.43478260869574" y="-298.66071428571428"/>
         </scene>
+        <!--playlist-->
+        <scene sceneID="qvi-Pe-aJG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlaylistHome" referencedIdentifier="playlist" id="Tgo-9D-TBx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8ym-FW-ciS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WR9-J0-3WA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301" y="-299"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ogs-A3-rak">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XR9-FH-4t2" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="postsvc" automaticallyAdjustsScrollViewInsets="NO" id="XR9-FH-4t2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="4vo-Ee-lCr">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -236,7 +258,7 @@
         <image name="opcao-default" width="302" height="114"/>
         <image name="opcao-selecao" width="260" height="72"/>
         <namedColor name="Background">
-            <color red="0.93300002813339233" green="0.97299998998641968" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.93333333333333335" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Cinza-texto">
             <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
