@@ -22,7 +22,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="Ym5-Te-ZPu" firstAttribute="centerX" secondItem="2bd-Vv-HOM" secondAttribute="centerX" id="jnI-4u-4f8"/>
                             <constraint firstItem="Ym5-Te-ZPu" firstAttribute="centerY" secondItem="2bd-Vv-HOM" secondAttribute="centerY" id="t1f-qw-oaS"/>
@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="hS5-r5-1QC" firstAttribute="centerX" secondItem="8E3-bb-3aB" secondAttribute="centerX" id="7eK-p2-Kop"/>
                             <constraint firstItem="hS5-r5-1QC" firstAttribute="centerY" secondItem="8E3-bb-3aB" secondAttribute="centerY" id="Lks-DV-kF2"/>
@@ -155,7 +155,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="OWG-GO-am3" firstAttribute="centerX" secondItem="tQn-G2-SVp" secondAttribute="centerX" id="VUA-mw-fWX"/>
                             <constraint firstItem="OWG-GO-am3" firstAttribute="centerY" secondItem="tQn-G2-SVp" secondAttribute="centerY" id="flo-Ch-h1o"/>
@@ -181,7 +181,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="mcw-II-sXZ" firstAttribute="centerX" secondItem="hs2-sA-bAW" secondAttribute="centerX" id="Z0v-Hg-24R"/>
                             <constraint firstItem="mcw-II-sXZ" firstAttribute="centerY" secondItem="hs2-sA-bAW" secondAttribute="centerY" id="hJX-1T-2QS"/>
