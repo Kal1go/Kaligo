@@ -12,7 +12,7 @@ class PostsViewController: UIViewController {
 
     @IBOutlet weak var filterCollectionView: UICollectionView!
     @IBOutlet weak var playlistsTableView: UITableView!
-
+    
     var collectionViewDelegate: FilterCollectionViewDelegate?
     var tableViewDelegate: PostsTableDelegate?
     
@@ -38,6 +38,7 @@ class PostsViewController: UIViewController {
         tableViewDelegate?.viewController = self
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
+        
     }
     
     @IBAction func closePlaylist(_ sender: UIStoryboardSegue) {}

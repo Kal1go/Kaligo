@@ -62,7 +62,7 @@ class LoginController: UIViewController {
         LoginController.isLogged = true
         CommonData.shared.user = user
         let mainStoryboard = UIStoryboard(name: "Posts", bundle: Bundle.main)
-            .instantiateViewController(withIdentifier: "postsvc")
+            .instantiateViewController(withIdentifier: "mainvc")
         mainStoryboard.modalPresentationStyle = .fullScreen
         self.present(mainStoryboard, animated: true, completion: nil)
         
