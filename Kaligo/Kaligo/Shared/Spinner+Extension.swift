@@ -10,17 +10,19 @@ import UIKit
 
 var vSpinner: UIView?
 
-extension UIViewController {
-    func showSpinner(onView: UIView) {
-        let spinnerView = UIView.init(frame: onView.bounds)
-        spinnerView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        let animation = UIActivityIndicatorView.init(style: .large)
+extension UIView {
+    func showSpinner() {
+        let spinnerView = UIView.init(frame: self.bounds)
+        spinnerView.backgroundColor =
+            UIColor(named: "Background")?.withAlphaComponent(0.5) ??
+            UIColor.white.withAlphaComponent(0.5)
+        let animation = UIActivityIndicatorView.init(style: .medium)
         animation.startAnimating()
         animation.center = spinnerView.center
 
         DispatchQueue.main.async {
             spinnerView.addSubview(animation)
-            onView.addSubview(spinnerView)
+            self.addSubview(spinnerView)
         }
 
         vSpinner = spinnerView

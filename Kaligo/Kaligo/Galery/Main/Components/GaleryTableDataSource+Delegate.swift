@@ -98,26 +98,26 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                                                message: "Depois que deletado, você não poderá mais recuperar, tem certeza de que deseja deletar?",
                                                isOneButton: false) { answer in
                         if answer {
-                            controller.showSpinner(onView: controller.view)
+                            controller.view.showSpinner()
                             ListHandler.deleteOne(id: listID) { (response) in
                                 DispatchQueue.main.async {
                                     switch response {
                                     case .success(let answer):
                                         self.playlists = List.delete(list: answer)
-                                        controller.removeSpinner()
+                                        controller.view.removeSpinner()
                                         self.delegate?.reloadData()
                                         if let galeryController = controller as? GaleryController {
                                             galeryController.setNoPlaylistLabel()
                                         }
                                     case .error(let description):
-                                        controller.removeSpinner()
+                                        controller.view.removeSpinner()
                                         controller.showCustomAlert(title: "Opss, algo deu errado", message: description, isOneButton: true) { _ in }
                                     }
                                 }
                             }
                             
                         } else {
-                            controller.removeSpinner()
+                            controller.view.removeSpinner()
                         }
                     }
                 }
