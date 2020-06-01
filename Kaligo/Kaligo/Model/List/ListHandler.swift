@@ -45,10 +45,10 @@ class ListHandler {
         }
     }
 
-    static func getAll(withCompletion completion: @escaping (ListLoadResponse) -> Void) {
+    static func getLast(withNumber number: Int, withCompletion completion: @escaping (ListLoadResponse) -> Void) {
         EndpointsRequests
             .getRequest(
-                url: "\(BASE_URL)/get/all",
+                url: "\(BASE_URL)/get/last/\(number)",
                 decodableType: ServerAnswer<Lists>.self
             ) { (response) in
                 switch response {
