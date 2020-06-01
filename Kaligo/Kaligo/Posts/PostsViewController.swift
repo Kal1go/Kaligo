@@ -12,10 +12,10 @@ class PostsViewController: UIViewController {
 
     @IBOutlet weak var filterCollectionView: UICollectionView!
     @IBOutlet weak var playlistsTableView: UITableView!
-
-    weak var collectionViewDelegate: FilterCollectionViewDelegate?
-    weak var tableViewDelegate: PostsTableDelegate?
-
+    
+    var collectionViewDelegate: FilterCollectionViewDelegate?
+    var tableViewDelegate: PostsTableDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,19 +35,29 @@ class PostsViewController: UIViewController {
                                                        category: "",
                                                        numberOfForks: 36,
                                                        type: "Playlist")]
-
+        tableViewDelegate?.viewController = self
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
+        
     }
+    
+    @IBAction func closePlaylist(_ sender: UIStoryboardSegue) {}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    @IBAction func forkPlaylist(_ sender: UIButton) {
+        // verificar se usuário já salvou essa playlist
+        tableViewDelegate?.playlists?[sender.tag].numberOfForks += 1
+        playlistsTableView.reloadData()
+    }
+    
+    func performSegue(for playlist: List) {
+        performSegue(withIdentifier: "listDetail", sender: playlist)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let navegation = segue.destination as? UINavigationController,
+            let view = navegation.viewControllers.first as? PlaylistHomeController,
+            let list = sender as? List {
+                view.playlist = list
+        }
     }
-    */
-
 }

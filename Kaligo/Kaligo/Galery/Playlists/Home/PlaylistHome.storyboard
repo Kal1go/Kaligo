@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NR7-y0-N8d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NR7-y0-N8d">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -99,7 +99,7 @@
                     <navigationItem key="navigationItem" title="Álgebra" id="MyA-gh-led">
                         <barButtonItem key="rightBarButtonItem" title="Fechar" id="zga-hp-W11">
                             <connections>
-                                <segue destination="Gou-of-9gy" kind="unwind" unwindAction="savePlaylist:" id="COc-ZO-kgk"/>
+                                <segue destination="Gou-of-9gy" kind="unwind" unwindAction="closePlaylist:" id="20H-rE-uVJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

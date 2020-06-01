@@ -10,8 +10,11 @@ import UIKit
 
 class PostsTableDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
 
+    weak var viewController: PostsViewController?
+    
     var playlists: Lists?
-
+    var selectedPlaylist: List?
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return playlists?.count ?? 0
     }
@@ -32,8 +35,16 @@ class PostsTableDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
         cell.playlistDescription.text = playlist.description
         cell.playlistCategory.text = playlist.category
         cell.numberOfForks.text = "\(playlist.numberOfForks)"
+        cell.forkButton.tag = indexPath.row
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let playlist = playlists?[indexPath.row] else { return }
+        selectedPlaylist = playlist
+
+        viewController?.performSegue(for: playlist)
     }
 
 }

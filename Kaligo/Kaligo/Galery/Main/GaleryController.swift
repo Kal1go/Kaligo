@@ -28,6 +28,11 @@ class GaleryController: UIViewController {
         tableViewDelegate?.delegate = self
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
+        
+    }
+    
+    override func awakeFromNib() {
+        self.navigationController?.tabBarItem.image = UIImage(systemName: "person.fill")
     }
     
     override func viewDidAppear(_ animated: Bool) {
