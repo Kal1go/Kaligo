@@ -43,6 +43,8 @@ class PostsTableDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let playlist = playlists?[indexPath.row] else { return }
         selectedPlaylist = playlist
+
+        viewController?.performSegue(for: playlist)
     }
 
 }

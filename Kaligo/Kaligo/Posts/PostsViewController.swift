@@ -39,6 +39,8 @@ class PostsViewController: UIViewController {
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
     }
+    
+    @IBAction func closePlaylist(_ sender: UIStoryboardSegue) {}
 
     @IBAction func forkPlaylist(_ sender: UIButton) {
         // verificar se usuário já salvou essa playlist
@@ -46,11 +48,15 @@ class PostsViewController: UIViewController {
         playlistsTableView.reloadData()
     }
     
+    func performSegue(for playlist: List) {
+        performSegue(withIdentifier: "listDetail", sender: playlist)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if
-            let destination = segue.destination as? PlaylistHomeController,
-            let selectedPlaylist = tableViewDelegate?.selectedPlaylist {
-                destination.playlist = selectedPlaylist
+        if let navegation = segue.destination as? UINavigationController,
+            let view = navegation.viewControllers.first as? PlaylistHomeController,
+            let list = sender as? List {
+                view.playlist = list
         }
     }
 }

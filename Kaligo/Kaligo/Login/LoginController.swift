@@ -61,8 +61,8 @@ class LoginController: UIViewController {
     private func toMain(user: User) {
         LoginController.isLogged = true
         CommonData.shared.user = user
-        let mainStoryboard = UIStoryboard(name: "Galery", bundle: Bundle.main)
-            .instantiateViewController(withIdentifier: "galeryvc")
+        let mainStoryboard = UIStoryboard(name: "Posts", bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: "postsvc")
         mainStoryboard.modalPresentationStyle = .fullScreen
         self.present(mainStoryboard, animated: true, completion: nil)
         

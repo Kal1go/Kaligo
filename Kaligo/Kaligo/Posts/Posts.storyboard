@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XR9-FH-4t2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XR9-FH-4t2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -34,7 +34,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filterCell" id="WUW-N6-Paa" customClass="SegmentedCollectionViewCell" customModule="Kaligo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="151" height="57"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="daD-hN-lhO">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="daD-hN-lhO">
                                             <rect key="frame" x="0.0" y="0.0" width="151" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -82,21 +82,21 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="229" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-NU-6ar">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="229" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-NU-6ar">
                                 <rect key="frame" x="0.0" y="155" width="414" height="707"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playlistCell" id="g8e-0C-dkL" customClass="PlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playlistCell" id="g8e-0C-dkL" customClass="PlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g8e-0C-dkL" id="N1E-sq-C2R">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g8e-0C-dkL" id="N1E-sq-C2R">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TableView-Card" translatesAutoresizingMaskIntoConstraints="NO" id="CCt-sz-H4N">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P9e-26-hWI">
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P9e-26-hWI">
                                                     <rect key="frame" x="40" y="38" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="wSr-WQ-GHY"/>
@@ -104,13 +104,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmI-Bn-V28">
-                                                    <rect key="frame" x="90" y="38" width="49" height="21"/>
+                                                    <rect key="frame" x="40" y="38" width="49" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nível 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L7-Wd-UxR">
-                                                    <rect key="frame" x="90" y="63.5" width="38.5" height="14.5"/>
+                                                    <rect key="frame" x="40" y="63.5" width="38.5" height="14.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -162,6 +162,7 @@
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="centerY" secondItem="N1E-sq-C2R" secondAttribute="centerY" id="Ca4-EK-gHe"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Nr1-fM-fib" secondAttribute="trailing" constant="15" id="DCU-j8-MwG"/>
                                                 <constraint firstItem="8L7-Wd-UxR" firstAttribute="leading" secondItem="P9e-26-hWI" secondAttribute="trailing" constant="10" id="GXL-7c-u2g"/>
+                                                <constraint firstItem="8L7-Wd-UxR" firstAttribute="leading" secondItem="MmI-Bn-V28" secondAttribute="leading" id="IvI-to-JPe"/>
                                                 <constraint firstItem="8L7-Wd-UxR" firstAttribute="top" secondItem="MmI-Bn-V28" secondAttribute="bottom" constant="4.5" id="LqL-Ag-GdS"/>
                                                 <constraint firstItem="h1y-Gg-Ckz" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="O26-TG-T9W"/>
                                                 <constraint firstItem="MmI-Bn-V28" firstAttribute="leading" secondItem="P9e-26-hWI" secondAttribute="trailing" constant="10" id="QUM-RH-69v"/>
@@ -169,6 +170,7 @@
                                                 <constraint firstItem="8L7-Wd-UxR" firstAttribute="bottom" secondItem="P9e-26-hWI" secondAttribute="bottom" id="RIp-XZ-dM1"/>
                                                 <constraint firstItem="MmI-Bn-V28" firstAttribute="top" secondItem="P9e-26-hWI" secondAttribute="top" id="RyT-ma-4OU"/>
                                                 <constraint firstItem="bNi-jO-FBy" firstAttribute="trailing" secondItem="Nr1-fM-fib" secondAttribute="trailing" constant="-12" id="Ugt-d8-4K4"/>
+                                                <constraint firstItem="MmI-Bn-V28" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="YcS-12-p8w"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="centerX" secondItem="N1E-sq-C2R" secondAttribute="centerX" id="bcA-0k-Lc2"/>
                                                 <constraint firstItem="P9e-26-hWI" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="e8z-fl-Xxx"/>
                                                 <constraint firstItem="Hz4-TD-6o5" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="fSM-gq-QjH"/>
@@ -181,6 +183,12 @@
                                                 <constraint firstItem="R5Q-ug-lCG" firstAttribute="top" secondItem="h1y-Gg-Ckz" secondAttribute="bottom" constant="5" id="uC4-Od-UBJ"/>
                                                 <constraint firstItem="h1y-Gg-Ckz" firstAttribute="top" secondItem="P9e-26-hWI" secondAttribute="bottom" constant="20" id="xow-cT-2RZ"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="QUM-RH-69v"/>
+                                                    <exclude reference="GXL-7c-u2g"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
                                         <connections>
@@ -194,7 +202,6 @@
                                             <outlet property="profilePicture" destination="P9e-26-hWI" id="ZRx-SO-me5"/>
                                             <outlet property="userLevel" destination="8L7-Wd-UxR" id="2mj-Tu-n9I"/>
                                             <outlet property="userName" destination="MmI-Bn-V28" id="t2G-0t-K42"/>
-                                            <segue destination="Tgo-9D-TBx" kind="show" identifier="showPlaylist" id="4EZ-ZB-KW2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -216,6 +223,7 @@
                     <connections>
                         <outlet property="filterCollectionView" destination="dl2-05-9II" id="96R-19-O5a"/>
                         <outlet property="playlistsTableView" destination="hRr-NU-6ar" id="bTU-pa-Jyz"/>
+                        <segue destination="chh-LC-rzw" kind="show" identifier="listDetail" id="xoS-BT-xEo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzm-eJ-p5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -223,14 +231,14 @@
             <point key="canvasLocation" x="630.43478260869574" y="-298.66071428571428"/>
         </scene>
         <!--playlist-->
-        <scene sceneID="qvi-Pe-aJG">
+        <scene sceneID="oP4-MM-ugS">
             <objects>
-                <viewControllerPlaceholder storyboardName="PlaylistHome" referencedIdentifier="playlist" id="Tgo-9D-TBx" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="8ym-FW-ciS"/>
+                <viewControllerPlaceholder storyboardName="PlaylistHome" referencedIdentifier="playlist" id="chh-LC-rzw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Dhq-RY-bcK"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WR9-J0-3WA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uke-uY-laK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301" y="-299"/>
+            <point key="canvasLocation" x="1360" y="-299"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ogs-A3-rak">
@@ -238,7 +246,7 @@
                 <navigationController storyboardIdentifier="postsvc" automaticallyAdjustsScrollViewInsets="NO" id="XR9-FH-4t2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="4vo-Ee-lCr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="Background"/>
                     </navigationBar>
