@@ -14,7 +14,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton! {
         didSet {
-            self.nextButton.layer.cornerRadius = 25
+            self.nextButton.layer.cornerRadius = 8
             self.nextButton.layer.masksToBounds = true
         }
     }
@@ -38,10 +38,10 @@ class OnboardingViewController: UIViewController {
             else { return }
         
         switch index {
-        case 0 ... (numberOfVC - 1):
+        case 0 ... (numberOfVC - 2):
             pageViewController?.forwardPage()
             
-        case numberOfVC:
+        case numberOfVC - 1:
             dismiss(animated: true, completion: nil)
             
         default:
@@ -57,13 +57,23 @@ class OnboardingViewController: UIViewController {
             else { return }
         
         switch index {
-        case 0 ... (numberOfVC - 1):
+        case 0 ... (numberOfVC - 2):
             nextButton.setTitle("Próximo", for: .normal)
-            skipButton.isHidden = false
             
-        case 3:
+            UIView.animate(withDuration: 0.25, animations: {
+                self.skipButton.alpha = 1.0
+            }, completion: { (true) in
+                self.skipButton.isHidden = false
+            })
+            
+        case numberOfVC - 1:
             nextButton.setTitle("Começar", for: .normal)
-            skipButton.isHidden = true
+            
+            UIView.animate(withDuration: 0.25, animations: {
+                self.skipButton.alpha = 0
+            }, completion: { (true) in
+                self.skipButton.isHidden = true
+            })
             
         default:
             break

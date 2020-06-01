@@ -63,7 +63,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="46e-7G-5dq">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="KK3-vW-yRL" customClass="OnboardingViewController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingvc" id="KK3-vW-yRL" customClass="OnboardingViewController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T8e-T5-gsf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

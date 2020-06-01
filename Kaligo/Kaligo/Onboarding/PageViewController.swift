@@ -50,9 +50,9 @@ class PageViewController: UIPageViewController {
     }
     
     func forwardPage() {
-        guard let currentIndex = self.pageViewDelegate?.currentIndex else { return }
-        
         self.pageViewDelegate?.currentIndex += 1
+        
+        guard let currentIndex = self.pageViewDelegate?.currentIndex else { return }
         
         if let nextViewController = setContentViewControler(at: currentIndex) {
             setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)

@@ -18,8 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             rootVC = UIStoryboard(name: "Posts", bundle: nil)
                 .instantiateViewController(withIdentifier: "mainvc")
         } else {
-            rootVC = UIStoryboard(name: "Login", bundle: nil)
-                .instantiateViewController(withIdentifier: "loginvc")
+//            rootVC = UIStoryboard(name: "Login", bundle: nil)
+//                .instantiateViewController(withIdentifier: "loginvc")
+            rootVC = UIStoryboard(name: "Onboarding", bundle: nil)
+                .instantiateViewController(identifier: "onboardingvc")
         }
         if let windowScene = scene as? UIWindowScene {
             self.window = UIWindow(windowScene: windowScene)
