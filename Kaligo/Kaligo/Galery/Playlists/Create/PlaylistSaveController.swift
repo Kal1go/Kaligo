@@ -99,20 +99,20 @@ class PlaylistSaveController: UITableViewController {
     
     @IBAction func save() {
         self.view.endEditing(true)
-        self.showSpinner(onView: self.view)
+        self.view.showSpinner()
         self.preConfigure()
         ListHandler.create(list: playlist) { (response) in
             switch response {
             case .success(let answer):
                 DispatchQueue.main.async {
                     User.addlist(list: answer)
-                    self.removeSpinner()
+                    self.view.removeSpinner()
                     self.navigationController?.previousViewController?.back()
                 }
             case .error(let description):
                 print(description)
                 DispatchQueue.main.async {
-                    self.removeSpinner()
+                    self.view.removeSpinner()
                     self.showCustomAlert(title: "Algo deu errado", message: "Verifique sua conexão com a internet.", isOneButton: true) { _ in }
                 }
             }

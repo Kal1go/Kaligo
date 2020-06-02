@@ -66,6 +66,7 @@
 		E490A52A248591EB0086B890 /* PageViewDelegate+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490A529248591EB0086B890 /* PageViewDelegate+DataSource.swift */; };
 		E490A52C248595CA0086B890 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490A52B248595CA0086B890 /* OnboardingViewController.swift */; };
 		E4B748A92473021B00B3FAAF /* PostsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748A82473021B00B3FAAF /* PostsTableDelegate.swift */; };
+		E4B748A92473021B00B3FAAF /* PostsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748A82473021B00B3FAAF /* PostsTableView.swift */; };
 		E4B748AB247309F700B3FAAF /* Galery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B748AA247309F700B3FAAF /* Galery.storyboard */; };
 		E4B748AF247310F000B3FAAF /* GaleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748AE247310F000B3FAAF /* GaleryController.swift */; };
 		E4B748B3247320B300B3FAAF /* GaleryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B2247320B300B3FAAF /* GaleryTableCell.swift */; };
@@ -135,7 +136,7 @@
 		E490A52B248595CA0086B890 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E49AFA9F247EE8F600BD088E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		E49AFAA0247EE8F600BD088E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		E4B748A82473021B00B3FAAF /* PostsTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableDelegate.swift; sourceTree = "<group>"; };
+		E4B748A82473021B00B3FAAF /* PostsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableView.swift; sourceTree = "<group>"; };
 		E4B748AA247309F700B3FAAF /* Galery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Galery.storyboard; sourceTree = "<group>"; };
 		E4B748AE247310F000B3FAAF /* GaleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryController.swift; sourceTree = "<group>"; };
 		E4B748B2247320B300B3FAAF /* GaleryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryTableCell.swift; sourceTree = "<group>"; };
@@ -271,7 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				E47EB20C246F1C77004651A2 /* Posts.storyboard */,
-				E4B748A82473021B00B3FAAF /* PostsTableDelegate.swift */,
+				E4B748A82473021B00B3FAAF /* PostsTableView.swift */,
 				E47EB212246F3438004651A2 /* PostsViewController.swift */,
 				E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */,
 			);
@@ -556,7 +557,7 @@
 				E43BC6142475997900351A22 /* InputController.swift in Sources */,
 				E4B748B3247320B300B3FAAF /* GaleryTableCell.swift in Sources */,
 				E451F34424747C25004E450C /* StepsTableDataSource+Delegate.swift in Sources */,
-				E4B748A92473021B00B3FAAF /* PostsTableDelegate.swift in Sources */,
+				E4B748A92473021B00B3FAAF /* PostsTableView.swift in Sources */,
 				E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */,
 				E4B748B52473272900B3FAAF /* GaleryTableDataSource+Delegate.swift in Sources */,
 				E451F3402474765D004E450C /* StepTableViewCell.swift in Sources */,

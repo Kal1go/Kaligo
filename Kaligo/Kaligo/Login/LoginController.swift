@@ -45,17 +45,17 @@ class LoginController: UIViewController {
             "level": 0
         ] as [String: Any]
         
-        self.showSpinner(onView: self.view)
+        self.view.showSpinner()
         UserHandler.auth(params: params as [String: Any]) { (response) in
             switch response {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.toMain(user: user)
-                    self.removeSpinner()
+                    self.view.removeSpinner()
                 }
             case.error(let description):
                 DispatchQueue.main.async {
-                    self.removeSpinner()
+                    self.view.removeSpinner()
                     self.showCustomAlert(title: "Não foi possível fazer login!",
                                          message: description, isOneButton: true) { _ in }
                 }
