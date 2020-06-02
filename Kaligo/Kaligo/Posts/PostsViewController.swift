@@ -9,45 +9,44 @@
 import UIKit
 
 class PostsViewController: UIViewController {
-
+    
     @IBOutlet weak var filterCollectionView: UICollectionView!
-    @IBOutlet weak var playlistsTableView: UITableView!
-
-    weak var collectionViewDelegate: FilterCollectionViewDelegate?
-    weak var tableViewDelegate: PostsTableDelegate?
-
+    @IBOutlet weak var postsTableView: PostsTableView!
+    
+    private var collectionViewDelegate: FilterCollectionViewDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let filterDelegate = FilterCollectionViewDelegate()
         self.collectionViewDelegate = filterDelegate
         collectionViewDelegate?.categories = ["Matemática", "História", "Geografia", "Biologia"]
-
+        
         filterCollectionView.delegate = self.collectionViewDelegate
         filterCollectionView.dataSource = self.collectionViewDelegate
-        
-        let postsDelegate = PostsTableDelegate()
-        self.tableViewDelegate = postsDelegate
-        tableViewDelegate?.playlists = [List(userName: "Jaque",
-                                                       userLevel: "Nível 7",
-                                                       title: "Álgebra",
-                                                       description: "Descrição dessa playlist",
-                                                       category: "",
-                                                       numberOfForks: 36,
-                                                       type: "Playlist")]
 
-        playlistsTableView.delegate = tableViewDelegate
-        playlistsTableView.dataSource = tableViewDelegate
+//        self.getLast()
+
+        postsTableView?.viewController = self
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    @IBAction func closePlaylist(_ sender: UIStoryboardSegue) {}
+    
+    @IBAction func forkPlaylist(_ sender: UIButton) {
+        // verificar se usuário já salvou essa playlist
+//        postsTableView?.playlists[sender.tag].numberOfForks += 1
+//        postsTableView.reloadData()
+    }
+    
+    func performSegue(for playlist: List) {
+        performSegue(withIdentifier: "listDetail", sender: playlist)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let navegation = segue.destination as? UINavigationController,
+            let view = navegation.viewControllers.first as? PlaylistHomeController,
+            let list = sender as? List {
+            view.playlist = list
+        }
     }
-    */
-
 }

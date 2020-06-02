@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         var rootVC: UIViewController?
         if LoginController.isLogged == true {
-            rootVC = UIStoryboard(name: "Galery", bundle: nil)
-                .instantiateViewController(withIdentifier: "galeryvc")
+            rootVC = UIStoryboard(name: "Posts", bundle: nil)
+                .instantiateViewController(withIdentifier: "mainvc")
         } else {
             rootVC = UIStoryboard(name: "Login", bundle: nil)
                 .instantiateViewController(withIdentifier: "loginvc")

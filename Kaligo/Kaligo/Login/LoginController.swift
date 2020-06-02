@@ -28,6 +28,11 @@ class LoginController: UIViewController {
         self.setUpSignInAppleButton()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // TODO: Verificar se usuário já passou pelo onboarding
+        self.presentOnboarding()
+    }
+    
     private func auth(appleIDCredential: ASAuthorizationAppleIDCredential) {
         let appleID = appleIDCredential.user //appleID is the password
         let name = appleIDCredential.fullName?.getFullName() ?? ""
@@ -40,17 +45,17 @@ class LoginController: UIViewController {
             "level": 0
         ] as [String: Any]
         
-        self.showSpinner(onView: self.view)
+        self.view.showSpinner()
         UserHandler.auth(params: params as [String: Any]) { (response) in
             switch response {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.toMain(user: user)
-                    self.removeSpinner()
+                    self.view.removeSpinner()
                 }
             case.error(let description):
                 DispatchQueue.main.async {
-                    self.removeSpinner()
+                    self.view.removeSpinner()
                     self.showCustomAlert(title: "Não foi possível fazer login!",
                                          message: description, isOneButton: true) { _ in }
                 }
@@ -61,12 +66,20 @@ class LoginController: UIViewController {
     private func toMain(user: User) {
         LoginController.isLogged = true
         CommonData.shared.user = user
-        let mainStoryboard = UIStoryboard(name: "Galery", bundle: Bundle.main)
-            .instantiateViewController(withIdentifier: "galeryvc")
+        let mainStoryboard = UIStoryboard(name: "Posts", bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: "mainvc")
         mainStoryboard.modalPresentationStyle = .fullScreen
         self.present(mainStoryboard, animated: true, completion: nil)
         
     }
+    
+    private func presentOnboarding() {
+        let onboardingVC = UIStoryboard(name: "Onboarding", bundle: nil)
+            .instantiateViewController(identifier: "onboardingvc")
+        onboardingVC.modalPresentationStyle = .fullScreen
+        self.present(onboardingVC, animated: true, completion: nil)
+    }
+    
     static func logout(presenter: UIViewController) {
         LoginController.isLogged = false
         
