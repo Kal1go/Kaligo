@@ -159,7 +159,7 @@
                                             <outlet property="addButton" destination="lvR-fF-0mV" id="0b2-Is-32z"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playlistCell" id="Feo-W3-rAo" customClass="PlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playlistCell" rowHeight="229" id="Feo-W3-rAo" customClass="PlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="109" width="414" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Feo-W3-rAo" id="4zT-Yk-oED">
@@ -359,7 +359,7 @@
     <color key="tintColor" name="Tint"/>
     <resources>
         <image name="Lia" width="816" height="816"/>
-        <image name="TableView-Card" width="413" height="229"/>
+        <image name="TableView-Card" width="860" height="477"/>
         <image name="botao-adicionado" width="46" height="46"/>
         <image name="criar-botao" width="245" height="57"/>
         <image name="opcao-segmented-default" width="420" height="143"/>
@@ -371,13 +371,13 @@
             <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Clicavel">
-            <color red="0.89399999380111694" green="0.94099998474121094" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.86274509803921573" green="0.94901960784313721" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Cor-LetraEscura">
-            <color red="0.14499999582767487" green="0.20000000298023224" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13333333333333333" green="0.20000000298023224" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.41999998688697815" green="0.41999998688697815" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.29411764705882354" green="0.14117647058823529" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
