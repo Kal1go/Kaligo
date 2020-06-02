@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Galeria-->
+        <!--Minha Galeria-->
         <scene sceneID="Knr-U6-lvh">
             <objects>
                 <viewController id="xRc-ws-f3N" customClass="GaleryController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="criar-botao" translatesAutoresizingMaskIntoConstraints="NO" id="XQJ-rw-3qg">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-criar" translatesAutoresizingMaskIntoConstraints="NO" id="XQJ-rw-3qg">
                                                     <rect key="frame" x="84.5" y="11" width="245" height="59"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="57" id="AOG-on-gwt"/>
@@ -35,9 +35,9 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvR-fF-0mV">
-                                                    <rect key="frame" x="84.5" y="14" width="245" height="56"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                    <state key="normal" title="Criar playlist">
+                                                    <rect key="frame" x="84.5" y="11" width="245" height="59"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <state key="normal" title="Criar roteiro">
                                                         <color key="titleColor" name="Background"/>
                                                     </state>
                                                     <connections>
@@ -47,9 +47,8 @@
                                             </subviews>
                                             <color key="backgroundColor" name="Background"/>
                                             <constraints>
-                                                <constraint firstItem="lvR-fF-0mV" firstAttribute="top" secondItem="Wc8-3e-GfB" secondAttribute="topMargin" constant="3" id="TF1-n2-Nqj"/>
+                                                <constraint firstItem="lvR-fF-0mV" firstAttribute="top" secondItem="Wc8-3e-GfB" secondAttribute="topMargin" id="TF1-n2-Nqj"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="lvR-fF-0mV" secondAttribute="bottom" id="XWN-Fm-fEf"/>
-                                                <constraint firstItem="lvR-fF-0mV" firstAttribute="top" secondItem="XQJ-rw-3qg" secondAttribute="top" constant="3" id="dQt-YU-OZA"/>
                                                 <constraint firstItem="lvR-fF-0mV" firstAttribute="bottom" secondItem="XQJ-rw-3qg" secondAttribute="bottom" id="jLU-Sh-u6N"/>
                                                 <constraint firstItem="XQJ-rw-3qg" firstAttribute="centerY" secondItem="Wc8-3e-GfB" secondAttribute="centerY" id="n1r-8j-HyD"/>
                                                 <constraint firstItem="XQJ-rw-3qg" firstAttribute="centerX" secondItem="Wc8-3e-GfB" secondAttribute="centerX" id="pb4-TA-ECY"/>
@@ -79,18 +78,18 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04V-7L-OTF">
-                                                    <rect key="frame" x="90" y="38" width="49" height="21"/>
+                                                    <rect key="frame" x="90" y="38" width="49" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nível 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-Kx-fFu">
-                                                    <rect key="frame" x="90" y="63.5" width="38.5" height="14.5"/>
+                                                    <rect key="frame" x="90" y="63" width="38.5" height="15"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-adicionado" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-sb-WqZ">
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-fork-selecionado" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-sb-WqZ">
                                                     <rect key="frame" x="294" y="33" width="85" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="Z5m-Jn-oNi"/>
@@ -291,7 +290,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7JB-JB-58R"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Galeria" leftItemsSupplementBackButton="YES" id="hN5-jv-OFG">
+                    <navigationItem key="navigationItem" title="Minha Galeria" leftItemsSupplementBackButton="YES" id="hN5-jv-OFG">
                         <barButtonItem key="rightBarButtonItem" title="Sair" id="YkY-5v-azl">
                             <connections>
                                 <action selector="logout" destination="xRc-ws-f3N" id="c0r-bf-T9j"/>
@@ -360,8 +359,8 @@
     <resources>
         <image name="Lia" width="816" height="816"/>
         <image name="TableView-Card" width="860" height="477"/>
-        <image name="botao-adicionado" width="46" height="46"/>
-        <image name="criar-botao" width="245" height="57"/>
+        <image name="botao-criar" width="245" height="57"/>
+        <image name="botao-fork-selecionado" width="200" height="200"/>
         <image name="opcao-segmented-default" width="420" height="143"/>
         <image name="opcao-segmented-selecao" width="347" height="96"/>
         <namedColor name="Background">
@@ -374,7 +373,7 @@
             <color red="0.86274509803921573" green="0.94901960784313721" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Cor-LetraEscura">
-            <color red="0.13333333333333333" green="0.20000000298023224" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.29411764705882354" green="0.14117647058823529" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
