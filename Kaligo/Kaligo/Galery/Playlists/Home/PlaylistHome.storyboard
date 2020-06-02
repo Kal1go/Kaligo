@@ -24,59 +24,50 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Lia" translatesAutoresizingMaskIntoConstraints="NO" id="vLj-IP-9XR">
-                                            <rect key="frame" x="20" y="15" width="70" height="70"/>
+                                            <rect key="frame" x="20" y="25" width="50" height="50"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="70" id="7wV-Nd-oWh"/>
-                                                <constraint firstAttribute="width" constant="70" id="Fo1-7U-w7R"/>
+                                                <constraint firstAttribute="height" constant="50" id="7wV-Nd-oWh"/>
+                                                <constraint firstAttribute="width" constant="50" id="Fo1-7U-w7R"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="35"/>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorena cavani" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvw-YM-um7">
-                                            <rect key="frame" x="101" y="39" width="112" height="22"/>
-                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
-                                            <color key="textColor" name="Cor-LetraEscura"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="botao-fork" translatesAutoresizingMaskIntoConstraints="NO" id="7nO-he-SzB">
-                                            <rect key="frame" x="294" y="26" width="100" height="48"/>
+                                            <rect key="frame" x="314" y="0.0" width="100" height="100"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="48" id="mX9-jM-BXd"/>
-                                                <constraint firstAttribute="width" constant="100" id="w1B-e3-oWz"/>
+                                                <constraint firstAttribute="width" constant="100" id="X0N-EQ-Cqk"/>
+                                                <constraint firstAttribute="height" constant="100" id="nmU-x6-z8g"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP6-8h-wbA">
-                                            <rect key="frame" x="350" y="39.5" width="21" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xes-q9-f0h">
+                                            <rect key="frame" x="81" y="54" width="75" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" name="Cor-LetraEscura"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atg-Yp-nOW">
-                                            <rect key="frame" x="101" y="63" width="31" height="14.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feito por Fulana de Tal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvw-YM-um7">
+                                            <rect key="frame" x="81" y="28.5" width="172.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                             <color key="textColor" name="Cor-LetraEscura"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="7nO-he-SzB" firstAttribute="centerY" secondItem="vLj-IP-9XR" secondAttribute="centerY" id="1qy-dE-a6c"/>
-                                        <constraint firstItem="atg-Yp-nOW" firstAttribute="leading" secondItem="vLj-IP-9XR" secondAttribute="trailing" constant="11" id="7ow-hF-F7X"/>
-                                        <constraint firstItem="atg-Yp-nOW" firstAttribute="top" secondItem="uvw-YM-um7" secondAttribute="bottom" constant="2" id="Jei-LD-2uk"/>
                                         <constraint firstItem="uvw-YM-um7" firstAttribute="leading" secondItem="vLj-IP-9XR" secondAttribute="trailing" constant="11" id="MKu-Ct-P8V"/>
+                                        <constraint firstItem="7nO-he-SzB" firstAttribute="centerY" secondItem="6TI-Y9-Fvz" secondAttribute="centerY" id="N8K-kj-9gd"/>
                                         <constraint firstItem="vLj-IP-9XR" firstAttribute="leading" secondItem="6TI-Y9-Fvz" secondAttribute="leadingMargin" id="T1G-D9-i5S"/>
                                         <constraint firstItem="vLj-IP-9XR" firstAttribute="centerY" secondItem="6TI-Y9-Fvz" secondAttribute="centerY" id="T9H-U9-QUC"/>
-                                        <constraint firstItem="cP6-8h-wbA" firstAttribute="centerY" secondItem="7nO-he-SzB" secondAttribute="centerY" id="iwL-3Z-QR9"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="cP6-8h-wbA" secondAttribute="trailing" constant="23" id="mVI-b4-Lz2"/>
-                                        <constraint firstItem="7nO-he-SzB" firstAttribute="trailing" secondItem="6TI-Y9-Fvz" secondAttribute="trailingMargin" id="sDx-rU-zkx"/>
-                                        <constraint firstItem="uvw-YM-um7" firstAttribute="centerY" secondItem="vLj-IP-9XR" secondAttribute="centerY" id="y7r-6Z-dNC"/>
+                                        <constraint firstItem="Xes-q9-f0h" firstAttribute="leading" secondItem="uvw-YM-um7" secondAttribute="leading" id="aEZ-mi-2JT"/>
+                                        <constraint firstItem="Xes-q9-f0h" firstAttribute="bottom" secondItem="vLj-IP-9XR" secondAttribute="bottom" id="cTj-cb-oia"/>
+                                        <constraint firstItem="Xes-q9-f0h" firstAttribute="top" secondItem="uvw-YM-um7" secondAttribute="bottom" constant="5" id="eh0-16-O0W"/>
+                                        <constraint firstAttribute="trailing" secondItem="7nO-he-SzB" secondAttribute="trailing" id="pva-Ng-KbU"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="Background"/>
                                 <connections>
-                                    <outlet property="numberOfForksLabel" destination="cP6-8h-wbA" id="dPV-oD-i0R"/>
                                     <outlet property="userImage" destination="vLj-IP-9XR" id="Mvr-6o-U7C"/>
-                                    <outlet property="userLevelLabel" destination="atg-Yp-nOW" id="Ryc-Yc-0YX"/>
                                     <outlet property="userNameLabel" destination="uvw-YM-um7" id="DAT-3V-abV"/>
                                 </connections>
                             </tableViewCell>
@@ -99,13 +90,12 @@
                     <navigationItem key="navigationItem" title="Álgebra" id="MyA-gh-led">
                         <barButtonItem key="rightBarButtonItem" title="Fechar" id="zga-hp-W11">
                             <connections>
-                                <segue destination="Gou-of-9gy" kind="unwind" unwindAction="closePlaylist:" id="20H-rE-uVJ"/>
+                                <action selector="dismissView:" destination="2Gm-jg-Wnc" id="fst-6e-VRB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiD-KW-CrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Gou-of-9gy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1186.9565217391305" y="-258.48214285714283"/>
         </scene>
@@ -138,15 +128,15 @@
     <color key="tintColor" name="Tint"/>
     <resources>
         <image name="Lia" width="816" height="816"/>
-        <image name="botao-fork" width="85" height="45"/>
+        <image name="botao-fork" width="200" height="200"/>
         <namedColor name="Background">
             <color red="0.93333333333333335" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Cor-LetraEscura">
-            <color red="0.14499999582767487" green="0.20000000298023224" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.41999998688697815" green="0.41999998688697815" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.29411764705882354" green="0.14117647058823529" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

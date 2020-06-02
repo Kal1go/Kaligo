@@ -12,7 +12,6 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
     
     weak var viewController: PostsViewController?
     var playlists = Lists()
-    var selectedPlaylist: List?
     
     private var indexOfPageToRequest = 0
     private var isLoading = false
@@ -54,9 +53,8 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
             cell.userLevel.text = "Nível \(playlist.userLevel)"
             cell.playlistTitle.text = playlist.title
             cell.playlistDescription.text = playlist.description
-            cell.playlistCategory.text = playlist.category
-            cell.numberOfForks.text = "\(playlist.numberOfForks)"
             cell.forkButton.tag = indexPath.row
+            cell.categoryImage.image = UIImage(named: "\(playlist.category)")
             
             return cell
         } else {
@@ -64,13 +62,6 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
             cell.backgroundColor = .clear
             return cell
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let playlist = playlists[indexPath.row]
-        selectedPlaylist = playlist
-        
-        viewController?.performSegue(for: playlist)
     }
     
     func loadMoreData() {

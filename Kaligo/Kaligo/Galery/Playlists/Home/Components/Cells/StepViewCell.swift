@@ -46,7 +46,7 @@ class StepViewCell: UIView {
         self.descLabel.text = step.description
         self.urlButton.setTitle(step.url, for: .normal)
         self.isSeeLess = step.isExpanded ?? false
-        self.numeroDePassos.text = String(step.number)
+        self.numeroDePassos.text = String("\(step.number)-")
         self.descLabel.numberOfLines = self.isSeeLess ? 0 : 3
         self.seeMoreButton.setTitle(self.isSeeLess ? "See less" : "See more", for: .normal)
         

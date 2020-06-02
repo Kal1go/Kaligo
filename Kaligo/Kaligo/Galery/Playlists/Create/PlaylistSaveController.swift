@@ -20,6 +20,8 @@ class PlaylistSaveController: UITableViewController {
     var inputController: InputController?
     var pickerController: PlaylistSavePicker?
     
+    let sectionTitles = ["Informações", "Categoria"]
+    
     var playlist = List()
         
     override func viewDidLoad() {
@@ -40,6 +42,9 @@ class PlaylistSaveController: UITableViewController {
         pickerController = PlaylistSavePicker(components: getCategories())
         categoryPickerView.delegate = pickerController
         categoryPickerView.dataSource = pickerController
+        
+        let headerNib = UINib.init(nibName: "SectionHeaderView", bundle: Bundle.main)
+        self.tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "SectionHeaderView")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -51,6 +56,16 @@ class PlaylistSaveController: UITableViewController {
         playlist.category = category.rawValue
         
         validateSteps()
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeaderView") as? SectionHeaderView else {
+            return UITableViewHeaderFooterView()
+        }
+        
+        headerView.titleLabel.text = sectionTitles[section]
+
+        return headerView
     }
     
     private func getCategories() -> [String] {

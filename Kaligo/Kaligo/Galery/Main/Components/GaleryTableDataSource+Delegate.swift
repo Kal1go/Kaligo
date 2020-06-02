@@ -38,6 +38,13 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 81
+        }
+        return 229
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(
@@ -45,12 +52,6 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                 for: indexPath) as? GaleryTableCell
                 else { return UITableViewCell() }
             
-            if filter == .playlists {
-                cell.addButton.setTitle("Criar playlist", for: .normal)
-                
-            } else {
-                cell.addButton.setTitle("Criar dica", for: .normal)
-            }
             cell.selectionStyle = .none
             return cell
             
@@ -135,14 +136,13 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
             cell.userLevel.text = d.userLevel
             cell.playlistTitle.text = d.title
             cell.playlistDescription.text = d.description
-            cell.playlistCategory.text = d.category
-            cell.numberOfForks.text = "\(d.numberOfForks)"
+            cell.categoryImage.image = UIImage(named: "\(d.category)")
         } else if let d = data as? ModeloDica {
             cell.userName.text = d.userName
             cell.userLevel.text = d.userLevel
             cell.playlistTitle.text = d.title
             cell.playlistDescription.text = d.description
-            cell.playlistCategory.text = d.category
+            cell.categoryImage.image = UIImage(named: "\(d.category)")
         }
         
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-var isMVP = true
+var isMVP = false
 
 class GaleryController: UIViewController {
 
@@ -73,6 +73,17 @@ class GaleryController: UIViewController {
             tableViewDelegate?.playlists?.append(source.playlist)
             playlistsTableView.reloadData()
         }
+    }
+    
+    @IBAction func forkPlaylist(_ sender: UIButton) {
+        // verificar se usuário já salvou essa playlist
+        tableViewDelegate?.playlists?[sender.tag].numberOfForks += 1
+        
+        let forkDefaultImage = UIImage(named: "botao-fork")
+        let forkSelectedImage = UIImage(named: "botao-fork-selecionado")
+        
+        sender.isSelected.toggle()
+        sender.setImage(sender.isSelected ? forkSelectedImage : forkDefaultImage, for: .normal)
     }
     
     @IBAction func logout() {

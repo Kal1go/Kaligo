@@ -40,6 +40,9 @@ class PlaylistCreateController: UIViewController {
         delegate.titleDelegate = TextFieldDelegate(delegate: inputController, type: .title)
         delegate.descriptionDelegate = TextViewDelegate(delegate: inputController, type: .description)
         delegate.urlDelegate = TextFieldDelegate(delegate: inputController, type: .url)
+        
+        let headerNib = UINib.init(nibName: "SectionHeaderView", bundle: Bundle.main)
+        self.stepsTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "SectionHeaderView")
     }
     
     override func viewDidLayoutSubviews() {

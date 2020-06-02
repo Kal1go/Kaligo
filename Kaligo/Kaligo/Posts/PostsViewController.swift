@@ -29,13 +29,16 @@ class PostsViewController: UIViewController {
 
         postsTableView?.viewController = self
     }
-    
-    @IBAction func closePlaylist(_ sender: UIStoryboardSegue) {}
-    
+        
     @IBAction func forkPlaylist(_ sender: UIButton) {
         // verificar se usuário já salvou essa playlist
-//        postsTableView?.playlists[sender.tag].numberOfForks += 1
-//        postsTableView.reloadData()
+        postsTableView?.playlists[sender.tag].numberOfForks += 1
+        
+        let forkDefaultImage = UIImage(named: "botao-fork")
+        let forkSelectedImage = UIImage(named: "botao-fork-selecionado")
+        
+        sender.isSelected.toggle()
+        sender.setImage(sender.isSelected ? forkSelectedImage : forkDefaultImage, for: .normal)
     }
     
     func performSegue(for playlist: List) {
@@ -45,8 +48,9 @@ class PostsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navegation = segue.destination as? UINavigationController,
             let view = navegation.viewControllers.first as? PlaylistHomeController,
-            let list = sender as? List {
-            view.playlist = list
+            let selected = postsTableView.indexPathForSelectedRow,
+            let delegate = postsTableView.delegate as? PostsTableView {
+            view.playlist = delegate.playlists[selected.row]
         }
     }
 }

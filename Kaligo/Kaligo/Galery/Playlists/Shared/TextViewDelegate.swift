@@ -46,7 +46,7 @@ class TextViewDelegate: NSObject, UITextViewDelegate {
     func setTextView(_ textView: UITextView, with text: String = "") {
         if text != "" {
             textView.text = text
-            textView.textColor = .black
+            textView.textColor = UIColor(named: "Tint")
         } else {
             textView.text = placeholder
             textView.textColor = .lightGray

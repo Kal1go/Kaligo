@@ -65,12 +65,13 @@
 		E490A528248591D00086B890 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490A527248591D00086B890 /* PageViewController.swift */; };
 		E490A52A248591EB0086B890 /* PageViewDelegate+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490A529248591EB0086B890 /* PageViewDelegate+DataSource.swift */; };
 		E490A52C248595CA0086B890 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490A52B248595CA0086B890 /* OnboardingViewController.swift */; };
-		E4B748A92473021B00B3FAAF /* PostsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748A82473021B00B3FAAF /* PostsTableDelegate.swift */; };
 		E4B748A92473021B00B3FAAF /* PostsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748A82473021B00B3FAAF /* PostsTableView.swift */; };
 		E4B748AB247309F700B3FAAF /* Galery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B748AA247309F700B3FAAF /* Galery.storyboard */; };
 		E4B748AF247310F000B3FAAF /* GaleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748AE247310F000B3FAAF /* GaleryController.swift */; };
 		E4B748B3247320B300B3FAAF /* GaleryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B2247320B300B3FAAF /* GaleryTableCell.swift */; };
 		E4B748B52473272900B3FAAF /* GaleryTableDataSource+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B748B42473272900B3FAAF /* GaleryTableDataSource+Delegate.swift */; };
+		E4D41F872486E136002F0877 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D41F862486E136002F0877 /* SectionHeaderView.swift */; };
+		E4D41F892486E155002F0877 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4D41F882486E155002F0877 /* SectionHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +142,8 @@
 		E4B748AE247310F000B3FAAF /* GaleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryController.swift; sourceTree = "<group>"; };
 		E4B748B2247320B300B3FAAF /* GaleryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryTableCell.swift; sourceTree = "<group>"; };
 		E4B748B42473272900B3FAAF /* GaleryTableDataSource+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaleryTableDataSource+Delegate.swift"; sourceTree = "<group>"; };
+		E4D41F862486E136002F0877 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		E4D41F882486E155002F0877 /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 				E451F34324747C25004E450C /* StepsTableDataSource+Delegate.swift */,
 				E4183E712476F6AE00984A2C /* PlaylistSavePicker.swift */,
 				E451F33F2474765D004E450C /* StepTableViewCell.swift */,
+				E4D41F862486E136002F0877 /* SectionHeaderView.swift */,
+				E4D41F882486E155002F0877 /* SectionHeaderView.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				87DF629B24732A01002B8FCE /* PlaylistHome.storyboard in Resources */,
 				E423AE02246F0F7E009F42C3 /* LaunchScreen.storyboard in Resources */,
 				E423ADFF246F0F7E009F42C3 /* Assets.xcassets in Resources */,
+				E4D41F892486E155002F0877 /* SectionHeaderView.xib in Resources */,
 				87DF629F24733AF9002B8FCE /* StepViewCell.xib in Resources */,
 				E423ADFD246F0F7C009F42C3 /* Main.storyboard in Resources */,
 				E435E49A24745ACD003D79CD /* PlaylistCreate.storyboard in Resources */,
@@ -557,6 +563,7 @@
 				E43BC6142475997900351A22 /* InputController.swift in Sources */,
 				E4B748B3247320B300B3FAAF /* GaleryTableCell.swift in Sources */,
 				E451F34424747C25004E450C /* StepsTableDataSource+Delegate.swift in Sources */,
+				E4D41F872486E136002F0877 /* SectionHeaderView.swift in Sources */,
 				E4B748A92473021B00B3FAAF /* PostsTableView.swift in Sources */,
 				E47EB218246F34DC004651A2 /* FilterCollectionViewDelegate.swift in Sources */,
 				E4B748B52473272900B3FAAF /* GaleryTableDataSource+Delegate.swift in Sources */,
