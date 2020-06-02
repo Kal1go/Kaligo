@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -17,58 +17,48 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sde-p6-X3i">
                     <rect key="frame" x="16" y="16" width="489" height="261"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="card-playlishHome" id="dQ3-9e-bkA">
-                            <rect key="frame" x="-16" y="-16" width="521" height="293"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-passo" id="dQ3-9e-bkA">
+                            <rect key="frame" x="0.0" y="0.0" width="489" height="261"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Kng-sA-XRz">
-                            <rect key="frame" x="24" y="16" width="441" height="229"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Kng-sA-XRz">
+                            <rect key="frame" x="20" y="20" width="449" height="221"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jp3-5G-bvn">
-                                    <rect key="frame" x="0.0" y="0.0" width="441" height="44"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4N-2J-FF3">
+                                    <rect key="frame" x="0.0" y="0.0" width="449" height="22"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botaoNumeroDePassos" translatesAutoresizingMaskIntoConstraints="NO" id="q06-tc-PXF">
-                                            <rect key="frame" x="-25" y="-20" width="70" height="58"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mso-Hb-pqH">
-                                            <rect key="frame" x="19" y="-0.5" width="6" height="21"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hht-g5-b5j">
+                                            <rect key="frame" x="0.0" y="0.0" width="30" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="sSS-r4-jjR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Passo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srh-LT-U3Y">
+                                            <rect key="frame" x="30" y="0.0" width="419" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="Uyb-h8-p0g"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" name="Cor-LetraEscura"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstItem="q06-tc-PXF" firstAttribute="width" secondItem="Jp3-5G-bvn" secondAttribute="width" multiplier="0.15873" id="78j-TW-CCX"/>
-                                        <constraint firstItem="q06-tc-PXF" firstAttribute="leading" secondItem="Jp3-5G-bvn" secondAttribute="leading" constant="-25" id="HUt-9B-0Ji"/>
-                                        <constraint firstItem="Mso-Hb-pqH" firstAttribute="centerY" secondItem="q06-tc-PXF" secondAttribute="centerY" multiplier="1.1" id="NVn-gR-gwh"/>
-                                        <constraint firstItem="Mso-Hb-pqH" firstAttribute="centerX" secondItem="q06-tc-PXF" secondAttribute="centerX" multiplier="2.2" id="P74-z9-i3z"/>
-                                        <constraint firstItem="q06-tc-PXF" firstAttribute="height" secondItem="Jp3-5G-bvn" secondAttribute="height" multiplier="1.31818" id="SgC-pJ-VCo"/>
-                                        <constraint firstItem="Mso-Hb-pqH" firstAttribute="height" secondItem="q06-tc-PXF" secondAttribute="height" multiplier="0.362069" id="Zw1-3p-3Gp"/>
-                                        <constraint firstItem="q06-tc-PXF" firstAttribute="top" secondItem="Jp3-5G-bvn" secondAttribute="top" constant="-20" id="w0Q-QD-qY0"/>
-                                    </constraints>
-                                </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Passo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srh-LT-U3Y">
-                                    <rect key="frame" x="0.0" y="50" width="441" height="22"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="22" id="Uyb-h8-p0g"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J49-zI-9ZG">
+                                    <rect key="frame" x="0.0" y="37" width="449" height="122"/>
+                                    <string key="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" name="Cor-LetraEscura"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J49-zI-9ZG">
-                                    <rect key="frame" x="0.0" y="78" width="441" height="110"/>
-                                    <string key="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</string>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" name="Cinza-texto"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTU-P2-vVb">
-                                    <rect key="frame" x="0.0" y="194" width="441" height="35"/>
+                                    <rect key="frame" x="0.0" y="174" width="449" height="47"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSN-vM-UUJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="283.5" height="35"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288.5" height="47"/>
                                             <state key="normal" title="Button">
                                                 <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -77,7 +67,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtw-oZ-mbp">
-                                            <rect key="frame" x="283.5" y="0.0" width="157.5" height="35"/>
+                                            <rect key="frame" x="288.5" y="0.0" width="160.5" height="47"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                             <state key="normal" title="See More"/>
                                             <connections>
@@ -90,22 +80,14 @@
                                     </constraints>
                                 </stackView>
                             </subviews>
-                            <constraints>
-                                <constraint firstItem="JSN-vM-UUJ" firstAttribute="height" secondItem="srh-LT-U3Y" secondAttribute="height" multiplier="1.6" id="6hZ-XH-eWy"/>
-                                <constraint firstItem="Jp3-5G-bvn" firstAttribute="height" secondItem="srh-LT-U3Y" secondAttribute="height" multiplier="2" id="Rgc-Mo-E9G"/>
-                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="dQ3-9e-bkA" firstAttribute="leading" secondItem="Sde-p6-X3i" secondAttribute="leading" constant="-20" id="6WE-8Z-RON"/>
-                        <constraint firstAttribute="trailing" secondItem="Kng-sA-XRz" secondAttribute="trailing" constant="24" id="BwI-Pg-Qsy"/>
-                        <constraint firstItem="dQ3-9e-bkA" firstAttribute="top" secondItem="Sde-p6-X3i" secondAttribute="top" constant="-16" id="KMg-F0-d6Q"/>
-                        <constraint firstItem="Kng-sA-XRz" firstAttribute="top" secondItem="Sde-p6-X3i" secondAttribute="top" constant="16" id="Uql-EG-j8D"/>
-                        <constraint firstAttribute="trailing" secondItem="dQ3-9e-bkA" secondAttribute="trailing" constant="-20" id="gpt-cq-jSs"/>
-                        <constraint firstAttribute="bottom" secondItem="Kng-sA-XRz" secondAttribute="bottom" constant="16" id="jzC-xB-Ola"/>
-                        <constraint firstAttribute="bottom" secondItem="dQ3-9e-bkA" secondAttribute="bottom" constant="-16" id="pgh-8b-Rne"/>
-                        <constraint firstItem="Kng-sA-XRz" firstAttribute="leading" secondItem="Sde-p6-X3i" secondAttribute="leading" constant="24" id="sar-fa-CFU"/>
+                        <constraint firstAttribute="trailing" secondItem="Kng-sA-XRz" secondAttribute="trailing" constant="20" id="BwI-Pg-Qsy"/>
+                        <constraint firstItem="Kng-sA-XRz" firstAttribute="top" secondItem="Sde-p6-X3i" secondAttribute="top" constant="20" id="Uql-EG-j8D"/>
+                        <constraint firstAttribute="bottom" secondItem="Kng-sA-XRz" secondAttribute="bottom" constant="20" id="jzC-xB-Ola"/>
+                        <constraint firstItem="Kng-sA-XRz" firstAttribute="leading" secondItem="Sde-p6-X3i" secondAttribute="leading" constant="20" id="sar-fa-CFU"/>
                     </constraints>
                 </view>
             </subviews>
@@ -121,7 +103,7 @@
             <connections>
                 <outlet property="descLabel" destination="J49-zI-9ZG" id="QGv-UD-fWy"/>
                 <outlet property="mainStackView" destination="Kng-sA-XRz" id="mVG-mL-qaM"/>
-                <outlet property="numeroDePassos" destination="Mso-Hb-pqH" id="Nbz-Ke-Sue"/>
+                <outlet property="numeroDePassos" destination="hht-g5-b5j" id="Lbn-XL-cj8"/>
                 <outlet property="seeMoreButton" destination="Vtw-oZ-mbp" id="6i5-yo-hE6"/>
                 <outlet property="titleLabel" destination="srh-LT-U3Y" id="Nr2-U0-k4r"/>
                 <outlet property="urlButton" destination="JSN-vM-UUJ" id="VBI-Yb-e6V"/>
@@ -130,13 +112,9 @@
         </view>
     </objects>
     <resources>
-        <image name="botaoNumeroDePassos" width="55" height="55"/>
-        <image name="card-playlishHome" width="410" height="267"/>
-        <namedColor name="Cinza-texto">
-            <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="card-passo" width="384" height="240"/>
         <namedColor name="Cor-LetraEscura">
-            <color red="0.14499999582767487" green="0.20000000298023224" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

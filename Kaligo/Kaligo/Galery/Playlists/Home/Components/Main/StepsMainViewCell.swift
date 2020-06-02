@@ -11,10 +11,8 @@ import UIKit
 
 class StepsMainViewCell: UITableViewCell {
     
-    @IBOutlet weak var numberOfForksLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var userLevelLabel: UILabel!
     
     override func awakeFromNib() {
            super.awakeFromNib()

@@ -44,8 +44,6 @@ class PlaylistHomeController: UITableViewController {
             
             if let cell1 = cell1 as? StepsMainViewCell {
                 cell1.userNameLabel.text = playlist.userName
-                cell1.userLevelLabel.text = playlist.userLevel
-                cell1.numberOfForksLabel.text = String(playlist.numberOfForks)
                 return cell1
             }
             return cell1
@@ -64,11 +62,7 @@ class PlaylistHomeController: UITableViewController {
             }
             
             var row: Int
-            if isMVP {
-                row = indexPath.row
-            } else {
-                row = indexPath.row - 1
-            }
+            row = isMVP ? indexPath.row : indexPath.row - 1
             
             guard let step = playlist.steps?[row] else {
                 fatalError("Is impossible take Step")
