@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NxT-0S-tdN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NxT-0S-tdN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Criar playlist-->
+        <!--Criar roteiro-->
         <scene sceneID="9i5-dR-ULl">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="0sc-ja-n1k" customClass="PlaylistCreateController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Título" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSv-Ws-Khb">
                                                             <rect key="frame" x="10" y="0.0" width="306" height="40"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="textColor" name="Cor-LetraEscura"/>
+                                                            <color key="textColor" name="Tint"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                             <connections>
@@ -70,7 +70,7 @@
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" text="Descrição" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dnA-Lh-s3r">
                                                             <rect key="frame" x="5" y="0.0" width="316" height="115"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="textColor" name="Cor-LetraEscura"/>
+                                                            <color key="textColor" name="Tint"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
@@ -97,7 +97,7 @@
                                                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nql-1r-AxH">
                                                             <rect key="frame" x="10" y="0.0" width="306" height="40"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="textColor" name="Cor-LetraEscura"/>
+                                                            <color key="textColor" name="Tint"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                                         </textField>
@@ -115,16 +115,10 @@
                                                         <constraint firstItem="1Ke-GC-wUy" firstAttribute="leading" secondItem="SBR-7N-oAz" secondAttribute="leading" id="rrm-1R-Kmw"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circulo-enumeracao" translatesAutoresizingMaskIntoConstraints="NO" id="uso-Mh-uAR">
-                                                    <rect key="frame" x="20" y="17" width="56" height="56"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="56" id="ltN-hY-5ow"/>
-                                                        <constraint firstAttribute="width" constant="56" id="tDD-Vv-Xrg"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOr-aa-DMj">
-                                                    <rect key="frame" x="41.5" y="38" width="13" height="14.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOr-aa-DMj">
+                                                    <rect key="frame" x="37.5" y="38" width="21" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -147,23 +141,18 @@
                                                 <constraint firstItem="SBR-7N-oAz" firstAttribute="top" secondItem="rhh-ua-2rt" secondAttribute="bottom" constant="20" id="2Cv-cG-2BN"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="SsM-Mc-jtE" secondAttribute="trailing" constant="24" id="5Gv-lZ-hMV"/>
                                                 <constraint firstItem="NF3-oy-NEg" firstAttribute="trailing" secondItem="G5a-0M-a5h" secondAttribute="trailingMargin" constant="-4" id="6w8-Om-9GY"/>
-                                                <constraint firstItem="VOr-aa-DMj" firstAttribute="width" relation="lessThanOrEqual" secondItem="uso-Mh-uAR" secondAttribute="width" id="GBA-xu-4o1"/>
                                                 <constraint firstItem="AW7-Sk-g86" firstAttribute="leading" secondItem="NF3-oy-NEg" secondAttribute="leading" id="Gne-wP-LuE"/>
                                                 <constraint firstItem="SBR-7N-oAz" firstAttribute="leading" secondItem="rhh-ua-2rt" secondAttribute="leading" id="HdY-Od-eSE"/>
-                                                <constraint firstItem="uso-Mh-uAR" firstAttribute="top" secondItem="G5a-0M-a5h" secondAttribute="topMargin" constant="6" id="LgO-wp-iSq"/>
                                                 <constraint firstItem="IAf-Fl-ZTb" firstAttribute="top" secondItem="G5a-0M-a5h" secondAttribute="top" id="MLM-vQ-JeE"/>
                                                 <constraint firstItem="NF3-oy-NEg" firstAttribute="top" secondItem="G5a-0M-a5h" secondAttribute="topMargin" constant="6" id="R9Q-YQ-xpp"/>
-                                                <constraint firstItem="uso-Mh-uAR" firstAttribute="leading" secondItem="G5a-0M-a5h" secondAttribute="leadingMargin" id="SO6-hx-8ja"/>
                                                 <constraint firstItem="rhh-ua-2rt" firstAttribute="trailing" secondItem="SsM-Mc-jtE" secondAttribute="trailing" id="SzV-hb-N0b"/>
                                                 <constraint firstItem="rhh-ua-2rt" firstAttribute="top" secondItem="SsM-Mc-jtE" secondAttribute="bottom" constant="20" id="Uou-hF-YIZ"/>
                                                 <constraint firstItem="SsM-Mc-jtE" firstAttribute="leading" secondItem="G5a-0M-a5h" secondAttribute="leadingMargin" constant="24" id="eMd-vd-1kB"/>
                                                 <constraint firstAttribute="bottom" secondItem="IAf-Fl-ZTb" secondAttribute="bottom" id="fWb-fc-Hq1"/>
                                                 <constraint firstItem="AW7-Sk-g86" firstAttribute="bottom" secondItem="NF3-oy-NEg" secondAttribute="bottom" id="gfI-JA-9m5"/>
                                                 <constraint firstItem="AW7-Sk-g86" firstAttribute="top" secondItem="NF3-oy-NEg" secondAttribute="top" id="iP6-uj-7PL"/>
-                                                <constraint firstItem="VOr-aa-DMj" firstAttribute="centerX" secondItem="uso-Mh-uAR" secondAttribute="centerX" id="jFE-g0-pww"/>
                                                 <constraint firstAttribute="trailing" secondItem="IAf-Fl-ZTb" secondAttribute="trailing" id="jSo-Fx-L4Z"/>
                                                 <constraint firstItem="rhh-ua-2rt" firstAttribute="leading" secondItem="SsM-Mc-jtE" secondAttribute="leading" id="l0o-QQ-bak"/>
-                                                <constraint firstItem="VOr-aa-DMj" firstAttribute="centerY" secondItem="uso-Mh-uAR" secondAttribute="centerY" id="lIr-SW-qsj"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="SBR-7N-oAz" secondAttribute="bottom" constant="42" id="maW-bO-7H6"/>
                                                 <constraint firstItem="AW7-Sk-g86" firstAttribute="trailing" secondItem="NF3-oy-NEg" secondAttribute="trailing" id="rTG-3U-pAS"/>
                                                 <constraint firstItem="SBR-7N-oAz" firstAttribute="trailing" secondItem="rhh-ua-2rt" secondAttribute="trailing" id="uMG-LY-nae"/>
@@ -185,7 +174,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="criar-botao" translatesAutoresizingMaskIntoConstraints="NO" id="hVf-Fi-07Q">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-criar" translatesAutoresizingMaskIntoConstraints="NO" id="hVf-Fi-07Q">
                                                     <rect key="frame" x="84.5" y="12" width="245" height="57"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="57" id="ES6-3G-Ama"/>
@@ -226,7 +215,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u5Y-yX-gJr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Criar playlist" largeTitleDisplayMode="always" id="J6u-1E-vsX">
+                    <navigationItem key="navigationItem" title="Criar roteiro" largeTitleDisplayMode="always" id="J6u-1E-vsX">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="SXg-Vu-egn">
                             <connections>
                                 <segue destination="NTC-cD-LZl" kind="unwind" unwindAction="savePlaylist:" id="ViA-Cs-BA2"/>
@@ -257,7 +246,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="Background"/>
                         <sections>
-                            <tableViewSection id="Md0-6E-vMG">
+                            <tableViewSection headerTitle="Informações" id="Md0-6E-vMG">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="gJf-9m-yRi">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
@@ -269,10 +258,10 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-umalinha" translatesAutoresizingMaskIntoConstraints="NO" id="AFH-xg-yYs">
                                                     <rect key="frame" x="20" y="10" width="374" height="40"/>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Nome da playlist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXG-nM-Fba">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Nome do roteiro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXG-nM-Fba">
                                                     <rect key="frame" x="30" y="10" width="354" height="40"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="textColor" name="Cor-LetraEscura"/>
+                                                    <color key="textColor" name="Tint"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -306,7 +295,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="acA-Lp-ixy">
                                                     <rect key="frame" x="25" y="11" width="364" height="168"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="textColor" name="Cor-LetraEscura"/>
+                                                    <color key="textColor" name="Tint"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -324,31 +313,26 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="242" id="qwE-a8-p8o">
-                                        <rect key="frame" x="0.0" y="278" width="414" height="242"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Categoria" id="fj3-Gh-Tez">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="180" id="vbc-EM-eB9">
+                                        <rect key="frame" x="0.0" y="334" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qwE-a8-p8o" id="dqN-hc-s5e">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vbc-EM-eB9" id="doq-qK-NZi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh3-U6-LQy">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <color key="textColor" name="Cor-LetraEscura"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-eb-Np9">
-                                                    <rect key="frame" x="0.0" y="40" width="414" height="202"/>
+                                                <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="hDK-LD-HfI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="rvG-eb-Np9" secondAttribute="bottom" id="0sN-wh-Wbr"/>
-                                                <constraint firstItem="rvG-eb-Np9" firstAttribute="leading" secondItem="dqN-hc-s5e" secondAttribute="leading" id="20L-pJ-MUu"/>
-                                                <constraint firstItem="lh3-U6-LQy" firstAttribute="top" secondItem="dqN-hc-s5e" secondAttribute="topMargin" id="JHC-jB-F02"/>
-                                                <constraint firstItem="lh3-U6-LQy" firstAttribute="leading" secondItem="dqN-hc-s5e" secondAttribute="leadingMargin" id="T8G-97-iii"/>
-                                                <constraint firstAttribute="trailing" secondItem="rvG-eb-Np9" secondAttribute="trailing" id="aMJ-jG-87y"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="lh3-U6-LQy" secondAttribute="trailing" id="loD-8r-ghg"/>
-                                                <constraint firstItem="rvG-eb-Np9" firstAttribute="top" secondItem="lh3-U6-LQy" secondAttribute="bottom" constant="8" id="rlD-pW-IzD"/>
+                                                <constraint firstItem="hDK-LD-HfI" firstAttribute="leading" secondItem="doq-qK-NZi" secondAttribute="leading" id="H0q-Db-pg4"/>
+                                                <constraint firstAttribute="bottom" secondItem="hDK-LD-HfI" secondAttribute="bottom" id="nsw-Ks-efH"/>
+                                                <constraint firstItem="hDK-LD-HfI" firstAttribute="top" secondItem="doq-qK-NZi" secondAttribute="top" id="qd1-Ev-50L"/>
+                                                <constraint firstAttribute="trailing" secondItem="hDK-LD-HfI" secondAttribute="trailing" id="tiy-5j-zTq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
@@ -369,7 +353,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="categoryPickerView" destination="rvG-eb-Np9" id="8wh-27-zyJ"/>
+                        <outlet property="categoryPickerView" destination="hDK-LD-HfI" id="EF6-M9-wLh"/>
                         <outlet property="descriptionTextView" destination="acA-Lp-ixy" id="dWi-ez-sxk"/>
                         <outlet property="nameTextField" destination="BXG-nM-Fba" id="tJx-Nh-upv"/>
                         <outlet property="saveButton" destination="4hX-Im-1lK" id="Z8m-bM-zlI"/>
@@ -377,7 +361,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUE-hx-Oh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="-66"/>
+            <point key="canvasLocation" x="1802.8985507246377" y="-66.294642857142861"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jjz-GC-OxE">
@@ -407,20 +391,19 @@
     </scenes>
     <color key="tintColor" name="Tint"/>
     <resources>
+        <image name="botao-criar" width="245" height="57"/>
         <image name="botao-excluir" width="44" height="44"/>
-        <image name="campodetexto-multiplo" width="325" height="115"/>
-        <image name="campodetexto-umalinha" width="325" height="39"/>
-        <image name="circulo-enumeracao" width="44" height="44"/>
-        <image name="criar-botao" width="245" height="57"/>
+        <image name="campodetexto-multiplo" width="302" height="113"/>
+        <image name="campodetexto-umalinha" width="302" height="39"/>
         <image name="passo-card" width="414" height="365"/>
         <namedColor name="Background">
             <color red="0.93333333333333335" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Cor-LetraEscura">
-            <color red="0.14499999582767487" green="0.20000000298023224" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.41999998688697815" green="0.41999998688697815" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.29411764705882354" green="0.14117647058823529" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

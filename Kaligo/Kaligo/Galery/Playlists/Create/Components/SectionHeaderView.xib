@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Z2c-hV-EoJ" customClass="SectionHeaderView" customModule="Kaligo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-r5-XnQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjj-Af-ucZ">
+                            <rect key="frame" x="20" y="16.5" width="374" height="27.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                            <color key="textColor" name="Cor-LetraEscura"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="Background"/>
+                    <constraints>
+                        <constraint firstItem="yjj-Af-ucZ" firstAttribute="centerY" secondItem="b9C-r5-XnQ" secondAttribute="centerY" id="7Tj-By-fUQ"/>
+                        <constraint firstAttribute="trailing" secondItem="yjj-Af-ucZ" secondAttribute="trailing" constant="20" id="QVv-lC-LYb"/>
+                        <constraint firstItem="yjj-Af-ucZ" firstAttribute="leading" secondItem="b9C-r5-XnQ" secondAttribute="leading" constant="20" id="yYu-zh-048"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="b9C-r5-XnQ" firstAttribute="top" secondItem="Z2c-hV-EoJ" secondAttribute="top" id="F29-eW-J1d"/>
+                <constraint firstAttribute="bottom" secondItem="b9C-r5-XnQ" secondAttribute="bottom" id="SCY-J9-YMT"/>
+                <constraint firstItem="HVs-Mb-hDs" firstAttribute="trailing" secondItem="b9C-r5-XnQ" secondAttribute="trailing" id="eno-PV-EJV"/>
+                <constraint firstItem="b9C-r5-XnQ" firstAttribute="leading" secondItem="HVs-Mb-hDs" secondAttribute="leading" id="sUX-Tu-3xF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="HVs-Mb-hDs"/>
+            <connections>
+                <outlet property="titleLabel" destination="yjj-Af-ucZ" id="5v0-cg-v4x"/>
+            </connections>
+            <point key="canvasLocation" x="-226.08695652173915" y="43.526785714285715"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.93333333333333335" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Cor-LetraEscura">
+            <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
