@@ -52,12 +52,6 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                 for: indexPath) as? GaleryTableCell
                 else { return UITableViewCell() }
             
-            if filter == .playlists {
-                cell.addButton.setTitle("Criar playlist", for: .normal)
-                
-            } else {
-                cell.addButton.setTitle("Criar dica", for: .normal)
-            }
             cell.selectionStyle = .none
             return cell
             
