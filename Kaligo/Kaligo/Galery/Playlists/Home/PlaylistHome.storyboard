@@ -90,13 +90,12 @@
                     <navigationItem key="navigationItem" title="Álgebra" id="MyA-gh-led">
                         <barButtonItem key="rightBarButtonItem" title="Fechar" id="zga-hp-W11">
                             <connections>
-                                <segue destination="Gou-of-9gy" kind="unwind" unwindAction="closePlaylist:" id="20H-rE-uVJ"/>
+                                <action selector="dismissView:" destination="2Gm-jg-Wnc" id="fst-6e-VRB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiD-KW-CrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Gou-of-9gy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1186.9565217391305" y="-258.48214285714283"/>
         </scene>

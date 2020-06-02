@@ -29,9 +29,7 @@ class PostsViewController: UIViewController {
 
         postsTableView?.viewController = self
     }
-    
-    @IBAction func closePlaylist(_ sender: UIStoryboardSegue) {}
-    
+        
     @IBAction func forkPlaylist(_ sender: UIButton) {
         // verificar se usuário já salvou essa playlist
         postsTableView?.playlists[sender.tag].numberOfForks += 1

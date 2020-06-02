@@ -74,7 +74,7 @@ class GaleryController: UIViewController {
             playlistsTableView.reloadData()
         }
     }
-    
+        
     @IBAction func logout() {
         LoginController.logout(presenter: self)
     }
