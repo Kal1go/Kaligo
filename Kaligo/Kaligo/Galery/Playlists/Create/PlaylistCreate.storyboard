@@ -34,10 +34,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsM-Mc-jtE">
                                                     <rect key="frame" x="44" y="77" width="326" height="40"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-umalinha" translatesAutoresizingMaskIntoConstraints="NO" id="RqN-hp-MkA">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-umalinha" translatesAutoresizingMaskIntoConstraints="NO" id="RqN-hp-MkA">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="40"/>
                                                         </imageView>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Título" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSv-Ws-Khb">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Título do passo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSv-Ws-Khb">
                                                             <rect key="frame" x="10" y="0.0" width="306" height="40"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="textColor" name="Tint"/>
@@ -64,7 +64,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhh-ua-2rt">
                                                     <rect key="frame" x="44" y="137" width="326" height="115"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-multiplo" translatesAutoresizingMaskIntoConstraints="NO" id="4Mq-oq-u0O">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-multiplo" translatesAutoresizingMaskIntoConstraints="NO" id="4Mq-oq-u0O">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="115"/>
                                                         </imageView>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" text="Descrição" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dnA-Lh-s3r">
@@ -91,7 +91,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBR-7N-oAz">
                                                     <rect key="frame" x="44" y="272" width="326" height="40"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-umalinha" translatesAutoresizingMaskIntoConstraints="NO" id="1Ke-GC-wUy">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-umalinha" translatesAutoresizingMaskIntoConstraints="NO" id="1Ke-GC-wUy">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="40"/>
                                                         </imageView>
                                                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nql-1r-AxH">
@@ -282,18 +282,18 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="190" id="ct6-nN-Npf">
-                                        <rect key="frame" x="0.0" y="88" width="414" height="190"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="244" id="ct6-nN-Npf">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="244"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ct6-nN-Npf" id="teS-rx-84O">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-multiplo" translatesAutoresizingMaskIntoConstraints="NO" id="yH0-Yp-17j">
-                                                    <rect key="frame" x="20" y="11" width="374" height="168"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="202"/>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="acA-Lp-ixy">
-                                                    <rect key="frame" x="25" y="11" width="364" height="168"/>
+                                                    <rect key="frame" x="25" y="11" width="364" height="202"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" name="Tint"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -304,10 +304,10 @@
                                                 <constraint firstItem="acA-Lp-ixy" firstAttribute="top" secondItem="teS-rx-84O" secondAttribute="topMargin" id="4TV-d0-ygE"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="acA-Lp-ixy" secondAttribute="trailing" constant="5" id="89a-mC-aub"/>
                                                 <constraint firstItem="yH0-Yp-17j" firstAttribute="leading" secondItem="teS-rx-84O" secondAttribute="leadingMargin" id="HXx-um-uMy"/>
+                                                <constraint firstItem="acA-Lp-ixy" firstAttribute="bottom" secondItem="teS-rx-84O" secondAttribute="bottomMargin" constant="-20" id="NLO-Z5-YR0"/>
                                                 <constraint firstItem="yH0-Yp-17j" firstAttribute="trailing" secondItem="teS-rx-84O" secondAttribute="trailingMargin" id="UM1-m1-ZSO"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="acA-Lp-ixy" secondAttribute="bottom" id="gMG-ox-aIT"/>
                                                 <constraint firstItem="acA-Lp-ixy" firstAttribute="leading" secondItem="teS-rx-84O" secondAttribute="leadingMargin" constant="5" id="gcS-Ef-uts"/>
-                                                <constraint firstItem="yH0-Yp-17j" firstAttribute="bottom" secondItem="teS-rx-84O" secondAttribute="bottomMargin" id="iT4-P1-0wG"/>
+                                                <constraint firstItem="yH0-Yp-17j" firstAttribute="bottom" secondItem="teS-rx-84O" secondAttribute="bottomMargin" constant="-20" id="iT4-P1-0wG"/>
                                                 <constraint firstItem="yH0-Yp-17j" firstAttribute="top" secondItem="teS-rx-84O" secondAttribute="topMargin" id="lmD-pp-EsT"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -318,7 +318,7 @@
                             <tableViewSection headerTitle="Categoria" id="fj3-Gh-Tez">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="180" id="vbc-EM-eB9">
-                                        <rect key="frame" x="0.0" y="334" width="414" height="180"/>
+                                        <rect key="frame" x="0.0" y="388" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vbc-EM-eB9" id="doq-qK-NZi">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>

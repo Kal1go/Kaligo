@@ -60,6 +60,16 @@ class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeaderView") as? SectionHeaderView else {
+            return UITableViewHeaderFooterView()
+        }
+        
+        headerView.titleLabel.text = section == 0 ? "Passos do roteiro" : ""
+        
+        return headerView
+    }
+    
     func deleteStep(at index: Int) {
         self.steps.remove(at: index)
         for i in 0 ..< steps.count {
