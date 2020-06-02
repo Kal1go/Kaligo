@@ -12,7 +12,6 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
     
     weak var viewController: PostsViewController?
     var playlists = Lists()
-    var selectedPlaylist: List?
     
     private var indexOfPageToRequest = 0
     private var isLoading = false
@@ -63,13 +62,6 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
             cell.backgroundColor = .clear
             return cell
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let playlist = playlists[indexPath.row]
-//        selectedPlaylist = playlist
-//        
-//        viewController?.performSegue(for: playlist)
     }
     
     func loadMoreData() {

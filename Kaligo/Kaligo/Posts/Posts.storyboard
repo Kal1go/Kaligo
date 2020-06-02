@@ -186,6 +186,7 @@
                                             <outlet property="profilePicture" destination="P9e-26-hWI" id="ZRx-SO-me5"/>
                                             <outlet property="userLevel" destination="8L7-Wd-UxR" id="2mj-Tu-n9I"/>
                                             <outlet property="userName" destination="MmI-Bn-V28" id="t2G-0t-K42"/>
+                                            <segue destination="chh-LC-rzw" kind="show" id="4NJ-Gm-F9t"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -213,7 +214,6 @@
                     <connections>
                         <outlet property="filterCollectionView" destination="dl2-05-9II" id="96R-19-O5a"/>
                         <outlet property="postsTableView" destination="hRr-NU-6ar" id="bTU-pa-Jyz"/>
-                        <segue destination="chh-LC-rzw" kind="show" identifier="listDetail" id="xoS-BT-xEo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzm-eJ-p5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

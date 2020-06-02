@@ -50,8 +50,9 @@ class PostsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navegation = segue.destination as? UINavigationController,
             let view = navegation.viewControllers.first as? PlaylistHomeController,
-            let list = sender as? List {
-            view.playlist = list
+            let selected = postsTableView.indexPathForSelectedRow,
+            let delegate = postsTableView.delegate as? PostsTableView {
+            view.playlist = delegate.playlists[selected.row]
         }
     }
 }
