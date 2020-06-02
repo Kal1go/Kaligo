@@ -103,32 +103,32 @@
                                                         <constraint firstAttribute="height" constant="40" id="xA4-Vb-9jq"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmI-Bn-V28">
-                                                    <rect key="frame" x="40" y="38" width="49" height="21"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Jaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmI-Bn-V28">
+                                                    <rect key="frame" x="40" y="38" width="54" height="21.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nível 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L7-Wd-UxR">
-                                                    <rect key="frame" x="40" y="63.5" width="38.5" height="14.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="40" y="64.5" width="35.5" height="13.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Álgebra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1y-Gg-Ckz">
-                                                    <rect key="frame" x="40" y="98" width="74" height="27"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="40" y="98" width="66.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição da playlist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5Q-ug-lCG">
-                                                    <rect key="frame" x="40" y="130" width="334" height="20.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" name="Cinza-texto"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição da playlist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5Q-ug-lCG">
+                                                    <rect key="frame" x="40" y="124.5" width="334" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz4-TD-6o5">
-                                                    <rect key="frame" x="40" y="177.5" width="55" height="14.5"/>
+                                                    <rect key="frame" x="319" y="177.5" width="55" height="14.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -148,10 +148,11 @@
                                             <constraints>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="height" secondItem="N1E-sq-C2R" secondAttribute="height" id="2X9-2A-qNe"/>
                                                 <constraint firstItem="P9e-26-hWI" firstAttribute="top" secondItem="N1E-sq-C2R" secondAttribute="topMargin" constant="27" id="5w8-7J-r4v"/>
+                                                <constraint firstItem="Hz4-TD-6o5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="R5Q-ug-lCG" secondAttribute="bottom" constant="10" id="7KA-JH-iu2"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="centerY" secondItem="N1E-sq-C2R" secondAttribute="centerY" id="Ca4-EK-gHe"/>
                                                 <constraint firstItem="8L7-Wd-UxR" firstAttribute="leading" secondItem="P9e-26-hWI" secondAttribute="trailing" constant="10" id="GXL-7c-u2g"/>
                                                 <constraint firstItem="8L7-Wd-UxR" firstAttribute="leading" secondItem="MmI-Bn-V28" secondAttribute="leading" id="IvI-to-JPe"/>
-                                                <constraint firstItem="8L7-Wd-UxR" firstAttribute="top" secondItem="MmI-Bn-V28" secondAttribute="bottom" constant="4.5" id="LqL-Ag-GdS"/>
+                                                <constraint firstItem="8L7-Wd-UxR" firstAttribute="top" secondItem="MmI-Bn-V28" secondAttribute="bottom" constant="5" id="LqL-Ag-GdS"/>
                                                 <constraint firstItem="h1y-Gg-Ckz" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="O26-TG-T9W"/>
                                                 <constraint firstItem="MmI-Bn-V28" firstAttribute="leading" secondItem="P9e-26-hWI" secondAttribute="trailing" constant="10" id="QUM-RH-69v"/>
                                                 <constraint firstItem="R5Q-ug-lCG" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="QX5-XE-TAS"/>
@@ -162,10 +163,10 @@
                                                 <constraint firstItem="MmI-Bn-V28" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="YcS-12-p8w"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="centerX" secondItem="N1E-sq-C2R" secondAttribute="centerX" id="bcA-0k-Lc2"/>
                                                 <constraint firstItem="P9e-26-hWI" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="e8z-fl-Xxx"/>
-                                                <constraint firstItem="Hz4-TD-6o5" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="fSM-gq-QjH"/>
                                                 <constraint firstItem="ISX-xP-k1m" firstAttribute="top" secondItem="N1E-sq-C2R" secondAttribute="top" id="fld-bW-HwF"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="width" secondItem="N1E-sq-C2R" secondAttribute="width" id="phJ-Oz-wBD"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Hz4-TD-6o5" secondAttribute="bottom" constant="26" id="qWN-59-pQU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Hz4-TD-6o5" secondAttribute="trailing" constant="20" id="qtd-Xz-esb"/>
                                                 <constraint firstItem="R5Q-ug-lCG" firstAttribute="top" secondItem="h1y-Gg-Ckz" secondAttribute="bottom" constant="5" id="uC4-Od-UBJ"/>
                                                 <constraint firstItem="h1y-Gg-Ckz" firstAttribute="top" secondItem="P9e-26-hWI" secondAttribute="bottom" constant="20" id="xow-cT-2RZ"/>
                                             </constraints>
@@ -292,8 +293,8 @@
         <namedColor name="Background">
             <color red="0.93333333333333335" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Cinza-texto">
-            <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Cor-LetraEscura">
+            <color red="0.14499999582767487" green="0.20000000298023224" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.41999998688697815" green="0.41999998688697815" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
