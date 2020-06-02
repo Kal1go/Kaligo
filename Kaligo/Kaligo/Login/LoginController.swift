@@ -28,6 +28,11 @@ class LoginController: UIViewController {
         self.setUpSignInAppleButton()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // TODO: Verificar se usuário já passou pelo onboarding
+        self.presentOnboarding()
+    }
+    
     private func auth(appleIDCredential: ASAuthorizationAppleIDCredential) {
         let appleID = appleIDCredential.user //appleID is the password
         let name = appleIDCredential.fullName?.getFullName() ?? ""
@@ -67,6 +72,14 @@ class LoginController: UIViewController {
         self.present(mainStoryboard, animated: true, completion: nil)
         
     }
+    
+    private func presentOnboarding() {
+        let onboardingVC = UIStoryboard(name: "Onboarding", bundle: nil)
+            .instantiateViewController(identifier: "onboardingvc")
+        onboardingVC.modalPresentationStyle = .fullScreen
+        self.present(onboardingVC, animated: true, completion: nil)
+    }
+    
     static func logout(presenter: UIViewController) {
         LoginController.isLogged = false
         
