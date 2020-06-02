@@ -55,7 +55,6 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
             cell.playlistTitle.text = playlist.title
             cell.playlistDescription.text = playlist.description
             cell.playlistCategory.text = playlist.category
-            cell.numberOfForks.text = "\(playlist.numberOfForks)"
             cell.forkButton.tag = indexPath.row
             
             return cell
@@ -67,10 +66,10 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let playlist = playlists[indexPath.row]
-        selectedPlaylist = playlist
-        
-        viewController?.performSegue(for: playlist)
+//        let playlist = playlists[indexPath.row]
+//        selectedPlaylist = playlist
+//        
+//        viewController?.performSegue(for: playlist)
     }
     
     func loadMoreData() {

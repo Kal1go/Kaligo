@@ -195,13 +195,6 @@
                                                         <constraint firstAttribute="width" constant="85" id="vYG-XQ-Kfj"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMu-fz-EgH">
-                                                    <rect key="frame" x="304" y="43" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Álgebra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z86-7U-qhj">
                                                     <rect key="frame" x="40" y="38" width="334" height="33.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -265,7 +258,6 @@
                                         <connections>
                                             <outlet property="backgroundImage" destination="VYT-fW-6I4" id="z1i-dQ-8Rr"/>
                                             <outlet property="forkImage" destination="5bi-sb-WqZ" id="l1T-AM-2FH"/>
-                                            <outlet property="numberOfForks" destination="MMu-fz-EgH" id="a6y-tu-R5g"/>
                                             <outlet property="playlistCategory" destination="hq2-Iz-v9k" id="Udx-SC-Psy"/>
                                             <outlet property="playlistDescription" destination="Asa-qG-dE4" id="8XG-lo-IpN"/>
                                             <outlet property="playlistTitle" destination="Z86-7U-qhj" id="ooH-DS-3DN"/>

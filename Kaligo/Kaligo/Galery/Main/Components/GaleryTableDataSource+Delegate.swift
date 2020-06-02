@@ -136,7 +136,6 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
             cell.playlistTitle.text = d.title
             cell.playlistDescription.text = d.description
             cell.playlistCategory.text = d.category
-            cell.numberOfForks.text = "\(d.numberOfForks)"
         } else if let d = data as? ModeloDica {
             cell.userName.text = d.userName
             cell.userLevel.text = d.userLevel

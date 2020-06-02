@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yd8-pO-sPV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yd8-pO-sPV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -89,7 +89,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playlistCell" id="g8e-0C-dkL" customClass="PlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g8e-0C-dkL" id="N1E-sq-C2R">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g8e-0C-dkL" id="N1E-sq-C2R">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -115,19 +115,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-fork" translatesAutoresizingMaskIntoConstraints="NO" id="Nr1-fM-fib">
-                                                    <rect key="frame" x="294" y="33" width="85" height="45"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="FhF-IK-dDx"/>
-                                                        <constraint firstAttribute="width" constant="85" id="ezX-9P-zXg"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNi-jO-FBy">
-                                                    <rect key="frame" x="337" y="45.5" width="30" height="20.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Álgebra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1y-Gg-Ckz">
                                                     <rect key="frame" x="40" y="98" width="74" height="27"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
@@ -146,8 +133,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISX-xP-k1m">
-                                                    <rect key="frame" x="294" y="33" width="85" height="45"/>
+                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISX-xP-k1m">
+                                                    <rect key="frame" x="314" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="Qb9-85-jRm"/>
+                                                        <constraint firstAttribute="width" constant="100" id="d6L-NU-Jpb"/>
+                                                    </constraints>
+                                                    <state key="normal" image="botao-fork"/>
                                                     <connections>
                                                         <action selector="forkPlaylist:" destination="9Lh-pP-cOi" eventType="touchUpInside" id="RBL-8D-iQn"/>
                                                     </connections>
@@ -155,12 +147,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="height" secondItem="N1E-sq-C2R" secondAttribute="height" id="2X9-2A-qNe"/>
-                                                <constraint firstItem="Nr1-fM-fib" firstAttribute="bottom" secondItem="8L7-Wd-UxR" secondAttribute="bottom" id="2i3-Gb-7K4"/>
                                                 <constraint firstItem="P9e-26-hWI" firstAttribute="top" secondItem="N1E-sq-C2R" secondAttribute="topMargin" constant="27" id="5w8-7J-r4v"/>
-                                                <constraint firstItem="bNi-jO-FBy" firstAttribute="leading" secondItem="Nr1-fM-fib" secondAttribute="leading" constant="43" id="9Dg-0T-tDa"/>
-                                                <constraint firstItem="ISX-xP-k1m" firstAttribute="trailing" secondItem="Nr1-fM-fib" secondAttribute="trailing" id="BNO-Il-Hj1"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="centerY" secondItem="N1E-sq-C2R" secondAttribute="centerY" id="Ca4-EK-gHe"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Nr1-fM-fib" secondAttribute="trailing" constant="15" id="DCU-j8-MwG"/>
                                                 <constraint firstItem="8L7-Wd-UxR" firstAttribute="leading" secondItem="P9e-26-hWI" secondAttribute="trailing" constant="10" id="GXL-7c-u2g"/>
                                                 <constraint firstItem="8L7-Wd-UxR" firstAttribute="leading" secondItem="MmI-Bn-V28" secondAttribute="leading" id="IvI-to-JPe"/>
                                                 <constraint firstItem="8L7-Wd-UxR" firstAttribute="top" secondItem="MmI-Bn-V28" secondAttribute="bottom" constant="4.5" id="LqL-Ag-GdS"/>
@@ -169,18 +157,15 @@
                                                 <constraint firstItem="R5Q-ug-lCG" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="QX5-XE-TAS"/>
                                                 <constraint firstItem="8L7-Wd-UxR" firstAttribute="bottom" secondItem="P9e-26-hWI" secondAttribute="bottom" id="RIp-XZ-dM1"/>
                                                 <constraint firstItem="MmI-Bn-V28" firstAttribute="top" secondItem="P9e-26-hWI" secondAttribute="top" id="RyT-ma-4OU"/>
-                                                <constraint firstItem="bNi-jO-FBy" firstAttribute="trailing" secondItem="Nr1-fM-fib" secondAttribute="trailing" constant="-12" id="Ugt-d8-4K4"/>
+                                                <constraint firstAttribute="trailing" secondItem="ISX-xP-k1m" secondAttribute="trailing" id="T4T-f2-VZ6"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="R5Q-ug-lCG" secondAttribute="trailing" constant="20" id="V3o-d9-2hx"/>
                                                 <constraint firstItem="MmI-Bn-V28" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="YcS-12-p8w"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="centerX" secondItem="N1E-sq-C2R" secondAttribute="centerX" id="bcA-0k-Lc2"/>
                                                 <constraint firstItem="P9e-26-hWI" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="e8z-fl-Xxx"/>
                                                 <constraint firstItem="Hz4-TD-6o5" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="fSM-gq-QjH"/>
-                                                <constraint firstItem="ISX-xP-k1m" firstAttribute="bottom" secondItem="Nr1-fM-fib" secondAttribute="bottom" id="jnh-sH-7dM"/>
+                                                <constraint firstItem="ISX-xP-k1m" firstAttribute="top" secondItem="N1E-sq-C2R" secondAttribute="top" id="fld-bW-HwF"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="width" secondItem="N1E-sq-C2R" secondAttribute="width" id="phJ-Oz-wBD"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Hz4-TD-6o5" secondAttribute="bottom" constant="26" id="qWN-59-pQU"/>
-                                                <constraint firstItem="bNi-jO-FBy" firstAttribute="centerY" secondItem="Nr1-fM-fib" secondAttribute="centerY" id="rFm-7f-VxS"/>
-                                                <constraint firstItem="ISX-xP-k1m" firstAttribute="leading" secondItem="Nr1-fM-fib" secondAttribute="leading" id="thx-IU-l1r"/>
-                                                <constraint firstItem="ISX-xP-k1m" firstAttribute="top" secondItem="Nr1-fM-fib" secondAttribute="top" id="tlA-Pf-9Nh"/>
                                                 <constraint firstItem="R5Q-ug-lCG" firstAttribute="top" secondItem="h1y-Gg-Ckz" secondAttribute="bottom" constant="5" id="uC4-Od-UBJ"/>
                                                 <constraint firstItem="h1y-Gg-Ckz" firstAttribute="top" secondItem="P9e-26-hWI" secondAttribute="bottom" constant="20" id="xow-cT-2RZ"/>
                                             </constraints>
@@ -195,8 +180,6 @@
                                         <connections>
                                             <outlet property="backgroundImage" destination="CCt-sz-H4N" id="Eqs-IM-BIc"/>
                                             <outlet property="forkButton" destination="ISX-xP-k1m" id="Yo9-i1-Ve3"/>
-                                            <outlet property="forkImage" destination="Nr1-fM-fib" id="FUJ-CT-waf"/>
-                                            <outlet property="numberOfForks" destination="bNi-jO-FBy" id="2cX-iR-zwE"/>
                                             <outlet property="playlistCategory" destination="Hz4-TD-6o5" id="Wf1-ny-Jyj"/>
                                             <outlet property="playlistDescription" destination="R5Q-ug-lCG" id="fVd-UK-GMD"/>
                                             <outlet property="playlistTitle" destination="h1y-Gg-Ckz" id="N1U-mv-lJT"/>
@@ -302,7 +285,7 @@
     <color key="tintColor" name="Tint"/>
     <resources>
         <image name="TableView-Card" width="413" height="229"/>
-        <image name="botao-fork" width="85" height="45"/>
+        <image name="botao-fork" width="200" height="200"/>
         <image name="opcao-default" width="302" height="114"/>
         <image name="opcao-selecao" width="260" height="72"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
