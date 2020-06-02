@@ -53,8 +53,8 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
             cell.userLevel.text = "Nível \(playlist.userLevel)"
             cell.playlistTitle.text = playlist.title
             cell.playlistDescription.text = playlist.description
-            cell.playlistCategory.text = playlist.category
             cell.forkButton.tag = indexPath.row
+            cell.categoryImage.image = UIImage(named: "\(playlist.category)")
             
             return cell
         } else {

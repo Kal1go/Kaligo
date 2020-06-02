@@ -136,13 +136,13 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
             cell.userLevel.text = d.userLevel
             cell.playlistTitle.text = d.title
             cell.playlistDescription.text = d.description
-            cell.playlistCategory.text = d.category
+            cell.categoryImage.image = UIImage(named: "\(d.category)")
         } else if let d = data as? ModeloDica {
             cell.userName.text = d.userName
             cell.userLevel.text = d.userLevel
             cell.playlistTitle.text = d.title
             cell.playlistDescription.text = d.description
-            cell.playlistCategory.text = d.category
+            cell.categoryImage.image = UIImage(named: "\(d.category)")
         }
         
     }
