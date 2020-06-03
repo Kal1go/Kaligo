@@ -19,6 +19,9 @@ class PlaylistTableViewCell: UITableViewCell {
     @IBOutlet weak var forkButton: UIButton!
     @IBOutlet weak var categoryImage: UIImageView!
     
+    private var imageForkS = UIImage(named: "botao-fork-selecionado")
+    private var imageFork = UIImage(named: "botao-fork")
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -39,10 +42,9 @@ class PlaylistTableViewCell: UITableViewCell {
         self.playlistDescription.text = playlist.description
         self.forkButton.tag = indexPath.row
         self.categoryImage.image = UIImage(named: "\(playlist.category)")
-        if playlist.isOwner() {
-            self.forkButton.setImage(UIImage(named: "botao-fork-selecionado"), for: .normal)
-            self.forkButton.isEnabled = false
-        }
         
+        let isOwner = playlist.isOwner()
+        self.forkButton.setImage(isOwner ? imageForkS : imageFork, for: .normal)
+        self.forkButton.isEnabled = !isOwner
     }
 }

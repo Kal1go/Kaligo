@@ -122,7 +122,6 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
         return configuration
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section != 0 {
             delegate?.segue(atIndex: indexPath.row)

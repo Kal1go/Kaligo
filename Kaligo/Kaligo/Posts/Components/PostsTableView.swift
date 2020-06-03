@@ -48,7 +48,6 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
                 else { return UITableViewCell() }
             
             let playlist = playlists[indexPath.row]
-            
             cell.configureCell(playlist: playlist,
                                indexPath: indexPath)
             
