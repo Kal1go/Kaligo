@@ -50,6 +50,13 @@ class List: Codable {
         ]
     }
     
+    var fork: [String: Any] {
+        return [
+            "userID": CommonData.shared.user._id ?? "",
+            "listID": _id ?? ""
+        ]
+    }
+    
     init() {
         self.userName = ""
         self.userLevel = ""
@@ -90,6 +97,13 @@ class List: Codable {
             print("Error list not found")
             return []
         }
+    }
+    
+    public func isOwner() -> Bool {
+        if let userID = CommonData.shared.user._id {
+            return self.userID == userID
+        }
+        return false
     }
 
 }

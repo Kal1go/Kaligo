@@ -35,4 +35,14 @@ class PlaylistTableViewCell: UITableViewCell {
     func setUp() {
         userLevel.text = "Nível \(userLevel.text ?? "0")"
     }
+    
+    public func configureCell(playlist: List, indexPath: IndexPath) {
+        self.userName.text = playlist.userName != " " ? playlist.userName : "Sem nome"
+        self.userLevel.text = "Nível \(playlist.userLevel)"
+        self.playlistTitle.text = playlist.title
+        self.playlistDescription.text = playlist.description
+        self.forkButton.tag = indexPath.row
+        self.categoryImage.image = UIImage(named: "\(playlist.category)")
+        self.forkButton.isEnabled = !playlist.isOwner()
+    }
 }

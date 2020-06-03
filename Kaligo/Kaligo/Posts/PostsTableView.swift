@@ -49,12 +49,8 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
             
             let playlist = playlists[indexPath.row]
             
-            cell.userName.text = playlist.userName != " " ? playlist.userName : "Sem nome"
-            cell.userLevel.text = "Nível \(playlist.userLevel)"
-            cell.playlistTitle.text = playlist.title
-            cell.playlistDescription.text = playlist.description
-            cell.forkButton.tag = indexPath.row
-            cell.categoryImage.image = UIImage(named: "\(playlist.category)")
+            cell.configureCell(playlist: playlist,
+                               indexPath: indexPath)
             
             return cell
         } else {
