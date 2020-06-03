@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         var rootVC: UIViewController?
-        if LoginController.isLogged == true {
+        if CommonData.isLogged == true {
             rootVC = UIStoryboard(name: "Posts", bundle: nil)
                 .instantiateViewController(withIdentifier: "mainvc")
         } else {

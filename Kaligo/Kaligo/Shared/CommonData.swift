@@ -20,4 +20,22 @@ class CommonData {
             UserDefaults.standard.set(encodable: newValue, forKey: "user")
         }
     }
+    
+    static var isSawOndoarding: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "isSawOndoarding")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isSawOndoarding")
+        }
+    }
+    
+    static var isLogged: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "isLogged")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isLogged")
+        }
+    }
 }

@@ -22,7 +22,10 @@ class PlaylistSaveController: UITableViewController {
     
     let sectionTitles = ["Informações", "Categoria"]
     
+    weak var delegate: PlaylistHomeControllerDelegate?
+    
     var playlist = List()
+    private var isUpdate = false
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +48,27 @@ class PlaylistSaveController: UITableViewController {
         
         let headerNib = UINib.init(nibName: "SectionHeaderView", bundle: Bundle.main)
         self.tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "SectionHeaderView")
+        
+        preLoadConfigure()
+    }
+    
+    private func preLoadConfigure() {
+        guard playlist.title != "" else { return }
+        
+        isUpdate = true
+        saveButton.isEnabled = true
+        nameTextField.text = playlist.title
+        descriptionTextView.text = playlist.description
+        pickerController?.selected = playlist.category
+        for (index, value) in Category.allCases.enumerated() {
+            if value.rawValue == playlist.category {
+                categoryPickerView.selectRow(index,
+                                             inComponent: 0,
+                                             animated: true)
+                return
+            }
+        }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -101,7 +125,7 @@ class PlaylistSaveController: UITableViewController {
     }
     
     private func preConfigure() {
-        playlist.type = "Playlist" //TODO: - Configurar na hora de salvar Tips
+        playlist.type = "Playlist"
         playlist.category = pickerController?.selected ?? ""
         playlist.userName = CommonData.shared.user.name
         playlist.userLevel = CommonData.shared.user.level
@@ -111,12 +135,22 @@ class PlaylistSaveController: UITableViewController {
     @IBAction func save() {
         self.view.endEditing(true)
         self.view.showSpinner()
-        self.preConfigure()
+        if isUpdate {
+            playlist.category = pickerController?.selected ?? ""
+            updateList()
+        } else {
+            self.preConfigure()
+            createList()
+        }
+    }
+    
+    private func createList() {
         ListHandler.create(list: playlist) { (response) in
             switch response {
             case .success(let answer):
                 DispatchQueue.main.async {
                     User.addlist(list: answer)
+                    self.delegate?.reloadData()
                     self.view.removeSpinner()
                     self.navigationController?.previousViewController?.back()
                 }
@@ -127,8 +161,27 @@ class PlaylistSaveController: UITableViewController {
                     self.showCustomAlert(title: "Algo deu errado", message: "Verifique sua conexão com a internet.", isOneButton: true) { _ in }
                 }
             }
-
+            
         }
-        
+    }
+    private func updateList() {
+        ListHandler.update(params: playlist) { (response) in
+            switch response {
+            case .success(let answer):
+                DispatchQueue.main.async {
+                    User.updatelist(list: answer)
+                    self.view.removeSpinner()
+                    self.delegate?.reloadData()
+                    self.navigationController?.previousViewController?.back()
+                    EventManager.shared.trigger(eventName: "reloadPosts")
+                }
+            case .error(let description):
+                print(description)
+                DispatchQueue.main.async {
+                    self.view.removeSpinner()
+                    self.showCustomAlert(title: "Algo deu errado", message: "Verifique sua conexão com a internet.", isOneButton: true) { _ in }
+                }
+            }
+        }
     }
 }
