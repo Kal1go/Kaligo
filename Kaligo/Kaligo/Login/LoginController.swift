@@ -29,8 +29,9 @@ class LoginController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // TODO: Verificar se usuário já passou pelo onboarding
-        self.presentOnboarding()
+        if !CommonData.isSawOndoarding {
+            self.presentOnboarding()
+        }
     }
     
     private func auth(appleIDCredential: ASAuthorizationAppleIDCredential) {
