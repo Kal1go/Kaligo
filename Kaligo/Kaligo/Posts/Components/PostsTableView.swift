@@ -50,8 +50,8 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
                                    indexPath: indexPath)
             }
             
-            
             return cell
+            
         } else {
             let cell = UITableViewCell()
             cell.backgroundColor = .clear
@@ -62,7 +62,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
     internal func loadMoreData() {
         if !self.isLoading {
             self.isLoading = true
-            self.getLast(){}
+            self.getLast {}
         }
     }
     
@@ -103,7 +103,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
                                              message: "Deseja realizar a busca novamente?",
                                              isOneButton: false) { (answer) in
                                                 if answer {
-                                                    self.getLast(){}
+                                                    self.getLast {}
                                                 }
                         }
                     }
@@ -128,8 +128,8 @@ extension UITableView {
     func reloadData(completion :@escaping () -> Void) {
         UIView.animate(withDuration: 0, animations: {
             self.reloadData()
-        }) { _ in
+        }, completion: {_ in
             completion()
-        }
+        })
     }
 }
