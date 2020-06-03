@@ -31,6 +31,28 @@ struct User: Codable {
             CommonData.shared.user.list = [list]
         }
     }
+    static func updatelist(list: List) {
+        if var userList = CommonData.shared.user.list {
+            if let index = userList.firstIndex(where: {$0._id == list._id}) {
+                userList[index] = list
+                CommonData.shared.user.list = userList
+            }
+            
+        } else {
+            CommonData.shared.user.list = [list]
+        }
+    }
+    static func find(withId _id: String?) -> List? {
+        if let userList = CommonData.shared.user.list {
+            if let index = userList.firstIndex(where: {$0._id == _id}) {
+                return userList[index]
+            } else {
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }
 }
 
 typealias Users = [User]
