@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,23 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tela #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym5-Te-ZPu">
-                                <rect key="frame" x="165" y="431.5" width="84.5" height="33.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bem vindo ao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym5-Te-ZPu">
+                                <rect key="frame" x="20" y="541" width="231" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kaligo!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dT-RI-VVm">
+                                <rect key="frame" x="20" y="597" width="157" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="52"/>
+                                <color key="textColor" name="Tint"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Um aplicativo para ajudar em seus estudos." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTi-Xu-jHi">
+                                <rect key="frame" x="20" y="675" width="374" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tela1" translatesAutoresizingMaskIntoConstraints="NO" id="d8j-OE-EOP">
+                                <rect key="frame" x="-1" y="-56" width="415" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
-                        <constraints>
-                            <constraint firstItem="Ym5-Te-ZPu" firstAttribute="centerX" secondItem="2bd-Vv-HOM" secondAttribute="centerX" id="jnI-4u-4f8"/>
-                            <constraint firstItem="Ym5-Te-ZPu" firstAttribute="centerY" secondItem="2bd-Vv-HOM" secondAttribute="centerY" id="t1f-qw-oaS"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tzf-Qe-ild"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxR-JQ-Bgp" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="283" y="826"/>
+            <point key="canvasLocation" x="282.60869565217394" y="825.66964285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rqK-Hf-PCU">
@@ -42,23 +58,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tela #2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS5-r5-1QC">
-                                <rect key="frame" x="163" y="431.5" width="88" height="33.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tela2" translatesAutoresizingMaskIntoConstraints="NO" id="11j-Ms-pnN">
+                                <rect key="frame" x="0.0" y="-57" width="416" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estudos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtM-op-TdZ">
+                                <rect key="frame" x="20" y="542" width="139" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Esse aplicativo foi feito para você que quer retomar os estudos ou continua-los." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9M-b8-q76">
+                                <rect key="frame" x="20" y="610" width="374" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
-                        <constraints>
-                            <constraint firstItem="hS5-r5-1QC" firstAttribute="centerX" secondItem="8E3-bb-3aB" secondAttribute="centerX" id="7eK-p2-Kop"/>
-                            <constraint firstItem="hS5-r5-1QC" firstAttribute="centerY" secondItem="8E3-bb-3aB" secondAttribute="centerY" id="Lks-DV-kF2"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Dq3-F2-C3e"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNv-nX-nnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="826"/>
+            <point key="canvasLocation" x="882.60869565217399" y="825.66964285714278"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="46e-7G-5dq">
@@ -68,8 +93,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-mC-bQS">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-mC-bQS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="9t8-ST-kH9" kind="embed" id="8U9-m5-rkH"/>
                                 </connections>
@@ -107,13 +133,9 @@
                         <constraints>
                             <constraint firstItem="Mkj-WN-bSa" firstAttribute="width" secondItem="X8C-n0-cLx" secondAttribute="width" id="6fb-NN-O1T"/>
                             <constraint firstItem="Mkj-WN-bSa" firstAttribute="centerY" secondItem="7cQ-NM-1xK" secondAttribute="centerY" id="Igb-Hb-cZy"/>
-                            <constraint firstItem="I1U-mC-bQS" firstAttribute="leading" secondItem="cYG-Qp-DXG" secondAttribute="leading" id="Ocu-FY-xwf"/>
-                            <constraint firstItem="I1U-mC-bQS" firstAttribute="bottom" secondItem="cYG-Qp-DXG" secondAttribute="bottom" id="OdD-Jm-K5Z"/>
                             <constraint firstItem="7cQ-NM-1xK" firstAttribute="centerY" secondItem="X8C-n0-cLx" secondAttribute="centerY" id="PRa-fa-GOu"/>
                             <constraint firstItem="Mkj-WN-bSa" firstAttribute="leading" secondItem="cYG-Qp-DXG" secondAttribute="leading" constant="20" id="Q3N-0u-3XI"/>
-                            <constraint firstItem="I1U-mC-bQS" firstAttribute="top" secondItem="cYG-Qp-DXG" secondAttribute="top" id="Tfd-Z1-2tY"/>
                             <constraint firstItem="Mkj-WN-bSa" firstAttribute="height" secondItem="X8C-n0-cLx" secondAttribute="height" id="b3M-bf-O60"/>
-                            <constraint firstItem="I1U-mC-bQS" firstAttribute="trailing" secondItem="cYG-Qp-DXG" secondAttribute="trailing" id="gjG-YA-Z66"/>
                             <constraint firstItem="cYG-Qp-DXG" firstAttribute="trailing" secondItem="X8C-n0-cLx" secondAttribute="trailing" constant="20" id="sbx-vE-NkF"/>
                             <constraint firstItem="cYG-Qp-DXG" firstAttribute="bottom" secondItem="7cQ-NM-1xK" secondAttribute="bottom" constant="18" id="wIk-bW-RAG"/>
                             <constraint firstItem="7cQ-NM-1xK" firstAttribute="centerX" secondItem="cYG-Qp-DXG" secondAttribute="centerX" id="yKi-OA-h4S"/>
@@ -149,23 +171,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tela #3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWG-GO-am3">
-                                <rect key="frame" x="163" y="431.5" width="88.5" height="33.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="telasok" translatesAutoresizingMaskIntoConstraints="NO" id="dO4-tM-5aH">
+                                <rect key="frame" x="-1" y="-57" width="415" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comunidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ou4-FZ-udo">
+                                <rect key="frame" x="20" y="542" width="220" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Compartilhar as ferramentas que usa ou usou para os seus estudos pode ajudar outras pessoas!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHu-tu-mTr">
+                                <rect key="frame" x="20" y="610" width="374" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
-                        <constraints>
-                            <constraint firstItem="OWG-GO-am3" firstAttribute="centerX" secondItem="tQn-G2-SVp" secondAttribute="centerX" id="VUA-mw-fWX"/>
-                            <constraint firstItem="OWG-GO-am3" firstAttribute="centerY" secondItem="tQn-G2-SVp" secondAttribute="centerY" id="flo-Ch-h1o"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dmR-uB-8zz"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJW-Ih-Sv4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1994" y="826"/>
+            <point key="canvasLocation" x="1482.608695652174" y="825.66964285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4Kf-xv-Rd2">
@@ -175,28 +206,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tela #4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcw-II-sXZ">
-                                <rect key="frame" x="162.5" y="431.5" width="89" height="33.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Roteiros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJV-qb-QRJ">
+                                <rect key="frame" x="20" y="543" width="140" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salvar roteiros de estudos de outras pessoas pode mostrar a infinidade de maneiras e a criatividade para estudar." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyL-hp-k8w">
+                                <rect key="frame" x="20" y="611" width="374" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tela4" translatesAutoresizingMaskIntoConstraints="NO" id="kgX-8X-ln6">
+                                <rect key="frame" x="0.0" y="-16" width="415" height="514"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
-                        <constraints>
-                            <constraint firstItem="mcw-II-sXZ" firstAttribute="centerX" secondItem="hs2-sA-bAW" secondAttribute="centerX" id="Z0v-Hg-24R"/>
-                            <constraint firstItem="mcw-II-sXZ" firstAttribute="centerY" secondItem="hs2-sA-bAW" secondAttribute="centerY" id="hJX-1T-2QS"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hBR-cv-t4P"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5p-O7-L7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2810" y="826"/>
+            <point key="canvasLocation" x="2082.608695652174" y="825.66964285714278"/>
         </scene>
     </scenes>
     <resources>
+        <image name="tela1" width="414" height="480"/>
+        <image name="tela2" width="414" height="480"/>
+        <image name="tela4" width="414" height="482"/>
+        <image name="telasok" width="414" height="480"/>
         <namedColor name="Background">
             <color red="0.93333333333333335" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Cor-LetraEscura">
+            <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.29411764705882354" green="0.14117647058823529" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
