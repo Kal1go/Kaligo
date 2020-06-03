@@ -11,7 +11,8 @@ import UIKit
 class StepsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     var steps: Steps = [Step(number: 1)]
-        
+    var list: List?
+    
     var titleDelegate: TextFieldDelegate?
     var urlDelegate: TextFieldDelegate?
     var descriptionDelegate: TextViewDelegate?

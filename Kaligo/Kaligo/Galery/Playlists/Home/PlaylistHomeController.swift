@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 
+protocol PlaylistHomeControllerDelegate: class {
+    func reloadData()
+}
 class PlaylistHomeController: UITableViewController {
 
     var playlist = List()
+    weak var delegate: GaleryTableViewProtocol?
+    @IBOutlet weak var editButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +24,8 @@ class PlaylistHomeController: UITableViewController {
     }
     
     func setUp() {
+        // In this case, the user not is owner
+        editButton.isEnabled = playlist.isOwner()
         navigationItem.title = playlist.title
         self.tableView.estimatedRowHeight = 233
     }
@@ -43,7 +50,8 @@ class PlaylistHomeController: UITableViewController {
             let cell1 = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath)
             
             if let cell1 = cell1 as? StepsMainViewCell {
-                cell1.userNameLabel.text = playlist.userName
+                cell1.setUp(list: playlist)
+                cell1.delegate = self
                 return cell1
             }
             return cell1
@@ -85,6 +93,11 @@ class PlaylistHomeController: UITableViewController {
                 tableView.endUpdates()
             }
             customView.setupWith(step: step)
+        } else if let cell = cell.contentView.subviews.first(where: { $0.tag == 999 }) as? StepViewCell {
+            guard let step = playlist.steps?[indexPath.row - 1] else {
+                fatalError("Is impossible take Step")
+            }
+            cell.setupWith(step: step)
         }
         return cell
     }
@@ -93,4 +106,60 @@ class PlaylistHomeController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if
+                let navegation = segue.destination as? UINavigationController,
+                let view = navegation.viewControllers.first as? PlaylistCreateController {
+               view.isUpdate = true
+               view.list = playlist
+               view.delegate = self
+           }
+           
+           if
+               let navegation = segue.destination as? UINavigationController,
+               let view = navegation.viewControllers.first as? PlaylistHomeController,
+               let list = sender as? List {
+                   view.playlist = list
+           }
+       }
+}
+
+extension PlaylistHomeController: PlaylistHomeControllerDelegate {
+    func reloadData() {
+        if let list = User.find(withId: playlist._id) {
+            playlist = list
+            setUp()
+            tableView.reloadData()
+            delegate?.reloadData()
+        }
+    }
+}
+
+extension PlaylistHomeController: StepsMainViewCellDelegate {
+    func fork() {
+        guard
+            let cell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? StepsMainViewCell
+        else {
+            return
+        }
+        cell.showSpinner()
+        ListHandler.fork(params: playlist) { (answer) in
+            switch answer {
+            case.success(let answer):
+                DispatchQueue.main.async {
+                    cell.removeSpinner()
+                    self.playlist = answer
+                    let forkSelectedImage = UIImage(named: "botao-fork-selecionado")
+                    cell.forkButton.setImage(forkSelectedImage, for: .normal)
+                    cell.forkButton.isEnabled = false
+                    User.addlist(list: answer)
+                    self.setUp()
+                    self.tableView.reloadData()
+                    EventManager.shared.trigger(eventName: "reloadPosts")
+                }
+            case.error(let description):
+                self.showCustomAlert(title: "Ops, algo deu errado!", message: description, isOneButton: true) { (_) in }
+            }
+        }
+    }
 }

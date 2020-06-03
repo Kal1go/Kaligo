@@ -50,7 +50,6 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
                                    indexPath: indexPath)
             }
             
-            
             return cell
         } else {
             let cell = UITableViewCell()
@@ -62,7 +61,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
     internal func loadMoreData() {
         if !self.isLoading {
             self.isLoading = true
-            self.getLast(){}
+            self.getLast {}
         }
     }
     
@@ -103,7 +102,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
                                              message: "Deseja realizar a busca novamente?",
                                              isOneButton: false) { (answer) in
                                                 if answer {
-                                                    self.getLast(){}
+                                                    self.getLast {}
                                                 }
                         }
                     }

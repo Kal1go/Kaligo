@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NR7-y0-N8d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NR7-y0-N8d">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -33,13 +33,10 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="35"/>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="botao-fork" translatesAutoresizingMaskIntoConstraints="NO" id="7nO-he-SzB">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx1-TZ-Opv">
                                             <rect key="frame" x="314" y="0.0" width="100" height="100"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="X0N-EQ-Cqk"/>
-                                                <constraint firstAttribute="height" constant="100" id="nmU-x6-z8g"/>
-                                            </constraints>
-                                        </imageView>
+                                            <state key="normal" image="botao-fork"/>
+                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xes-q9-f0h">
                                             <rect key="frame" x="81" y="54" width="75" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -54,19 +51,22 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="7nO-he-SzB" firstAttribute="centerY" secondItem="vLj-IP-9XR" secondAttribute="centerY" id="1qy-dE-a6c"/>
+                                        <constraint firstItem="Jx1-TZ-Opv" firstAttribute="height" secondItem="6TI-Y9-Fvz" secondAttribute="height" id="Fi8-dU-AdK"/>
+                                        <constraint firstItem="Jx1-TZ-Opv" firstAttribute="width" secondItem="6TI-Y9-Fvz" secondAttribute="height" multiplier="1:1" id="Grd-LW-Sy8"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jx1-TZ-Opv" secondAttribute="trailing" id="HyA-Cn-Zfa"/>
                                         <constraint firstItem="uvw-YM-um7" firstAttribute="leading" secondItem="vLj-IP-9XR" secondAttribute="trailing" constant="11" id="MKu-Ct-P8V"/>
-                                        <constraint firstItem="7nO-he-SzB" firstAttribute="centerY" secondItem="6TI-Y9-Fvz" secondAttribute="centerY" id="N8K-kj-9gd"/>
+                                        <constraint firstItem="Jx1-TZ-Opv" firstAttribute="top" secondItem="6TI-Y9-Fvz" secondAttribute="top" id="Pvo-fJ-pqU"/>
                                         <constraint firstItem="vLj-IP-9XR" firstAttribute="leading" secondItem="6TI-Y9-Fvz" secondAttribute="leadingMargin" id="T1G-D9-i5S"/>
                                         <constraint firstItem="vLj-IP-9XR" firstAttribute="centerY" secondItem="6TI-Y9-Fvz" secondAttribute="centerY" id="T9H-U9-QUC"/>
                                         <constraint firstItem="Xes-q9-f0h" firstAttribute="leading" secondItem="uvw-YM-um7" secondAttribute="leading" id="aEZ-mi-2JT"/>
                                         <constraint firstItem="Xes-q9-f0h" firstAttribute="bottom" secondItem="vLj-IP-9XR" secondAttribute="bottom" id="cTj-cb-oia"/>
                                         <constraint firstItem="Xes-q9-f0h" firstAttribute="top" secondItem="uvw-YM-um7" secondAttribute="bottom" constant="5" id="eh0-16-O0W"/>
-                                        <constraint firstAttribute="trailing" secondItem="7nO-he-SzB" secondAttribute="trailing" id="pva-Ng-KbU"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="Background"/>
                                 <connections>
+                                    <outlet property="descriptionLabel" destination="Xes-q9-f0h" id="VRV-9j-eYU"/>
+                                    <outlet property="forkButton" destination="Jx1-TZ-Opv" id="SDK-9c-jdz"/>
                                     <outlet property="userImage" destination="vLj-IP-9XR" id="Mvr-6o-U7C"/>
                                     <outlet property="userNameLabel" destination="uvw-YM-um7" id="DAT-3V-abV"/>
                                 </connections>
@@ -88,16 +88,32 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Álgebra" id="MyA-gh-led">
+                        <barButtonItem key="leftBarButtonItem" title="Editar" id="7c5-s4-Jtr">
+                            <connections>
+                                <segue destination="LOw-V2-C0j" kind="presentation" modalPresentationStyle="fullScreen" id="shj-SS-bdK"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Fechar" id="zga-hp-W11">
                             <connections>
                                 <action selector="dismissView:" destination="2Gm-jg-Wnc" id="fst-6e-VRB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="7c5-s4-Jtr" id="Ord-jP-14D"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiD-KW-CrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186.9565217391305" y="-258.48214285714283"/>
+        </scene>
+        <!--PlaylistCreate-->
+        <scene sceneID="tDl-ek-YCk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlaylistCreate" id="LOw-V2-C0j" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Olr-JE-Phq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="-337"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a1x-AA-9oq">
