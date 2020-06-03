@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIB-Ry-Ygb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIB-Ry-Ygb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -69,7 +69,7 @@
                                                         <color key="titleColor" name="Background"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="kOI-AZ-nfU" kind="show" id="Qf5-Ba-A55"/>
+                                                        <segue destination="kOI-AZ-nfU" kind="presentation" modalPresentationStyle="fullScreen" id="Qf5-Ba-A55"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -90,8 +90,31 @@
                                             <outlet property="addButton" destination="lvR-fF-0mV" id="0b2-Is-32z"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noPlaylistCell" rowHeight="350" id="6Wg-W9-0mz" customClass="PlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="109" width="414" height="350"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Wg-W9-0mz" id="sow-L9-dTH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você ainda não tem nenhum roteiro de estudos. Crie um para começar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-CB-Z2E">
+                                                    <rect key="frame" x="30" y="154" width="354" height="42.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" name="Cor-LetraEscura"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="H7c-CB-Z2E" firstAttribute="leading" secondItem="sow-L9-dTH" secondAttribute="leading" constant="30" id="7qj-b2-j7R"/>
+                                                <constraint firstAttribute="trailing" secondItem="H7c-CB-Z2E" secondAttribute="trailing" constant="30" id="8jt-lp-fdU"/>
+                                                <constraint firstItem="H7c-CB-Z2E" firstAttribute="centerY" secondItem="sow-L9-dTH" secondAttribute="centerY" id="Jet-nQ-ybq"/>
+                                                <constraint firstItem="H7c-CB-Z2E" firstAttribute="centerX" secondItem="sow-L9-dTH" secondAttribute="centerX" id="P1h-dF-EdE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="Background"/>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playlistCell" rowHeight="229" id="Feo-W3-rAo" customClass="PlaylistTableViewCell" customModule="Kaligo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="109" width="414" height="229"/>
+                                        <rect key="frame" x="0.0" y="459" width="414" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Feo-W3-rAo" id="4zT-Yk-oED">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
@@ -293,24 +316,14 @@
                                     <constraint firstItem="rc1-k1-h3O" firstAttribute="width" secondItem="c0C-yp-6uU" secondAttribute="width" multiplier="0.5" id="gA9-1N-A33"/>
                                 </constraints>
                             </stackView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você ainda não tem nenhuma playlist. Crie uma para começar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPX-1N-Cc7">
-                                <rect key="frame" x="40" y="427" width="334" height="42.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" name="Cor-LetraEscura"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="HPX-1N-Cc7" firstAttribute="centerY" secondItem="R2U-kA-WsU" secondAttribute="centerY" id="3G7-z6-uTJ"/>
                             <constraint firstItem="t3M-63-Z9x" firstAttribute="top" secondItem="7JB-JB-58R" secondAttribute="top" id="BHd-6B-lyu"/>
                             <constraint firstItem="7JB-JB-58R" firstAttribute="trailing" secondItem="t3M-63-Z9x" secondAttribute="trailing" id="EAl-Kl-yyy"/>
                             <constraint firstItem="c0C-yp-6uU" firstAttribute="leading" secondItem="7JB-JB-58R" secondAttribute="leading" id="Kwl-c8-FOd"/>
                             <constraint firstItem="c0C-yp-6uU" firstAttribute="top" secondItem="7JB-JB-58R" secondAttribute="top" id="OA7-hN-8Y8"/>
-                            <constraint firstItem="HPX-1N-Cc7" firstAttribute="leading" secondItem="7JB-JB-58R" secondAttribute="leading" constant="40" id="ah3-eo-G3t"/>
                             <constraint firstItem="7JB-JB-58R" firstAttribute="trailing" secondItem="c0C-yp-6uU" secondAttribute="trailing" id="c6k-4R-Dnz"/>
-                            <constraint firstItem="HPX-1N-Cc7" firstAttribute="centerX" secondItem="R2U-kA-WsU" secondAttribute="centerX" id="dld-fh-HTo"/>
-                            <constraint firstItem="7JB-JB-58R" firstAttribute="trailing" secondItem="HPX-1N-Cc7" secondAttribute="trailing" constant="40" id="i4D-7z-fMS"/>
                             <constraint firstItem="t3M-63-Z9x" firstAttribute="leading" secondItem="7JB-JB-58R" secondAttribute="leading" id="x3h-VS-MsJ"/>
                             <constraint firstItem="7JB-JB-58R" firstAttribute="bottom" secondItem="t3M-63-Z9x" secondAttribute="bottom" constant="-40" id="xvO-Tr-qde"/>
                         </constraints>
@@ -324,11 +337,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="noPlaylistLabel" destination="HPX-1N-Cc7" id="Dfl-aa-NXt"/>
                         <outlet property="playlistsOptionImage" destination="0hQ-W6-83a" id="k2y-E2-u9u"/>
                         <outlet property="playlistsTableView" destination="t3M-63-Z9x" id="AeA-bx-uzZ"/>
                         <outlet property="tipsOptionImage" destination="ZzB-JM-uVp" id="E6r-SQ-Vvp"/>
-                        <segue destination="glZ-RV-DOy" kind="show" identifier="listDetail" id="Piu-jw-sn5"/>
+                        <segue destination="glZ-RV-DOy" kind="presentation" identifier="listDetail" modalPresentationStyle="fullScreen" id="Piu-jw-sn5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwx-vj-u0r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

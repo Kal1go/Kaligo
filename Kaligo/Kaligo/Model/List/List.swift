@@ -20,7 +20,7 @@ enum Category: String, CaseIterable {
     case sociologia = "Sociologia"
     case estrangeiras = "Línguas estrangeiras"
     case artes = "Artes"
-    case none
+    case outro = "Outro"
 }
 
 class List: Codable {

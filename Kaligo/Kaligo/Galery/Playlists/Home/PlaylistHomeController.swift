@@ -45,7 +45,6 @@ class PlaylistHomeController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if indexPath.row == 0 && !isMVP {
             let cell1 = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath)
             

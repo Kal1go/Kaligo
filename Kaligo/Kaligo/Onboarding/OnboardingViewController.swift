@@ -28,6 +28,7 @@ class OnboardingViewController: UIViewController {
     }
     
     @IBAction func skipButtonTapped(_ sender: Any) {
+        CommonData.isSawOndoarding = true
         dismiss(animated: true, completion: nil)
     }
     
@@ -43,7 +44,7 @@ class OnboardingViewController: UIViewController {
             
         case numberOfVC - 1:
             dismiss(animated: true, completion: nil)
-            
+            CommonData.isSawOndoarding = true
         default:
             break
         }

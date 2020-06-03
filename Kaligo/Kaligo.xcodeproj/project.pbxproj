@@ -478,7 +478,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Lia Kassardjian";
 				TargetAttributes = {
 					E423ADF1246F0F7C009F42C3 = {
@@ -603,7 +603,6 @@
 				82D5EAF1247732D600594274 /* Spinner+Extension.swift in Sources */,
 				82D5EAEB247732CD00594274 /* LoginExtensions.swift in Sources */,
 				8258E262247760C1004F0B84 /* TextFild+Return.swift in Sources */,
-				E423ADF6246F0F7C009F42C3 /* AppDelegate.swift in Sources */,
 				829E8B6724877C4E0099E2C6 /* EventManager.swift in Sources */,
 				E423ADF8246F0F7C009F42C3 /* SceneDelegate.swift in Sources */,
 				82D5EAE6247732C100594274 /* ListHandler.swift in Sources */,
