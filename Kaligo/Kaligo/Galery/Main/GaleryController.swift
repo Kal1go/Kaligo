@@ -47,10 +47,6 @@ class GaleryController: UIViewController {
         tableViewDelegate?.tips = []
     }
     
-    func setNoPlaylistLabel() {
-        guard let playlists = tableViewDelegate?.playlists else { return }
-        noPlaylistLabel.isHidden = playlists.isEmpty ? false : true
-    }
     @IBAction func changeFilter(_ sender: UIButton) {
         if sender.tag == 1 {
             playlistsOptionImage.tintColor = UIColor(named: "Clicavel")
