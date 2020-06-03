@@ -69,7 +69,7 @@
                                                         <color key="titleColor" name="Background"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="kOI-AZ-nfU" kind="show" id="Qf5-Ba-A55"/>
+                                                        <segue destination="kOI-AZ-nfU" kind="presentation" modalPresentationStyle="fullScreen" id="Qf5-Ba-A55"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -328,7 +328,7 @@
                         <outlet property="playlistsOptionImage" destination="0hQ-W6-83a" id="k2y-E2-u9u"/>
                         <outlet property="playlistsTableView" destination="t3M-63-Z9x" id="AeA-bx-uzZ"/>
                         <outlet property="tipsOptionImage" destination="ZzB-JM-uVp" id="E6r-SQ-Vvp"/>
-                        <segue destination="glZ-RV-DOy" kind="show" identifier="listDetail" id="Piu-jw-sn5"/>
+                        <segue destination="glZ-RV-DOy" kind="presentation" identifier="listDetail" modalPresentationStyle="fullScreen" id="Piu-jw-sn5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwx-vj-u0r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

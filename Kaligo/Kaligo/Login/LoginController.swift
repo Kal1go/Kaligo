@@ -12,15 +12,6 @@ import Endpoints_Requests
 
 class LoginController: UIViewController {
     
-    static var isLogged: Bool {
-        get {
-            return UserDefaults.standard.bool(forKey: "isLogged")
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: "isLogged")
-        }
-    }
-    
     let authorizationAppleIDButton = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
     
     override func viewDidLoad() {
@@ -65,7 +56,7 @@ class LoginController: UIViewController {
     }
     
     private func toMain(user: User) {
-        LoginController.isLogged = true
+        CommonData.isLogged = true
         CommonData.shared.user = user
         let mainStoryboard = UIStoryboard(name: "Posts", bundle: Bundle.main)
             .instantiateViewController(withIdentifier: "mainvc")
@@ -82,8 +73,7 @@ class LoginController: UIViewController {
     }
     
     static func logout(presenter: UIViewController) {
-        LoginController.isLogged = false
-        
+        CommonData.isLogged = false
         guard let rootVC = UIStoryboard.init(name: "Login", bundle: nil)
             .instantiateViewController(withIdentifier: "loginvc") as? LoginController else {
                 return

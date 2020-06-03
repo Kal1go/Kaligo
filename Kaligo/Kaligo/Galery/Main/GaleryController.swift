@@ -51,7 +51,6 @@ class GaleryController: UIViewController {
     
     func setNoPlaylistLabel() {
         guard let playlists = tableViewDelegate?.playlists else { return }
-        
         noPlaylistLabel.isHidden = playlists.isEmpty ? false : true
     }
     
@@ -103,6 +102,7 @@ extension GaleryController: GaleryTableViewProtocol {
         guard let list = tableViewDelegate?.playlists?[index] else {
             fatalError("Where stay the list???")
         }
+        print(list)
         performSegue(withIdentifier: "listDetail", sender: list)
     }
     
@@ -111,6 +111,7 @@ extension GaleryController: GaleryTableViewProtocol {
             let view = navegation.viewControllers.first as? PlaylistHomeController,
             let list = sender as? List {
                 view.playlist = list
+                print("here")
         }
     }
 }
