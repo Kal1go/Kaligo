@@ -27,6 +27,7 @@ class GaleryController: UIViewController {
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editGalery(_:)))
     }
     
     override func awakeFromNib() {
@@ -80,6 +81,17 @@ class GaleryController: UIViewController {
     @IBAction func logout() {
         LoginController.logout(presenter: self)
     }
+    
+    @objc func editGalery(_ sender: Any) {
+        if playlistsTableView.isEditing {
+            playlistsTableView.isEditing = false
+            self.navigationItem.leftBarButtonItem? = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editGalery(_:)))
+        } else {
+            playlistsTableView.isEditing = true
+            self.navigationItem.leftBarButtonItem? = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(editGalery(_:)))
+        }
+    }
+    
 }
 
 extension GaleryController: GaleryTableViewProtocol {
