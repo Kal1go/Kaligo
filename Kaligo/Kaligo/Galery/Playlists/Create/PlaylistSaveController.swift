@@ -68,14 +68,10 @@ class PlaylistSaveController: UITableViewController {
         return headerView
     }
     
-    private func getCategories() -> [String] {
-        var categories = [String]()
-        for value in Category.allCases {
-            if value != .none {
-                categories.append(value.rawValue)
-            }
+    private func getCategories() -> [String] {        
+        return Category.allCases.map { (value) in
+            value.rawValue
         }
-        return categories
     }
     
     private func validateSteps() {

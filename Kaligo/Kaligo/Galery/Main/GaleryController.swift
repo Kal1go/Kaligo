@@ -15,7 +15,6 @@ class GaleryController: UIViewController {
     @IBOutlet weak var playlistsOptionImage: UIImageView!
     @IBOutlet weak var tipsOptionImage: UIImageView!
     @IBOutlet weak var playlistsTableView: UITableView!
-    @IBOutlet weak var noPlaylistLabel: UILabel!
     
     var tableViewDelegate: GaleryTableView?
 
@@ -24,7 +23,6 @@ class GaleryController: UIViewController {
 
         self.tableViewDelegate = GaleryTableView()
         generateData()
-        setNoPlaylistLabel()
         tableViewDelegate?.delegate = self
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
@@ -41,18 +39,11 @@ class GaleryController: UIViewController {
             tableViewDelegate?.playlists = CommonData.shared.user.list
             playlistsTableView.reloadData()
         }        
-        setNoPlaylistLabel()
     }
 
     func generateData() {
         tableViewDelegate?.playlists = CommonData.shared.user.list
         tableViewDelegate?.tips = []
-    }
-    
-    func setNoPlaylistLabel() {
-        guard let playlists = tableViewDelegate?.playlists else { return }
-        
-        noPlaylistLabel.isHidden = playlists.isEmpty ? false : true
     }
     
     @IBAction func changeFilter(_ sender: UIButton) {
@@ -100,9 +91,7 @@ extension GaleryController: GaleryTableViewProtocol {
     }
     
     func segue(atIndex index: Int) {
-        guard let list = tableViewDelegate?.playlists?[index] else {
-            fatalError("Where stay the list???")
-        }
+        guard let list = tableViewDelegate?.playlists?[index] else { return }
         performSegue(withIdentifier: "listDetail", sender: list)
     }
     
