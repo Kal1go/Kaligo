@@ -32,7 +32,9 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
+            guard let count = playlists?.count else { return 1 }
+            return count == 0 ? 2 : 1
+            
         } else {
             return playlists?.count ?? 0
         }
@@ -40,19 +42,24 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 81
+            return indexPath.row == 0 ? 81 : 350
         }
         return 229
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(
-                withIdentifier: "addPlaylistCell",
-                for: indexPath) as? GaleryTableCell
-                else { return UITableViewCell() }
+            if indexPath.row == 0 {
+                guard let cell = tableView.dequeueReusableCell(
+                    withIdentifier: "addPlaylistCell",
+                    for: indexPath) as? GaleryTableCell
+                    else { return UITableViewCell() }
+                
+                cell.selectionStyle = .none
+                return cell
+            }
             
-            cell.selectionStyle = .none
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "noPlaylistCell") else { return UITableViewCell() }
             return cell
             
         } else {
@@ -100,9 +107,7 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                                         EventManager.shared.trigger(eventName: "reloadPosts")
                                         controller.view.removeSpinner()
                                         self.delegate?.reloadData()
-                                        if let galeryController = controller as? GaleryController {
-                                            galeryController.setNoPlaylistLabel()
-                                        }
+                                        
                                     case .error(let description):
                                         controller.view.removeSpinner()
                                         controller.showCustomAlert(title: "Opss, algo deu errado", message: description, isOneButton: true) { _ in }

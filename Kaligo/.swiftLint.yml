@@ -10,6 +10,7 @@ disabled_rules:
   - trailing_whitespace
   - weak_delegate
   - unused_optional_binding
+  - syntactic_sugar
 
 
 # rule identifiers to opt in

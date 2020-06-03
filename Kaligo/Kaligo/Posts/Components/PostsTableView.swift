@@ -51,6 +51,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
             }
             
             return cell
+            
         } else {
             let cell = UITableViewCell()
             cell.backgroundColor = .clear
@@ -127,8 +128,8 @@ extension UITableView {
     func reloadData(completion :@escaping () -> Void) {
         UIView.animate(withDuration: 0, animations: {
             self.reloadData()
-        }) { _ in
+        }, completion: {_ in
             completion()
-        }
+        })
     }
 }

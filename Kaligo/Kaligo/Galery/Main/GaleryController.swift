@@ -15,7 +15,6 @@ class GaleryController: UIViewController {
     @IBOutlet weak var playlistsOptionImage: UIImageView!
     @IBOutlet weak var tipsOptionImage: UIImageView!
     @IBOutlet weak var playlistsTableView: UITableView!
-    @IBOutlet weak var noPlaylistLabel: UILabel!
     
     var tableViewDelegate: GaleryTableView?
 
@@ -24,11 +23,11 @@ class GaleryController: UIViewController {
 
         self.tableViewDelegate = GaleryTableView()
         generateData()
-        setNoPlaylistLabel()
         tableViewDelegate?.delegate = self
         playlistsTableView.delegate = tableViewDelegate
         playlistsTableView.dataSource = tableViewDelegate
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editGalery(_:)))
     }
     
     override func awakeFromNib() {
@@ -41,7 +40,6 @@ class GaleryController: UIViewController {
             tableViewDelegate?.playlists = CommonData.shared.user.list
             playlistsTableView.reloadData()
         }        
-        setNoPlaylistLabel()
     }
 
     func generateData() {
@@ -53,7 +51,6 @@ class GaleryController: UIViewController {
         guard let playlists = tableViewDelegate?.playlists else { return }
         noPlaylistLabel.isHidden = playlists.isEmpty ? false : true
     }
-    
     @IBAction func changeFilter(_ sender: UIButton) {
         if sender.tag == 1 {
             playlistsOptionImage.tintColor = UIColor(named: "Clicavel")
@@ -88,6 +85,17 @@ class GaleryController: UIViewController {
     @IBAction func logout() {
         LoginController.logout(presenter: self)
     }
+    
+    @objc func editGalery(_ sender: Any) {
+        if playlistsTableView.isEditing {
+            playlistsTableView.isEditing = false
+            self.navigationItem.leftBarButtonItem? = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editGalery(_:)))
+        } else {
+            playlistsTableView.isEditing = true
+            self.navigationItem.leftBarButtonItem? = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(editGalery(_:)))
+        }
+    }
+    
 }
 
 extension GaleryController: GaleryTableViewProtocol {
@@ -99,10 +107,7 @@ extension GaleryController: GaleryTableViewProtocol {
     }
     
     func segue(atIndex index: Int) {
-        guard let list = tableViewDelegate?.playlists?[index] else {
-            fatalError("Where stay the list???")
-        }
-        print(list)
+        guard let list = tableViewDelegate?.playlists?[index] else { return }
         performSegue(withIdentifier: "listDetail", sender: list)
     }
     
