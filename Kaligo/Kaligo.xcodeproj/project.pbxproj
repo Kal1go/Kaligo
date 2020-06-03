@@ -206,6 +206,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		829E8B652487559F0099E2C6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E4B748A82473021B00B3FAAF /* PostsTableView.swift */,
+				E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		82D5EACC2477322A00594274 /* Connection */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,9 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				E47EB20C246F1C77004651A2 /* Posts.storyboard */,
-				E4B748A82473021B00B3FAAF /* PostsTableView.swift */,
 				E47EB212246F3438004651A2 /* PostsViewController.swift */,
-				E47EB217246F34DC004651A2 /* FilterCollectionViewDelegate.swift */,
+				829E8B652487559F0099E2C6 /* Components */,
 			);
 			path = Posts;
 			sourceTree = "<group>";

@@ -34,6 +34,7 @@ class List: Codable {
     var _id: String?
     var userID: String
     var type: String
+    var isForked: Bool?
     
     var dictionaryRepresentation: [String: Any] {
         return [

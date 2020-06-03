@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIB-Ry-Ygb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIB-Ry-Ygb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -185,6 +185,7 @@
                                         <connections>
                                             <outlet property="backgroundImage" destination="VYT-fW-6I4" id="z1i-dQ-8Rr"/>
                                             <outlet property="categoryImage" destination="Tn5-6b-IIJ" id="poK-d0-TOc"/>
+                                            <outlet property="forkButton" destination="hwI-KN-cPz" id="Ado-xc-trp"/>
                                             <outlet property="playlistDescription" destination="Asa-qG-dE4" id="8XG-lo-IpN"/>
                                             <outlet property="playlistTitle" destination="Z86-7U-qhj" id="ooH-DS-3DN"/>
                                             <outlet property="profilePicture" destination="anL-oX-XNf" id="kgA-WU-Iu3"/>

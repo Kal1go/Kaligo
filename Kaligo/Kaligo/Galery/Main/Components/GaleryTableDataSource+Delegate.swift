@@ -60,20 +60,12 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(
                     withIdentifier: "playlistCell",
                     for: indexPath) as? PlaylistTableViewCell,
-                let playlists = playlists,
-                let tips = tips
+                let playlists = playlists
                 else { return UITableViewCell() }
             
-            if filter == .playlists {
-                let playlist = playlists[indexPath.row]
-                setRow(for: cell, with: playlist)
-                
-            } else {
-                let tip = tips[indexPath.row]
-                setRow(for: cell, with: tip)
-            }
+            let playlist = playlists[indexPath.row]
+            cell.configureCell(playlist: playlist, indexPath: indexPath)
             cell.selectionStyle = .none
-            cell.setUp()
             return cell
         }
     }
@@ -130,22 +122,6 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
         return configuration
     }
     
-    private func setRow<T>(for cell: PlaylistTableViewCell, with data: T) {
-        if let d = data as? List {
-            cell.userName.text = d.userName
-            cell.userLevel.text = d.userLevel
-            cell.playlistTitle.text = d.title
-            cell.playlistDescription.text = d.description
-            cell.categoryImage.image = UIImage(named: "\(d.category)")
-        } else if let d = data as? ModeloDica {
-            cell.userName.text = d.userName
-            cell.userLevel.text = d.userLevel
-            cell.playlistTitle.text = d.title
-            cell.playlistDescription.text = d.description
-            cell.categoryImage.image = UIImage(named: "\(d.category)")
-        }
-        
-    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section != 0 {

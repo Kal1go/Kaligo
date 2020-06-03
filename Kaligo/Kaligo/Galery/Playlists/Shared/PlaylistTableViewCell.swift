@@ -32,10 +32,6 @@ class PlaylistTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUp() {
-        userLevel.text = "Nível \(userLevel.text ?? "0")"
-    }
-    
     public func configureCell(playlist: List, indexPath: IndexPath) {
         self.userName.text = playlist.userName != " " ? playlist.userName : "Sem nome"
         self.userLevel.text = "Nível \(playlist.userLevel)"
@@ -43,6 +39,10 @@ class PlaylistTableViewCell: UITableViewCell {
         self.playlistDescription.text = playlist.description
         self.forkButton.tag = indexPath.row
         self.categoryImage.image = UIImage(named: "\(playlist.category)")
-        self.forkButton.isEnabled = !playlist.isOwner()
+        if playlist.isOwner() {
+            self.forkButton.setImage(UIImage(named: "botao-fork-selecionado"), for: .normal)
+            self.forkButton.isEnabled = false
+        }
+        
     }
 }
