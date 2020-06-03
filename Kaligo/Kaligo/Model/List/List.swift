@@ -30,10 +30,13 @@ class List: Codable {
     var description: String
     var numberOfForks: Int
     var category: String
+    var parent: String?
     var steps: Steps?
     var _id: String?
     var userID: String
     var type: String
+    var hasForkedBy: [String]?
+    var hasFork: Bool? = false
     
     var dictionaryRepresentation: [String: Any] {
         return [
@@ -47,6 +50,13 @@ class List: Codable {
             "userID": CommonData.shared.user._id ?? "",
             "steps": steps?.dictionaryRepresentation() ?? [],
             "_id": _id ?? ""
+        ]
+    }
+    
+    var fork: [String: Any] {
+        return [
+            "userID": CommonData.shared.user._id ?? "",
+            "listID": _id ?? ""
         ]
     }
     
@@ -91,7 +101,22 @@ class List: Codable {
             return []
         }
     }
-
+    
+    public func isOwner() -> Bool {
+        if let userID = CommonData.shared.user._id {
+            return self.userID == userID
+        }
+        return false
+    }
+    
+    public func hasForked() -> Bool {
+        if
+            let userID = CommonData.shared.user._id,
+            let forked = self.hasForkedBy {
+            return forked.first(where: {$0 == userID}) != nil || self.hasFork ?? false
+        }
+        return false
+    }
 }
 
 typealias Lists = [List]

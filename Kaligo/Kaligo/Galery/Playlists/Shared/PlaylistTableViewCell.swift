@@ -19,6 +19,9 @@ class PlaylistTableViewCell: UITableViewCell {
     @IBOutlet weak var forkButton: UIButton!
     @IBOutlet weak var categoryImage: UIImageView!
     
+    private var imageForkS = UIImage(named: "botao-fork-selecionado")
+    private var imageFork = UIImage(named: "botao-fork")
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,7 +35,16 @@ class PlaylistTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUp() {
-        userLevel.text = "Nível \(userLevel.text ?? "0")"
+    public func configureCell(playlist: List, indexPath: IndexPath) {
+        self.userName.text = playlist.userName != " " ? playlist.userName : "Anônimo"
+        self.userLevel.text = "Nível \(playlist.numberOfForks)"
+        self.playlistTitle.text = playlist.title
+        self.playlistDescription.text = playlist.description
+        self.forkButton.tag = indexPath.row
+        self.categoryImage.image = UIImage(named: "\(playlist.category)")
+        
+        let isForked = playlist.isOwner() || playlist.hasForked()
+        self.forkButton.setImage(isForked ? imageForkS : imageFork, for: .normal)
+        self.forkButton.isEnabled = !isForked
     }
 }

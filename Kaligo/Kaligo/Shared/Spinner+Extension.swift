@@ -8,30 +8,27 @@
 
 import UIKit
 
-var vSpinner: UIView?
-
 extension UIView {
     func showSpinner() {
-        let spinnerView = UIView.init(frame: self.bounds)
-        spinnerView.backgroundColor =
-            UIColor(named: "Background")?.withAlphaComponent(0.5) ??
-            UIColor.white.withAlphaComponent(0.5)
-        let animation = UIActivityIndicatorView.init(style: .medium)
-        animation.startAnimating()
-        animation.center = spinnerView.center
-
         DispatchQueue.main.async {
-            spinnerView.addSubview(animation)
-            self.addSubview(spinnerView)
+            let spinnerView = UIView.init(frame: self.bounds)
+            spinnerView.backgroundColor =
+                UIColor(named: "Background")?.withAlphaComponent(0.5) ??
+                UIColor.white.withAlphaComponent(0.5)
+            let animation = UIActivityIndicatorView.init(style: .medium)
+            animation.startAnimating()
+            animation.center = spinnerView.center
+            spinnerView.tag = 999
+            DispatchQueue.main.async {
+                spinnerView.addSubview(animation)
+                self.addSubview(spinnerView)
+            }
         }
-
-        vSpinner = spinnerView
     }
 
     func removeSpinner() {
         DispatchQueue.main.async {
-            vSpinner?.removeFromSuperview()
-            vSpinner = nil
+            self.viewWithTag(999)?.removeFromSuperview()
         }
     }
 }

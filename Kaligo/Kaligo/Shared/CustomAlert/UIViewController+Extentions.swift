@@ -13,24 +13,25 @@ public extension UIViewController {
                          message: String,
                          isOneButton: Bool,
                          withCompletion completion: @escaping (Bool) -> Void) {
-        
-        guard let customAlert = UIStoryboard(name: "CustomAlertView", bundle: nil)
-            .instantiateViewController(withIdentifier: "CustomAlertID") as? CustomAlertView else {
-            return
+        DispatchQueue.main.async {
+            guard let customAlert = UIStoryboard(name: "CustomAlertView", bundle: nil)
+                .instantiateViewController(withIdentifier: "CustomAlertID") as? CustomAlertView else {
+                return
+            }
+            
+            customAlert.providesPresentationContextTransitionStyle = true
+            customAlert.definesPresentationContext = true
+            customAlert.modalPresentationStyle = .overCurrentContext
+            customAlert.modalTransitionStyle = .crossDissolve
+            
+            customAlert.titleAlert = title
+            customAlert.messageAlert = message
+            customAlert.isOneButton = isOneButton
+            customAlert.comfirmMoreDidTap { (answer) in
+                completion(answer)
+            }
+            
+            self.present(customAlert, animated: true, completion: nil)
         }
-        
-        customAlert.providesPresentationContextTransitionStyle = true
-        customAlert.definesPresentationContext = true
-        customAlert.modalPresentationStyle = .overCurrentContext
-        customAlert.modalTransitionStyle = .crossDissolve
-        
-        customAlert.titleAlert = title
-        customAlert.messageAlert = message
-        customAlert.isOneButton = isOneButton
-        customAlert.comfirmMoreDidTap { (answer) in
-            completion(answer)
-        }
-        
-        self.present(customAlert, animated: true, completion: nil)
     }
 }
