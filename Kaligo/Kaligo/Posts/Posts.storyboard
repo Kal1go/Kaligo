@@ -73,7 +73,7 @@
                                                         <action selector="forkPlaylist:" destination="9Lh-pP-cOi" eventType="touchUpInside" id="RBL-8D-iQn"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Categoria-linguaEstrangeira" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-qQ-NeF">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Línguas Estrangeiras" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-qQ-NeF">
                                                     <rect key="frame" x="211" y="168" width="163" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="Uml-QF-uKF"/>
@@ -290,7 +290,7 @@
     </scenes>
     <color key="tintColor" name="Tint"/>
     <resources>
-        <image name="Categoria-linguaEstrangeira" width="163" height="26"/>
+        <image name="Línguas Estrangeiras" width="163" height="26"/>
         <image name="TableView-Card" width="860" height="477"/>
         <image name="botao-fork" width="200" height="200"/>
         <image name="opcao-default" width="302" height="114"/>
