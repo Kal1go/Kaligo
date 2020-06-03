@@ -97,6 +97,7 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                                     switch response {
                                     case .success(let answer):
                                         self.playlists = List.delete(list: answer)
+                                        EventManager.shared.trigger(eventName: "reloadPosts")
                                         controller.view.removeSpinner()
                                         self.delegate?.reloadData()
                                         if let galeryController = controller as? GaleryController {

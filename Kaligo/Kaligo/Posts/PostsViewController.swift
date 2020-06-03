@@ -24,21 +24,43 @@ class PostsViewController: UIViewController {
         
         filterCollectionView.delegate = self.collectionViewDelegate
         filterCollectionView.dataSource = self.collectionViewDelegate
-
-//        self.getLast()
-
+        self.setUpEvents()
         postsTableView?.viewController = self
+    }
+    
+    private func setUpEvents() {
+        EventManager.shared.listenTo(eventName: "reloadPosts") {
+            self.postsTableView.resetTable()
+        }
     }
         
     @IBAction func forkPlaylist(_ sender: UIButton) {
         // verificar se usuário já salvou essa playlist
 //        postsTableView?.playlists[sender.tag].numberOfForks += 1
-//        
-//        let forkDefaultImage = UIImage(named: "botao-fork")
-//        let forkSelectedImage = UIImage(named: "botao-fork-selecionado")
-//        
-//        sender.isSelected.toggle()
-//        sender.setImage(sender.isSelected ? forkSelectedImage : forkDefaultImage, for: .normal)
+//
+        guard
+            let cell = postsTableView?.cellForRow(at: IndexPath(row: sender.tag, section: 0)),
+            let list = postsTableView?.playlists[sender.tag]
+        else {
+            return
+        }
+        cell.showSpinner()
+        ListHandler.fork(params: list) { (answer) in
+            switch answer {
+            case.success(let answer):
+                DispatchQueue.main.async {
+                    cell.removeSpinner()
+                    let forkSelectedImage = UIImage(named: "botao-fork-selecionado")
+                    sender.setImage(forkSelectedImage, for: .normal)
+                    sender.isEnabled = false
+                    self.postsTableView?.playlists[sender.tag].hasFork = true
+                    User.addlist(list: answer)
+                }
+            case.error(let description):
+                self.showCustomAlert(title: "Ops, algo deu errado!", message: description, isOneButton: true) { (_) in }
+            }
+        }
+        
     }
     
     func performSegue(for playlist: List) {

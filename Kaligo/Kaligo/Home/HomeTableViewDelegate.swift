@@ -31,10 +31,10 @@ class HomeTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: "",
                 for: indexPath) as? CategoriasHomeTableViewCell,
-            let dicas = self.dicas
+            let _ = self.dicas
             else { return UITableViewCell() }
 
-        let dica = dicas[indexPath.row]
+//        let dica = dicas[indexPath.row]
 //        cell.nomeCategoriaCardHome.text = dica.tituloCard
 //        terminar o codigo da home
         return cell

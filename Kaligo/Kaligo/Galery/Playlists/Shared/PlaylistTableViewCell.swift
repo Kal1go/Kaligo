@@ -36,15 +36,15 @@ class PlaylistTableViewCell: UITableViewCell {
     }
     
     public func configureCell(playlist: List, indexPath: IndexPath) {
-        self.userName.text = playlist.userName != " " ? playlist.userName : "Sem nome"
-        self.userLevel.text = "Nível \(playlist.userLevel)"
+        self.userName.text = playlist.userName != " " ? playlist.userName : "Anônimo"
+        self.userLevel.text = "Nível \(playlist.numberOfForks)"
         self.playlistTitle.text = playlist.title
         self.playlistDescription.text = playlist.description
         self.forkButton.tag = indexPath.row
         self.categoryImage.image = UIImage(named: "\(playlist.category)")
         
-        let isOwner = playlist.isOwner()
-        self.forkButton.setImage(isOwner ? imageForkS : imageFork, for: .normal)
-        self.forkButton.isEnabled = !isOwner
+        let isForked = playlist.isOwner() || playlist.hasForked()
+        self.forkButton.setImage(isForked ? imageForkS : imageFork, for: .normal)
+        self.forkButton.isEnabled = !isForked
     }
 }
