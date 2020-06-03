@@ -21,6 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             rootVC = UIStoryboard(name: "Login", bundle: nil)
                 .instantiateViewController(withIdentifier: "loginvc")
         }
+        rootVC?.showCustomAlert(title: "Entrando no app",
+                                message: "Você está entrando nesse aplicativo com o propósito de estudar outras formas de...",
+                                isOneButton: false,
+                                withCompletion: {_ in })
         if let windowScene = scene as? UIWindowScene {
             self.window = UIWindow(windowScene: windowScene)
             self.window?.rootViewController = rootVC

@@ -237,7 +237,7 @@
             </objects>
             <point key="canvasLocation" x="942.02898550724649" y="-65.625"/>
         </scene>
-        <!--Salvar playlist-->
+        <!--Salvar roteiro-->
         <scene sceneID="8aA-Fc-Mys">
             <objects>
                 <tableViewController id="tEO-tS-eUt" customClass="PlaylistSaveController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
@@ -345,7 +345,7 @@
                             <outlet property="delegate" destination="tEO-tS-eUt" id="KmI-qQ-9kQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Salvar playlist" id="Nbp-dJ-aZe">
+                    <navigationItem key="navigationItem" title="Salvar roteiro" id="Nbp-dJ-aZe">
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="4hX-Im-1lK">
                             <connections>
                                 <action selector="save" destination="tEO-tS-eUt" id="S77-tP-VY7"/>

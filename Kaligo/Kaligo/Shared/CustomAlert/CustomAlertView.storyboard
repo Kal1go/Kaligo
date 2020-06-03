@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,41 +30,35 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biE-yH-fS9">
-                                <rect key="frame" x="41" y="269" width="332" height="268.5"/>
+                                <rect key="frame" x="44.5" y="299.5" width="325" height="207"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_alert" translatesAutoresizingMaskIntoConstraints="NO" id="v33-IP-dEL">
-                                        <rect key="frame" x="0.0" y="0.0" width="332" height="268.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-hf-K86">
+                                        <rect key="frame" x="16.5" y="20" width="292.5" height="26.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-hf-K86">
-                                        <rect key="frame" x="58" y="64" width="216" height="24"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" name="Cor-LetraEscura"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esse medium fala sobre as principais causas de errarmos quando fazemos as contas..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1L-z5-l9O">
-                                        <rect key="frame" x="58" y="96" width="216" height="58"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Esse medium fala sobre as principais causas de errarmos quando fazemos as contas..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1L-z5-l9O">
+                                        <rect key="frame" x="16.5" y="54.5" width="292.5" height="64.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" name="Cor-LetraEscura"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="pGt-cC-rEC">
-                                        <rect key="frame" x="38.5" y="176" width="255" height="51"/>
+                                        <rect key="frame" x="0.0" y="127" width="325" height="70"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LE1-AX-WSh">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="51"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="70"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_alert_button_01" translatesAutoresizingMaskIntoConstraints="NO" id="6CX-03-oje">
-                                                        <rect key="frame" x="0.0" y="0.0" width="137.5" height="51"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
-                                                    <button opaque="NO" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVE-29-vYV">
-                                                        <rect key="frame" x="21" y="0.0" width="96" height="51"/>
+                                                    <button opaque="NO" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVE-29-vYV">
+                                                        <rect key="frame" x="20" y="10" width="132.5" height="50"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Confimar">
-                                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <state key="normal" title="Confimar" backgroundImage="card_alert_button_01">
+                                                            <color key="titleColor" name="Background"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="onTapOkButton:" destination="PQ0-uW-qr2" eventType="touchUpInside" id="Liq-pQ-HPw"/>
@@ -72,29 +67,21 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="rVE-29-vYV" firstAttribute="centerY" secondItem="LE1-AX-WSh" secondAttribute="centerYWithinMargins" id="6zL-Ri-umR"/>
-                                                    <constraint firstItem="6CX-03-oje" firstAttribute="top" secondItem="LE1-AX-WSh" secondAttribute="top" id="9NE-Um-GE5"/>
-                                                    <constraint firstAttribute="trailing" secondItem="6CX-03-oje" secondAttribute="trailing" id="MNL-37-6CF"/>
-                                                    <constraint firstItem="rVE-29-vYV" firstAttribute="width" secondItem="LE1-AX-WSh" secondAttribute="width" multiplier="0.7" id="SxV-T8-8BL"/>
-                                                    <constraint firstItem="rVE-29-vYV" firstAttribute="height" secondItem="LE1-AX-WSh" secondAttribute="height" id="UiO-hw-zWX"/>
-                                                    <constraint firstAttribute="bottom" secondItem="6CX-03-oje" secondAttribute="bottom" id="dq3-tr-gAf"/>
-                                                    <constraint firstItem="rVE-29-vYV" firstAttribute="centerX" secondItem="LE1-AX-WSh" secondAttribute="centerXWithinMargins" id="jI5-Ot-2MB"/>
-                                                    <constraint firstItem="6CX-03-oje" firstAttribute="leading" secondItem="LE1-AX-WSh" secondAttribute="leading" id="tKc-zw-k5c"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rVE-29-vYV" secondAttribute="bottom" constant="10" id="LZz-ye-aJ3"/>
+                                                    <constraint firstItem="rVE-29-vYV" firstAttribute="width" secondItem="LE1-AX-WSh" secondAttribute="width" multiplier="0.768116" id="f5W-h6-Unz"/>
+                                                    <constraint firstItem="rVE-29-vYV" firstAttribute="centerX" secondItem="LE1-AX-WSh" secondAttribute="centerX" id="hwT-pi-YDI"/>
+                                                    <constraint firstItem="rVE-29-vYV" firstAttribute="top" secondItem="LE1-AX-WSh" secondAttribute="top" constant="10" id="m63-DV-Om1"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bV1-F0-Cvn">
-                                                <rect key="frame" x="117.5" y="0.0" width="137.5" height="51"/>
+                                                <rect key="frame" x="152.5" y="0.0" width="172.5" height="70"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_alert_button_00" translatesAutoresizingMaskIntoConstraints="NO" id="7RC-UR-2W3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="137.5" height="51"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb8-fb-PHW">
-                                                        <rect key="frame" x="20.5" y="11" width="96" height="28.5"/>
+                                                        <rect key="frame" x="20" y="10" width="132.5" height="50"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                        <state key="normal" title="Cancelar">
-                                                            <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <state key="normal" title="Cancelar" backgroundImage="card_alert_button_00">
+                                                            <color key="titleColor" name="Cor-LetraEscura"/>
                                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -104,40 +91,33 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="7RC-UR-2W3" firstAttribute="top" secondItem="bV1-F0-Cvn" secondAttribute="top" id="08r-ft-3os"/>
-                                                    <constraint firstAttribute="trailing" secondItem="7RC-UR-2W3" secondAttribute="trailing" id="62B-xX-qfr"/>
-                                                    <constraint firstAttribute="bottom" secondItem="7RC-UR-2W3" secondAttribute="bottom" id="8TS-tV-Wk5"/>
-                                                    <constraint firstItem="Yb8-fb-PHW" firstAttribute="width" secondItem="bV1-F0-Cvn" secondAttribute="width" multiplier="0.7" id="DXp-V6-ktJ"/>
-                                                    <constraint firstItem="Yb8-fb-PHW" firstAttribute="centerX" secondItem="bV1-F0-Cvn" secondAttribute="centerX" id="eh3-ba-lme"/>
-                                                    <constraint firstItem="Yb8-fb-PHW" firstAttribute="height" secondItem="bV1-F0-Cvn" secondAttribute="height" multiplier="0.555556" id="fKg-w6-fQG"/>
-                                                    <constraint firstItem="Yb8-fb-PHW" firstAttribute="centerY" secondItem="bV1-F0-Cvn" secondAttribute="centerY" id="htx-Oo-kR1"/>
-                                                    <constraint firstItem="7RC-UR-2W3" firstAttribute="leading" secondItem="bV1-F0-Cvn" secondAttribute="leading" id="m9x-J3-CTP"/>
+                                                    <constraint firstItem="Yb8-fb-PHW" firstAttribute="centerX" secondItem="bV1-F0-Cvn" secondAttribute="centerX" id="4cj-9o-6wP"/>
+                                                    <constraint firstItem="Yb8-fb-PHW" firstAttribute="width" secondItem="bV1-F0-Cvn" secondAttribute="width" multiplier="0.768116" id="8xZ-BA-2VX"/>
+                                                    <constraint firstItem="Yb8-fb-PHW" firstAttribute="top" secondItem="bV1-F0-Cvn" secondAttribute="top" constant="10" id="guf-MC-AjF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Yb8-fb-PHW" secondAttribute="bottom" constant="10" id="jIH-D6-fDv"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="LE1-AX-WSh" firstAttribute="width" secondItem="bV1-F0-Cvn" secondAttribute="width" id="mLB-Np-lBx"/>
+                                            <constraint firstAttribute="height" constant="70" id="uZX-du-05r"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="Background"/>
                                 <constraints>
-                                    <constraint firstItem="pGt-cC-rEC" firstAttribute="height" secondItem="biE-yH-fS9" secondAttribute="height" multiplier="0.189918" id="1LN-mm-iLN"/>
+                                    <constraint firstItem="pGt-cC-rEC" firstAttribute="top" secondItem="u1L-z5-l9O" secondAttribute="bottom" constant="8" id="1jF-1q-E59"/>
                                     <constraint firstItem="u1L-z5-l9O" firstAttribute="centerX" secondItem="biE-yH-fS9" secondAttribute="centerX" id="5Sd-rY-U00"/>
-                                    <constraint firstItem="pGt-cC-rEC" firstAttribute="centerY" secondItem="biE-yH-fS9" secondAttribute="centerY" multiplier="1.5" id="5U5-l0-9jz"/>
-                                    <constraint firstItem="pGt-cC-rEC" firstAttribute="width" secondItem="biE-yH-fS9" secondAttribute="width" multiplier="0.768" id="AB0-K2-PI7"/>
-                                    <constraint firstAttribute="width" secondItem="biE-yH-fS9" secondAttribute="height" multiplier="331:268" id="E78-VN-AL1"/>
-                                    <constraint firstItem="v33-IP-dEL" firstAttribute="height" secondItem="biE-yH-fS9" secondAttribute="height" id="PGP-gn-kEI"/>
-                                    <constraint firstItem="dnU-hf-K86" firstAttribute="top" secondItem="biE-yH-fS9" secondAttribute="top" constant="64" id="Qcu-kW-PE3"/>
+                                    <constraint firstItem="pGt-cC-rEC" firstAttribute="width" secondItem="biE-yH-fS9" secondAttribute="width" id="AB0-K2-PI7"/>
+                                    <constraint firstAttribute="width" constant="325" id="JRp-x6-ssW"/>
+                                    <constraint firstItem="dnU-hf-K86" firstAttribute="top" secondItem="biE-yH-fS9" secondAttribute="top" constant="20" id="Qcu-kW-PE3"/>
                                     <constraint firstItem="u1L-z5-l9O" firstAttribute="top" secondItem="dnU-hf-K86" secondAttribute="bottom" constant="8" id="SHh-by-2wh"/>
-                                    <constraint firstAttribute="height" constant="268.5" id="Suk-jI-Idg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Suk-jI-Idg"/>
                                     <constraint firstItem="dnU-hf-K86" firstAttribute="width" secondItem="u1L-z5-l9O" secondAttribute="width" id="UU9-h4-6Qj"/>
-                                    <constraint firstItem="u1L-z5-l9O" firstAttribute="width" secondItem="v33-IP-dEL" secondAttribute="width" multiplier="0.65" id="cdB-2A-uJa"/>
+                                    <constraint firstItem="u1L-z5-l9O" firstAttribute="width" secondItem="biE-yH-fS9" secondAttribute="width" multiplier="0.9" id="cdB-2A-uJa"/>
+                                    <constraint firstAttribute="bottom" secondItem="pGt-cC-rEC" secondAttribute="bottom" constant="10" id="jql-Ld-xsa"/>
                                     <constraint firstItem="pGt-cC-rEC" firstAttribute="centerX" secondItem="biE-yH-fS9" secondAttribute="centerX" id="pvQ-Jh-Xxr"/>
-                                    <constraint firstItem="v33-IP-dEL" firstAttribute="width" secondItem="biE-yH-fS9" secondAttribute="width" id="uGd-R8-4Hu"/>
-                                    <constraint firstItem="v33-IP-dEL" firstAttribute="centerY" secondItem="biE-yH-fS9" secondAttribute="centerY" id="w11-Jx-SUJ"/>
-                                    <constraint firstItem="v33-IP-dEL" firstAttribute="centerX" secondItem="biE-yH-fS9" secondAttribute="centerX" id="wlO-6c-yGE"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -168,13 +148,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjG-xV-oTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="138.91625615763547"/>
+            <point key="canvasLocation" x="1123.1884057971015" y="138.61607142857142"/>
         </scene>
     </scenes>
     <resources>
-        <image name="card_alert" width="334" height="258"/>
         <image name="card_alert_bg" width="414" height="896"/>
-        <image name="card_alert_button_00" width="154" height="54"/>
-        <image name="card_alert_button_01" width="154" height="54"/>
+        <image name="card_alert_button_00" width="142" height="50"/>
+        <image name="card_alert_button_01" width="142" height="50"/>
+        <namedColor name="Background">
+            <color red="0.93333333333333335" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Cor-LetraEscura">
+            <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
