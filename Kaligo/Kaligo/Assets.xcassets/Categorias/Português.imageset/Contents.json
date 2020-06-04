@@ -1,15 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "Categoria-portugues.pdf",
+      "filename" : "Português.pdf",
       "idiom" : "universal"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

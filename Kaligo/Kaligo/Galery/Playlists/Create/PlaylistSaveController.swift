@@ -58,7 +58,8 @@ class PlaylistSaveController: UITableViewController {
         isUpdate = true
         saveButton.isEnabled = true
         nameTextField.text = playlist.title
-        descriptionTextView.text = playlist.description
+        descriptionDelegate?.setTextView(descriptionTextView,
+                                                                    with: playlist.description)
         pickerController?.selected = playlist.category
         for (index, value) in Category.allCases.enumerated() {
             if value.rawValue == playlist.category {

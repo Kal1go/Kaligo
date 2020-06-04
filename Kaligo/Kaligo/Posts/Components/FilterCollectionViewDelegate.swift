@@ -35,7 +35,7 @@ class FilterCollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollec
             for: indexPath
         ) as? SegmentedCollectionViewCell else { return }
         
-        cell.selectionImage.tintColor = UIColor(named: "Tint")
+        cell.selectionImage.tintColor = UIColor(named: "Tint-Medium")
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

@@ -31,7 +31,8 @@ class StepsMainViewCell: UITableViewCell {
     }
     
     func setUp(list: List) {
-        self.userNameLabel.text = list.userName
+        self.userNameLabel.text = "\(list.userName)"
+        print(list.category)
         self.categoryImage.image = UIImage(named: "\(list.category)")
         let isForked = list.isOwner() || list.hasForked()
         self.forkButton.setImage(isForked ? imageForkS : imageFork, for: .normal)

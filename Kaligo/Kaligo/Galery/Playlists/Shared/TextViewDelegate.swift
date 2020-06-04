@@ -24,7 +24,7 @@ class TextViewDelegate: NSObject, UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == placeholder {
             textView.text = ""
-            textView.textColor = UIColor(named: "Tint")
+            textView.textColor = UIColor(named: "Tint-Medium")
         }
     }
     
@@ -46,7 +46,7 @@ class TextViewDelegate: NSObject, UITextViewDelegate {
     func setTextView(_ textView: UITextView, with text: String = "") {
         if text != "" {
             textView.text = text
-            textView.textColor = UIColor(named: "Tint")
+            textView.textColor = UIColor(named: "Tint-Medium")
         } else {
             textView.text = placeholder
             textView.textColor = .lightGray

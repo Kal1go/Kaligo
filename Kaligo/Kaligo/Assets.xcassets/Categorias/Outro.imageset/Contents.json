@@ -1,15 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "Categoria-outro.pdf",
+      "filename" : "Outro.pdf",
       "idiom" : "universal"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

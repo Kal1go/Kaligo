@@ -28,6 +28,14 @@ class GaleryController: UIViewController {
         playlistsTableView.dataSource = tableViewDelegate
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editGalery(_:)))
+        
+//        self.navigationItem.rightBarButtonItem?.image = UIImage(named: "Sair")?.withRenderingMode(.alwaysOriginal)
+        
+        //because the tableview size, we ned make this to configure the title large,
+        DispatchQueue.main.async { [weak self] in
+            self?.navigationController?.navigationBar.sizeToFit()
+        }
+
     }
     
     override func awakeFromNib() {
@@ -37,11 +45,17 @@ class GaleryController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if tableViewDelegate?.playlists?.count != CommonData.shared.user.list?.count {
+            
             tableViewDelegate?.playlists = CommonData.shared.user.list
             playlistsTableView.reloadData()
-        }        
+        }
+        
     }
-
+    
+    override func viewDidLayoutSubviews() {
+          super.viewDidLayoutSubviews()
+          self.playlistsTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
+    }
     func generateData() {
         tableViewDelegate?.playlists = CommonData.shared.user.list
         tableViewDelegate?.tips = []
@@ -79,7 +93,14 @@ class GaleryController: UIViewController {
     }
     
     @IBAction func logout() {
-        LoginController.logout(presenter: self)
+        self.showCustomAlert(title: "Sair",
+                             message: "Deseja realmente encerrar sua sessão no aplicativo?",
+                             isOneButton: false) { (answer) in
+                                if answer {
+                                    LoginController.logout(presenter: self)
+                                }
+        }
+        
     }
     
     @objc func editGalery(_ sender: Any) {
@@ -94,8 +115,9 @@ class GaleryController: UIViewController {
     
 }
 
-extension GaleryController: GaleryTableViewProtocol {
+extension GaleryController: GaleryTableViewProtocol, PlaylistHomeControllerDelegate {
     func reloadData() {
+        self.tableViewDelegate?.playlists = CommonData.shared.user.list
         self.playlistsTableView.reloadData()
     }
     func controller() -> UIViewController {
@@ -108,10 +130,16 @@ extension GaleryController: GaleryTableViewProtocol {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let navegation = segue.destination as? UINavigationController,
+        if
+            let navegation = segue.destination as? UINavigationController,
             let view = navegation.viewControllers.first as? PlaylistHomeController,
             let list = sender as? List {
                 view.playlist = list
+                view.delegate = self
+        } else if
+            let navegation = segue.destination as? UINavigationController,
+            let view = navegation.viewControllers.first as? PlaylistCreateController {
+            view.delegate = self
         }
     }
 }
