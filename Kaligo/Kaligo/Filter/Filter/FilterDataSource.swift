@@ -15,14 +15,24 @@ protocol FilterDataSourceDelegate: class {
 class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     public weak var delegate: FilterDataSourceDelegate?
-    public var categories = Categories.getCategories()
+    public var categories: [String] {
+        var answer = [all]
+        answer.append(contentsOf: Categories.getCategories())
+        return answer
+    }
     private var collectionView: UICollectionView
     
     private var filters: [String] = [String]()
     private let all = " Todas "
     private var allButtons = [UIButton]()
     private var allButton = UIButton()
-
+    
+    private let primaryColor: UIColor = .tintMedium
+    private let primaryTextColor: UIColor = .backgroundMedium
+    
+    private let secondColor: UIColor = .backgroundMedium
+    private let secondTextColor: UIColor = .tintMedium
+    
     init(collectionView: UICollectionView) {
         self.collectionView = collectionView
         super.init()
@@ -39,7 +49,6 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
     }
     
     private func initAllButtons() {
-        categories.insert(all, at: 0)
         categories.forEach { elem in
             self.allButtons.append(UIButton())
         }
@@ -67,14 +76,16 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
             if name == all {
                 if filters.count == 0 {
                     allButton = cell.filterButton
-                    allButton.backgroundColor = .red
-//                    allButton.setTitleColor(, for: .normal)
+                    allButton.backgroundColor = primaryColor
+                    allButton.setTitleColor(secondColor, for: .normal)
                 }
             } else {
                 if filters.contains(name) {
-                    cell.filterButton.backgroundColor =  .red //"primaryColor"
+                    cell.filterButton.backgroundColor =  primaryColor
+                    cell.filterButton.setTitleColor(secondColor, for: .normal)
                 } else {
-                    cell.filterButton.backgroundColor = .blue
+                    cell.filterButton.backgroundColor = secondColor
+                    cell.filterButton.setTitleColor(primaryColor, for: .normal)
                 }
             
         }
@@ -92,22 +103,26 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
             for button in allButtons {
                 if let textButton = button.titleLabel?.text {
                     if filters.contains(textButton) {
-                        button.backgroundColor = .blue
+                        button.backgroundColor = secondColor
+                        button.setTitleColor(primaryColor, for: .normal)
                     }
                 }
             }
-            allButton.backgroundColor = .red
+            allButton.backgroundColor = primaryColor
+            allButton.setTitleColor(secondColor, for: .normal)
+            
             filters.removeAll()
         } else if !filters.contains(tag) || filters.count != 0 {
-            
-            allButton.backgroundColor = .blue
+            allButton.backgroundColor = secondColor
+            allButton.setTitleColor(primaryColor, for: .normal)
             
             if !filters.contains(tag) { //Ativar
-                sender.backgroundColor = .red
+                allButtons[sender.tag].backgroundColor = primaryColor
+                allButtons[sender.tag].setTitleColor(secondColor, for: .normal)
                 filters.append(tag)
-                
             } else {
-                sender.backgroundColor = .blue
+                allButtons[sender.tag].backgroundColor = secondColor
+                allButtons[sender.tag].setTitleColor(primaryColor, for: .normal)
                 if let index = filters.firstIndex(of: tag) {
                     filters.remove(at: index)
                 }
@@ -116,7 +131,8 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
         
         if filters.count == 0, let index = allButtons.firstIndex(of: allButton) {
             if let name = allButtons[index].titleLabel?.text, name == all {
-                allButtons[index].backgroundColor = .red
+                allButtons[index].backgroundColor = primaryColor
+                allButtons[index].setTitleColor(secondColor, for: .normal)
             }
         }
         
