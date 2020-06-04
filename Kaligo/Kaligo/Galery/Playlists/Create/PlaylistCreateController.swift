@@ -75,12 +75,13 @@ class PlaylistCreateController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         guard let steps = stepsTableViewDelegate?.steps else { return false }
+        guard identifier == "next" else { return true }
         
         if steps.count > 1 {
             for step in steps {
                 if step.title == "" {
                     showCustomAlert(title: "Passo incompleto!",
-                                    message: "Todos os passos da sua playlist devem ter um título",
+                                    message: "Todos os passos do seu Roteiro devem ter um título",
                                     isOneButton: true) { _ in }
                     
                     return false

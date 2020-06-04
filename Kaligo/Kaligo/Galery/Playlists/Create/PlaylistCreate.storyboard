@@ -218,12 +218,12 @@
                     <navigationItem key="navigationItem" title="Criar roteiro" largeTitleDisplayMode="always" id="J6u-1E-vsX">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="SXg-Vu-egn">
                             <connections>
-                                <segue destination="NTC-cD-LZl" kind="unwind" unwindAction="savePlaylist:" id="ViA-Cs-BA2"/>
+                                <segue destination="NTC-cD-LZl" kind="unwind" unwindAction="savePlaylist:" id="SC2-i4-oVZ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Próximo" id="3b8-yU-eEO">
                             <connections>
-                                <segue destination="tEO-tS-eUt" kind="show" id="4bl-C2-pg6"/>
+                                <segue destination="tEO-tS-eUt" kind="show" identifier="next" id="4bl-C2-pg6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -406,7 +406,7 @@
             <color red="0.19215686274509805" green="0.12156862745098039" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint-Medium">
-            <color red="0.35699999332427979" green="0.30199998617172241" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.29800000786781311" green="0.18400000035762787" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
