@@ -46,6 +46,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
                 else { return UITableViewCell() }
             if playlists.count > indexPath.row {
                 let playlist = playlists[indexPath.row]
+                cell.selectionStyle = .none
                 cell.configureCell(playlist: playlist,
                                    indexPath: indexPath)
             }
@@ -55,6 +56,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
         } else {
             let cell = UITableViewCell()
             cell.backgroundColor = .clear
+            cell.selectionStyle = .none
             return cell
         }
     }
