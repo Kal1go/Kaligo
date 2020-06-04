@@ -119,21 +119,24 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
                 allButtons[index].backgroundColor = .red
             }
         }
-        print(filters)
         
         delegate?.filterBy(category: filters)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height: Double = 40.0
+        let height: CGFloat = collectionView.frame.height
         let size = categories[indexPath.row].count
-        let width: Double = Double(size) * 12
-        return CGSize(width: width, height: height)
-    }
-    
-    func setupAllButtons(value: Int) {
-        for _ in 0 ..< value {
-            allButtons.append(UIButton())
+        
+        var variable: CGFloat = .zero
+        switch size {
+        case 0...5:
+            variable = 14
+        case 5...15:
+            variable = 12
+        default:
+            variable = 10
         }
+        let width: CGFloat = CGFloat(size) * variable
+        return CGSize(width: width, height: height)
     }
 }

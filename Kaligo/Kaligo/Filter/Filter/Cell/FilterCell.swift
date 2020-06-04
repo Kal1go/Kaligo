@@ -14,10 +14,10 @@ class FilterCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         filterButton.addTarget(self, action: #selector(btnClicked(_:)), for: .touchUpInside)
+        filterButton.layer.cornerRadius = 16
     }
     
     @objc func btnClicked (_ sender: UIButton) {
         filterButton.isSelected.toggle()
     }
-    
 }

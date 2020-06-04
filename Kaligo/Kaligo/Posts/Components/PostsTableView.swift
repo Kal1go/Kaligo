@@ -33,7 +33,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             //Return the amount of items
-            return  50
+            return 33
         } else {
             //Return the Loading cell
             return 229
