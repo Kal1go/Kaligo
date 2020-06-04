@@ -13,17 +13,9 @@ class PostsViewController: UIViewController {
     @IBOutlet weak var filterCollectionView: UICollectionView!
     @IBOutlet weak var postsTableView: PostsTableView!
     
-    private var collectionViewDelegate: FilterCollectionViewDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let filterDelegate = FilterCollectionViewDelegate()
-        self.collectionViewDelegate = filterDelegate
-        collectionViewDelegate?.categories = ["Matemática", "História", "Geografia", "Biologia"]
-        
-        filterCollectionView.delegate = self.collectionViewDelegate
-        filterCollectionView.dataSource = self.collectionViewDelegate
         self.setUpEvents()
         postsTableView?.viewController = self
     }

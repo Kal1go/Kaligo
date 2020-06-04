@@ -22,10 +22,26 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
         self.dataSource = self
         self.backgroundColor = .clear
         self.loadMoreData()
+        self.register()
+    }
+    
+    private func register() {
+        let filterCell = UINib(nibName: "FilterTableCell", bundle: nil)
+        self.register(filterCell, forCellReuseIdentifier: "FilterTableCell")
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            //Return the amount of items
+            return  50
+        } else {
+            //Return the Loading cell
+            return 229
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        if section == 1 {
             //Return the amount of items
             return  playlists.count
         } else {
@@ -34,11 +50,16 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "FilterTableCell", for: indexPath) as? FilterTableCell
+            else { return UITableViewCell() }
+            return cell
+            
+        } else if indexPath.section == 1 {
             guard
                 let cell = tableView.dequeueReusableCell(
                     withIdentifier: "playlistCell",
@@ -89,7 +110,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
     
     private func getLast(withCompletion complition: @escaping () -> Void) {
         DispatchQueue.main.async {
-            let cell = self.cellForRow(at: .init(row: 0, section: 1))
+            let cell = self.cellForRow(at: .init(row: 0, section: 2))
             cell?.contentView.showSpinner()
             ListHandler.getLast(withNumber: self.indexOfPageToRequest) { (answer) in
                 DispatchQueue.main.async {

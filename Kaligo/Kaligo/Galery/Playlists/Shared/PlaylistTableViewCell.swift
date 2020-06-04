@@ -52,8 +52,6 @@ class PlaylistTableViewCell: UITableViewCell {
                                                   isOwner: isOwnew)
     }
     
-    
-    
     private func choiceForkWord(number: Int, isOwner: Bool) -> String {
         switch number {
         case 0:
