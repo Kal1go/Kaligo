@@ -112,7 +112,6 @@ extension GaleryController: GaleryTableViewProtocol {
             let view = navegation.viewControllers.first as? PlaylistHomeController,
             let list = sender as? List {
                 view.playlist = list
-                print("here")
         }
     }
 }

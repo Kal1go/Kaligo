@@ -51,13 +51,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Álgebra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1y-Gg-Ckz">
-                                                    <rect key="frame" x="40" y="98" width="66.5" height="21.5"/>
+                                                    <rect key="frame" x="40" y="86" width="334" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição da playlist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5Q-ug-lCG">
-                                                    <rect key="frame" x="40" y="124.5" width="334" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição da playlist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5Q-ug-lCG">
+                                                    <rect key="frame" x="40" y="112.5" width="334" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" name="Cor-LetraEscura"/>
                                                     <nil key="highlightedColor"/>
@@ -97,12 +97,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="ISX-xP-k1m" secondAttribute="trailing" id="T4T-f2-VZ6"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="R5Q-ug-lCG" secondAttribute="trailing" constant="20" id="V3o-d9-2hx"/>
                                                 <constraint firstItem="MmI-Bn-V28" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="YcS-12-p8w"/>
+                                                <constraint firstAttribute="trailing" secondItem="h1y-Gg-Ckz" secondAttribute="trailing" constant="40" id="ZsL-Ck-bHG"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="centerX" secondItem="N1E-sq-C2R" secondAttribute="centerX" id="bcA-0k-Lc2"/>
                                                 <constraint firstItem="P9e-26-hWI" firstAttribute="leading" secondItem="N1E-sq-C2R" secondAttribute="leadingMargin" constant="20" id="e8z-fl-Xxx"/>
                                                 <constraint firstItem="ISX-xP-k1m" firstAttribute="top" secondItem="N1E-sq-C2R" secondAttribute="top" id="fld-bW-HwF"/>
                                                 <constraint firstItem="CCt-sz-H4N" firstAttribute="width" secondItem="N1E-sq-C2R" secondAttribute="width" id="phJ-Oz-wBD"/>
                                                 <constraint firstItem="R5Q-ug-lCG" firstAttribute="top" secondItem="h1y-Gg-Ckz" secondAttribute="bottom" constant="5" id="uC4-Od-UBJ"/>
-                                                <constraint firstItem="h1y-Gg-Ckz" firstAttribute="top" secondItem="P9e-26-hWI" secondAttribute="bottom" constant="20" id="xow-cT-2RZ"/>
+                                                <constraint firstItem="h1y-Gg-Ckz" firstAttribute="top" secondItem="P9e-26-hWI" secondAttribute="bottom" constant="8" id="xow-cT-2RZ"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -271,7 +272,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="mainvc" automaticallyAdjustsScrollViewInsets="NO" id="Yd8-pO-sPV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1dg-3k-DmZ">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="1dg-3k-DmZ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

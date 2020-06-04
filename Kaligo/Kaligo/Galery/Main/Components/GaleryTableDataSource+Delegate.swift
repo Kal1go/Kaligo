@@ -55,7 +55,7 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
                     for: indexPath) as? GaleryTableCell
                     else { return UITableViewCell() }
                 
-                cell.selectionStyle = .none
+//                cell.selectionStyle = .default
                 return cell
             }
             
@@ -130,7 +130,9 @@ class GaleryTableView: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section != 0 {
-            delegate?.segue(atIndex: indexPath.row)
+            DispatchQueue.main.async {
+                self.delegate?.segue(atIndex: indexPath.row)
+            }
         }
     }
     

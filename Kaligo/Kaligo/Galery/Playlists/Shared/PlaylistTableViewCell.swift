@@ -37,14 +37,31 @@ class PlaylistTableViewCell: UITableViewCell {
     
     public func configureCell(playlist: List, indexPath: IndexPath) {
         self.userName.text = playlist.userName != " " ? playlist.userName : "Anônimo"
-        self.userLevel.text = "Nível \(playlist.numberOfForks)"
+        
         self.playlistTitle.text = playlist.title
         self.playlistDescription.text = playlist.description
         self.forkButton.tag = indexPath.row
         self.categoryImage.image = UIImage(named: "\(playlist.category)")
         
-        let isForked = playlist.isOwner() || playlist.hasForked()
+        let isOwnew = playlist.isOwner()
+        let isForked = isOwnew || playlist.hasForked()
         self.forkButton.setImage(isForked ? imageForkS : imageFork, for: .normal)
         self.forkButton.isEnabled = !isForked
+        
+        self.userLevel.text = self.choiceForkWord(number: playlist.numberOfForks,
+                                                  isOwner: isOwnew)
+    }
+    
+    
+    
+    private func choiceForkWord(number: Int, isOwner: Bool) -> String {
+        switch number {
+        case 0:
+            return isOwner ? "Ninguém ainda salvou esse projeto" : "Seja o primeiro a salvar"
+        case 1:
+            return "Salvo por 1 pessoa"
+        default:
+            return "Salvo por \(number) pessoas"
+        }
     }
 }
