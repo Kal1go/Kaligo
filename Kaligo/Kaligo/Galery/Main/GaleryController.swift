@@ -31,7 +31,7 @@ class GaleryController: UIViewController {
     }
     
     override func awakeFromNib() {
-        self.navigationController?.tabBarItem.image = UIImage(systemName: "person.fill")
+        self.navigationController?.tabBarItem.image = UIImage(systemName: "rectangle.stack.fill")
     }
     
     override func viewDidAppear(_ animated: Bool) {
