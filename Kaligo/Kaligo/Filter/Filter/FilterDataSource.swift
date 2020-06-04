@@ -28,9 +28,11 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
     private var allButton = UIButton()
     
     private let primaryColor: UIColor = .tintMedium
+    private let primaryImage: UIImage = .filterSelected
     private let primaryTextColor: UIColor = .backgroundMedium
     
     private let secondColor: UIColor = .backgroundMedium
+    private let secondImage: UIImage = .filterNotSelected
     private let secondTextColor: UIColor = .tintMedium
     
     init(collectionView: UICollectionView) {
@@ -76,20 +78,21 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
             if name == all {
                 if filters.count == 0 {
                     allButton = cell.filterButton
-                    allButton.backgroundColor = primaryColor
+                    allButton.setBackgroundImage(primaryImage, for: .normal)
                     allButton.setTitleColor(secondColor, for: .normal)
                 }
             } else {
                 if filters.contains(name) {
-                    cell.filterButton.backgroundColor =  primaryColor
+                    cell.filterButton.setBackgroundImage(primaryImage, for: .normal)
                     cell.filterButton.setTitleColor(secondColor, for: .normal)
                 } else {
-                    cell.filterButton.backgroundColor = secondColor
+                    cell.filterButton.setBackgroundImage(secondImage, for: .normal)
                     cell.filterButton.setTitleColor(primaryColor, for: .normal)
                 }
             
         }
         allButtons[indexPath.row] = cell.filterButton
+        allButtons[indexPath.row].clipsToBounds = true
         return cell
     }
 
@@ -103,25 +106,25 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
             for button in allButtons {
                 if let textButton = button.titleLabel?.text {
                     if filters.contains(textButton) {
-                        button.backgroundColor = secondColor
+                        button.setBackgroundImage(secondImage, for: .normal)
                         button.setTitleColor(primaryColor, for: .normal)
                     }
                 }
             }
-            allButton.backgroundColor = primaryColor
+            allButton.setBackgroundImage(primaryImage, for: .normal)
             allButton.setTitleColor(secondColor, for: .normal)
             
             filters.removeAll()
         } else if !filters.contains(tag) || filters.count != 0 {
-            allButton.backgroundColor = secondColor
+            allButton.setBackgroundImage(secondImage, for: .normal)
             allButton.setTitleColor(primaryColor, for: .normal)
             
             if !filters.contains(tag) { //Ativar
-                allButtons[sender.tag].backgroundColor = primaryColor
+                allButtons[sender.tag].setBackgroundImage(primaryImage, for: .normal)
                 allButtons[sender.tag].setTitleColor(secondColor, for: .normal)
                 filters.append(tag)
             } else {
-                allButtons[sender.tag].backgroundColor = secondColor
+                allButtons[sender.tag].setBackgroundImage(secondImage, for: .normal)
                 allButtons[sender.tag].setTitleColor(primaryColor, for: .normal)
                 if let index = filters.firstIndex(of: tag) {
                     filters.remove(at: index)
@@ -131,7 +134,7 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
         
         if filters.count == 0, let index = allButtons.firstIndex(of: allButton) {
             if let name = allButtons[index].titleLabel?.text, name == all {
-                allButtons[index].backgroundColor = primaryColor
+                allButtons[index].setBackgroundImage(primaryImage, for: .normal)
                 allButtons[index].setTitleColor(secondColor, for: .normal)
             }
         }

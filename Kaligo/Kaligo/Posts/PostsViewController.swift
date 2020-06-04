@@ -27,9 +27,6 @@ class PostsViewController: UIViewController {
     }
         
     @IBAction func forkPlaylist(_ sender: UIButton) {
-        // verificar se usuário já salvou essa playlist
-//        postsTableView?.playlists[sender.tag].numberOfForks += 1
-//
         guard
             let cell = postsTableView?.cellForRow(at: IndexPath(row: sender.tag, section: 1)) as? PlaylistTableViewCell,
             let list = postsTableView?.listsFilted[sender.tag]
