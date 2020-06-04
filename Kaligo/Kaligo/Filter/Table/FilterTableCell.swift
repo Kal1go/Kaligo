@@ -11,12 +11,11 @@ import UIKit
 class FilterTableCell: UITableViewCell {
     
     @IBOutlet weak var collection: UICollectionView!
-    var collectionDataSourceDelegate: FilterDataSource?
+    public var collectionDataSourceDelegate: FilterDataSource?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionDataSourceDelegate = FilterDataSource(collectionView: collection)
-        collectionDataSourceDelegate?.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,8 +23,4 @@ class FilterTableCell: UITableViewCell {
     }
 }
 
-extension FilterTableCell: FilterDataSourceDelegate {
-    func filterBy(category: [String]) {
-        print(category)
-    }
-}
+

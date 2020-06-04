@@ -31,8 +31,8 @@ class PostsViewController: UIViewController {
 //        postsTableView?.playlists[sender.tag].numberOfForks += 1
 //
         guard
-            let cell = postsTableView?.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? PlaylistTableViewCell,
-            let list = postsTableView?.playlists[sender.tag]
+            let cell = postsTableView?.cellForRow(at: IndexPath(row: sender.tag, section: 1)) as? PlaylistTableViewCell,
+            let list = postsTableView?.listsFilted[sender.tag]
         else {
             return
         }
@@ -45,8 +45,8 @@ class PostsViewController: UIViewController {
                     let forkSelectedImage = UIImage(named: "botao-fork-selecionado")
                     sender.setImage(forkSelectedImage, for: .normal)
                     sender.isEnabled = false
-                    self.postsTableView?.playlists[sender.tag].hasFork = true
-                    self.postsTableView?.playlists[sender.tag].numberOfForks += 1
+                    self.postsTableView?.listsFilted[sender.tag].hasFork = true
+                    self.postsTableView?.listsFilted[sender.tag].numberOfForks += 1
                     cell.configureCell(playlist: list, indexPath: IndexPath(row: sender.tag, section: 0))
                     User.addlist(list: answer)
                 }
@@ -57,6 +57,11 @@ class PostsViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        postsTableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+    }
+    
     func performSegue(for playlist: List) {
         DispatchQueue.main.async {
             self.performSegue(withIdentifier: "listDetail", sender: playlist)
@@ -65,10 +70,9 @@ class PostsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navegation = segue.destination as? UINavigationController,
-            let view = navegation.viewControllers.first as? PlaylistHomeController,
-            let selected = postsTableView.indexPathForSelectedRow,
-            let delegate = postsTableView.delegate as? PostsTableView {
-            view.playlist = delegate.playlists[selected.row]
+            let list = sender as? List,
+            let view = navegation.viewControllers.first as? PlaylistHomeController {
+            view.playlist = list
         }
     }
 }

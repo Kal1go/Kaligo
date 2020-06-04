@@ -19,7 +19,7 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
     private var collectionView: UICollectionView
     
     private var filters: [String] = [String]()
-    private let all = " Todos "
+    private let all = " Todas "
     private var allButtons = [UIButton]()
     private var allButton = UIButton()
 
@@ -96,7 +96,7 @@ class FilterDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDe
                     }
                 }
             }
-            sender.backgroundColor = .red
+            allButton.backgroundColor = .red
             filters.removeAll()
         } else if !filters.contains(tag) || filters.count != 0 {
             

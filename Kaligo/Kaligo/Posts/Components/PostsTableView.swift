@@ -12,9 +12,11 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
     
     weak var viewController: PostsViewController?
     public var playlists = Lists()
+    public var listsFilted = Lists()
     
     private var indexOfPageToRequest = 0
     private var isLoading = false
+    private var categoriesFilted = [String]()
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -43,7 +45,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 1 {
             //Return the amount of items
-            return  playlists.count
+            return  listsFilted.count
         } else {
             //Return the Loading cell
             return 1
@@ -57,6 +59,8 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FilterTableCell", for: indexPath) as? FilterTableCell
             else { return UITableViewCell() }
+            
+            cell.collectionDataSourceDelegate?.delegate = self
             return cell
             
         } else if indexPath.section == 1 {
@@ -66,9 +70,9 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
                     for: indexPath) as? PlaylistTableViewCell
                 else { return UITableViewCell() }
             if playlists.count > indexPath.row {
-                let playlist = playlists[indexPath.row]
+                let list = listsFilted[indexPath.row]
                 cell.selectionStyle = .none
-                cell.configureCell(playlist: playlist,
+                cell.configureCell(playlist: list,
                                    indexPath: indexPath)
             }
             
@@ -99,6 +103,7 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
         DispatchQueue.main.async {
             self.indexOfPageToRequest = 0
             self.playlists = []
+            self.listsFilted = []
             self.getLast {
                 DispatchQueue.main.async {
                     let indexPath = IndexPath(row: 0, section: 0)
@@ -141,13 +146,14 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
         DispatchQueue.main.async {
             self.indexOfPageToRequest += 1
             self.playlists.append(contentsOf: lists)
+            self.filterBy(category: self.categoriesFilted)
             self.reloadData()
             self.isLoading = false
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.viewController?.performSegue(for: playlists[indexPath.row])
+        self.viewController?.performSegue(for: listsFilted[indexPath.row])
     }
 }
 
@@ -158,5 +164,22 @@ extension UITableView {
         }, completion: {_ in
             completion()
         })
+    }
+}
+
+extension PostsTableView: FilterDataSourceDelegate {
+    func filterBy(category: [String]) {
+        self.categoriesFilted = category
+        self.listsFilted = []
+        if category.count == 0 {
+            self.listsFilted = self.playlists
+        } else {
+            for index in 0 ..< playlists.count {
+                if category.contains(playlists[index].category) {
+                    listsFilted.append(playlists[index])
+                }
+            }
+        }
+        self.reloadData()
     }
 }
