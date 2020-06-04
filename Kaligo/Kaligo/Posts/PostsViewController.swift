@@ -12,6 +12,7 @@ class PostsViewController: UIViewController {
     
     @IBOutlet weak var filterCollectionView: UICollectionView!
     @IBOutlet weak var postsTableView: PostsTableView!
+    @IBOutlet weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +52,11 @@ class PostsViewController: UIViewController {
                 self.showCustomAlert(title: "Ops, algo deu errado!", message: description, isOneButton: true) { (_) in }
             }
         }
-        
     }
     
+    func messageLabel(isHidden: Bool) {
+        self.messageLabel.isHidden = isHidden
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         postsTableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)

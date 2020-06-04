@@ -180,6 +180,7 @@ extension PostsTableView: FilterDataSourceDelegate {
                 }
             }
         }
+        self.viewController?.messageLabel(isHidden: listsFilted.count != 0)
         self.reloadData()
     }
 }
