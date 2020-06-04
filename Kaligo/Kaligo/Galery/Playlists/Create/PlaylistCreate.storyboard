@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NxT-0S-tdN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NxT-0S-tdN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -40,9 +40,9 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Título do passo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSv-Ws-Khb">
                                                             <rect key="frame" x="10" y="0.0" width="306" height="40"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="textColor" name="Tint"/>
+                                                            <color key="textColor" name="Tint-Medium"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             <connections>
                                                                 <action selector="textFieldDidChange:" destination="0sc-ja-n1k" eventType="editingChanged" id="90m-G7-spB"/>
                                                             </connections>
@@ -94,10 +94,10 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campodetexto-umalinha" translatesAutoresizingMaskIntoConstraints="NO" id="1Ke-GC-wUy">
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="40"/>
                                                         </imageView>
-                                                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nql-1r-AxH">
+                                                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Referência" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nql-1r-AxH">
                                                             <rect key="frame" x="10" y="0.0" width="306" height="40"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="textColor" name="Tint"/>
+                                                            <color key="textColor" name="Tint-Medium"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                                         </textField>
@@ -174,7 +174,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-criar" translatesAutoresizingMaskIntoConstraints="NO" id="hVf-Fi-07Q">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botao-criar2" translatesAutoresizingMaskIntoConstraints="NO" id="hVf-Fi-07Q">
                                                     <rect key="frame" x="84.5" y="12" width="245" height="57"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="57" id="ES6-3G-Ama"/>
@@ -182,7 +182,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kg-qa-OmQ">
-                                                    <rect key="frame" x="84.5" y="15" width="245" height="54"/>
+                                                    <rect key="frame" x="84.5" y="13.5" width="245" height="54"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <state key="normal" title="Adicionar passo">
                                                         <color key="titleColor" name="Background"/>
@@ -194,12 +194,12 @@
                                             </subviews>
                                             <color key="backgroundColor" name="Background"/>
                                             <constraints>
-                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="trailing" secondItem="hVf-Fi-07Q" secondAttribute="trailing" id="7ha-iU-V55"/>
                                                 <constraint firstItem="hVf-Fi-07Q" firstAttribute="centerX" secondItem="pFn-Oi-1H7" secondAttribute="centerX" id="GP1-IF-Ovc"/>
-                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="leading" secondItem="hVf-Fi-07Q" secondAttribute="leading" id="Ksl-e6-oiz"/>
-                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="bottom" secondItem="hVf-Fi-07Q" secondAttribute="bottom" id="TNa-u8-QEp"/>
+                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="centerY" secondItem="hVf-Fi-07Q" secondAttribute="centerY" id="HOp-UP-OPd"/>
                                                 <constraint firstItem="hVf-Fi-07Q" firstAttribute="centerY" secondItem="pFn-Oi-1H7" secondAttribute="centerY" id="VNZ-2s-uZv"/>
-                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="top" secondItem="hVf-Fi-07Q" secondAttribute="top" constant="3" id="kg0-5s-elM"/>
+                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="height" secondItem="hVf-Fi-07Q" secondAttribute="height" multiplier="0.947368" id="Wht-sp-6EE"/>
+                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="centerX" secondItem="hVf-Fi-07Q" secondAttribute="centerX" id="bGC-0m-NmV"/>
+                                                <constraint firstItem="4kg-qa-OmQ" firstAttribute="width" secondItem="hVf-Fi-07Q" secondAttribute="width" id="dGm-T7-G1O"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -261,9 +261,9 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Nome do roteiro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXG-nM-Fba">
                                                     <rect key="frame" x="30" y="10" width="354" height="40"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="textColor" name="Tint"/>
+                                                    <color key="textColor" name="Tint-Medium"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
                                                         <action selector="textFieldDidChange:" destination="tEO-tS-eUt" eventType="editingChanged" id="fw2-aK-9mH"/>
                                                     </connections>
@@ -295,7 +295,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="acA-Lp-ixy">
                                                     <rect key="frame" x="25" y="11" width="364" height="202"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="textColor" name="Tint"/>
+                                                    <color key="textColor" name="Tint-Medium"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -391,7 +391,7 @@
     </scenes>
     <color key="tintColor" name="Tint"/>
     <resources>
-        <image name="botao-criar" width="245" height="57"/>
+        <image name="botao-criar2" width="300" height="100"/>
         <image name="botao-excluir" width="44" height="44"/>
         <image name="campodetexto-multiplo" width="302" height="113"/>
         <image name="campodetexto-umalinha" width="302" height="39"/>
@@ -403,7 +403,10 @@
             <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.29411764705882354" green="0.14117647058823529" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19215686274509805" green="0.12156862745098039" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint-Medium">
+            <color red="0.35699999332427979" green="0.30199998617172241" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

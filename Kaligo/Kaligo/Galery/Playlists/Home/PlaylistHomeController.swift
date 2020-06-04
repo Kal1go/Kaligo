@@ -16,6 +16,7 @@ class PlaylistHomeController: UITableViewController {
 
     var playlist = List()
     weak var delegate: GaleryTableViewProtocol?
+
     @IBOutlet weak var editButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -28,6 +29,12 @@ class PlaylistHomeController: UITableViewController {
         editButton.isEnabled = playlist.isOwner()
         navigationItem.title = playlist.title
         self.tableView.estimatedRowHeight = 233
+        self.register()
+    }
+    
+    private func register() {
+        let cell = UINib(nibName: "StepViewCell", bundle: nil)
+        self.tableView.register(cell, forCellReuseIdentifier: "StepViewCell")
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -56,49 +63,59 @@ class PlaylistHomeController: UITableViewController {
             return cell1
             
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.selectionStyle = .none
-        
-        if cell.contentView.subviews.contains(where: { $0.tag == 999 }) == false {
-            guard let customView = Bundle.main.loadNibNamed(
-                String(describing: StepViewCell.self),
-                       owner: self,
-                       options: nil)?.first as? StepViewCell
-                else {
-                 fatalError("Is impossible take the View")
-            }
-            
-            var row: Int
-            row = isMVP ? indexPath.row : indexPath.row - 1
-            
-            guard let step = playlist.steps?[row] else {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "StepViewCell") as? StepViewCell {
+            guard let step = playlist.steps?[indexPath.row - 1] else {
                 fatalError("Is impossible take Step")
             }
-            
-            customView.tag = 999
-            cell.contentView.addSubview(customView)
-            customView.translatesAutoresizingMaskIntoConstraints = false
-            customView.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor).isActive = true
-            customView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor).isActive = true
-            customView.topAnchor.constraint(equalTo: cell.contentView.topAnchor).isActive = true
-            customView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor).isActive = true
-            
-            customView.numeroDePassos.text = String(0)
-            
-            customView.onSeeMoreDidTap {
+            cell.setupWith(step: step)
+            cell.selectionStyle = .none
+            cell.onSeeMoreDidTap {
                 [weak self] in
                 self?.playlist.steps?[indexPath.row - 1].isExpanded?.toggle()
                 tableView.beginUpdates()
                 tableView.endUpdates()
             }
-            customView.setupWith(step: step)
-        } else if let cell = cell.contentView.subviews.first(where: { $0.tag == 999 }) as? StepViewCell {
-            guard let step = playlist.steps?[indexPath.row - 1] else {
-                fatalError("Is impossible take Step")
-            }
-            cell.setupWith(step: step)
+            return cell
         }
-        return cell
+        return UITableViewCell()
+        
+//        if cell.contentView.subviews.contains(where: { $0.tag == 999 }) == false {
+//
+//            guard let customView = customView else {
+//                fatalError("Where stay the View")
+//            }
+//
+//            var row: Int
+//            row = isMVP ? indexPath.row : indexPath.row - 1
+//
+//            guard let step = playlist.steps?[row] else {
+//                fatalError("Is impossible take Step")
+//            }
+//
+//            customView.tag = 999
+//            cell.contentView.addSubview(customView)
+//            customView.translatesAutoresizingMaskIntoConstraints = false
+//            customView.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor).isActive = true
+//            customView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor).isActive = true
+//            customView.topAnchor.constraint(equalTo: cell.contentView.topAnchor).isActive = true
+//            customView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor).isActive = true
+//
+//            customView.numeroDePassos.text = String(0)
+//
+//            customView.onSeeMoreDidTap {
+//                [weak self] in
+//                self?.playlist.steps?[indexPath.row - 1].isExpanded?.toggle()
+//                tableView.beginUpdates()
+//                tableView.endUpdates()
+//            }
+//            customView.setupWith(step: step)
+//        } else if let cell = cell.contentView.subviews.first(where: { $0.tag == 999 }) as? StepViewCell {
+//            guard let step = playlist.steps?[indexPath.row - 1] else {
+//                fatalError("Is impossible take Step")
+//            }
+//            cell.setupWith(step: step)
+//        }
+//        return cell
     }
     
     @IBAction func dismissView(_ sender: Any) {

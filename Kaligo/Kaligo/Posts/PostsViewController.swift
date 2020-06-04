@@ -39,7 +39,7 @@ class PostsViewController: UIViewController {
 //        postsTableView?.playlists[sender.tag].numberOfForks += 1
 //
         guard
-            let cell = postsTableView?.cellForRow(at: IndexPath(row: sender.tag, section: 0)),
+            let cell = postsTableView?.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? PlaylistTableViewCell,
             let list = postsTableView?.playlists[sender.tag]
         else {
             return
@@ -54,6 +54,8 @@ class PostsViewController: UIViewController {
                     sender.setImage(forkSelectedImage, for: .normal)
                     sender.isEnabled = false
                     self.postsTableView?.playlists[sender.tag].hasFork = true
+                    self.postsTableView?.playlists[sender.tag].numberOfForks += 1
+                    cell.configureCell(playlist: list, indexPath: IndexPath(row: sender.tag, section: 0))
                     User.addlist(list: answer)
                 }
             case.error(let description):
@@ -64,7 +66,9 @@ class PostsViewController: UIViewController {
     }
     
     func performSegue(for playlist: List) {
-        performSegue(withIdentifier: "listDetail", sender: playlist)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "listDetail", sender: playlist)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

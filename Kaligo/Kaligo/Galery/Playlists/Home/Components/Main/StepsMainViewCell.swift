@@ -16,8 +16,8 @@ class StepsMainViewCell: UITableViewCell {
     
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var forkButton: UIButton!
+    @IBOutlet weak var categoryImage: UIImageView!
     
     weak var delegate: StepsMainViewCellDelegate?
     private var imageForkS = UIImage(named: "botao-fork-selecionado")
@@ -31,8 +31,9 @@ class StepsMainViewCell: UITableViewCell {
     }
     
     func setUp(list: List) {
-        self.userNameLabel.text = list.userName
-        self.descriptionLabel.text = list.category
+        self.userNameLabel.text = "\(list.userName)"
+        print(list.category)
+        self.categoryImage.image = UIImage(named: "\(list.category)")
         let isForked = list.isOwner() || list.hasForked()
         self.forkButton.setImage(isForked ? imageForkS : imageFork, for: .normal)
         self.forkButton.isEnabled = !isForked

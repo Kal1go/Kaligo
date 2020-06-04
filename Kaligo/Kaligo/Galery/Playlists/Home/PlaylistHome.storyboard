@@ -23,7 +23,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Lia" translatesAutoresizingMaskIntoConstraints="NO" id="vLj-IP-9XR">
+                                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Lia" translatesAutoresizingMaskIntoConstraints="NO" id="vLj-IP-9XR">
                                             <rect key="frame" x="20" y="25" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="7wV-Nd-oWh"/>
@@ -37,35 +37,48 @@
                                             <rect key="frame" x="314" y="0.0" width="100" height="100"/>
                                             <state key="normal" image="botao-fork"/>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xes-q9-f0h">
-                                            <rect key="frame" x="81" y="54" width="75" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feito por Fulana de Tal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvw-YM-um7">
-                                            <rect key="frame" x="81" y="28.5" width="172.5" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                            <color key="textColor" name="Cor-LetraEscura"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCi-9r-k9r">
+                                            <rect key="frame" x="20" y="24" width="294" height="52.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feito por Fulana de Tal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvw-YM-um7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="294" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                    <color key="textColor" name="Cor-LetraEscura"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Biologia" translatesAutoresizingMaskIntoConstraints="NO" id="me0-OP-nIs">
+                                                    <rect key="frame" x="0.0" y="25.5" width="91" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="BI2-rs-Z6h"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="uvw-YM-um7" secondAttribute="trailing" id="7Dj-56-uRT"/>
+                                                <constraint firstAttribute="bottom" secondItem="me0-OP-nIs" secondAttribute="bottom" id="7Wo-Vf-Oay"/>
+                                                <constraint firstItem="uvw-YM-um7" firstAttribute="leading" secondItem="qCi-9r-k9r" secondAttribute="leading" id="8Yd-Ch-HbP"/>
+                                                <constraint firstItem="uvw-YM-um7" firstAttribute="top" secondItem="qCi-9r-k9r" secondAttribute="top" id="9ZQ-zC-166"/>
+                                                <constraint firstItem="me0-OP-nIs" firstAttribute="leading" secondItem="qCi-9r-k9r" secondAttribute="leading" id="Pfh-jg-LlO"/>
+                                                <constraint firstItem="me0-OP-nIs" firstAttribute="top" secondItem="uvw-YM-um7" secondAttribute="bottom" constant="5" id="T2b-fu-Ohy"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="qCi-9r-k9r" firstAttribute="centerY" secondItem="6TI-Y9-Fvz" secondAttribute="centerY" id="3nO-Nr-etD"/>
                                         <constraint firstItem="Jx1-TZ-Opv" firstAttribute="height" secondItem="6TI-Y9-Fvz" secondAttribute="height" id="Fi8-dU-AdK"/>
                                         <constraint firstItem="Jx1-TZ-Opv" firstAttribute="width" secondItem="6TI-Y9-Fvz" secondAttribute="height" multiplier="1:1" id="Grd-LW-Sy8"/>
                                         <constraint firstAttribute="trailing" secondItem="Jx1-TZ-Opv" secondAttribute="trailing" id="HyA-Cn-Zfa"/>
-                                        <constraint firstItem="uvw-YM-um7" firstAttribute="leading" secondItem="vLj-IP-9XR" secondAttribute="trailing" constant="11" id="MKu-Ct-P8V"/>
+                                        <constraint firstItem="Jx1-TZ-Opv" firstAttribute="leading" secondItem="qCi-9r-k9r" secondAttribute="trailing" id="N3l-n5-fUi"/>
                                         <constraint firstItem="Jx1-TZ-Opv" firstAttribute="top" secondItem="6TI-Y9-Fvz" secondAttribute="top" id="Pvo-fJ-pqU"/>
                                         <constraint firstItem="vLj-IP-9XR" firstAttribute="leading" secondItem="6TI-Y9-Fvz" secondAttribute="leadingMargin" id="T1G-D9-i5S"/>
                                         <constraint firstItem="vLj-IP-9XR" firstAttribute="centerY" secondItem="6TI-Y9-Fvz" secondAttribute="centerY" id="T9H-U9-QUC"/>
-                                        <constraint firstItem="Xes-q9-f0h" firstAttribute="leading" secondItem="uvw-YM-um7" secondAttribute="leading" id="aEZ-mi-2JT"/>
-                                        <constraint firstItem="Xes-q9-f0h" firstAttribute="bottom" secondItem="vLj-IP-9XR" secondAttribute="bottom" id="cTj-cb-oia"/>
-                                        <constraint firstItem="Xes-q9-f0h" firstAttribute="top" secondItem="uvw-YM-um7" secondAttribute="bottom" constant="5" id="eh0-16-O0W"/>
+                                        <constraint firstItem="qCi-9r-k9r" firstAttribute="leading" secondItem="6TI-Y9-Fvz" secondAttribute="leadingMargin" id="lhr-xS-9uh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="Background"/>
                                 <connections>
-                                    <outlet property="descriptionLabel" destination="Xes-q9-f0h" id="VRV-9j-eYU"/>
+                                    <outlet property="categoryImage" destination="me0-OP-nIs" id="wk3-JX-y7H"/>
                                     <outlet property="forkButton" destination="Jx1-TZ-Opv" id="SDK-9c-jdz"/>
                                     <outlet property="userImage" destination="vLj-IP-9XR" id="Mvr-6o-U7C"/>
                                     <outlet property="userNameLabel" destination="uvw-YM-um7" id="DAT-3V-abV"/>
@@ -121,7 +134,7 @@
                 <navigationController storyboardIdentifier="playlist" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="NR7-y0-N8d" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Xnx-VV-pQY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="Background"/>
                         <textAttributes key="titleTextAttributes">
@@ -143,6 +156,7 @@
     </scenes>
     <color key="tintColor" name="Tint"/>
     <resources>
+        <image name="Biologia" width="91" height="26"/>
         <image name="Lia" width="816" height="816"/>
         <image name="botao-fork" width="200" height="200"/>
         <namedColor name="Background">
@@ -152,7 +166,7 @@
             <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.29411764705882354" green="0.14117647058823529" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19215686274509805" green="0.12156862745098039" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

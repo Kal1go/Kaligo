@@ -18,7 +18,7 @@ enum Category: String, CaseIterable {
     case geografica = "Geografia"
     case filosofia = "Filosofia"
     case sociologia = "Sociologia"
-    case estrangeiras = "Línguas estrangeiras"
+    case estrangeiras = "Língua estrangeira"
     case artes = "Artes"
     case outro = "Outro"
 }

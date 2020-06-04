@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class StepViewCell: UIView {
+class StepViewCell: UITableViewCell {
     @IBOutlet private weak var mainStackView: UIStackView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descLabel: UILabel!
@@ -24,7 +24,7 @@ class StepViewCell: UIView {
         self.isSeeLess.toggle()
         self.descLabel.numberOfLines = self.isSeeLess ? 0 : 3
         self.descLabel.layoutIfNeeded()
-        self.seeMoreButton.setTitle(self.isSeeLess ? "See less" : "See more", for: .normal)
+        self.seeMoreButton.setTitle(self.isSeeLess ? "Ver menos" : "Ver Mais", for: .normal)
         self.seeMoreDidTapHandler?()
     }
     
