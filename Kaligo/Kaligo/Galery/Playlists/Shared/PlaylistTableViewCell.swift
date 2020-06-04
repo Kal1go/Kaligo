@@ -52,12 +52,10 @@ class PlaylistTableViewCell: UITableViewCell {
                                                   isOwner: isOwnew)
     }
     
-    
-    
     private func choiceForkWord(number: Int, isOwner: Bool) -> String {
         switch number {
         case 0:
-            return isOwner ? "Ninguém ainda salvou esse projeto" : "Seja o primeiro a salvar"
+            return isOwner ? "Ninguém salvou ainda esse roteiro" : "Seja o primeiro a salvar"
         case 1:
             return "Salvo por 1 pessoa"
         default:

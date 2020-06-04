@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem-vindo ao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym5-Te-ZPu">
-                                <rect key="frame" x="20" y="245.33333333333337" width="374" height="48"/>
+                                <rect key="frame" x="20" y="345.33333333333331" width="374" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" name="Cor-LetraEscura"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Kaligo!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dT-RI-VVm">
-                                <rect key="frame" x="20" y="303.33333333333331" width="374" height="62.333333333333314"/>
+                                <rect key="frame" x="20" y="393.33333333333331" width="374" height="62.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="52"/>
-                                <color key="textColor" name="Tint"/>
+                                <color key="textColor" name="Tint-Medium"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Um aplicativo para ajudar em seus estudos." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTi-Xu-jHi">
-                                <rect key="frame" x="20" y="380.66666666666669" width="374" height="52.666666666666686"/>
+                                <rect key="frame" x="20" y="470.66666666666669" width="374" height="52.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                 <color key="textColor" name="Cor-LetraEscura"/>
                                 <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                             <constraint firstItem="PTi-Xu-jHi" firstAttribute="trailing" secondItem="Ym5-Te-ZPu" secondAttribute="trailing" id="KLh-Fd-clq"/>
                             <constraint firstItem="0dT-RI-VVm" firstAttribute="leading" secondItem="Ym5-Te-ZPu" secondAttribute="leading" id="PRz-gf-eQ7"/>
                             <constraint firstItem="tzf-Qe-ild" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PTi-Xu-jHi" secondAttribute="bottom" constant="65" id="WFY-e4-zgt"/>
-                            <constraint firstItem="Ym5-Te-ZPu" firstAttribute="top" secondItem="d8j-OE-EOP" secondAttribute="bottom" id="X58-z2-Ino"/>
+                            <constraint firstItem="Ym5-Te-ZPu" firstAttribute="top" secondItem="d8j-OE-EOP" secondAttribute="bottom" constant="100" id="X58-z2-Ino"/>
                             <constraint firstItem="PTi-Xu-jHi" firstAttribute="leading" secondItem="Ym5-Te-ZPu" secondAttribute="leading" id="Y1B-FJ-h7g"/>
                             <constraint firstItem="tzf-Qe-ild" firstAttribute="trailing" secondItem="Ym5-Te-ZPu" secondAttribute="trailing" constant="20" id="YwV-bV-fZe"/>
                             <constraint firstItem="Ym5-Te-ZPu" firstAttribute="leading" secondItem="tzf-Qe-ild" secondAttribute="leading" constant="20" id="dtE-xz-Zza"/>
@@ -52,7 +52,7 @@
                             <constraint firstItem="d8j-OE-EOP" firstAttribute="top" secondItem="2bd-Vv-HOM" secondAttribute="top" id="kn1-mI-2y4"/>
                             <constraint firstItem="d8j-OE-EOP" firstAttribute="width" secondItem="tzf-Qe-ild" secondAttribute="width" id="n9E-mY-VL4"/>
                             <constraint firstItem="0dT-RI-VVm" firstAttribute="trailing" secondItem="Ym5-Te-ZPu" secondAttribute="trailing" id="npf-1x-rmC"/>
-                            <constraint firstItem="0dT-RI-VVm" firstAttribute="top" secondItem="Ym5-Te-ZPu" secondAttribute="bottom" constant="10" id="oBH-BQ-WJf"/>
+                            <constraint firstItem="0dT-RI-VVm" firstAttribute="top" secondItem="Ym5-Te-ZPu" secondAttribute="bottom" id="oBH-BQ-WJf"/>
                             <constraint firstItem="PTi-Xu-jHi" firstAttribute="top" secondItem="0dT-RI-VVm" secondAttribute="bottom" constant="15" id="qgN-Un-1Rd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tzf-Qe-ild"/>
@@ -125,11 +125,11 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="7cQ-NM-1xK">
                                 <rect key="frame" x="179.66666666666666" y="681" width="55" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.80000000000000004" green="0.75686274509999996" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="currentPageIndicatorTintColor" name="Tint"/>
+                                <color key="currentPageIndicatorTintColor" name="Tint-Large"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8C-n0-cLx">
                                 <rect key="frame" x="294" y="677" width="100" height="45"/>
-                                <color key="backgroundColor" name="Tint"/>
+                                <color key="backgroundColor" name="Tint-Large"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="472-OD-1Rd"/>
                                     <constraint firstAttribute="width" constant="100" id="6hr-ea-JGE"/>
@@ -141,7 +141,7 @@
                                     <action selector="nextButtonTapped:" destination="KK3-vW-yRL" eventType="touchUpInside" id="9FU-rz-8c3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-WN-bSa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-WN-bSa">
                                 <rect key="frame" x="20" y="677" width="100" height="45"/>
                                 <state key="normal" title="Pular">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -287,8 +287,11 @@
         <namedColor name="Cor-LetraEscura">
             <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Tint">
-            <color red="0.29411764705882354" green="0.14117647058823529" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Tint-Large">
+            <color red="0.33333333333333331" green="0.43529411764705883" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint-Medium">
+            <color red="0.20000000000000001" green="0.29411764705882354" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

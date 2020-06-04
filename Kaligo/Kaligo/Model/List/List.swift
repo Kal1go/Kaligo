@@ -8,21 +8,6 @@
 
 import Foundation
 
-enum Category: String, CaseIterable {
-    case matematica = "Matemática"
-    case portugues = "Língua Portuguesa"
-    case biologia = "Biologia"
-    case fisica = "Física"
-    case quimica = "Química"
-    case historia = "História"
-    case geografica = "Geografia"
-    case filosofia = "Filosofia"
-    case sociologia = "Sociologia"
-    case estrangeiras = "Língua estrangeira"
-    case artes = "Artes"
-    case outro = "Outro"
-}
-
 class List: Codable {
     var userName: String
     var userLevel: String

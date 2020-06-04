@@ -42,7 +42,7 @@ class PlaylistSaveController: UITableViewController {
         descriptionTextView.delegate = descriptionDelegate
         descriptionDelegate?.setTextView(descriptionTextView)
         
-        pickerController = PlaylistSavePicker(components: getCategories())
+        pickerController = PlaylistSavePicker(components: Categories.getCategories())
         categoryPickerView.delegate = pickerController
         categoryPickerView.dataSource = pickerController
         
@@ -91,12 +91,6 @@ class PlaylistSaveController: UITableViewController {
         headerView.titleLabel.text = sectionTitles[section]
 
         return headerView
-    }
-    
-    private func getCategories() -> [String] {        
-        return Category.allCases.map { (value) in
-            value.rawValue
-        }
     }
     
     private func validateSteps() {

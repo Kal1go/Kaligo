@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yd8-pO-sPV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yd8-pO-sPV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -73,8 +72,8 @@
                                                         <action selector="forkPlaylist:" destination="9Lh-pP-cOi" eventType="touchUpInside" id="RBL-8D-iQn"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Línguas Estrangeiras" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-qQ-NeF">
-                                                    <rect key="frame" x="211" y="168" width="163" height="27"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artes" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-qQ-NeF">
+                                                    <rect key="frame" x="319" y="168" width="55" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="Uml-QF-uKF"/>
                                                     </constraints>
@@ -122,7 +121,6 @@
                                             <outlet property="profilePicture" destination="P9e-26-hWI" id="ZRx-SO-me5"/>
                                             <outlet property="userLevel" destination="8L7-Wd-UxR" id="2mj-Tu-n9I"/>
                                             <outlet property="userName" destination="MmI-Bn-V28" id="t2G-0t-K42"/>
-                                            <segue destination="chh-LC-rzw" kind="show" id="4NJ-Gm-F9t"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -140,63 +138,22 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filterCell" id="WUW-N6-Paa" customClass="SegmentedCollectionViewCell" customModule="Kaligo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="151" height="57"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="daD-hN-lhO">
-                                            <rect key="frame" x="0.0" y="0.0" width="151" height="57"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opcao-default" translatesAutoresizingMaskIntoConstraints="NO" id="YPh-Qu-LhE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="57"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="57" id="VR6-hO-SXw"/>
-                                                        <constraint firstAttribute="width" constant="151" id="dYc-NZ-Fdl"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opcao-selecao" translatesAutoresizingMaskIntoConstraints="NO" id="SKN-4E-gqs">
-                                                    <rect key="frame" x="13.5" y="13.5" width="130" height="36"/>
-                                                    <color key="tintColor" name="Background"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="dSi-xD-ER8"/>
-                                                        <constraint firstAttribute="width" constant="130" id="vSY-VI-5io"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obI-rv-frp">
-                                                    <rect key="frame" x="23.5" y="13.5" width="110" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="SKN-4E-gqs" firstAttribute="centerX" secondItem="daD-hN-lhO" secondAttribute="centerX" constant="3" id="36p-eC-mne"/>
-                                                <constraint firstItem="obI-rv-frp" firstAttribute="leading" secondItem="SKN-4E-gqs" secondAttribute="leading" constant="10" id="63C-EA-9Y4"/>
-                                                <constraint firstAttribute="bottom" secondItem="YPh-Qu-LhE" secondAttribute="bottom" id="C7v-GG-RwR"/>
-                                                <constraint firstItem="obI-rv-frp" firstAttribute="centerY" secondItem="SKN-4E-gqs" secondAttribute="centerY" id="LY9-d6-F94"/>
-                                                <constraint firstItem="obI-rv-frp" firstAttribute="top" secondItem="SKN-4E-gqs" secondAttribute="top" id="O0U-M5-Tqo"/>
-                                                <constraint firstItem="YPh-Qu-LhE" firstAttribute="top" secondItem="daD-hN-lhO" secondAttribute="top" id="QXL-2F-h5h"/>
-                                                <constraint firstItem="SKN-4E-gqs" firstAttribute="centerY" secondItem="daD-hN-lhO" secondAttribute="centerY" constant="3" id="Sj1-hp-ZKS"/>
-                                                <constraint firstItem="obI-rv-frp" firstAttribute="trailing" secondItem="SKN-4E-gqs" secondAttribute="trailing" constant="-10" id="VzW-CQ-Ggu"/>
-                                                <constraint firstAttribute="trailing" secondItem="YPh-Qu-LhE" secondAttribute="trailing" id="m5m-Df-qEv"/>
-                                                <constraint firstItem="obI-rv-frp" firstAttribute="bottom" secondItem="SKN-4E-gqs" secondAttribute="bottom" id="p90-PU-Lrj"/>
-                                                <constraint firstItem="YPh-Qu-LhE" firstAttribute="leading" secondItem="daD-hN-lhO" secondAttribute="leading" id="wpd-mT-FEa"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <connections>
-                                            <outlet property="backgroundImage" destination="YPh-Qu-LhE" id="5BF-vq-NfW"/>
-                                            <outlet property="filterTitle" destination="obI-rv-frp" id="XTH-qO-dx7"/>
-                                            <outlet property="selectionImage" destination="SKN-4E-gqs" id="nO2-65-GcQ"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ainda não existe nenhum roteiro nessa categoria" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3a-e5-9Wl">
+                                <rect key="frame" x="41.5" y="426" width="331" height="49"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" name="Cor-LetraEscura"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
+                            <constraint firstItem="Q3a-e5-9Wl" firstAttribute="width" secondItem="XsS-S7-FS8" secondAttribute="width" multiplier="0.8" id="8uX-Mx-UKc"/>
                             <constraint firstItem="dl2-05-9II" firstAttribute="top" secondItem="XsS-S7-FS8" secondAttribute="top" id="CQF-7N-0yK"/>
                             <constraint firstItem="XsS-S7-FS8" firstAttribute="trailing" secondItem="hRr-NU-6ar" secondAttribute="trailing" id="DNU-fS-VyT"/>
+                            <constraint firstItem="Q3a-e5-9Wl" firstAttribute="centerY" secondItem="XsS-S7-FS8" secondAttribute="centerY" id="He4-yy-zhF"/>
+                            <constraint firstItem="Q3a-e5-9Wl" firstAttribute="centerX" secondItem="XsS-S7-FS8" secondAttribute="centerX" id="SP0-2i-Otg"/>
                             <constraint firstItem="hRr-NU-6ar" firstAttribute="top" secondItem="dl2-05-9II" secondAttribute="bottom" constant="10" id="Wbd-zF-xVQ"/>
                             <constraint firstItem="XsS-S7-FS8" firstAttribute="bottom" secondItem="hRr-NU-6ar" secondAttribute="bottom" id="gag-Kd-dKd"/>
                             <constraint firstItem="hRr-NU-6ar" firstAttribute="leading" secondItem="XsS-S7-FS8" secondAttribute="leading" id="jim-Qp-bYW"/>
@@ -214,7 +171,9 @@
                     <navigationItem key="navigationItem" title="Comunidade" id="dPt-ek-wWC"/>
                     <connections>
                         <outlet property="filterCollectionView" destination="dl2-05-9II" id="96R-19-O5a"/>
+                        <outlet property="messageLabel" destination="Q3a-e5-9Wl" id="0rn-14-Z3D"/>
                         <outlet property="postsTableView" destination="hRr-NU-6ar" id="bTU-pa-Jyz"/>
+                        <segue destination="chh-LC-rzw" kind="presentation" identifier="listDetail" modalPresentationStyle="fullScreen" id="zEd-qf-diu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzm-eJ-p5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -291,11 +250,9 @@
     </scenes>
     <color key="tintColor" name="Tint"/>
     <resources>
-        <image name="Línguas Estrangeiras" width="163" height="26"/>
+        <image name="Artes" width="55" height="27"/>
         <image name="TableView-Card" width="860" height="477"/>
         <image name="botao-fork" width="200" height="200"/>
-        <image name="opcao-default" width="302" height="114"/>
-        <image name="opcao-selecao" width="260" height="72"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <namedColor name="Background">
             <color red="0.93333333333333335" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -304,10 +261,10 @@
             <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.19215686274509805" green="0.12156862745098039" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.1764705882352941" green="0.18823529411764706" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint-Large">
-            <color red="0.46700000762939453" green="0.30300000309944153" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.33333333333333331" green="0.43529411764705883" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

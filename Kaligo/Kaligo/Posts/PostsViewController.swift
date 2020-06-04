@@ -12,18 +12,11 @@ class PostsViewController: UIViewController {
     
     @IBOutlet weak var filterCollectionView: UICollectionView!
     @IBOutlet weak var postsTableView: PostsTableView!
-    
-    private var collectionViewDelegate: FilterCollectionViewDelegate?
+    @IBOutlet weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let filterDelegate = FilterCollectionViewDelegate()
-        self.collectionViewDelegate = filterDelegate
-        collectionViewDelegate?.categories = ["Matemática", "História", "Geografia", "Biologia"]
-        
-        filterCollectionView.delegate = self.collectionViewDelegate
-        filterCollectionView.dataSource = self.collectionViewDelegate
         self.setUpEvents()
         postsTableView?.viewController = self
     }
@@ -35,12 +28,9 @@ class PostsViewController: UIViewController {
     }
         
     @IBAction func forkPlaylist(_ sender: UIButton) {
-        // verificar se usuário já salvou essa playlist
-//        postsTableView?.playlists[sender.tag].numberOfForks += 1
-//
         guard
-            let cell = postsTableView?.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? PlaylistTableViewCell,
-            let list = postsTableView?.playlists[sender.tag]
+            let cell = postsTableView?.cellForRow(at: IndexPath(row: sender.tag, section: 1)) as? PlaylistTableViewCell,
+            let list = postsTableView?.listsFilted[sender.tag]
         else {
             return
         }
@@ -53,8 +43,8 @@ class PostsViewController: UIViewController {
                     let forkSelectedImage = UIImage(named: "botao-fork-selecionado")
                     sender.setImage(forkSelectedImage, for: .normal)
                     sender.isEnabled = false
-                    self.postsTableView?.playlists[sender.tag].hasFork = true
-                    self.postsTableView?.playlists[sender.tag].numberOfForks += 1
+                    self.postsTableView?.listsFilted[sender.tag].hasFork = true
+                    self.postsTableView?.listsFilted[sender.tag].numberOfForks += 1
                     cell.configureCell(playlist: list, indexPath: IndexPath(row: sender.tag, section: 0))
                     User.addlist(list: answer)
                 }
@@ -62,7 +52,14 @@ class PostsViewController: UIViewController {
                 self.showCustomAlert(title: "Ops, algo deu errado!", message: description, isOneButton: true) { (_) in }
             }
         }
-        
+    }
+    
+    func messageLabel(isHidden: Bool) {
+        self.messageLabel.isHidden = isHidden
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        postsTableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     }
     
     func performSegue(for playlist: List) {
@@ -73,10 +70,9 @@ class PostsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navegation = segue.destination as? UINavigationController,
-            let view = navegation.viewControllers.first as? PlaylistHomeController,
-            let selected = postsTableView.indexPathForSelectedRow,
-            let delegate = postsTableView.delegate as? PostsTableView {
-            view.playlist = delegate.playlists[selected.row]
+            let list = sender as? List,
+            let view = navegation.viewControllers.first as? PlaylistHomeController {
+            view.playlist = list
         }
     }
 }

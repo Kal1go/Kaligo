@@ -16,6 +16,7 @@ class OnboardingViewController: UIViewController {
         didSet {
             self.nextButton.layer.cornerRadius = 8
             self.nextButton.layer.masksToBounds = true
+//            self.nextButton.currentBackgroundImage
         }
     }
     
