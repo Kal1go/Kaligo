@@ -124,6 +124,10 @@ class PostsTableView: UITableView, UITableViewDataSource, UITableViewDelegate, U
             self.isLoading = false
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.viewController?.performSegue(for: playlists[indexPath.row])
+    }
 }
 
 extension UITableView {
