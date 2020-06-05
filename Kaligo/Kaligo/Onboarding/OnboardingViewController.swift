@@ -15,8 +15,10 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton! {
         didSet {
             self.nextButton.layer.cornerRadius = 8
+            self.nextButton.titleLabel?.adjustsFontSizeToFitWidth = true
+            self.nextButton.titleLabel?.minimumScaleFactor = 0.5
+            self.nextButton.titleLabel?.sizeToFit()
             self.nextButton.layer.masksToBounds = true
-//            self.nextButton.currentBackgroundImage
         }
     }
     

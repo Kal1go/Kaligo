@@ -96,11 +96,12 @@ extension LoginController: ASAuthorizationControllerDelegate {
         authorizationAppleIDButton.cornerRadius = 10
         self.view.addSubview(authorizationAppleIDButton)
         
+        let constant = self.view.frame.height * 0.07
         authorizationAppleIDButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             authorizationAppleIDButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            authorizationAppleIDButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100),
-            authorizationAppleIDButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8),
+            authorizationAppleIDButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -constant),
+            authorizationAppleIDButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9),
             authorizationAppleIDButton.heightAnchor.constraint(equalToConstant: 50)
         ])
         

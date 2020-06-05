@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82193C6D2489C8C5003C670E /* AutoResizeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82193C6C2489C8C5003C670E /* AutoResizeLabel.swift */; };
+		82193C6F2489DB2D003C670E /* PaddingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82193C6E2489DB2D003C670E /* PaddingTextView.swift */; };
 		823106402477738F0067E00C /* UserDafaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231063F2477738F0067E00C /* UserDafaults+Codable.swift */; };
 		823DCE57247B9985005CC9D5 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DCE56247B9985005CC9D5 /* CustomAlertView.swift */; };
 		823DCE59247B99A1005CC9D5 /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DCE58247B99A1005CC9D5 /* UIViewController+Extentions.swift */; };
@@ -81,6 +83,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82193C6C2489C8C5003C670E /* AutoResizeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResizeLabel.swift; sourceTree = "<group>"; };
+		82193C6E2489DB2D003C670E /* PaddingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextView.swift; sourceTree = "<group>"; };
 		8231063F2477738F0067E00C /* UserDafaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDafaults+Codable.swift"; sourceTree = "<group>"; };
 		823DCE56247B9985005CC9D5 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		823DCE58247B99A1005CC9D5 /* UIViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extentions.swift"; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 				82D5EAE9247732CD00594274 /* Login.storyboard */,
 				82D5EAEA247732CD00594274 /* LoginController.swift */,
 				82D5EAE8247732CD00594274 /* LoginExtensions.swift */,
+				82193C6E2489DB2D003C670E /* PaddingTextView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -501,6 +506,7 @@
 				E490A527248591D00086B890 /* PageViewController.swift */,
 				E490A529248591EB0086B890 /* PageViewDelegate+DataSource.swift */,
 				E490A52B248595CA0086B890 /* OnboardingViewController.swift */,
+				82193C6C2489C8C5003C670E /* AutoResizeLabel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -616,6 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E47EB213246F3438004651A2 /* PostsViewController.swift in Sources */,
+				82193C6D2489C8C5003C670E /* AutoResizeLabel.swift in Sources */,
 				E490A528248591D00086B890 /* PageViewController.swift in Sources */,
 				E47EB211246F336D004651A2 /* PlaylistTableViewCell.swift in Sources */,
 				82D5EAF6247732DE00594274 /* User.swift in Sources */,
@@ -651,6 +658,7 @@
 				87DF629924731938002B8FCE /* HomeTableViewDelegate.swift in Sources */,
 				87DF6295247305EC002B8FCE /* HomeViewController.swift in Sources */,
 				E47EB20F246F244B004651A2 /* SegmentedCollectionViewCell.swift in Sources */,
+				82193C6F2489DB2D003C670E /* PaddingTextView.swift in Sources */,
 				823DCE57247B9985005CC9D5 /* CustomAlertView.swift in Sources */,
 				87DF62A324733DBE002B8FCE /* Review.swift in Sources */,
 				82A5D3352477828400E98286 /* Controller+Back.swift in Sources */,
