@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Alert View-->
+        <scene sceneID="7s5-WD-ICE">
+            <objects>
+                <viewController storyboardIdentifier="CustomAlertID" id="PQ0-uW-qr2" customClass="CustomAlertView" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="deP-tu-yfL"/>
+                        <viewControllerLayoutGuide type="bottom" id="dtU-5i-iBo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Uj-9S-3Nv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_alert_bg" translatesAutoresizingMaskIntoConstraints="NO" id="jCm-jz-rgg">
+                                <rect key="frame" x="-10" y="-10" width="434" height="916"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aco-2B-g1U">
+                                <rect key="frame" x="-10" y="-10" width="434" height="916"/>
+                                <connections>
+                                    <action selector="onTapCancelButton:" destination="PQ0-uW-qr2" eventType="touchUpInside" id="sH2-lZ-eXT"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biE-yH-fS9">
+                                <rect key="frame" x="44.5" y="299.5" width="325" height="207"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-hf-K86">
+                                        <rect key="frame" x="16.5" y="20" width="292.5" height="26.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" name="Cor-LetraEscura"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Esse medium fala sobre as principais causas de errarmos quando fazemos as contas..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1L-z5-l9O">
+                                        <rect key="frame" x="16.5" y="54.5" width="292.5" height="64.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" name="Cor-LetraEscura"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="pGt-cC-rEC">
+                                        <rect key="frame" x="0.0" y="127" width="325" height="70"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LE1-AX-WSh">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVE-29-vYV">
+                                                        <rect key="frame" x="20" y="10" width="132.5" height="50"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Confimar" backgroundImage="card_alert_button_01">
+                                                            <color key="titleColor" name="Background"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onTapOkButton:" destination="PQ0-uW-qr2" eventType="touchUpInside" id="Liq-pQ-HPw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="rVE-29-vYV" secondAttribute="bottom" constant="10" id="LZz-ye-aJ3"/>
+                                                    <constraint firstItem="rVE-29-vYV" firstAttribute="width" secondItem="LE1-AX-WSh" secondAttribute="width" multiplier="0.768116" id="f5W-h6-Unz"/>
+                                                    <constraint firstItem="rVE-29-vYV" firstAttribute="centerX" secondItem="LE1-AX-WSh" secondAttribute="centerX" id="hwT-pi-YDI"/>
+                                                    <constraint firstItem="rVE-29-vYV" firstAttribute="top" secondItem="LE1-AX-WSh" secondAttribute="top" constant="10" id="m63-DV-Om1"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bV1-F0-Cvn">
+                                                <rect key="frame" x="152.5" y="0.0" width="172.5" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb8-fb-PHW">
+                                                        <rect key="frame" x="20" y="10" width="132.5" height="50"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                        <state key="normal" title="Cancelar" backgroundImage="card_alert_button_00">
+                                                            <color key="titleColor" name="Cor-LetraEscura"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onTapCancelButton:" destination="PQ0-uW-qr2" eventType="touchUpInside" id="PDU-MM-MLM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Yb8-fb-PHW" firstAttribute="centerX" secondItem="bV1-F0-Cvn" secondAttribute="centerX" id="4cj-9o-6wP"/>
+                                                    <constraint firstItem="Yb8-fb-PHW" firstAttribute="width" secondItem="bV1-F0-Cvn" secondAttribute="width" multiplier="0.768116" id="8xZ-BA-2VX"/>
+                                                    <constraint firstItem="Yb8-fb-PHW" firstAttribute="top" secondItem="bV1-F0-Cvn" secondAttribute="top" constant="10" id="guf-MC-AjF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Yb8-fb-PHW" secondAttribute="bottom" constant="10" id="jIH-D6-fDv"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="LE1-AX-WSh" firstAttribute="width" secondItem="bV1-F0-Cvn" secondAttribute="width" id="mLB-Np-lBx"/>
+                                            <constraint firstAttribute="height" constant="70" id="uZX-du-05r"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstItem="pGt-cC-rEC" firstAttribute="top" secondItem="u1L-z5-l9O" secondAttribute="bottom" constant="8" id="1jF-1q-E59"/>
+                                    <constraint firstItem="u1L-z5-l9O" firstAttribute="centerX" secondItem="biE-yH-fS9" secondAttribute="centerX" id="5Sd-rY-U00"/>
+                                    <constraint firstItem="pGt-cC-rEC" firstAttribute="width" secondItem="biE-yH-fS9" secondAttribute="width" id="AB0-K2-PI7"/>
+                                    <constraint firstAttribute="width" constant="325" id="JRp-x6-ssW"/>
+                                    <constraint firstItem="dnU-hf-K86" firstAttribute="top" secondItem="biE-yH-fS9" secondAttribute="top" constant="20" id="Qcu-kW-PE3"/>
+                                    <constraint firstItem="u1L-z5-l9O" firstAttribute="top" secondItem="dnU-hf-K86" secondAttribute="bottom" constant="8" id="SHh-by-2wh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Suk-jI-Idg"/>
+                                    <constraint firstItem="dnU-hf-K86" firstAttribute="width" secondItem="u1L-z5-l9O" secondAttribute="width" id="UU9-h4-6Qj"/>
+                                    <constraint firstItem="u1L-z5-l9O" firstAttribute="width" secondItem="biE-yH-fS9" secondAttribute="width" multiplier="0.9" id="cdB-2A-uJa"/>
+                                    <constraint firstAttribute="bottom" secondItem="pGt-cC-rEC" secondAttribute="bottom" constant="10" id="jql-Ld-xsa"/>
+                                    <constraint firstItem="pGt-cC-rEC" firstAttribute="centerX" secondItem="biE-yH-fS9" secondAttribute="centerX" id="pvQ-Jh-Xxr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aco-2B-g1U" firstAttribute="width" secondItem="jCm-jz-rgg" secondAttribute="width" id="1S2-al-DAT"/>
+                            <constraint firstItem="biE-yH-fS9" firstAttribute="centerY" secondItem="2Uj-9S-3Nv" secondAttribute="centerY" multiplier="0.9" id="AgO-FY-x0P"/>
+                            <constraint firstItem="Aco-2B-g1U" firstAttribute="height" secondItem="jCm-jz-rgg" secondAttribute="height" id="BPI-G7-35s"/>
+                            <constraint firstItem="jCm-jz-rgg" firstAttribute="top" secondItem="2Uj-9S-3Nv" secondAttribute="top" constant="-10" id="CLZ-RF-KHh"/>
+                            <constraint firstAttribute="trailing" secondItem="jCm-jz-rgg" secondAttribute="trailing" constant="-10" id="LE6-de-RRM"/>
+                            <constraint firstItem="jCm-jz-rgg" firstAttribute="leading" secondItem="2Uj-9S-3Nv" secondAttribute="leading" constant="-10" id="V7q-Np-ryk"/>
+                            <constraint firstItem="Aco-2B-g1U" firstAttribute="centerY" secondItem="jCm-jz-rgg" secondAttribute="centerY" id="cPn-km-Lew"/>
+                            <constraint firstItem="biE-yH-fS9" firstAttribute="centerX" secondItem="2Uj-9S-3Nv" secondAttribute="centerX" id="cZf-ar-jdW"/>
+                            <constraint firstAttribute="bottom" secondItem="jCm-jz-rgg" secondAttribute="bottom" constant="-10" id="eT4-PD-MLb"/>
+                            <constraint firstItem="dnU-hf-K86" firstAttribute="centerX" secondItem="2Uj-9S-3Nv" secondAttribute="centerX" id="hN0-cT-1Us"/>
+                            <constraint firstItem="Aco-2B-g1U" firstAttribute="centerX" secondItem="jCm-jz-rgg" secondAttribute="centerX" id="pYx-qw-Rid"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6yM-CK-RJK"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="biE-yH-fS9" id="vus-ay-Kk3"/>
+                        <outlet property="cancelButton" destination="Yb8-fb-PHW" id="j1m-g0-XZ0"/>
+                        <outlet property="cancelButtonView" destination="bV1-F0-Cvn" id="WEM-RE-4T0"/>
+                        <outlet property="messageLabel" destination="u1L-z5-l9O" id="6So-mV-itl"/>
+                        <outlet property="okButton" destination="rVE-29-vYV" id="cvM-id-CZu"/>
+                        <outlet property="titleLabel" destination="dnU-hf-K86" id="5bJ-2S-z2p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjG-xV-oTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123.1884057971015" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="card_alert_bg" width="414" height="896"/>
+        <image name="card_alert_button_00" width="142" height="50"/>
+        <image name="card_alert_button_01" width="142" height="50"/>
+        <namedColor name="Background">
+            <color red="0.93333333333333335" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Cor-LetraEscura">
+            <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

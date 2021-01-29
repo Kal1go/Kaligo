@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s6n-uE-iZ3">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Controller-->
+        <scene sceneID="U7g-cx-ToT">
+            <objects>
+                <viewController storyboardIdentifier="loginvc" id="eEB-Vq-HJz" customClass="LoginController" customModule="Kaligo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Hs-NM-rQO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="figura-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="joc-Ux-p56">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="492.66666666666669"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HwA-Dm-11d">
+                                <rect key="frame" x="20" y="512.66666666666663" width="374" height="249.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá, estudante" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug3-Or-Hpg" customClass="AutoResizeLabel" customModule="Kaligo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="54.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <color key="textColor" name="Tint-Medium"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precisamos de você" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV8-ul-hvQ" customClass="AutoResizeLabel" customModule="Kaligo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="54.333333333333371" width="374" height="38"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" name="Cor-LetraEscura"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" editable="NO" text="Para começarmos, precisamos que você faça o login." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKX-UE-w20" customClass="UITextViewFixed" customModule="Kaligo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92.333333333333371" width="374" height="157"/>
+                                        <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="-8" maxY="0.0"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="xDV-je-WFn"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="zrb-Hf-mh0"/>
+                                        <color key="textColor" name="Cor-LetraEscura"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AKX-UE-w20" firstAttribute="height" secondItem="XV8-ul-hvQ" secondAttribute="height" multiplier="4.14035" id="aav-Rr-2FQ"/>
+                                    <constraint firstItem="XV8-ul-hvQ" firstAttribute="height" secondItem="ug3-Or-Hpg" secondAttribute="height" multiplier="0.7" id="jwR-pG-yHD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.97254901960784312" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HwA-Dm-11d" firstAttribute="leading" secondItem="FSb-rZ-KTI" secondAttribute="leading" constant="20" id="8sI-1v-sq1"/>
+                            <constraint firstItem="joc-Ux-p56" firstAttribute="height" secondItem="5Hs-NM-rQO" secondAttribute="height" multiplier="0.55" id="C2G-QB-hq9"/>
+                            <constraint firstItem="joc-Ux-p56" firstAttribute="centerX" secondItem="5Hs-NM-rQO" secondAttribute="centerX" id="EBC-Yd-Zb7"/>
+                            <constraint firstItem="joc-Ux-p56" firstAttribute="top" secondItem="5Hs-NM-rQO" secondAttribute="top" id="IpS-n5-6ZC"/>
+                            <constraint firstItem="HwA-Dm-11d" firstAttribute="top" secondItem="joc-Ux-p56" secondAttribute="bottom" constant="20" id="XIa-tX-e2n"/>
+                            <constraint firstItem="FSb-rZ-KTI" firstAttribute="top" secondItem="joc-Ux-p56" secondAttribute="top" constant="44" id="ZXf-w4-eVm"/>
+                            <constraint firstAttribute="trailing" secondItem="HwA-Dm-11d" secondAttribute="trailing" constant="20" id="dbr-OZ-cig"/>
+                            <constraint firstItem="joc-Ux-p56" firstAttribute="width" secondItem="5Hs-NM-rQO" secondAttribute="width" id="hQM-3V-Bt6"/>
+                            <constraint firstItem="FSb-rZ-KTI" firstAttribute="bottom" secondItem="HwA-Dm-11d" secondAttribute="bottom" constant="100" id="jlf-Om-esy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FSb-rZ-KTI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="02P-l7-3YN"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gon-7O-me8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818.84057971014499" y="-197.54464285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QGW-Y2-BEI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s6n-uE-iZ3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c3b-BW-6Ne">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eEB-Vq-HJz" kind="relationship" relationship="rootViewController" id="RIe-XG-Tva"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXH-JF-nSK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91.304347826086968" y="-197.54464285714286"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" name="Tint"/>
+    <resources>
+        <image name="figura-inicio" width="414" height="425"/>
+        <namedColor name="Cor-LetraEscura">
+            <color red="0.13333333333333333" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.17647058823529413" green="0.18823529411764706" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint-Medium">
+            <color red="0.20000000298023224" green="0.29399999976158142" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
